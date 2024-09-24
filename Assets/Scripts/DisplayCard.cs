@@ -19,8 +19,9 @@ public class DisplayCard : MonoBehaviour
     public string cardDescription;
     public string cardType;
 
+   
+    public string cardClass;
     // Extra info
-    public int cardTime;
     public int cardRarity;
 
     public TMP_Text nameText;
@@ -29,7 +30,7 @@ public class DisplayCard : MonoBehaviour
     public TMP_Text defenseText;
     public TMP_Text healthText;
     public TMP_Text descriptionText;
-    public TMP_Text timeText;
+    public TMP_Text cardText;
 
 
 
@@ -50,7 +51,7 @@ public class DisplayCard : MonoBehaviour
         cardHealth = displayCard[0].cardHealth;
         cardDescription = displayCard[0].cardDescription;
         cardType = displayCard[0].cardType;
-        cardTime = displayCard[0].cardTime;
+        cardClass = displayCard[0].cardClass;
 
         nameText.text = cardName;
         manaCostText.text = "" + cardCost;
@@ -58,6 +59,6 @@ public class DisplayCard : MonoBehaviour
         defenseText.text = "" + cardDefense;
         healthText.text = "" + cardHealth;
         descriptionText.text = cardDescription;
-        timeText.text = "" + cardTime;
+        cardText.text = "" + cardClass;
     }
 }

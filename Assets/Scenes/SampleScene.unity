@@ -1764,10 +1764,10 @@ MonoBehaviour:
     cardHealth: 0
     cardDescription: 
     cardType: 
-    cardTime: 0
+    cardClass: 
     cardRarity: 0
-  displayId: 71
-  cardId: 71
+  displayId: 50
+  cardId: 0
   cardName: 
   cardCost: 0
   cardAttack: 0
@@ -1775,7 +1775,7 @@ MonoBehaviour:
   cardHealth: 0
   cardDescription: 
   cardType: 
-  cardTime: 0
+  cardClass: 
   cardRarity: 0
   nameText: {fileID: 714173192}
   manaCostText: {fileID: 2113859557}
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   defenseText: {fileID: 720802071}
   healthText: {fileID: 33382293}
   descriptionText: {fileID: 1787414102}
-  timeText: {fileID: 1653873362}
+  cardText: {fileID: 1653873362}
 --- !u!1 &1594769363
 GameObject:
   m_ObjectHideFlags: 0

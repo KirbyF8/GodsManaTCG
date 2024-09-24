@@ -14,9 +14,10 @@ public class Card
     public string cardDescription;
     public string cardType;
 
+    public string cardClass;
+
 
     // Extra info
-    public int cardTime;
     public int cardRarity;
 
     public Card()
@@ -24,7 +25,7 @@ public class Card
 
     }
 
-    public Card(int Id, string CardName, int Cost, int Attack, int Defense, int Health, string Description, string Type, int Time, int Rarity)
+    public Card(int Id, string CardName, int Cost, int Attack, int Defense, int Health, string Description, string Type, string Class, int Rarity)
     {
         cardId = Id;
         cardName = CardName;
@@ -35,7 +36,7 @@ public class Card
         cardDescription = Description;
         cardType = Type;
 
-        cardTime = Time;
+        cardClass = Class;
         cardRarity = Rarity;
 
 
