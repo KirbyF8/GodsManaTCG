@@ -20,7 +20,7 @@ public class CardDatabase : MonoBehaviour
         
         // Mundo Antiguo 2 (Nº)
         cardList.Add(new Card(6, "Nº12 ", 1, 3, 0, 3, "Al ser destruida invoca de forma especial desde tu mano o deck a Nº11", "N", "", 0));
-        cardList.Add(new Card(7, "Nº11", 2, 1, 4, 4, "Al ser invocada de forma especial crea 2 fichas [soldado de arena] 0/4/1, al ser destruida invoca de forma especial desde tu mano o deck a Nº10 ", "none", "", 0));
+        cardList.Add(new Card(7, "Nº11", 2, 1, 4, 4, "Al ser invocada de forma especial crea 2 fichas [soldado de arena] 0/4/1, al ser destruida invoca de forma especial desde tu mano o deck a Nº10 ", "none", "Invoccadora", 0));
         cardList.Add(new Card(8, "Nº10", 3, 4, 1, 3, "Al ser invocada de forma especial roba 1 carta, al morir invoca de forma especial desde de tu mano o deck a Nº9 ", "none", "", 0));
         cardList.Add(new Card(9, "Nº9", 4, 8, 0, 1, "Al ser invocada de forma especial destruye 1 elegido del rival que este en posición de ataque, al morir invoca de forma especial desde tu mano o deck a Nº8", "none", "", 0));
         cardList.Add(new Card(10, "Nº8", 5, 6, 2, 4, "Al ser invocada de forma especial inflije 1 de daño a todos los elegidos enemigos, al morir invoca de forma especial desde tu mano o deck a Nº7", "none", "", 0));
@@ -80,66 +80,88 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(49, "Elen Bolt", 3, 6, 3, 3, "Si K.R.I.S es seleccionado como efecto puedes descartar esta carta y negar ese efecto", "Miknit", "Artificiera", 0));
         cardList.Add(new Card(50, "Leo Bolt", 4, 1, 4, 3, "Al ser invocado, si tienes a K.R.I.S en la mano, reduce su coste a la mitad", "Miknit", "Artificiero", 0));
         cardList.Add(new Card(51, "Nora Bolt", 6, 5, 2, 6, "Al ser invocada si Kris Bolt o K.R.I.S estan en el campo puedes buscar una carta que mencione a uno de los dos en tu deck y añadirla a tu mano ", "Miknit", "Artificiera", 0));
-        cardList.Add(new Card(51, "K.R.I.S", 10, 10, 10, 10, "Si esta en posición de defensa los elegidos enemigos solo pueden atacarle a el", "N", "Robot", 0));
+        cardList.Add(new Card(52, "K.R.I.S", 10, 10, 10, 10, "Si esta en posición de defensa los elegidos enemigos solo pueden atacarle a el", "N", "Robot", 0));
         
-        cardList.Add(new Card(52, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Dominio", "", 0));
-        cardList.Add(new Card(53, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "Mágica", "", 0));
-        cardList.Add(new Card(54, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de vida por cada uno", "Mágica", "", 0));
+        cardList.Add(new Card(53, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Dominio", "", 0));
+        cardList.Add(new Card(54, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "Mágica", "", 0));
+        cardList.Add(new Card(55, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de vida por cada uno", "Mágica", "", 0));
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
-        cardList.Add(new Card(55, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ataque, cuando es el turno del rival reducelo a la mitad", "Miknit", "Artificiero", 0));
-        cardList.Add(new Card(56, "Valette Bleck", 4, 5, 2, 2, "Al ser invocada roba una carta de equipo, puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0));
-        cardList.Add(new Card(57, "Nara", 3, 1, 2, 8, "Puede tener hasta 8 cartas equipadas", "Dana", "Mercenaria", 0));
-        cardList.Add(new Card(58, "B.S.B-G.A.P-103", 8, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "N", "Robot", 0));
+        cardList.Add(new Card(56, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ataque, cuando es el turno del rival reducelo a la mitad", "Miknit", "Artificiero", 0));
+        cardList.Add(new Card(57, "Valette Bleck", 4, 5, 2, 2, "Al ser invocada roba una carta de equipo, puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0));
+        cardList.Add(new Card(58, "Nara", 3, 1, 2, 8, "Puede tener hasta 8 cartas equipadas", "Dana", "Mercenaria", 0));
+        cardList.Add(new Card(59, "B.S.B-G.A.P-103", 8, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "N", "Robot", 0));
 
-        cardList.Add(new Card(59, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Equipo", "", 0));
-        cardList.Add(new Card(60, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, cuando esta carta es destruida invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Equipo", "", 0));
-        cardList.Add(new Card(61, "Pistola Bleck", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Equipo", "", 0));
-        cardList.Add(new Card(62, "Rifle Keiser", 3, 0, 0, 0, "Aumenta en 1 el ataque, si esta carta es enviada al cementerio destruye un elegido", "Equipo", "", 0));
-        cardList.Add(new Card(63, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Equipo", "", 0));
+        cardList.Add(new Card(60, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Equipo", "", 0));
+        cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, cuando esta carta es destruida invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Equipo", "", 0));
+        cardList.Add(new Card(62, "Pistola Bleck", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Equipo", "", 0));
+        cardList.Add(new Card(63, "Rifle Keiser", 3, 0, 0, 0, "Aumenta en 1 el ataque, si esta carta es enviada al cementerio destruye un elegido", "Equipo", "", 0));
+        cardList.Add(new Card(64, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Equipo", "", 0));
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
         // 
 
         // Revolución Steampunk 3 (Revolucionarios)
-        cardList.Add(new Card(64, "Sonya Delay", 10, 1, 10, 10, "Mientras esta carta este en el campo tu rival no puede atacar con sus elegidos", "Chronos", "", 0));
-        cardList.Add(new Card(65, "Edelgard", 10, 20, 10, 10, "Esta elegida puede atacar tantas veces a elegidos enemigos como quiera pero no puede atacar directamente", "Murgu", "", 0));
-        cardList.Add(new Card(66, "Ace Electro", 10, 4, 4, 10, "Mientras esta carta este en el campo tu rival no puede colocar trampas ni equipar cartas de equipo", "Miknit", "", 0));
-        cardList.Add(new Card(67, "Genex", 10, 10, 10, 20, "Cada vez que finalice tu turno recupera toda su vida", "Dana", "", 0));
-        cardList.Add(new Card(68, "Fazos", 10, 5, 5, 5, "Mientras esta carta este en el campo tu adversario no puede invocar de forma especial", "Yrys", "", 0));
-        cardList.Add(new Card(69, "Mona", 10, 10, 10, 10, "Cuando es invocada destruye todos los elegidos que su mana no sea de Etse", "Etse", "", 0));
+        cardList.Add(new Card(65, "Sonya Delay", 10, 1, 10, 10, "Mientras esta carta este en el campo tu rival no puede atacar con sus elegidos", "Chronos", "", 0));
+        cardList.Add(new Card(66, "Edelgard", 10, 20, 10, 10, "Esta elegida puede atacar tantas veces a elegidos enemigos como quiera pero no puede atacar directamente", "Murgu", "", 0));
+        cardList.Add(new Card(67, "Ace Electro", 10, 4, 4, 10, "Mientras esta carta este en el campo tu rival no puede colocar trampas ni equipar cartas de equipo", "Miknit", "", 0));
+        cardList.Add(new Card(68, "Genex", 10, 10, 10, 20, "Cada vez que finalice tu turno recupera toda su vida", "Dana", "", 0));
+        cardList.Add(new Card(69, "Fazos", 10, 5, 5, 5, "Mientras esta carta este en el campo tu adversario no puede invocar de forma especial", "Yrys", "", 0));
+        cardList.Add(new Card(70, "Mona", 10, 10, 10, 10, "Cuando es invocada destruye todos los elegidos que su mana no sea de Etse", "Etse", "", 0));
 
-        cardList.Add(new Card(70, "Deicidio", 10, 0, 0, 0, "Si todo tu mana es mana de los dioses transformalo en mana, aumenta permanentemente en 2 tu mana maximo, no puedes obtener mana de los dioses después de activar este efecto", "none", "", 0));
+        cardList.Add(new Card(71, "Deicidio", 10, 0, 0, 0, "Si todo tu mana es mana de los dioses transformalo en mana, aumenta permanentemente en 2 tu mana maximo, no puedes obtener mana de los dioses después de activar este efecto", "none", "", 0));
         
-        cardList.Add(new Card(71, "Emperor Red", 6, 0, 0, 0, "Siempre que un elegido de chronos ataque el elegido del rival no puede contraatacar", "Dominio", "", 0));
-        cardList.Add(new Card(72, "Baño de sangre", 6, 0, 0, 0, "Cuando un elegido es destruido recupera toda la vida de tus elegidos de murgu", "Dominio", "", 0));
-        cardList.Add(new Card(73, "Electromagnetismo", 6, 0, 0, 0, "Al invocar un elegido de Miknit puede atacar sin esperar", "Dominio", "", 0));
-        cardList.Add(new Card(74, "Neblina púrpura", 8, 0, 0, 0, "Los elegidos invocados que no sean de Dana pierden la mitad de su ataque y defensa", "Dominio", "", 0));
-        cardList.Add(new Card(75, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Dominio", "", 0));
-        cardList.Add(new Card(76, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Dominio", "", 0));
+        cardList.Add(new Card(72, "Emperor Red", 6, 0, 0, 0, "Siempre que un elegido de chronos ataque el elegido del rival no puede contraatacar", "Dominio", "", 0));
+        cardList.Add(new Card(73, "Baño de sangre", 6, 0, 0, 0, "Cuando un elegido es destruido recupera toda la vida de tus elegidos de murgu", "Dominio", "", 0));
+        cardList.Add(new Card(74, "Electromagnetismo", 6, 0, 0, 0, "Al invocar un elegido de Miknit puede atacar sin esperar", "Dominio", "", 0));
+        cardList.Add(new Card(75, "Neblina púrpura", 8, 0, 0, 0, "Los elegidos invocados que no sean de Dana pierden la mitad de su ataque y defensa", "Dominio", "", 0));
+        cardList.Add(new Card(76, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Dominio", "", 0));
+        cardList.Add(new Card(77, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Dominio", "", 0));
         // Revolución Steampunk 4 (Linea de defensa)
-        cardList.Add(new Card(77, "Ruby VIII", 5, 2, 2, 5, "Cuando es invocada roba una carta mágica a eleccion", "Miknit", "", 0));
-        cardList.Add(new Card(78, "Eins", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Zwei y Drei", "Chronos", "Artificiero", 0));
-        cardList.Add(new Card(79, "Zwei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Drei", "Chronos", "Artificiero", 0));
-        cardList.Add(new Card(80, "Drei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Zwei", "Chronos", "Artificiero", 0));
-        cardList.Add(new Card(81, "Atom", 5, 6, 5, 7, "Al ser invocada destruye una carta de tu adversario", "Dana", "Maga", 0));
-        cardList.Add(new Card(82, "Vix", 5, 7, 3, 5, "Al ser invocada equipala a un monstruo rival este pierde todo su ataque, cuando este es destruido devuelve esta carta a tu zona de elegidos", "none", "", 0));
+        cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "Cuando es invocada roba una carta mágica a eleccion", "Miknit", "Maga", 0));
+        cardList.Add(new Card(79, "Eins", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Zwei y Drei", "Chronos", "Artificiero", 0));
+        cardList.Add(new Card(80, "Zwei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Drei", "Chronos", "Artificiero", 0));
+        cardList.Add(new Card(81, "Drei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Zwei", "Chronos", "Artificiero", 0));
+        cardList.Add(new Card(82, "Atom", 5, 6, 5, 7, "Al ser invocada destruye una carta de tu adversario", "Dana", "Maga", 0));
+        cardList.Add(new Card(83, "Vix", 5, 7, 3, 5, "Al ser invocada equipala a un monstruo rival este pierde todo su ataque, cuando este es destruido devuelve esta carta a tu zona de elegidos", "Murgu", "Luchadora", 0));
 
         // Revolución Steampunk 5 (Nuevos Trabajos)
-        cardList.Add(new Card(83, "Myu", 2, 1, 1, 1, "Cuando es invocada busca un elegido en el deck del rival, destierralo", "Chronos", "Tirador", 0));
-        cardList.Add(new Card(84, "Drip", 2, 1, 1, 1, "Cuando es invocada busca una mágica en el deck del rival, destierrala", "Dana", "Mercader", 0));
-        cardList.Add(new Card(85, "BeeBot", 2, 1, 1, 1, "Cuando es invocada roba una mágica en el deck", "N", "Robot", 0));
-        cardList.Add(new Card(86, "Emil", 2, 1, 1, 1, "Cuando es invocada busca una trampa en el deck del rival, destierrala", "Dana", "Mercader", 0));
-        cardList.Add(new Card(87, "M.4.1.D", 2, 1, 1, 1, "Cuando es invocada roba una carta de equipo en el deck", "N", "Robot", 0));
-        cardList.Add(new Card(88, "Temp", 1, 1, 1, 1, "Cuando es invocada mira las 3 cartas de la parte superior de tu deck colocalas de vuelta en el orden que quieras", "Chronos", "Explorador", 0));
-        cardList.Add(new Card(89, "Decay", 2, 1, 1, 1, "Cuando es invocada busca una carta de equipo en el deck del rival, destierrala", "Chronos", "Mago", 0));
-        cardList.Add(new Card(90, "Efraim", 2, 1, 1, 1, "Cuando es invocada busca una carta de dominio en el deck del rival, destierrala", "Dana", "Artificiero", 0));
+        cardList.Add(new Card(84, "Myu", 2, 1, 1, 1, "Cuando es invocada busca un elegido en el deck del rival, destierralo", "Chronos", "Tirador", 0));
+        cardList.Add(new Card(85, "Drip", 2, 1, 1, 1, "Cuando es invocada busca una mágica en el deck del rival, destierrala", "Dana", "Mercader", 0));
+        cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "Cuando es invocada roba una mágica en el deck", "N", "Robot", 0));
+        cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "Cuando es invocada busca una trampa en el deck del rival, destierrala", "Dana", "Mercader", 0));
+        cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "Cuando es invocada roba una carta de equipo en el deck", "N", "Robot", 0));
+        cardList.Add(new Card(89, "Temp", 1, 1, 1, 1, "Cuando es invocada mira las 3 cartas de la parte superior de tu deck colocalas de vuelta en el orden que quieras", "Chronos", "Explorador", 0));
+        cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "Cuando es invocada busca una carta de equipo en el deck del rival, destierrala", "Chronos", "Mago", 0));
+        cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "Cuando es invocada busca una carta de dominio en el deck del rival, destierrala", "Dana", "Artificiero", 0));
 
 
         // Miknit's Mana War Legacy 
 
-        cardList.Add(new Card(91, "Myura", 10, 8, 4, 7, "Cuando es inovada limita las zonas de elegidos y cartas especiales a 4, si tu oponente tiene las dos zonas al completo puedes invocar esta carta de la mano", "Miknit", "Maga", 0));
-        cardList.Add(new Card(92, "Etrian", 10, 8, 10, 8, "Invoca tantos elegidos de coste 1 como mana de Miknit tengas, gasta todo el mana de Miknit", "Miknit", "", 0));
-        cardList.Add(new Card(93, "Klio", 10, 10, 8, 8, "Invoca todos los elegidos de tu mano, cuando vayan a ser destruidos destierralos", "Miknit", "", 0));
+        cardList.Add(new Card(92, "Myura", 10, 8, 4, 7, "Cuando es inovada limita las zonas de elegidos y cartas especiales a 4, si tu oponente tiene las dos zonas al completo puedes invocar esta carta de la mano", "Miknit", "Maga", 0));
+        cardList.Add(new Card(93, "Etrian", 10, 8, 10, 8, "Invoca tantos elegidos de coste 1 como mana de Miknit tengas, gasta todo el mana de Miknit", "Miknit", "Guerrero", 0));
+        cardList.Add(new Card(94, "Klio", 10, 10, 8, 8, "Invoca todos los elegidos de tu mano, cuando vayan a ser destruidos destierralos", "Miknit", "Mercenario", 0));
+        cardList.Add(new Card(95, "Elfraim", 1, 1, 1, 1, "Cuando es invocado copia el efecto de un elegido en el campo", "Miknit", "Explorador", 0));
+        cardList.Add(new Card(96, "Fath", 4, 2, 5, 3, "No es afectado por efectos de otros elegidos, si un elegido que controles fuera a ser destruido puedes elegir destruir a este en su lugar", "Miknit", "Guerrero", 0));
+        cardList.Add(new Card(97, "Momo", 4, 2, 3, 5, "Cuando es invocada invoca desde el deck un elegido de coste 1", "Miknit", "Invocadora", 0));
 
+
+        // Miknit's Mana War Legacy 2
+        cardList.Add(new Card(98, "Lilyan", 4, 3, 3, 2, "Mientras esta carta esta en el campo ningun jugador puede usar cartas mágicas, no es afectada por efectos de cartas", "Miknit", "Guerrera", 0));
+        cardList.Add(new Card(99, "Lancelot", 6, 6, 2, 3, "Cuando es invocado puede atacar sin esperar 1 turno", "Miknit", "Guerrero", 0));
+        cardList.Add(new Card(100, "Axel", 6, 4, 1, 10, "Se cura 2hp cada vez que un elegido enemigo ataca", "Miknit", "Barbaro", 0));
+        cardList.Add(new Card(101, "Filo", 1, 3, 1, 2, "Puedes invocarla en el campo del rival roba dos cartas si haces esto", "Miknit", "Pícara", 0));
+        cardList.Add(new Card(102, "Leynla", 3, 4, 3, 6, "Cuando inicie tu fase de combate devuelve esta carta a la mano e invoca a Leynla Dragon", "Miknit", "Barbara", 0));
+        cardList.Add(new Card(103, "Leynla Dragón", 6, 6, 8, 12, "No puede ser invocada de forma normal, cuando acabe la fase de combate vuelve a la mano e Invoca a Leynla", "Miknit", "Barbara", 0));
+
+        cardList.Add(new Card(104, "Kit", 2, 4, 1, 1, "Al ser invocado tira un d6 destruye tantas cartas en el campo como sea el resultado, si no hay suficientes cartas en el campo destruye solo a este elegido", "Miknit", "Mago", 0));
+        cardList.Add(new Card(105, "Ruby", 10, 6, 7, 5, "Al ser invocada recupera todo el mana de Miknit que hallas gastado este turno", "Miknit", "Guerrera", 0));
+        cardList.Add(new Card(106, "Yuu", 4, 1, 3, 10, "Aumenta en 1 su ataque cada vez que recupera hp", "Miknit", "Mercenario", 0));
+        cardList.Add(new Card(107, "Ryo", 4, 1, 4, 10, "Una vez por turno cura 1hp a un elegido", "Miknit", "Curandera", 0));
+        
+
+
+        cardList.Add(new Card(107, "Keon", 3, 2, 10, 6, "Mientras esta carta este en posición de defensa los elegidos enemigos tienen que atacarla", "Miknit", "Guerrero", 0));
+        cardList.Add(new Card(108, "Socram", 10, 6, 1, 25, "Recupera toda su vida cuando un elegido de Miknit es destruido", "Miknit", "Barbaro", 0));
+        cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "Cuando es invocado si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Mago", 0));
 
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
