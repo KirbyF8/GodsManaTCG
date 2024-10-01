@@ -116,11 +116,11 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(76, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Dominio", "", 0));
         cardList.Add(new Card(77, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Dominio", "", 0));
         // Revolución Steampunk 4 (Linea de defensa)
-        cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "Cuando es invocada roba una carta mágica a eleccion", "Miknit", "Maga", 0));
+        cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "Cuando es invocada roba una carta mágica a eleccion", "Miknit", "Hechicera", 0));
         cardList.Add(new Card(79, "Eins", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Zwei y Drei", "Chronos", "Artificiero", 0));
         cardList.Add(new Card(80, "Zwei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Drei", "Chronos", "Artificiero", 0));
         cardList.Add(new Card(81, "Drei", 5, 10, 1, 1, "Cuando es invocado de forma normal invoca desde el deck o mano a Eins y Zwei", "Chronos", "Artificiero", 0));
-        cardList.Add(new Card(82, "Atom", 5, 6, 5, 7, "Al ser invocada destruye una carta de tu adversario", "Dana", "Maga", 0));
+        cardList.Add(new Card(82, "Atom", 5, 6, 5, 7, "Al ser invocada destruye una carta de tu adversario", "Dana", "Hechicera", 0));
         cardList.Add(new Card(83, "Vix", 5, 7, 3, 5, "Al ser invocada equipala a un monstruo rival este pierde todo su ataque, cuando este es destruido devuelve esta carta a tu zona de elegidos", "Murgu", "Luchadora", 0));
 
         // Revolución Steampunk 5 (Nuevos Trabajos)
@@ -130,13 +130,13 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "Cuando es invocada busca una trampa en el deck del rival, destierrala", "Dana", "Mercader", 0));
         cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "Cuando es invocada roba una carta de equipo en el deck", "N", "Robot", 0));
         cardList.Add(new Card(89, "Temp", 1, 1, 1, 1, "Cuando es invocada mira las 3 cartas de la parte superior de tu deck colocalas de vuelta en el orden que quieras", "Chronos", "Explorador", 0));
-        cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "Cuando es invocada busca una carta de equipo en el deck del rival, destierrala", "Chronos", "Mago", 0));
+        cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "Cuando es invocada busca una carta de equipo en el deck del rival, destierrala", "Chronos", "Hechicero", 0));
         cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "Cuando es invocada busca una carta de dominio en el deck del rival, destierrala", "Dana", "Artificiero", 0));
 
 
         // Miknit's Mana War Legacy 
 
-        cardList.Add(new Card(92, "Myura", 10, 8, 4, 7, "Cuando es inovada limita las zonas de elegidos y cartas especiales a 4, si tu oponente tiene las dos zonas al completo puedes invocar esta carta de la mano", "Miknit", "Maga", 0));
+        cardList.Add(new Card(92, "Myura", 10, 8, 4, 7, "Cuando es inovada limita las zonas de elegidos y cartas especiales a 4, si tu oponente tiene las dos zonas al completo puedes invocar esta carta de la mano", "Miknit", "Hechicera", 0));
         cardList.Add(new Card(93, "Etrian", 10, 8, 10, 8, "Invoca tantos elegidos de coste 1 como mana de Miknit tengas, gasta todo el mana de Miknit", "Miknit", "Guerrero", 0));
         cardList.Add(new Card(94, "Klio", 10, 10, 8, 8, "Invoca todos los elegidos de tu mano, cuando vayan a ser destruidos destierralos", "Miknit", "Mercenario", 0));
         cardList.Add(new Card(95, "Elfraim", 1, 1, 1, 1, "Cuando es invocado copia el efecto de un elegido en el campo", "Miknit", "Explorador", 0));
@@ -152,7 +152,7 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(102, "Leynla", 3, 4, 3, 6, "Cuando inicie tu fase de combate devuelve esta carta a la mano e invoca a Leynla Dragon", "Miknit", "Barbara", 0));
         cardList.Add(new Card(103, "Leynla Dragón", 6, 6, 8, 12, "No puede ser invocada de forma normal, cuando acabe la fase de combate vuelve a la mano e Invoca a Leynla", "Miknit", "Barbara", 0));
 
-        cardList.Add(new Card(104, "Kit", 2, 4, 1, 1, "Al ser invocado tira un d6 destruye tantas cartas en el campo como sea el resultado, si no hay suficientes cartas en el campo destruye solo a este elegido", "Miknit", "Mago", 0));
+        cardList.Add(new Card(104, "Kit", 2, 4, 1, 1, "Al ser invocado tira un d6 destruye tantas cartas en el campo como sea el resultado, si no hay suficientes cartas en el campo destruye solo a este elegido", "Miknit", "Hechicero", 0));
         cardList.Add(new Card(105, "Ruby", 10, 6, 7, 5, "Al ser invocada recupera todo el mana de Miknit que hallas gastado este turno", "Miknit", "Guerrera", 0));
         cardList.Add(new Card(106, "Yuu", 4, 1, 3, 10, "Aumenta en 1 su ataque cada vez que recupera hp", "Miknit", "Mercenario", 0));
         cardList.Add(new Card(107, "Ryo", 4, 1, 4, 10, "Una vez por turno cura 1hp a un elegido", "Miknit", "Curandera", 0));
@@ -161,7 +161,7 @@ public class CardDatabase : MonoBehaviour
 
         cardList.Add(new Card(107, "Keon", 3, 2, 10, 6, "Mientras esta carta este en posición de defensa los elegidos enemigos tienen que atacarla", "Miknit", "Guerrero", 0));
         cardList.Add(new Card(108, "Socram", 10, 6, 1, 25, "Recupera toda su vida cuando un elegido de Miknit es destruido", "Miknit", "Barbaro", 0));
-        cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "Cuando es invocado si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Mago", 0));
+        cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "Cuando es invocado si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Hechicero", 0));
 
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
