@@ -163,6 +163,10 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(108, "Socram", 10, 6, 1, 25, "Recupera toda su vida cuando un elegido de Miknit es destruido", "Miknit", "Barbaro", 0));
         cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "Cuando es invocado si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Hechicero", 0));
 
+
+        // Sobre Colaboraciones Radiantes
+        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "Al atacar cambia a posicion de defensa", "N", "Invocación", 0));
+
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
         cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "Cuando esta carta es invocada destierra todas las cartas Nº aumenta en 1 su vida por cada una", "N", "Invocadora", 0));
