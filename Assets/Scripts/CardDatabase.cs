@@ -19,18 +19,18 @@ public class CardDatabase : MonoBehaviour
         // Mundo Antiguo (Antes de los dioses (Desbloqueo))
         
         // Mundo Antiguo 2 (Nº)
-        cardList.Add(new Card(6, "Nº12 ", 1, 3, 0, 3, "Al ser destruida invoca de forma especial desde tu mano o deck a Nº11", "N", "", 0));
-        cardList.Add(new Card(7, "Nº11", 2, 1, 4, 4, "Al ser invocada de forma especial crea 2 fichas [soldado de arena] 0/4/1, al ser destruida invoca de forma especial desde tu mano o deck a Nº10 ", "none", "Invoccadora", 0));
-        cardList.Add(new Card(8, "Nº10", 3, 4, 1, 3, "Al ser invocada de forma especial roba 1 carta, al morir invoca de forma especial desde de tu mano o deck a Nº9 ", "none", "", 0));
-        cardList.Add(new Card(9, "Nº9", 4, 8, 0, 1, "Al ser invocada de forma especial destruye 1 elegido del rival que este en posición de ataque, al morir invoca de forma especial desde tu mano o deck a Nº8", "none", "", 0));
-        cardList.Add(new Card(10, "Nº8", 5, 6, 2, 4, "Al ser invocada de forma especial inflije 1 de daño a todos los elegidos enemigos, al morir invoca de forma especial desde tu mano o deck a Nº7", "none", "", 0));
-        cardList.Add(new Card(11, "Nº7", 6, 9, 1, 6, "Al ser invocada de forma especial destruye todos los elegidos heridos, al morir invoca de forma especial desde tu mano o deck a Nº6", "none", "", 0));
-        cardList.Add(new Card(12, "Nº6", 7, 10, 1, 4, "Al ser invocada de forma especial inflije 5 de daño a un elegido o a tu rival, al morir invoca de forma especial desde tu mano o deck a Nº5", "none", "", 0));
-        cardList.Add(new Card(13, "Nº5", 8, 7, 5, 5, "Al ser invocada de forma especial reduce a 0 la defensa de todos los elegidos rivales, al morir invoca de forma especial desde tu mano o deck a Nº4", "none", "", 0));
-        cardList.Add(new Card(14, "Nº4", 9, 5, 10, 10, "Al ser invocada de forma especial coloca a todos los elegidos en posición de defensa, al morir invoca de forma especial desde tu mano o deck a Nº3", "none", "", 0));
-        cardList.Add(new Card(15, "Nº3", 10, 12, 6, 9, "Al ser invocada de forma especial destruye tantos elegidos hasta que quede uno en cada campo, al morir invoca de forma especial desde tu mano o deck a Nº2", "none", "", 0));
-        cardList.Add(new Card(16, "Nº2", 11, 11, 10, 9, "Al ser invocada de forma especial busca una carta mágica o trampa Nº y añadela a tu mano, al morir invoca de forma especial desde tu mano o deck a Nº2", "none", "", 0));
-        cardList.Add(new Card(17, "Nº1", 12, 12, 12, 12, "Al ser invocada de forma especial gasta todo tu mana, esta carta no puede ser seleccionada por efectos, al final de cada ronda recupera toda su vida", "none", "Guerrera", 0));
+        cardList.Add(new Card(6, "Nº12 ", 1, 3, 0, 3, "Al ser destruida invoca de forma especial desde tu mano o deck a Nº11", "Chronos", "Guerrera", 0));
+        cardList.Add(new Card(7, "Nº11", 2, 1, 4, 4, "Al ser invocada de forma especial crea 2 fichas [soldado de arena] 0/4/1, al ser destruida invoca de forma especial desde tu mano o deck a Nº10 ", "Chronos", "Invocadora", 0));
+        cardList.Add(new Card(8, "Nº10", 3, 4, 1, 3, "Al ser invocada de forma especial roba 1 carta, al morir invoca de forma especial desde de tu mano o deck a Nº9 ", "Chronos", "Hechicera", 0));
+        cardList.Add(new Card(9, "Nº9", 4, 8, 0, 1, "Al ser invocada de forma especial destruye 1 elegido del rival que este en posición de ataque, al morir invoca de forma especial desde tu mano o deck a Nº8", "Chronos", "Pícara", 0));
+        cardList.Add(new Card(10, "Nº8", 5, 6, 2, 4, "Al ser invocada de forma especial inflije 1 de daño a todos los elegidos enemigos, al morir invoca de forma especial desde tu mano o deck a Nº7", "Chronos", "Mercenaria", 0));
+        cardList.Add(new Card(11, "Nº7", 6, 9, 1, 6, "Al ser invocada de forma especial destruye todos los elegidos heridos, al morir invoca de forma especial desde tu mano o deck a Nº6", "Chronos", "Mercenaria", 0));
+        cardList.Add(new Card(12, "Nº6", 7, 10, 1, 4, "Al ser invocada de forma especial inflije 5 de daño a un elegido o a tu rival, al morir invoca de forma especial desde tu mano o deck a Nº5", "Chronos", "Exploradora", 0));
+        cardList.Add(new Card(13, "Nº5", 8, 7, 5, 5, "Al ser invocada de forma especial reduce a 0 la defensa de todos los elegidos rivales, al morir invoca de forma especial desde tu mano o deck a Nº4", "Chronos", "Guerrera", 0));
+        cardList.Add(new Card(14, "Nº4", 9, 5, 10, 10, "Al ser invocada de forma especial coloca a todos los elegidos en posición de defensa, al morir invoca de forma especial desde tu mano o deck a Nº3", "Chronos", "Curandera", 0));
+        cardList.Add(new Card(15, "Nº3", 10, 12, 6, 9, "Al ser invocada de forma especial destruye tantos elegidos hasta que quede uno en cada campo, al morir invoca de forma especial desde tu mano o deck a Nº2", "Chronos", "Bárbara", 0));
+        cardList.Add(new Card(16, "Nº2", 11, 11, 10, 9, "Al ser invocada de forma especial busca una carta mágica o trampa Nº y añadela a tu mano, al morir invoca de forma especial desde tu mano o deck a Nº2", "Chronos", "Exploradora", 0));
+        cardList.Add(new Card(17, "Nº1", 12, 12, 12, 12, "Al ser invocada de forma especial gasta todo tu mana, esta carta no puede ser seleccionada por efectos, al final de cada ronda recupera toda su vida", "Chronos", "Guerrera", 0));
 
         cardList.Add(new Card(18, "Último esfuerzo Nº", 2, 0, 0, 0, "Destruye un elegido Nº después destruye un elegido del rival, después de activar el efecto no puedes invocar elegidos que no sean Nº ", "Mágica", "", 0));
         cardList.Add(new Card(19, "Retirada Nº",1, 0, 0, 0, "Devuelve al Deck cualquier número de Nº, roba una carta por cada una", "Mágica", "", 0));
