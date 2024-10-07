@@ -156,16 +156,26 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(105, "Ruby", 10, 6, 7, 5, "Al ser invocada recupera todo el mana de Miknit que hallas gastado este turno", "Miknit", "Guerrera", 0));
         cardList.Add(new Card(106, "Yuu", 4, 1, 3, 10, "Aumenta en 1 su ataque cada vez que recupera hp", "Miknit", "Mercenario", 0));
         cardList.Add(new Card(107, "Ryo", 4, 1, 4, 10, "Una vez por turno cura 1hp a un elegido", "Miknit", "Curandera", 0));
-        
+        cardList.Add(new Card(108, "Henka", 6, 7, 2, 3, "Al ser invocada busca una carta de equipo en tu deck y robala, una vez por turno puedes cambiar una carta de equipo en el campo por otra en el deck", "Miknit", "Pícara", 0));
 
 
         cardList.Add(new Card(107, "Keon", 3, 2, 10, 6, "Mientras esta carta este en posición de defensa los elegidos enemigos tienen que atacarla", "Miknit", "Guerrero", 0));
         cardList.Add(new Card(108, "Socram", 10, 6, 1, 25, "Recupera toda su vida cuando un elegido de Miknit es destruido", "Miknit", "Barbaro", 0));
         cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "Cuando es invocado si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Hechicero", 0));
-
+        cardList.Add(new Card(109, "Lime", 5, 7, 6, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbara", 0));
+        cardList.Add(new Card(109, "Yawaraki", 5, 6, 7, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbaro", 0));
+        cardList.Add(new Card(109, "Aki", 2, 3, 1, 2, "Cuando es invocada invoca en el campo del rival Enredaderas 0/5/5 en defensa", "Miknit", "Exploradora", 0));
+        cardList.Add(new Card(107, "Sai", 5, 7, 2, 3, "Puedes invocar esta carta en el campo del rival destruyendo uno de sus monstruos", "Miknit", "Pícaro", 0));
 
         // Sobre Colaboraciones Radiantes
-        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "Al atacar cambia a posicion de defensa", "N", "Invocación", 0));
+        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "", 0));
+
+        // Sobre Magia para novatos y no tan novatos
+        cardList.Add(new Card(111, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario del deck, si su coste es 1 invocalo de forma especial", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros del deck,mano o zona de destierros", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "", 0));
 
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
@@ -179,5 +189,6 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(0, "Soldado de arena", 0, 0, 4, 1, "No puede ser destruido en batalla si Nº11 esta en el campo", "N", "Invocación", 0));
         cardList.Add(new Card(0, "Chakal", 0, 5, 1, 2, "Al atacar cambia a posicion de defensa", "N", "Invocación", 0));
         cardList.Add(new Card(0, "Lia", 0, 9, 0, 1, "Cuando es destruida en batalla envia del cementerio al deck la carta de equipo Lia", "none", "Invocación", 0));
+        cardList.Add(new Card(0, "Enredaderas", 0, 0, 5, 5, "Al final del turno crea una copia de si misma, si no puede inflije 1LP al jugador que posea esta carta", "N", "Invocación", 0));
     }
 }

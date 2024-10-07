@@ -104,7 +104,7 @@ public class DisplayFisicCard : MonoBehaviour
         cardText.text = "" + cardClass;
 
         
-        if (cardImgs.Length == cardId - 1)
+        if (cardImgs.Length >= cardId - 1)
         {
             cardImg.sprite = cardImgs[displayId - 1];
 
