@@ -39,8 +39,9 @@ public class DisplayCard : MonoBehaviour
     public Image fondoName;
     public Image fondoTxt;
 
+    public bool isFlipped;
 
-
+    [SerializeField] private GameObject cardBack;
 
     [SerializeField] private Sprite Fondo_Dana;
     [SerializeField] private Sprite Fondo_Murgu;
@@ -168,6 +169,17 @@ public class DisplayCard : MonoBehaviour
 
     }
 
+    public void faceDown_faceUp()
+    {
+        if (isFlipped)
+        {
+            cardBack.SetActive(false);
+        }
+        else
+        {
+            cardBack.SetActive(true);
+        }
+    }
 
 
 }
