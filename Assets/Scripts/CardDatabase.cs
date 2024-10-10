@@ -168,15 +168,19 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(107, "Sai", 5, 7, 2, 3, "Puedes invocar esta carta en el campo del rival destruyendo uno de sus monstruos", "Miknit", "Pícaro", 0));
 
         // Sobre Colaboraciones Radiantes
-        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "", 0));
+        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0));
+        cardList.Add(new Card(110, "Yu", 0, 0, 0, 2, "Tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "", 0));
 
-        // Sobre Magia para novatos y no tan novatos
+
+        // Sobre de Magia para novatos y no tan novatos
         cardList.Add(new Card(111, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "", 0));
         cardList.Add(new Card(19, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "", 0));
         cardList.Add(new Card(19, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario del deck, si su coste es 1 invocalo de forma especial", "Mágica", "", 0));
         cardList.Add(new Card(19, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros del deck,mano o zona de destierros", "Mágica", "", 0));
         cardList.Add(new Card(19, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "", 0));
-
+        cardList.Add(new Card(19, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al deck", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Mágica", "", 0));
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
         cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "Cuando esta carta es invocada destierra todas las cartas Nº aumenta en 1 su vida por cada una", "N", "Invocadora", 0));
