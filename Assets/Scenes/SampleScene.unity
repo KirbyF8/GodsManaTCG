@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4400,6 +4400,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929984831}
   m_CullTransparentMesh: 1
+--- !u!1 &954678132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954678133}
+  - component: {fileID: 954678134}
+  m_Layer: 5
+  m_Name: TurnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &954678133
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954678132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061531676}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &954678134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954678132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ddc456e72b44344a1fc1b1f4613fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isYourTurn: 0
+  yourTurns: 0
+  rivalTurns: 0
+  maxManaYou: 0
+  yourActualMana: 0
+  maxManaRival: 0
+  rivalActualMana: 0
+  ManaN: {fileID: 21300000, guid: 079603de66222b941af5c2c0dabb8aec, type: 3}
+  ManaN_Spent: {fileID: 21300000, guid: 48925a724d95524419030557c6708de1, type: 3}
+  ManaDana: {fileID: 21300000, guid: 90b64027b11a30f4ca6da19c794092e4, type: 3}
+  ManaDana_Spent: {fileID: 21300000, guid: aef642bed714d1e4090e0074439737b3, type: 3}
+  ManaEtse: {fileID: 21300000, guid: 13146b54cfea9f2408955b531bc7483b, type: 3}
+  ManaEtse_Spent: {fileID: 21300000, guid: bf720a8a268bc0347a6fe056553d3999, type: 3}
+  ManaMiknit: {fileID: 21300000, guid: e8abcf73e4a17ea44b1f890ceb123394, type: 3}
+  ManaMiknit_Spent: {fileID: 21300000, guid: a8c501a4f91554c459526fbbb9b1e591, type: 3}
+  ManaChronos: {fileID: 21300000, guid: 3e646a6f89d77d048bbec398a651a11d, type: 3}
+  ManaChronos_Spent: {fileID: 21300000, guid: 872a3dc3adfcb5246998e1e3ebfcea5a, type: 3}
+  ManaMurgu: {fileID: 21300000, guid: e6cb7fea37fd1a24ab070cbbf9d034f3, type: 3}
+  ManaMurgu_Spent: {fileID: 21300000, guid: a01eacfe4f9d0a8409473ebdde5e2aa9, type: 3}
+  ManaYrys: {fileID: 21300000, guid: 2941f60ccae554f48a5b51bd5b9814d9, type: 3}
+  ManaYrys_Spent: {fileID: 21300000, guid: 1d7404aa923061842bb71a40c956feb0, type: 3}
+  Manas:
+  - {fileID: 1623013152}
+  - {fileID: 521077762}
+  - {fileID: 1708175421}
+  - {fileID: 2111664040}
+  - {fileID: 1411742996}
+  - {fileID: 298679582}
+  - {fileID: 1862192501}
+  - {fileID: 2103083387}
+  - {fileID: 1859485450}
+  - {fileID: 1812101571}
+  RivalManas:
+  - {fileID: 1268218666}
+  - {fileID: 1612749774}
+  - {fileID: 1801919938}
+  - {fileID: 1263910174}
+  - {fileID: 303005599}
+  - {fileID: 1586185011}
+  - {fileID: 657917043}
+  - {fileID: 116906312}
+  - {fileID: 566262020}
+  - {fileID: 149901695}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4696,7 @@ RectTransform:
   - {fileID: 374400863}
   - {fileID: 1890688707}
   - {fileID: 1122569516}
+  - {fileID: 954678133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

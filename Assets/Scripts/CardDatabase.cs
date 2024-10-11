@@ -40,31 +40,31 @@ public class CardDatabase : MonoBehaviour
         
 
         // Mundo Antiguo 3 (Defensores del futuro)
-        cardList.Add(new Card(22, "Lyriel", 2, 4, 2, 3, "Puede atacar directamente al rival", "N", "Pícara", 0));
-        cardList.Add(new Card(23, "Sol", 3, 2, 1, 12, "Por cada punto de vida que le falte aumenta su ataque en 1", "none", "Luchador", 0));
-        cardList.Add(new Card(24, "Zolbo", 1, 1, 1, 4, "Restaura la vida al completo de cualquier elegido", "none", "Curandero", 0));
-        cardList.Add(new Card(25, "Emma", 2, 5, 2, 4, "Si esta en el campo tu rival no te puede atacar directamente", "none", "Mercenaria", 0));
-        cardList.Add(new Card(26, "Leathen", 2, 1, 1, 1, "Al ser invocado toma el control de un elegido rival, al ser destruido devuelve el control del elegido a su propietario", "none", "Bardo", 0));
-        cardList.Add(new Card(27, "Arwen", 2, 1, 3, 4, "Al ser invocada cura 2PV al jugador que la invoco", "Curandera", "", 0));
+        cardList.Add(new Card(22, "Lyriel", 2, 4, 2, 3, "Puede atacar directamente al rival", "Chronos", "Pícara", 0));
+        cardList.Add(new Card(23, "Sol", 3, 2, 1, 12, "Por cada punto de vida que le falte aumenta su ataque en 1", "Chronos", "Luchador", 0));
+        cardList.Add(new Card(24, "Zolbo", 1, 1, 1, 4, "Restaura la vida al completo de cualquier elegido", "Chronos", "Curandero", 0));
+        cardList.Add(new Card(25, "Emma", 2, 5, 2, 4, "Si esta en el campo tu rival no te puede atacar directamente", "Chronos", "Mercenaria", 0));
+        cardList.Add(new Card(26, "Leathen", 2, 1, 1, 1, "Al ser invocado toma el control de un elegido rival, al ser destruido devuelve el control del elegido a su propietario", "Chronos", "Bardo", 0));
+        cardList.Add(new Card(27, "Arwen", 2, 1, 3, 4, "Al ser invocada cura 2PV al jugador que la invoco", "N", "Curandera", 0));
         
         
 
         // Mundo Antiguo 4 (Siervos Nº)
-        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, "Al ser invocada busca una Nº1 en tu mazo", "N", "", 0));
-        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, "Al ser invocado invoca una ficha Chakal 5/1/2", "N", "", 0));
-        cardList.Add(new Card(30, "Elcrieri", 9, 8, 2, 6, "Cada vez que ataque roba una carta", "N", "", 0));
-        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, "Al ser invocado coloca en posición de ataque un elegido en defensa", "N", "", 0));
-        cardList.Add(new Card(32, "Dahila", 3, 4, 0, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "N", "", 0));
-        cardList.Add(new Card(33, "Celine", 5, 4, 4, 6, "Cuando esta carta esta en el campo todos los elegidos que entren reciben 1 de daño excetpo si esto los mata", "N", "", 0));
-        cardList.Add(new Card(34, "Gumi", 4, 1, 4, 10, "Si el jugador rival recibe daño aumenta el ataque de esta carta en esa cantidad hasta el final de ese turno", "N", "", 0));
-        cardList.Add(new Card(35, "Amaro", 1, 5, 0, 1, "Al ser invocado destruye un elegido con 0 de defensa, si no puede esta carta es destruida", "N", "", 0));
-        cardList.Add(new Card(36, "Íñigo", 2, 3, 2, 3, "Si un elejido pasa de defensa a ataque reduce el ataque de este a la mitad", "N", "", 0));
-        cardList.Add(new Card(37, "Aul", 10, 10, 4, 10, "Si dos o mas elegidos son destruidos por el efecto de una carta puedes invocarla gratuitamente", "N", "", 0));
-        cardList.Add(new Card(38, "Olivia", 8, 0, 10, 10, "Puedes destruir una carta mágica o trampa, si lo haces tus elegidos que ya han atacado lo pueden volver a hacer", "N", "", 0));
-        cardList.Add(new Card(39, "Céfiro", 6, 6, 6, 6, "No puede ser destruido por efectos de elegidos", "N", "", 0));
+        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, "Al ser invocada busca una Nº1 en tu mazo", "Chronos", "", 0));
+        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, "Al ser invocado invoca una ficha Chakal 5/1/2", "Chronos", "", 0));
+        cardList.Add(new Card(30, "Elcrieri", 9, 8, 2, 6, "Cada vez que ataque roba una carta", "Chronos", "", 0));
+        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, "Al ser invocado coloca en posición de ataque un elegido en defensa", "Chronos", "", 0));
+        cardList.Add(new Card(32, "Dahila", 3, 4, 0, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "Chronos", "", 0));
+        cardList.Add(new Card(33, "Celine", 5, 4, 4, 6, "Mientras esta en el campo en posicion deataque todos los elegidos invocados reciben 1 de daño excetpo si esto los mata", "Chronos", "", 0));
+        cardList.Add(new Card(34, "Gumi", 4, 1, 4, 10, "Si el jugador rival recibe daño aumenta el ataque de esta carta en esa cantidad hasta el final de ese turno", "Chronos", "", 0));
+        cardList.Add(new Card(35, "Amaro", 1, 5, 0, 1, "Al ser invocado destruye un elegido con 0 de defensa, si no puede esta carta es destruida", "Chronos", "", 0));
+        cardList.Add(new Card(36, "Íñigo", 2, 3, 2, 3, "Si un elejido pasa de defensa a ataque reduce el ataque de este a la mitad", "Chronos", "", 0));
+        cardList.Add(new Card(37, "Aul", 10, 10, 4, 10, "Si dos o mas elegidos son destruidos por el efecto de una carta puedes invocarla gratuitamente", "Chronos", "", 0));
+        cardList.Add(new Card(38, "Olivia", 8, 0, 10, 10, "Puedes destruir una carta mágica o trampa, si lo haces tus elegidos que ya han atacado lo pueden volver a hacer", "Chronos", "", 0));
+        cardList.Add(new Card(39, "Céfiro", 6, 6, 6, 6, "No puede ser destruido por efectos de elegidos", "Chronos", "", 0));
 
         // Mundo Antiguo 5
-        cardList.Add(new Card(40, "Rana Mercante", 1, 0, 0, 1, "Una vez por ronda puedes descartar 2 cartas para robar 1", "none", "Mercader", 0));
+        cardList.Add(new Card(40, "Rana Mercante", 1, 0, 0, 1, "Una vez por ronda puedes descartar 2 cartas para robar 1", "Dana", "Mercader", 0));
         
         cardList.Add(new Card(41, "Reglas antiguas", 2, 0, 0, 0, "Elimina todos los manas de los dioses", "Mágica", "", 0));
         cardList.Add(new Card(42, "Último recurso", 0, 0, 0, 0, "Si tu vida es 1, obten 20 de mana", "Mágica", "", 0));
@@ -89,10 +89,10 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(56, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ataque, cuando es el turno del rival reducelo a la mitad", "Miknit", "Artificiero", 0));
         cardList.Add(new Card(57, "Valette Bleck", 4, 5, 2, 2, "Al ser invocada roba una carta de equipo, puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0));
         cardList.Add(new Card(58, "Nara", 3, 1, 2, 8, "Puede tener hasta 8 cartas equipadas", "Dana", "Mercenaria", 0));
-        cardList.Add(new Card(59, "B.S.B-G.A.P-103", 8, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "N", "Robot", 0));
+        cardList.Add(new Card(59, "B.S.B-G.A.P-103", 8, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "Murgu", "Robot", 0));
 
         cardList.Add(new Card(60, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Equipo", "", 0));
-        cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, cuando esta carta es destruida invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Equipo", "", 0));
+        cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, cuando esta carta es destruida invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Equipo", "Dana", 0));
         cardList.Add(new Card(62, "Pistola Bleck", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Equipo", "", 0));
         cardList.Add(new Card(63, "Rifle Keiser", 3, 0, 0, 0, "Aumenta en 1 el ataque, si esta carta es enviada al cementerio destruye un elegido", "Equipo", "", 0));
         cardList.Add(new Card(64, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Equipo", "", 0));
@@ -138,7 +138,7 @@ public class CardDatabase : MonoBehaviour
 
         cardList.Add(new Card(92, "Myura", 10, 8, 4, 7, "Cuando es inovada limita las zonas de elegidos y cartas especiales a 4, si tu oponente tiene las dos zonas al completo puedes invocar esta carta de la mano", "Miknit", "Hechicera", 0));
         cardList.Add(new Card(93, "Etrian", 10, 8, 10, 8, "Invoca tantos elegidos de coste 1 como mana de Miknit tengas, gasta todo el mana de Miknit", "Miknit", "Guerrero", 0));
-        cardList.Add(new Card(94, "Klio", 10, 10, 8, 8, "Invoca todos los elegidos de tu mano, cuando vayan a ser destruidos destierralos", "Miknit", "Mercenario", 0));
+        cardList.Add(new Card(94, "Klio", 10, 10, 8, 8, "Invoca todos los elegidos de tu mano, cuando vayan a ser enviados al cementerio destierralos", "Miknit", "Mercenario", 0));
         cardList.Add(new Card(95, "Elfraim", 1, 1, 1, 1, "Cuando es invocado copia el efecto de un elegido en el campo", "Miknit", "Explorador", 0));
         cardList.Add(new Card(96, "Fath", 4, 2, 5, 3, "No es afectado por efectos de otros elegidos, si un elegido que controles fuera a ser destruido puedes elegir destruir a este en su lugar", "Miknit", "Guerrero", 0));
         cardList.Add(new Card(97, "Momo", 4, 2, 3, 5, "Cuando es invocada invoca desde el deck un elegido de coste 1", "Miknit", "Invocadora", 0));
@@ -169,18 +169,32 @@ public class CardDatabase : MonoBehaviour
 
         // Sobre Colaboraciones Radiantes
         cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0));
-        cardList.Add(new Card(110, "Yu", 0, 0, 0, 2, "Tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "", 0));
-
+        cardList.Add(new Card(110, "Yu", 1, 1, 0, 2, "Tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0));
+        cardList.Add(new Card(110, "Togha", 4, 3, 2, 3, "Devuelve una carta mágica del cementerio al deck, roba una con un nombre distinto", "N", "Hechicero", 0));
 
         // Sobre de Magia para novatos y no tan novatos
-        cardList.Add(new Card(111, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario del deck, si su coste es 1 invocalo de forma especial", "Mágica", "", 0));
+        cardList.Add(new Card(111, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "N", 0));
+        cardList.Add(new Card(19, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "N", 0));
+        cardList.Add(new Card(19, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario del deck, si su coste es 1 invocalo de forma especial", "Mágica", "N", 0));
         cardList.Add(new Card(19, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros del deck,mano o zona de destierros", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "N", 0));
         cardList.Add(new Card(19, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al deck", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al deck", "Mágica", "N", 0));
         cardList.Add(new Card(19, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Mágica", "", 0));
+        cardList.Add(new Card(19, "Hacer añicos", 2, 0, 0, 0, "Inflije 1 de hp a un elegido, si tiene una carta de equipo destruyela", "Mágica", "N", 0));
+        cardList.Add(new Card(111, "Jarron Avaricioso", 2, 0, 0, 0, "Roba dos cartas", "Mágica", "N", 0));
+        cardList.Add(new Card(111, "Jarron Generoso", 2, 0, 0, 0, "Descarta dos cartas", "Mágica", "N", 0));
+        cardList.Add(new Card(111, "Agujero de Gusano", 10, 0, 0, 0, "Destierra todos los monstruos en el campo, después ambos jugadores invocan tantos monstruos del cementerio como puedan", "Mágica", "N", 0));
+        cardList.Add(new Card(111, "Lluvia de meteroros", 9, 0, 0, 0, "Destruye todos los monstruos de tu oponente", "Mágica", "", 0));
+        cardList.Add(new Card(111, "Curar heridas", 1, 0, 0, 0, "Recupera 5LP", "Mágica", "Dana", 0));
+        
+
+        cardList.Add(new Card(111, "Armadura de Magia", 2, 0, 0, 0, "Aumenta en 2 la defensa de un hechicero", "Equipo", "", 0));
+        cardList.Add(new Card(111, "Arma de luz", 1, 0, 0, 0, "Aumenta en 2 el ataque de un curandero", "Equipo", "", 0));
+        
+
+        cardList.Add(new Card(111, "Curar heridas graves", 5, 0, 0, 0, "Si tus LP disminuyen de 10 curate 20LP", "Trampa", "", 0));
+        cardList.Add(new Card(111, "Ida y vuelta", 2, 0, 0, 0, "Después de que uno de tus elegidos ataque, devuelvelo a la mano e invoca de esta un elegido con el mismo coste o menor", "Trampa", "N", 0));
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
         cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "Cuando esta carta es invocada destierra todas las cartas Nº aumenta en 1 su vida por cada una", "N", "Invocadora", 0));

@@ -101,4 +101,19 @@ public class PlayerDeck : MonoBehaviour
         }
         
     }
+
+    private void DrawCard()
+    {
+        
+    }
+
+    private void ReturnCard()
+    {
+
+    }
+
+    private void SearchCards()
+    {
+
+    }
 }

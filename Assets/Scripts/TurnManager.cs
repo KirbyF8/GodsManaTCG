@@ -13,7 +13,7 @@ public class TurnManager : MonoBehaviour
     public int maxManaYou = 0;
     public int yourActualMana = 0;
     public int maxManaRival = 0;
-    public int RivalActualMana;
+    public int rivalActualMana;
 
     private string normalMana = "N";
 
@@ -56,15 +56,23 @@ public class TurnManager : MonoBehaviour
         {
             if (yourTurns == 0 && rivalTurns == 0)
             {
-
                 maxManaYou++;
+                if (maxManaYou >= 10)
+                {
+                    maxManaYou = 10;
+                }
+                
                 yourActualMana = maxManaYou;
                 ManaChanges("N", 0, isYourTurn);
+                ManaChanges("N", 1, isYourTurn);
                 yourTurns++;
             }
             else
             {
-
+                if (maxManaYou >= 10)
+                {
+                    maxManaYou = 10;
+                }
                 maxManaYou++;
                 yourActualMana = maxManaYou;
                 //! draw card
@@ -77,15 +85,24 @@ public class TurnManager : MonoBehaviour
             if (rivalTurns == 0 && yourTurns == 0)
             {
                 isYourTurn = false;
-                maxManaYou++;
-                yourActualMana = maxManaYou;
+                maxManaRival++;
+                if (maxManaRival >= 10)
+                {
+                    maxManaRival = 10;
+                }
+
+                rivalActualMana = maxManaRival;
                 rivalTurns++;
             }
             else
             {
                 isYourTurn = false;
-                maxManaYou++;
-                yourActualMana = maxManaYou;
+                maxManaRival++;
+                if (maxManaRival >= 10)
+                {
+                    maxManaRival = 10;
+                }
+                rivalActualMana = maxManaRival;
                 //! draw card
                 rivalTurns++;
             }
@@ -95,7 +112,10 @@ public class TurnManager : MonoBehaviour
 
     private void TurnSelect()
     {
-        int coin = Random.Range(0, 2);
+
+        int coin = 0; 
+        // int coin = Random.Range(0, 2);
+       
         if (coin == 0)
         {
             isYourTurn = true;
@@ -132,7 +152,7 @@ public class TurnManager : MonoBehaviour
     {
         int aux;
         int aux2;
-        Image[] auxImg;
+        
         if (turn)
         {
             aux = maxManaYou;
@@ -145,44 +165,56 @@ public class TurnManager : MonoBehaviour
             aux2 = yourActualMana;
             
         }
-        
 
+
+
+
+
+        aux = aux - 1;
         if (operation == 0)
         {
+            
+           
             if (god == "N")
             {
-                Manas[aux--].sprite = ManaN;
+                Manas[aux].sprite = ManaN;
             }
             else if (god == "Dana")
             {
-                Manas[aux--].sprite = ManaDana;
+                Manas[aux].sprite = ManaDana;
             }
             else if (god == "Etse")
             {
-                Manas[aux--].sprite = ManaEtse;
+                Manas[aux].sprite = ManaEtse;
             }
             else if (god == "Miknit")
             {
-                Manas[aux--].sprite = ManaMiknit;
+                Manas[aux].sprite = ManaMiknit;
             }
             else if (god == "Chronos")
             {
-                Manas[aux--].sprite = ManaChronos;
+                Manas[aux].sprite = ManaChronos;
             }
             else if (god == "Murgu")
             {
-                Manas[aux--].sprite = ManaMurgu;
+                Manas[aux].sprite = ManaMurgu;
             }
             else if (god == "Yrys")
             {
-                Manas[aux--].sprite = ManaYrys;
+                Manas[aux].sprite = ManaYrys;
             }
+
+            return;
         }
 
         if (operation == 1)
         {
-            for (int i = 0; i < aux; i++)
+            
+            
+            for (int i = 0; i <= aux; i++)
             {
+
+               
                 if (Manas[i].sprite.name == "ManaDeDana_Agotado")
                 {
                     Manas[i].sprite = ManaDana;
@@ -211,7 +243,8 @@ public class TurnManager : MonoBehaviour
                 {
                     Manas[i].sprite = ManaN;
                 }
-            } 
+            }
+            return;
         }
 
         if (operation == 2)
@@ -223,6 +256,7 @@ public class TurnManager : MonoBehaviour
             {
                 rivalSpendManas(god, aux2,ref RivalManas);
             }
+            return;
           }
 }
     private void yourSpendManas(string god,int aux2,ref Image[] Manas)
