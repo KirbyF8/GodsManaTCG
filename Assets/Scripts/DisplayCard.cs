@@ -71,19 +71,29 @@ public class DisplayCard : MonoBehaviour
     [SerializeField] private Sprite Txt_Chronos;
     [SerializeField] private Sprite Txt_Miknit;
 
+    private GameAssets gameAssets;
 
     private Sprite[] cardImgs;
 
 
     void Start()
     {
-        cardImgs = Resources.LoadAll<Sprite>("Images");
+
+        isFlipped = true;
+
+        gameAssets = FindAnyObjectByType<GameAssets>();
+
+        cardImgs = gameAssets.cardImgs;
 
         displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
+        
 
         
+        
     }
+
+    
 
 
     void SetCard()
@@ -109,7 +119,7 @@ public class DisplayCard : MonoBehaviour
         
         if (cardImgs.Length >= cardId - 1)
         {
-            cardImg.sprite = cardImgs[displayId - 1];
+            cardImg.sprite = cardImgs[cardId - 1];
 
         }
         else

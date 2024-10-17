@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225511385598018576, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
       propertyPath: m_Name
-      value: Card Variant
+      value: CardInHand
       objectReference: {fileID: 0}
     - target: {fileID: 1353039486317949376, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
       propertyPath: m_Pivot.x
@@ -106,6 +106,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353039486317949376, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749273490240525722, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
