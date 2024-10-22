@@ -116,7 +116,7 @@ public class DisplayCard : MonoBehaviour
         descriptionText.text = cardDescription;
         cardText.text = "" + cardClass;
 
-        
+        /*
         if (cardImgs.Length >= cardId - 1)
         {
             cardImg.sprite = cardImgs[cardId - 1];
@@ -125,8 +125,8 @@ public class DisplayCard : MonoBehaviour
         else
         {
             Debug.Log(cardImgs.Length);
-        }
-
+        }*/
+        
 
 
         if (cardType == "Miknit")
@@ -191,5 +191,9 @@ public class DisplayCard : MonoBehaviour
         }
     }
 
-
+    public void updateDisplay(int Id)
+    {
+        displayId = Id;
+        SetCard();
+    }
 }

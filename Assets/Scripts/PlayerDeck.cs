@@ -21,6 +21,9 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardInDeck5;
     public GameObject cardInDeck6;
 
+    [SerializeField] GameObject Hand;
+    [SerializeField] GameObject Card;
+
     void Start()
     {
         for (int i = 0; i <= deckSize-1;  i++)
@@ -30,6 +33,12 @@ public class PlayerDeck : MonoBehaviour
         }
 
         DeckChanges();
+        
+        for (int i = 1; i < 5; i++)
+        {
+            DrawCard(i);
+        }
+        
        
     }
 
@@ -102,8 +111,18 @@ public class PlayerDeck : MonoBehaviour
         
     }
 
-    private void DrawCard()
+    private void DrawCard(int cardId)
     {
+       GameObject CardInHand = Instantiate(Card,new Vector3(0,0,0), Quaternion.identity);
+        CardInHand.transform.SetParent(Hand.transform);
+        DisplayCard displayCard;
+        displayCard = CardInHand.GetComponent<DisplayCard>();
+
+
+        int lastCard = deck.Count;
+        displayCard.updateDisplay(deck[cardId].cardId);
+        
+
         
     }
 
