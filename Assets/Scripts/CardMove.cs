@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class CardMove : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] Selectable selectable;
     void Start()
     {
         
@@ -15,4 +18,6 @@ public class CardMove : MonoBehaviour
     {
         
     }
+
+   
 }

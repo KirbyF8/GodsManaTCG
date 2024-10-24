@@ -41,13 +41,39 @@ public class TurnManager : MonoBehaviour
     [SerializeField] Image[] Manas;
     [SerializeField] Image[] RivalManas;
 
-
+    [SerializeField] PlayerDeck playerDeck;
+    [SerializeField] PlayerDeck rivalDeck;
 
     private void Start()
     {
+        
         TurnSelect();
-        // !Draw 6 cards
+        FirstDraw();
         StartTurn();
+        
+    }
+
+    
+
+    public void DrawCard()
+    {
+        if (isYourTurn)
+        {
+            playerDeck.CallDraw(1);
+            return;
+        }
+        else if (!isYourTurn)
+        {
+            rivalDeck.CallDraw(1);
+            return;
+        }
+
+    }
+
+    private void FirstDraw()
+    {
+        playerDeck.CallDraw(6);
+        rivalDeck.CallDraw(6);
     }
 
     private void StartTurn()
@@ -75,7 +101,7 @@ public class TurnManager : MonoBehaviour
                 }
                 maxManaYou++;
                 yourActualMana = maxManaYou;
-                //! draw card
+                DrawCard();
                 yourTurns++;
             }
         }
@@ -103,7 +129,7 @@ public class TurnManager : MonoBehaviour
                     maxManaRival = 10;
                 }
                 rivalActualMana = maxManaRival;
-                //! draw card
+                DrawCard();
                 rivalTurns++;
             }
         }
