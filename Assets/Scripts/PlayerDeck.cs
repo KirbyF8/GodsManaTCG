@@ -55,6 +55,7 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 1; i < (numberOfDrawCards+1); i++)
         {
             DrawCard(i);
+            DeckChanges();
         }
     }
 
@@ -75,7 +76,7 @@ public class PlayerDeck : MonoBehaviour
 
     private void DeckChanges()
     {
-        if (deckSize < 51)
+        if (deck.Count < 51)
         {
             cardInDeck1.SetActive(false);
         } else if (deckSize > 51)
@@ -84,7 +85,7 @@ public class PlayerDeck : MonoBehaviour
             return;
         }
         
-        if (deckSize < 41)
+        if (deck.Count < 41)
         {
             cardInDeck2.SetActive(false);
         }else if (deckSize > 41)
@@ -92,7 +93,7 @@ public class PlayerDeck : MonoBehaviour
             cardInDeck2.SetActive(true) ;
             return;
         }
-        if (deckSize < 31)
+        if (deck.Count < 31)
         {
             cardInDeck3.SetActive(false);
         } else if (deckSize > 31)
@@ -101,7 +102,7 @@ public class PlayerDeck : MonoBehaviour
             return;
         }
 
-        if (deckSize < 21)
+        if (deck.Count < 21)
         {
             cardInDeck4.SetActive(false);
         } else if (deckSize > 21)
@@ -109,7 +110,7 @@ public class PlayerDeck : MonoBehaviour
             cardInDeck4.SetActive(true) ;
             return;
         }
-        if (deckSize < 11)
+        if (deck.Count < 11)
         {
             cardInDeck5.SetActive(false);
         } else if (deckSize > 11)
@@ -117,10 +118,10 @@ public class PlayerDeck : MonoBehaviour
             cardInDeck5.SetActive(true) ;
             return;
         }
-        if (deckSize < 1)
+        if (deck.Count < 1)
         {
             cardInDeck6.SetActive(false);
-        }else if (deckSize > 1)
+        }else if (deck.Count > 1)
         {
             cardInDeck6.SetActive(true) ;
             return;
@@ -436,7 +437,7 @@ public class PlayerDeck : MonoBehaviour
         if (!turnManager.checkMana(card.cardType, card.cardCost))
         {
             return;
-            //? HACER MAS TARDE
+            
         }
 
        
