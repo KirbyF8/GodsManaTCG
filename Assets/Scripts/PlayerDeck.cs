@@ -27,9 +27,12 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardInDeck6;
 
     [SerializeField] GameObject Hand;
+    [SerializeField] GameObject Field;
     [SerializeField] GameObject Card;
 
     [SerializeField] TurnManager turnManager;
+
+    private bool canDestroy = false;
 
     void Start()
     {
@@ -420,5 +423,68 @@ public class PlayerDeck : MonoBehaviour
 
 
         return returnCards;
+    }
+
+    public void canPlayCard(Card card)
+    {
+        if (field.Count >= 6)
+        {
+            return;
+        }
+
+        
+        if (!turnManager.checkMana(card.cardType, card.cardCost))
+        {
+            return;
+            //? HACER MAS TARDE
+        }
+
+       
+        for (int i = 0; i < hand.Count; i++)
+        {
+            if (hand[i] == card)
+            {
+                canDestroy = true;
+                PlayCard(card);
+
+
+            }
+        }
+
+       
+        return;
+    }
+
+    public void PlayCard(Card card)
+    {
+
+
+            GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
+            CardInHand.transform.SetParent(Field.transform);
+            DisplayCard displayCard;
+            displayCard = CardInHand.GetComponent<DisplayCard>();
+
+
+            
+            displayCard.updateDisplay(card.cardId);
+            field.Add(card);
+            hand.Remove(card);
+          
+        
+    }
+
+    public bool ConfirmDestruction()
+    {
+
+        if (canDestroy)
+        {
+            canDestroy = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 }

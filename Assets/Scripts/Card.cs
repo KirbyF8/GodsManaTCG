@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+
 [System.Serializable]
 public class Card 
 {
@@ -16,7 +19,7 @@ public class Card
 
     public string cardClass;
 
-
+   
     // Extra info
     public int cardRarity;
 
@@ -42,5 +45,6 @@ public class Card
 
     }
 
+    
 
 }

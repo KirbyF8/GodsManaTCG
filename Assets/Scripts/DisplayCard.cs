@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DisplayCard : MonoBehaviour
+public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 {
     public List<Card> displayCard = new List<Card>();
     public int displayId;
@@ -75,6 +76,11 @@ public class DisplayCard : MonoBehaviour
 
     private Sprite[] cardImgs;
 
+    private PlayerDeck playerDeck;
+
+    private Card thisCard;
+
+    [SerializeField] Selectable selectable;
 
     void Start()
     {
@@ -82,18 +88,19 @@ public class DisplayCard : MonoBehaviour
         isFlipped = true;
 
         gameAssets = FindAnyObjectByType<GameAssets>();
+        playerDeck = FindAnyObjectByType<PlayerDeck>();
 
         cardImgs = gameAssets.cardImgs;
 
         displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
         
-
+        thisCard = displayCard[0];
         
         
     }
 
-    
+ 
 
 
     void SetCard()
@@ -196,4 +203,25 @@ public class DisplayCard : MonoBehaviour
         displayId = Id;
         SetCard();
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        
+        playerDeck.canPlayCard(thisCard);
+        Destruction();
+
+
+
+    }
+
+    public void Destruction()
+    {
+        if (playerDeck.ConfirmDestruction())
+        {
+            Destroy(gameObject, 1f);
+        }
+        
+    }
+
+
 }

@@ -343,10 +343,10 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1 &116906310
 GameObject:
@@ -2517,6 +2517,7 @@ MonoBehaviour:
   cardInDeck5: {fileID: 498216565}
   cardInDeck6: {fileID: 1711113770}
   Hand: {fileID: 1374935952}
+  Field: {fileID: 374400862}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
 --- !u!1 &657917041
@@ -3266,7 +3267,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_Spacing: -100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -4072,6 +4073,7 @@ MonoBehaviour:
   cardInDeck5: {fileID: 264103799}
   cardInDeck6: {fileID: 551060742}
   Hand: {fileID: 742449902}
+  Field: {fileID: 83154056}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
 --- !u!114 &929984834
@@ -4485,7 +4487,7 @@ RectTransform:
   - {fileID: 1445472133}
   - {fileID: 1967202698}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2, y: 0, z: -0.007}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -5116,7 +5118,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 7
   m_Spacing: -100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -7548,6 +7550,10 @@ PrefabInstance:
       propertyPath: gameAssets
       value: 
       objectReference: {fileID: 1754585360}
+    - target: {fileID: 8597039006825536336, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
+      propertyPath: selectable
+      value: 
+      objectReference: {fileID: 1942163882}
     - target: {fileID: 8597039006825536336, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
       propertyPath: displayCard.Array.size
       value: 1

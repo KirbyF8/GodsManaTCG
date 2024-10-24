@@ -139,10 +139,10 @@ public class TurnManager : MonoBehaviour
     private void TurnSelect()
     {
 
-        int coin = 0; 
+        int coin = 1; 
         // int coin = Random.Range(0, 2);
        
-        if (coin == 0)
+        if (coin == 1)
         {
             isYourTurn = true;
 
@@ -174,7 +174,7 @@ public class TurnManager : MonoBehaviour
     // !0 Add new mana
     //? 1 Restore Mana
     //! 2 Spend Mana
-    public void ManaChanges(string god, int operation, bool turn)
+    public void ManaChanges(string god, int operation, bool turn, int manaSpent = 0)
     {
         int aux;
         int aux2;
@@ -277,9 +277,11 @@ public class TurnManager : MonoBehaviour
         {
            if (turn)
             {
+                yourActualMana -= manaSpent;
                 yourSpendManas(god, aux2,ref Manas);
             }else if (!turn)
             {
+                rivalActualMana -= manaSpent;
                 rivalSpendManas(god, aux2,ref RivalManas);
             }
             return;
@@ -347,6 +349,32 @@ public class TurnManager : MonoBehaviour
         {
             RivalManas[aux2--].sprite = ManaYrys_Spent;
         }
+    }
+
+    public bool checkMana(string god, int cardCost)
+    {
+        if (isYourTurn) 
+        {
+            if (cardCost <= yourActualMana)
+            {
+                yourSpendManas(god, yourActualMana, ref Manas);
+                yourActualMana -= cardCost;
+                return true;
+            }
+
+        }
+        else if (!isYourTurn)
+        {
+            if (cardCost <= rivalActualMana)
+            {
+                rivalActualMana -= cardCost;
+                return true;
+            }
+        }
+        
+
+        
+        return false;
     }
 
 
