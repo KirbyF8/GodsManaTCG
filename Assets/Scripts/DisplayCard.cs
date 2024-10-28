@@ -82,6 +82,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     [SerializeField] Selectable selectable;
 
+    private int whereIAm;
     void Start()
     {
 
@@ -201,12 +202,17 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     public void updateDisplay(int Id)
     {
         displayId = Id;
+        displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        
+        if (whereIAm == 0)
+        {
+
+            return;
+        }
         playerDeck.canPlayCard(thisCard);
         Destruction();
 
@@ -223,5 +229,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         
     }
 
+    //? 0 Deck Creator
+    //? 1 Hand
+    //? 2 Field
+    public void WhereIAm(int aux)
+    {
+        whereIAm = aux;
+    }
 
 }

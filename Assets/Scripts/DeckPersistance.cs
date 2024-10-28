@@ -13,15 +13,6 @@ public class DeckPersistance : MonoBehaviour
     private int cardOnDeckId;
  
 
-   public void AddToDeck(int cardSelectedId)
-    {
-        cardOnDeckList.Add(cardSelectedId);
-    }
-    public void RemoveFromDeck(int cardSelectedId)
-    {
-        cardOnDeckList.Remove(cardSelectedId);
-    }
-
     public void SaveDeck()
     {
 
@@ -29,6 +20,6 @@ public class DeckPersistance : MonoBehaviour
 
     public void DeleteDeck()
     {
-        cardOnDeckList.Clear();
+       
     }
 }
