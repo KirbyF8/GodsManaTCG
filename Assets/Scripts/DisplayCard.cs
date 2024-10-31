@@ -212,6 +212,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         {
 
             return;
+        }else if (whereIAm == 3)
+        {
+            Next();
+            return;
         }
         playerDeck.canPlayCard(thisCard);
         Destruction();
@@ -229,9 +233,15 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         
     }
 
+    private void Next()
+    {
+        Destroy(gameObject, 2f);
+    }
+
     //? 0 Deck Creator
     //? 1 Hand
     //? 2 Field
+    //? 3 Shoped
     public void WhereIAm(int aux)
     {
         whereIAm = aux;

@@ -162,40 +162,40 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(107, "Keon", 3, 2, 10, 6, "Mientras esta carta este en posición de defensa los elegidos enemigos tienen que atacarla", "Miknit", "Guerrero", 0));
         cardList.Add(new Card(108, "Socram", 10, 6, 1, 25, "Recupera toda su vida cuando un elegido de Miknit es destruido", "Miknit", "Barbaro", 0));
         cardList.Add(new Card(109, "Yro", 1, 3, 1, 1, "  <sprite name=AlSerInvocado> si tienes 2 o mas mana de Miknit destruye un elegido en el campo de tu adversario", "Miknit", "Hechicero", 0));
-        cardList.Add(new Card(109, "Lime", 5, 7, 6, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbara", 0));
-        cardList.Add(new Card(109, "Yawaraki", 5, 6, 7, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbaro", 0));
-        cardList.Add(new Card(109, "Aki", 2, 3, 1, 2, "  <sprite name=AlSerInvocado> invoca en el campo del rival Enredaderas 0/5/5 en defensa", "Miknit", "Exploradora", 0));
-        cardList.Add(new Card(107, "Sai", 5, 7, 2, 3, "Puedes invocar esta carta en el campo del rival destruyendo uno de sus monstruos", "Miknit", "Pícaro", 0));
+        cardList.Add(new Card(110, "Lime", 5, 7, 6, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbara", 0));
+        cardList.Add(new Card(111, "Yawaraki", 5, 6, 7, 1, "Esta carta no puede ser destruida en batalla", "Miknit", "Bárbaro", 0));
+        cardList.Add(new Card(112, "Aki", 2, 3, 1, 2, "  <sprite name=AlSerInvocado> invoca en el campo del rival Enredaderas 0/5/5 en defensa", "Miknit", "Exploradora", 0));
+        cardList.Add(new Card(113, "Sai", 5, 7, 2, 3, "Puedes invocar esta carta en el campo del rival destruyendo uno de sus monstruos", "Miknit", "Pícaro", 0));
 
         // Sobre Colaboraciones Radiantes
-        cardList.Add(new Card(110, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0));
-        cardList.Add(new Card(110, "Yu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0));
-        cardList.Add(new Card(110, "Togha", 4, 3, 2, 3, "Una vez por turno devuelve una carta mágica del cementerio al  <sprite name=Deck>, roba una con un nombre distinto", "N", "Hechicero", 0));
-        cardList.Add(new Card(110, "Marinette", 3, 4, 4, 2, "Cada vez que destruye un elegido roba una carta", "N", "Robot", 0));
+        cardList.Add(new Card(114, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0));
+        cardList.Add(new Card(115, "Yu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0));
+        cardList.Add(new Card(116, "Togha", 4, 3, 2, 3, "Una vez por turno devuelve una carta mágica del cementerio al  <sprite name=Deck>, roba una con un nombre distinto", "N", "Hechicero", 0));
+        cardList.Add(new Card(117, "Marinette", 3, 4, 4, 2, "Cada vez que destruye un elegido roba una carta", "N", "Robot", 0));
 
         // Sobre de Magia para novatos y no tan novatos
-        cardList.Add(new Card(111, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "N", 0));
-        cardList.Add(new Card(19, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "N", 0));
-        cardList.Add(new Card(19, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario  <sprite name=Deck>, si su coste es 1 invocalo de forma especial", "Mágica", "N", 0));
-        cardList.Add(new Card(19, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros  <sprite name=Deck>,mano o zona de destierros", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "N", 0));
-        cardList.Add(new Card(19, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al  <sprite name=Deck>", "Mágica", "N", 0));
-        cardList.Add(new Card(19, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Hacer añicos", 2, 0, 0, 0, "Inflije 1 de hp a un elegido, si tiene una carta de equipo destruyela", "Mágica", "N", 0));
-        cardList.Add(new Card(111, "Jarron Avaricioso", 2, 0, 0, 0, "Roba dos cartas", "Mágica", "N", 0));
-        cardList.Add(new Card(111, "Jarron Generoso", 2, 0, 0, 0, "Descarta dos cartas", "Mágica", "N", 0));
-        cardList.Add(new Card(111, "Agujero de Gusano", 10, 0, 0, 0, "Destierra todos los monstruos en el campo, después ambos jugadores invocan tantos monstruos del cementerio como puedan", "Mágica", "N", 0));
-        cardList.Add(new Card(111, "Lluvia de meteroros", 9, 0, 0, 0, "Destruye todos los monstruos de tu oponente", "Mágica", "", 0));
-        cardList.Add(new Card(111, "Curar heridas", 1, 0, 0, 0, "Recupera 5LP", "Mágica", "N", 0));
-        cardList.Add(new Card(111, "Sueño", 3, 0, 0, 0, "Cuando un elegido ataque su ataque se vuelve 0", "Trampa", "N", 0));
+        cardList.Add(new Card(118, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "N", 0));
+        cardList.Add(new Card(119, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "N", 0));
+        cardList.Add(new Card(120, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario  <sprite name=Deck>, si su coste es 1 invocalo de forma especial", "Mágica", "N", 0));
+        cardList.Add(new Card(121, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros  <sprite name=Deck>,mano o zona de destierros", "Mágica", "", 0));
+        cardList.Add(new Card(122, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "N", 0));
+        cardList.Add(new Card(123, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
+        cardList.Add(new Card(124, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al  <sprite name=Deck>", "Mágica", "N", 0));
+        cardList.Add(new Card(125, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Mágica", "", 0));
+        cardList.Add(new Card(126, "Hacer añicos", 2, 0, 0, 0, "Inflije 1 de hp a un elegido, si tiene una carta de equipo destruyela", "Mágica", "N", 0));
+        cardList.Add(new Card(127, "Jarron Avaricioso", 2, 0, 0, 0, "Roba dos cartas", "Mágica", "N", 0));
+        cardList.Add(new Card(128, "Jarron Generoso", 2, 0, 0, 0, "Descarta dos cartas", "Mágica", "N", 0));
+        cardList.Add(new Card(129, "Agujero de Gusano", 10, 0, 0, 0, "Destierra todos los monstruos en el campo, después ambos jugadores invocan tantos monstruos del cementerio como puedan", "Mágica", "N", 0));
+        cardList.Add(new Card(130, "Lluvia de meteroros", 9, 0, 0, 0, "Destruye todos los monstruos de tu oponente", "Mágica", "", 0));
+        cardList.Add(new Card(131, "Curar heridas", 1, 0, 0, 0, "Recupera 5LP", "Mágica", "N", 0));
+        cardList.Add(new Card(132, "Sueño", 3, 0, 0, 0, "Cuando un elegido ataque su ataque se vuelve 0", "Trampa", "N", 0));
 
-        cardList.Add(new Card(111, "Armadura de Magia", 2, 0, 0, 0, "Aumenta en 2 la defensa de un hechicero", "Equipo", "", 0));
-        cardList.Add(new Card(111, "Arma de luz", 1, 0, 0, 0, "Aumenta en 2 el ataque de un curandero", "Equipo", "", 0));
+        cardList.Add(new Card(133, "Armadura de Magia", 2, 0, 0, 0, "Aumenta en 2 la defensa de un hechicero", "Equipo", "", 0));
+        cardList.Add(new Card(134, "Arma de luz", 1, 0, 0, 0, "Aumenta en 2 el ataque de un curandero", "Equipo", "", 0));
         
 
-        cardList.Add(new Card(111, "Curar heridas graves", 5, 0, 0, 0, "Si tus LP disminuyen de 10 curate 20LP", "Trampa", "", 0));
-        cardList.Add(new Card(111, "Ida y vuelta", 2, 0, 0, 0, "Después de que uno de tus elegidos <sprite name=AlAtacar>, devuelvelo a la mano e invoca de esta un elegido con el mismo coste o menor", "Trampa", "N", 0));
+        cardList.Add(new Card(135, "Curar heridas graves", 5, 0, 0, 0, "Si tus LP disminuyen de 10 curate 20LP", "Trampa", "", 0));
+        cardList.Add(new Card(136, "Ida y vuelta", 2, 0, 0, 0, "Después de que uno de tus elegidos <sprite name=AlAtacar>, devuelvelo a la mano e invoca de esta un elegido con el mismo coste o menor", "Trampa", "N", 0));
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
         cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "<sprite name=AlSerInvocado> destierra todas las cartas Nº en el cementerio aumenta en 1 su vida por cada una", "N", "Invocadora", 0));
