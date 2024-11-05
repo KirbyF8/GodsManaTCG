@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DeckCreator : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class DeckCreator : MonoBehaviour
     private const int maxPages = 20;
 
     [SerializeField] DisplayCard[] cards;
-   
+    [SerializeField] private TextMeshProUGUI[] text;
+    [SerializeField] DeckPersistance deckPersistance;
+
+    private Card auxCard;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +50,8 @@ public class DeckCreator : MonoBehaviour
                 {
                     int aux1 = cards[i].displayId -= 6;
                     cards[i].updateDisplay(aux1);
-
+                    
+                    text[i].text = "X" + deckPersistance.NumberOfCards(cards[i].returnCard()).ToString();
                 }
                 
             }
@@ -66,6 +71,8 @@ public class DeckCreator : MonoBehaviour
                     
                     int aux2 = cards[i].displayId += 6;
                     cards[i].updateDisplay(aux2);
+
+                    text[i].text = "X" + deckPersistance.NumberOfCards(cards[i].returnCard()).ToString();
                 }
 
             }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
-    private int coins;
+    private int coins = 10000;
     [SerializeField] private Sprite[] boosterPacksSprites;
     [SerializeField] private int[] prices;
     [SerializeField] private string[] boosterPacksNames;
@@ -27,10 +27,15 @@ public class ShopUI : MonoBehaviour
 
    [SerializeField] private DisplayCard[] cardsInBooster;
 
+    [SerializeField] private TextMeshProUGUI actualCoins;
+
+    [SerializeField] private GameObject Hider;
+
     private string buyedBoosterPack;
  
     void Start()
     {
+        UpdateCoins();
         SetImages(boosterHint);
     }
 
@@ -40,9 +45,9 @@ public class ShopUI : MonoBehaviour
         
     }
 
-    private void LoadCoins()
+    private void UpdateCoins()
     {
-
+        actualCoins.text = "Gold: " + coins.ToString();
     }
     //? 0 <-
     //? 1 ->
@@ -117,38 +122,51 @@ public class ShopUI : MonoBehaviour
     private int second;
     public void BuyPack()
     {
-        panelPack.SetActive(true);
-        buyedBoosterImage.sprite = boosterPacksSprites[boosterHint];
-        buyedBoosterPack = boosterPacksNames[boosterHint];
-        
-        
-      if (buyedBoosterPack == "Mundo Antiguo")
+        if (coins >= prices[boosterHint])
         {
-            first = 1;
-            second = 46;
+
+            coins -= prices[boosterHint];
+            UpdateCoins();
+            panelPack.SetActive(true);
+            buyedBoosterImage.sprite = boosterPacksSprites[boosterHint];
+            buyedBoosterPack = boosterPacksNames[boosterHint];
+
+
+            if (buyedBoosterPack == "Mundo Antiguo")
+            {
+                first = 1;
+                second = 46;
+            }
+            else if (buyedBoosterPack == "Revolucion Steampunk")
+            {
+                first = 46;
+                second = 92;
+            }
+            else if (buyedBoosterPack == "Miknit's Mana War Legacy")
+            {
+                first = 92;
+                second = 114;
+            }
+            else if (buyedBoosterPack == "Colaboraciones Radiantes")
+            {
+                first = 114;
+                second = 118;
+            }
+            else if (buyedBoosterPack == "Magia para novatos y no tan novatos")
+            {
+                first = 118;
+                second = 137;
+            }
+
+
         }
-      else if (buyedBoosterPack == "Revolucion Steampunk")
+        else
         {
-            first = 46;
-            second = 92;
-        }
-      else if (buyedBoosterPack == "Miknit's Mana War Legacy")
-        {
-            first = 92;
-            second = 114;
-        }
-      else if (buyedBoosterPack == "Colaboraciones Radiantes")
-        {
-            first = 114;
-            second = 118;
-        }
-      else if (buyedBoosterPack == "Magia para novatos y no tan novatos")
-        {
-            first = 118;
-            second = 137;
+            //? Sonido
+            return;
         }
 
-       
+
 
     }
 
@@ -163,5 +181,17 @@ public class ShopUI : MonoBehaviour
             cardsInBooster[i].updateDisplay(cardsInBooster[i].displayId);
         }
         buyedBooster.SetActive(false);
+        Hider.SetActive(true);
+    }
+
+    public void returnToShop()
+    {
+        for (int i = 0; i < cardsInBooster.Length; i++)
+        {
+            cardsInBooster[i].faceDown();
+        }
+        panelPack.SetActive(false);
+        buyedBooster.SetActive(true);
+        Hider.SetActive(false);
     }
 }

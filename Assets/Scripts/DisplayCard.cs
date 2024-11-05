@@ -72,6 +72,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private Sprite Txt_Chronos;
     [SerializeField] private Sprite Txt_Miknit;
 
+    // [SerializeField] private GameObject healthPlace;
+    [SerializeField] private GameObject attackAndDefensePlace;
+    [SerializeField] DeckPersistance deckPersistance;
+
     private GameAssets gameAssets;
 
     private Sprite[] cardImgs;
@@ -134,7 +138,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         {
             Debug.Log(cardImgs.Length);
         }*/
-        
+        if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
+        {
+
+            attackAndDefensePlace.SetActive(false);
+            
+        }
+        else
+        {
+            attackAndDefensePlace.SetActive(true);
+        }
 
 
         if (cardType == "Miknit")
@@ -187,16 +200,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     }
 
-    public void faceDown_faceUp()
+    public void faceDown()
     {
-        if (isFlipped)
-        {
-            cardBack.SetActive(false);
-        }
-        else
-        {
-            cardBack.SetActive(true);
-        }
+        
+       cardBack.SetActive(true);
+        
+    }
+
+    public void faceUp()
+    {
+        cardBack.SetActive(false);
     }
 
     public void updateDisplay(int Id)
@@ -235,7 +248,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private void Next()
     {
-        Destroy(gameObject, 2f);
+        deckPersistance.AddSaveCard(thisCard);
+        cardBack.SetActive(false);
     }
 
     //? 0 Deck Creator
@@ -246,5 +260,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     {
         whereIAm = aux;
     }
-
+    Card aux;
+    public Card returnCard()
+    {
+        aux = CardDatabase.cardList[cardId];
+        return aux;
+    }
 }

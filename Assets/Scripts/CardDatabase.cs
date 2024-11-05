@@ -11,11 +11,11 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(0, "none", 0 , 0, 0, 0, "none", "none", "", 0));
 
         // Mundo Antiguo (Antes de los dioses)
-        cardList.Add(new Card(1, "Yumi", 1, 2, 1, 4, "Una aventurera humana olvidada por el mundo", "N", "", 0));
-        cardList.Add(new Card(2, "Lia", 1, 1, 2, 4, "Una aventurera elfa olvidadada por el mundo", "N", "", 0));
-        cardList.Add(new Card(3, "Pipmos", 1, 3, 1, 2, "Un aventurero mediano olvidado por el mundo", "N", "", 0));
-        cardList.Add(new Card(4, "Phaksa", 1, 2, 2, 3, "Una aventurera demi-humana olvidada por el mundo", "N", "", 0));
-        cardList.Add(new Card(5, "Daro", 1, 1, 1, 6, "Un aventurero enano olvidado por el mundo", "N", "", 0));
+        cardList.Add(new Card(1, "Yumi", 1, 2, 1, 4, "Una aventurera humana olvidada por el mundo", "N", "Mercenaria", 0));
+        cardList.Add(new Card(2, "Lia", 1, 1, 2, 4, "Una aventurera elfa olvidadada por el mundo", "N", "Guerrera", 0));
+        cardList.Add(new Card(3, "Pipmos", 1, 3, 1, 2, "Un aventurero mediano olvidado por el mundo", "N", "Bardo", 0));
+        cardList.Add(new Card(4, "Phaksa", 1, 2, 2, 3, "Una aventurera demi-humana olvidada por el mundo", "N", "Bárbara", 0));
+        cardList.Add(new Card(5, "Daro", 1, 1, 1, 6, "Un aventurero enano olvidado por el mundo", "N", "Hechicero", 0));
         // Mundo Antiguo (Antes de los dioses (Desbloqueo))
          
         // Mundo Antiguo 2 (Nº)
@@ -32,10 +32,10 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(16, "Nº2", 11, 11, 10, 9, "  <sprite name=AlSerInvocado> de forma especial busca una carta mágica o trampa Nº y añadela a <sprite name=Mano>, <sprite name=AlSerDestruido> invoca de forma especial <sprite name=Mano> o  <sprite name=Deck>  a Nº2", "Chronos", "Exploradora", 0));
         cardList.Add(new Card(17, "Nº1", 12, 12, 12, 12, "  <sprite name=AlSerInvocado> de forma especial gasta todo tu mana, esta carta no puede ser seleccionada por efectos, al final de cada ronda recupera todo su HP", "Chronos", "Guerrera", 0));
 
-        cardList.Add(new Card(18, "Último esfuerzo Nº", 2, 0, 0, 0, "Destruye un elegido Nº después destruye un elegido del rival, después de activar el efecto no puedes invocar elegidos que no sean Nº ", "Mágica", "", 0));
-        cardList.Add(new Card(19, "Retirada Nº",5, 0, 0, 0, "Devuelve al  <sprite name=Deck>  cualquier número de Nº en tu cementerio, roba una carta por cada una", "Mágica", "", 0));
-        cardList.Add(new Card(20, "Regrso Nº", 4, 0, 0, 0, "Cuando una elegida Nº es destruida, invoca del cementerio una Nº distinta a la que se acaba de enviar", "Trampa", "", 0));
-        cardList.Add(new Card(21, "Plan de contención Nº", 1, 0, 0, 0, "Cuando una elegida Nº es destruida, envia al  <sprite name=Deck>  del cementerio 1 elegida Nº", "Trampa", "", 0));
+        cardList.Add(new Card(18, "Último esfuerzo Nº", 2, 0, 0, 0, "Destruye un elegido Nº después destruye un elegido del rival, después de activar el efecto no puedes invocar elegidos que no sean Nº ", "Chronos", "Mágica", 0));
+        cardList.Add(new Card(19, "Retirada Nº",5, 0, 0, 0, "Devuelve al  <sprite name=Deck>  cualquier número de Nº en tu cementerio, roba una carta por cada una", "Chronos", "Mágica", 0));
+        cardList.Add(new Card(20, "Regrso Nº", 4, 0, 0, 0, "<sprite name=AlSerDestruido> una elegida Nº, invoca del cementerio una Nº distinta a la que se acaba de enviar", "Chronos", "Trampa", 0));
+        cardList.Add(new Card(21, "Plan de contención Nº", 1, 0, 0, 0, "<sprite name=AlSerDestruido> una elegida Nº, envia al  <sprite name=Deck>  del cementerio 1 elegida Nº", "Chronos", "Trampa", 0));
     
         
 
@@ -50,10 +50,10 @@ public class CardDatabase : MonoBehaviour
         
 
         // Mundo Antiguo 4 (Siervos Nº)
-        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, "<sprite name=AlSerInvocado> busca una Nº1  <sprite name=Deck>", "Chronos", "", 0));
-        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, "<sprite name=AlSerInvocado> invoca una ficha Chakal 5/1/2", "Chronos", "", 0));
+        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, " <sprite name=AlSerInvocado> busca una Nº1  <sprite name=Deck>", "Chronos", "", 0));
+        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, " <sprite name=AlSerInvocado> invoca una ficha Chakal 5/1/2", "Chronos", "", 0));
         cardList.Add(new Card(30, "Elcrieri", 8, 8, 2, 6, "Cada vez que ataque roba una carta", "Chronos", "", 0));
-        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, "<sprite name=AlSerInvocado> coloca en posición de ataque un elegido en defensa", "Chronos", "", 0));
+        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, " <sprite name=AlSerInvocado> coloca en posición de ataque un elegido en defensa", "Chronos", "Pícaro", 0));
         cardList.Add(new Card(32, "Dahila", 3, 4, 0, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "Chronos", "", 0));
         cardList.Add(new Card(33, "Celine", 5, 4, 4, 6, "Mientras esta en el campo en posicion de ataque todos los elegidos invocados reciben 1 de daño excetpo si esto los mata", "Chronos", "", 0));
         cardList.Add(new Card(34, "Gumi", 4, 1, 4, 10, "Si el jugador rival recibe daño aumenta el ataque de esta carta en esa cantidad hasta el final de ese turno", "Chronos", "", 0));
@@ -66,11 +66,11 @@ public class CardDatabase : MonoBehaviour
         // Mundo Antiguo 5
         cardList.Add(new Card(40, "Rana Mercante", 1, 0, 0, 1, "Una vez por ronda puedes descartar 2 cartas para robar 1", "Dana", "Mercader", 0));
         
-        cardList.Add(new Card(41, "Reglas antiguas", 2, 0, 0, 0, "Elimina todos los manas de los dioses", "Mágica", "", 0));
-        cardList.Add(new Card(42, "Último recurso", 0, 0, 0, 0, "Si tu vida es 1, obten 20 de mana", "Mágica", "", 0));
-        cardList.Add(new Card(43, "Vuelta a lo básico", 1, 0, 0, 0, "Transforma todo el mana de los dioses a mana", "Mágica", "", 0));
-        cardList.Add(new Card(44, "Último esfuerzo", 1, 0, 0, 0, "Cuando un elegido vaya a ser destruido mantenlo a 1 de vida", "Trampa", ""   , 0));
-        cardList.Add(new Card(45, "Castigo divino", 4, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
+        cardList.Add(new Card(41, "Reglas antiguas", 2, 0, 0, 0, "Elimina todos los manas de los dioses", "N", "Mágica", 0));
+        cardList.Add(new Card(42, "Último recurso", 0, 0, 0, 0, "Si tu vida es 1, obten 20 de mana", "Miknit", "Mágica", 0));
+        cardList.Add(new Card(43, "Vuelta a lo básico", 1, 0, 0, 0, "Transforma todo el mana de los dioses a mana", "N", "Mágica", 0));
+        cardList.Add(new Card(44, "Último esfuerzo", 1, 0, 0, 0, "Cuando un elegido vaya a ser destruido mantenlo a 1 de vida", "Dana", "Trampa", 0));
+        cardList.Add(new Card(45, "Castigo divino", 4, 0, 0, 0, "Destruye todos los monstruos en el campo", "Etse", "Mágica", 0));
 
 
         // Revolución Steampunk (La creacion de K.R.I.S)
@@ -169,7 +169,7 @@ public class CardDatabase : MonoBehaviour
 
         // Sobre Colaboraciones Radiantes
         cardList.Add(new Card(114, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0));
-        cardList.Add(new Card(115, "Yu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0));
+        cardList.Add(new Card(115, "Yuu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0));
         cardList.Add(new Card(116, "Togha", 4, 3, 2, 3, "Una vez por turno devuelve una carta mágica del cementerio al  <sprite name=Deck>, roba una con un nombre distinto", "N", "Hechicero", 0));
         cardList.Add(new Card(117, "Marinette", 3, 4, 4, 2, "Cada vez que destruye un elegido roba una carta", "N", "Robot", 0));
 
