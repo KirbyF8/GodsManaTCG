@@ -100,8 +100,8 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _Scale: 260.2
-    - _noise: 1
-    - _offset: 1
+    - _noise: 746.64
+    - _offset: 47.1
     m_Colors:
     - _CardColor: {r: 0.4622642, g: 0.1356944, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
