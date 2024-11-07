@@ -1,16 +1,25 @@
 {
-    "cards": [
-        {
-            "cardId": 20,
-            "cardName": "Regrso Nº",
-            "cardCost": 4,
-            "cardAttack": 0,
-            "cardDefense": 0,
-            "cardHealth": 0,
-            "cardDescription": "<sprite name=AlSerDestruido> una elegida Nº, invoca del cementerio una Nº distinta a la que se acaba de enviar",
-            "cardType": "Chronos",
-            "cardClass": "Trampa",
-            "cardRarity": 0
-        }
+    "cards": [],
+    "cardsID": [
+        65,
+        51,
+        72,
+        90,
+        67,
+        69,
+        64,
+        77,
+        90,
+        62,
+        65,
+        51,
+        72,
+        90,
+        67,
+        69,
+        64,
+        77,
+        90,
+        62
     ]
 }

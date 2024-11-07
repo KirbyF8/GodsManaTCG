@@ -34,7 +34,7 @@ public class CardDatabase : MonoBehaviour
 
         cardList.Add(new Card(18, "Último esfuerzo Nº", 2, 0, 0, 0, "Destruye un elegido Nº después destruye un elegido del rival, después de activar el efecto no puedes invocar elegidos que no sean Nº ", "Chronos", "Mágica", 0));
         cardList.Add(new Card(19, "Retirada Nº",5, 0, 0, 0, "Devuelve al  <sprite name=Deck>  cualquier número de Nº en tu cementerio, roba una carta por cada una", "Chronos", "Mágica", 0));
-        cardList.Add(new Card(20, "Regrso Nº", 4, 0, 0, 0, "<sprite name=AlSerDestruido> una elegida Nº, invoca del cementerio una Nº distinta a la que se acaba de enviar", "Chronos", "Trampa", 0));
+        cardList.Add(new Card(20, "Regreso Nº", 4, 0, 0, 0, "<sprite name=AlSerDestruido> una elegida Nº, invoca del cementerio una Nº distinta a la que se acaba de enviar", "Chronos", "Trampa", 0));
         cardList.Add(new Card(21, "Plan de contención Nº", 1, 0, 0, 0, "<sprite name=AlSerDestruido> una elegida Nº, envia al  <sprite name=Deck>  del cementerio 1 elegida Nº", "Chronos", "Trampa", 0));
     
         
@@ -82,20 +82,20 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(51, "Nora Bolt", 6, 5, 2, 6, "  <sprite name=AlSerInvocado> si Kris Bolt o K.R.I.S estan en el campo puedes buscar una carta que mencione a uno de los dos  <sprite name=Deck> y añadirla a tu mano ", "Miknit", "Artificiera", 0));
         cardList.Add(new Card(52, "K.R.I.S", 10, 10, 10, 10, "Si esta en posición de defensa los elegidos enemigos solo pueden atacarle a el", "N", "Robot", 0));
         
-        cardList.Add(new Card(53, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Dominio", "", 0));
+        cardList.Add(new Card(53, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Miknit", "Dominio", 0));
         cardList.Add(new Card(54, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "Mágica", "", 0));
-        cardList.Add(new Card(55, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de HP por cada uno", "Mágica", "", 0));
+        cardList.Add(new Card(55, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de HP por cada uno", "Miknit", "Mágica", 0));
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
         cardList.Add(new Card(56, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ataque, cuando es el turno del rival reducelo a la mitad", "Miknit", "Artificiero", 0));
         cardList.Add(new Card(57, "Valette Bleck", 4, 5, 2, 2, "  <sprite name=AlSerInvocado> roba una carta de equipo, puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0));
         cardList.Add(new Card(58, "Nara", 3, 1, 2, 8, "Puede tener hasta 8 cartas equipadas", "Dana", "Mercenaria", 0));
         cardList.Add(new Card(59, "B.S.B-G.A.P-103", 9, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "Murgu", "Robot", 0));
 
-        cardList.Add(new Card(60, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Equipo", "", 0));
-        cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, <sprite name=AlSerDestruido> invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Equipo", "Dana", 0));
-        cardList.Add(new Card(62, "Pistola Bleck", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Equipo", "", 0));
-        cardList.Add(new Card(63, "Rifle Keiser", 3, 0, 0, 0, "Aumenta en 1 el ataque, <sprite name=AlSerDestruido> destruye un elegido", "Equipo", "", 0));
-        cardList.Add(new Card(64, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Equipo", "", 0));
+        cardList.Add(new Card(60, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Dana", "Equipo", 0));
+        cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, <sprite name=AlSerDestruido> invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Dana", "Equipo", 0));
+        cardList.Add(new Card(62, "Pistola Bleck", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Chronos", "Equipo", 0));
+        cardList.Add(new Card(63, "Rifle Keiser", 3, 0, 0, 0, "Aumenta en 1 el ataque, <sprite name=AlSerDestruido> destruye un elegido", "Chronos", "Equipo", 0));
+        cardList.Add(new Card(64, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Miknit", "Equipo", 0));
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
         // 
 
@@ -107,14 +107,14 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(69, "Fazos", 10, 5, 5, 5, "Mientras esta carta este en el campo tu adversario no puede invocar de forma especial", "Yrys", "", 0));
         cardList.Add(new Card(70, "Mona", 10, 10, 10, 10, "  <sprite name=AlSerInvocado> destruye todos los elegidos que su mana no sea de Etse", "Etse", "", 0));
 
-        cardList.Add(new Card(71, "Deicidio", 10, 0, 0, 0, "Si todo tu mana es mana de los dioses transformalo en mana, aumenta permanentemente en 2 tu mana maximo, no puedes obtener mana de los dioses después de activar este efecto", "none", "", 0));
+        cardList.Add(new Card(71, "Deicidio", 10, 0, 0, 0, "Si todo tu mana es mana de los dioses transformalo en mana, aumenta permanentemente en 2 tu mana maximo, no puedes obtener mana de los dioses después de activar este efecto", "N", "Mágica", 0));
         
-        cardList.Add(new Card(72, "Emperor Red", 6, 0, 0, 0, "Siempre que un elegido de chronos ataque el elegido del rival no puede contraatacar", "Dominio", "", 0));
-        cardList.Add(new Card(73, "Baño de sangre", 6, 0, 0, 0, "Cuando un elegido es destruido recupera toda la vida de tus elegidos de murgu", "Dominio", "", 0));
-        cardList.Add(new Card(74, "Electromagnetismo", 6, 0, 0, 0, "Al invocar un elegido de Miknit puede atacar sin esperar", "Dominio", "", 0));
-        cardList.Add(new Card(75, "Neblina púrpura", 6, 0, 0, 0, "Los elegidos invocados que no sean de Dana pierden la mitad de su ataque y defensa", "Dominio", "", 0));
-        cardList.Add(new Card(76, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Dominio", "", 0));
-        cardList.Add(new Card(77, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Dominio", "", 0));
+        cardList.Add(new Card(72, "Emperor Red", 6, 0, 0, 0, "Siempre que un elegido de chronos ataque el elegido del rival no puede contraatacar", "Chronos", "Dominio", 0));
+        cardList.Add(new Card(73, "Baño de sangre", 6, 0, 0, 0, "Cuando un elegido es destruido recupera toda la vida de tus elegidos de murgu", "Murgu", "Dominio", 0));
+        cardList.Add(new Card(74, "Electromagnetismo", 6, 0, 0, 0, "Al invocar un elegido de Miknit puede atacar sin esperar", "Miknit", "Dominio", 0));
+        cardList.Add(new Card(75, "Neblina púrpura", 6, 0, 0, 0, "Los elegidos invocados que no sean de Dana pierden la mitad de su ataque y defensa", "Dana", "Dominio", 0));
+        cardList.Add(new Card(76, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Yrys", "Dominio", 0));
+        cardList.Add(new Card(77, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Etse", "Dominio", 0));
         // Revolución Steampunk 4 (Linea de defensa)
         cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "  <sprite name=AlSerInvocado> roba una carta mágica  <sprite name=Deck>", "Miknit", "Hechicera", 0));
         cardList.Add(new Card(79, "Eins", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> o mano a Zwei y Drei", "Chronos", "Artificiero", 0));
@@ -174,31 +174,31 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(117, "Marinette", 3, 4, 4, 2, "Cada vez que destruye un elegido roba una carta", "N", "Robot", 0));
 
         // Sobre de Magia para novatos y no tan novatos
-        cardList.Add(new Card(118, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Mágica", "N", 0));
-        cardList.Add(new Card(119, "Escarcharº", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Mágica", "N", 0));
-        cardList.Add(new Card(120, "Refuerzosº", 2, 0, 0, 0, "Roba un mercenario  <sprite name=Deck>, si su coste es 1 invocalo de forma especial", "Mágica", "N", 0));
-        cardList.Add(new Card(121, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros  <sprite name=Deck>,mano o zona de destierros", "Mágica", "", 0));
-        cardList.Add(new Card(122, "Toque de la Muerteº", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Mágica", "N", 0));
-        cardList.Add(new Card(123, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Mágica", "", 0));
-        cardList.Add(new Card(124, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al  <sprite name=Deck>", "Mágica", "N", 0));
-        cardList.Add(new Card(125, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Mágica", "", 0));
-        cardList.Add(new Card(126, "Hacer añicos", 2, 0, 0, 0, "Inflije 1 de hp a un elegido, si tiene una carta de equipo destruyela", "Mágica", "N", 0));
-        cardList.Add(new Card(127, "Jarron Avaricioso", 2, 0, 0, 0, "Roba dos cartas", "Mágica", "N", 0));
-        cardList.Add(new Card(128, "Jarron Generoso", 2, 0, 0, 0, "Descarta dos cartas", "Mágica", "N", 0));
-        cardList.Add(new Card(129, "Agujero de Gusano", 10, 0, 0, 0, "Destierra todos los monstruos en el campo, después ambos jugadores invocan tantos monstruos del cementerio como puedan", "Mágica", "N", 0));
-        cardList.Add(new Card(130, "Lluvia de meteroros", 9, 0, 0, 0, "Destruye todos los monstruos de tu oponente", "Mágica", "", 0));
-        cardList.Add(new Card(131, "Curar heridas", 1, 0, 0, 0, "Recupera 5LP", "Mágica", "N", 0));
-        cardList.Add(new Card(132, "Sueño", 3, 0, 0, 0, "Cuando un elegido ataque su ataque se vuelve 0", "Trampa", "N", 0));
+        cardList.Add(new Card(118, "Misil Mágico", 1, 0, 0, 0, "Inflie 1 de HP a un elegido", "Miknit", "Mágica", 0));
+        cardList.Add(new Card(119, "Escarchar", 1, 0, 0, 0, "Reduce en 1 la DF de un elegido", "Miknit", "Mágica", 0));
+        cardList.Add(new Card(120, "Refuerzos", 2, 0, 0, 0, "Roba un mercenario  <sprite name=Deck>, si su coste es 1 invocalo de forma especial", "Murgu", "Mágica", 0));
+        cardList.Add(new Card(121, "Portal", 10, 0, 0, 0, "Invoca 3 Hechiceros  <sprite name=Deck>,mano o zona de destierros", "Miknit", "Mágica", 0));
+        cardList.Add(new Card(122, "Toque de la Muerte", 3, 0, 0, 0, "Destruye un elegido en el campo, solo puedes activar esta carta si hay un Hechicero en tu zona de elegidos", "Etse", "Mágica", 0));
+        cardList.Add(new Card(123, "Fireball", 8, 0, 0, 0, "Destruye todos los monstruos en el campo", "Miknit", "Mágica", 0));
+        cardList.Add(new Card(124, "Resucitar", 2, 0, 0, 0, "Devuelve un elegido del cementerio al  <sprite name=Deck>", "Dana", "Mágica", 0));
+        cardList.Add(new Card(125, "Perdición", 7, 0, 0, 0, "Envia a la zona de destierros un elegido", "Yrys", "Mágica", 0));
+        cardList.Add(new Card(126, "Hacer añicos", 2, 0, 0, 0, "Inflije 1 de hp a un elegido, si tiene una carta de equipo destruyela", "Etse", "Mágica", 0));
+        cardList.Add(new Card(127, "Jarron Avaricioso", 2, 0, 0, 0, "Roba dos cartas", "N", "Mágica", 0));
+        cardList.Add(new Card(128, "Jarron Generoso", 2, 0, 0, 0, "Descarta dos cartas", "N", "Mágica", 0));
+        cardList.Add(new Card(129, "Agujero de Gusano", 10, 0, 0, 0, "Destierra todos los monstruos en el campo, después ambos jugadores invocan tantos monstruos del cementerio como puedan", "Yrys", "Mágica", 0));
+        cardList.Add(new Card(130, "Lluvia de meteroros", 9, 0, 0, 0, "Destruye todos los monstruos de tu oponente", "Yrys", "Mágica", 0));
+        cardList.Add(new Card(131, "Curar heridas", 1, 0, 0, 0, "Recupera 5LP", "Dana", "Mágica", 0));
+        cardList.Add(new Card(132, "Sueño", 3, 0, 0, 0, "Cuando un elegido ataque su ataque se vuelve 0", "Miknit", "Trampa", 0));
 
-        cardList.Add(new Card(133, "Armadura de Magia", 2, 0, 0, 0, "Aumenta en 2 la defensa de un hechicero", "Equipo", "", 0));
-        cardList.Add(new Card(134, "Arma de luz", 1, 0, 0, 0, "Aumenta en 2 el ataque de un curandero", "Equipo", "", 0));
+        cardList.Add(new Card(133, "Armadura de Magia", 2, 0, 0, 0, "Aumenta en 2 la defensa de un hechicero", "Miknit", "Equipo", 0));
+        cardList.Add(new Card(134, "Arma de luz", 1, 0, 0, 0, "Aumenta en 2 el ataque de un curandero", "Miknit", "Equipo", 0));
         
 
-        cardList.Add(new Card(135, "Curar heridas graves", 5, 0, 0, 0, "Si tus LP disminuyen de 10 curate 20LP", "Trampa", "", 0));
-        cardList.Add(new Card(136, "Ida y vuelta", 2, 0, 0, 0, "Después de que uno de tus elegidos <sprite name=AlAtacar>, devuelvelo a la mano e invoca de esta un elegido con el mismo coste o menor", "Trampa", "N", 0));
+        cardList.Add(new Card(135, "Curar heridas graves", 5, 0, 0, 0, "Si tus LP disminuyen de 10 curate 20LP", "Dana", "Trampa", 0));
+        cardList.Add(new Card(136, "Ida y vuelta", 2, 0, 0, 0, "Después de que uno de tus elegidos <sprite name=AlAtacar>, devuelvelo a la mano e invoca de esta un elegido con el mismo coste o menor", "Murgu", "Trampa", 0));
         // Cartas Desbloqueables Mundo Antiguo
         cardList.Add(new Card(1000, "Blight", 10, 20, 20, 20, "Un rey olvidado por el mundo", "N", "Guerrero", 0));
-        cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "<sprite name=AlSerInvocado> destierra todas las cartas Nº en el cementerio aumenta en 1 su vida por cada una", "N", "Invocadora", 0));
+        cardList.Add(new Card(1001, "Nº0", 1, 1, 1, 1, "<sprite name=AlSerInvocado> destierra todas las cartas Nº en el cementerio aumenta en 1 su vida por cada una", "Chronos", "Invocadora", 0));
 
         // Cartas Desbloqueables Revolución Steampunk
         cardList.Add(new Card(1002, "HelAI", 6, 3, 14, 5, "Si este elegido es el único en tu campo es destruido, si un elegido tuyo tiene una carta de equipo puedes invocar a este de forma especial", "Chronos", "Robot", 0));

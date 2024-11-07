@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 5826447}
   - component: {fileID: 5826448}
   - component: {fileID: 5826450}
-  - component: {fileID: 5826449}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -286,22 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f57c31bd39aa9f44bcafda26121ca87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5826449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5826441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f0e017cf59c77e498d40a287a356615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardOnDeck: []
-  cards: []
-  text: []
-  deckPersistance: {fileID: 5826450}
 --- !u!114 &5826450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSaveList: []
+  cardIDs: 
 --- !u!1 &13320129
 GameObject:
   m_ObjectHideFlags: 0

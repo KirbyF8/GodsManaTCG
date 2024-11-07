@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -76,9 +77,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private GameObject attackAndDefensePlace;
     [SerializeField] DeckPersistance deckPersistance;
 
+    [SerializeField] private Material materialSR;
+    [SerializeField] private Material materialUR;
+
     private GameAssets gameAssets;
 
-    private Sprite[] cardImgs;
+    [SerializeField] private Sprite[] cardImgs;
 
     private PlayerDeck playerDeck;
 
@@ -96,6 +100,13 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         playerDeck = FindAnyObjectByType<PlayerDeck>();
 
         cardImgs = gameAssets.cardImgs;
+
+        cardImgs = Resources.LoadAll<Sprite>("Images");
+
+        cardImgs = cardImgs
+    .Where(sprite => int.TryParse(sprite.name, out _)) 
+    .OrderBy(sprite => int.Parse(sprite.name))         
+    .ToArray();
 
         displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
@@ -127,17 +138,25 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         healthText.text = "" + cardHealth;
         descriptionText.text = cardDescription;
         cardText.text = "" + cardClass;
+        thisCard = displayCard[0];
 
-        /*
+        if (cardRarity == 1)
+        {
+            cardImg.material = materialSR;
+        }
+        
+        
+        
         if (cardImgs.Length >= cardId - 1)
         {
-            cardImg.sprite = cardImgs[cardId - 1];
+            cardImg.sprite = cardImgs[cardId-1];
 
         }
         else
         {
             Debug.Log(cardImgs.Length);
-        }*/
+        }
+
         if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
         {
 
@@ -248,6 +267,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private void Next()
     {
+       
         deckPersistance.AddSaveCard(thisCard);
         cardBack.SetActive(false);
     }

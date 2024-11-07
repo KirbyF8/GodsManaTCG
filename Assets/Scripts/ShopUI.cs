@@ -177,8 +177,8 @@ public class ShopUI : MonoBehaviour
         for (int i = 0; i < cardsInBooster.Length; i++) 
         {
             cardsInBooster[i].displayId = Random.Range(first, second);
-            cardsInBooster[i].WhereIAm(3);
             cardsInBooster[i].updateDisplay(cardsInBooster[i].displayId);
+            cardsInBooster[i].WhereIAm(3);
         }
         buyedBooster.SetActive(false);
         Hider.SetActive(true);

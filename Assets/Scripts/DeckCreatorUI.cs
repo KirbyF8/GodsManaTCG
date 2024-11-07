@@ -9,7 +9,7 @@ public class DeckCreator : MonoBehaviour
     public List<Card> cardOnDeck = new List<Card>();
 
     private int actualPage = 1;
-    private const int maxPages = 20;
+    private const int maxPages = 23;
 
     [SerializeField] DisplayCard[] cards;
     [SerializeField] private TextMeshProUGUI[] text;
@@ -20,6 +20,7 @@ public class DeckCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         for (int i = 0; i < cards.Length; i++)
         {
             cards[i].WhereIAm(0);
