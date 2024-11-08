@@ -145,17 +145,17 @@ public class ShopUI : MonoBehaviour
             else if (buyedBoosterPack == "Miknit's Mana War Legacy")
             {
                 first = 92;
-                second = 114;
+                second = 125;
             }
             else if (buyedBoosterPack == "Colaboraciones Radiantes")
             {
-                first = 114;
-                second = 118;
+                first = 125;
+                second = 142;
             }
             else if (buyedBoosterPack == "Magia para novatos y no tan novatos")
             {
-                first = 118;
-                second = 137;
+                first = 142;
+                second = 161;
             }
 
 

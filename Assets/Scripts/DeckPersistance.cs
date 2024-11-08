@@ -10,13 +10,15 @@ public class CardSaveListWrapper
 {
     public List<Card> cards;
     public List<int> cardsID;
+    public List<Card> deckCards;
 }
 
 public class DeckPersistance : MonoBehaviour
 {
 
     private string path = Application.dataPath + "/../saves/" + "save.json";
- 
+    private string deckPath = Application.dataPath + "/../saves/" + "DeckSave";
+    private string nameOfDeckPath;
 
     public List<Card> cardSaveList = new List<Card>();
     public List<int> cardIDs = new List<int>();
@@ -30,14 +32,28 @@ public class DeckPersistance : MonoBehaviour
         LoadSavedCards();
     }
 
-    public void SaveDeck()
+    public void SaveDeck(List<Card> deck, string filename)
     {
+        DeckSave = deck;
+        nameOfDeckPath = deckPath + filename;
 
+        if (File.Exists(nameOfDeckPath)) 
+        {
+            Debug.LogError("Ya hay un deck con ese nombre");
+            return;
+        }
+        else
+        {
+            CardSaveListWrapper wrapper = new CardSaveListWrapper { deckCards = DeckSave };
+            string json = JsonUtility.ToJson(wrapper, true);
+            File.WriteAllText(nameOfDeckPath+".json", json);
+        }
     }
 
-    public void DeleteDeck()
+    public void DeleteDeck(string filename)
     {
-       
+        nameOfDeckPath = deckPath + filename;
+        File.Delete(nameOfDeckPath + ".json");
     }
 
    

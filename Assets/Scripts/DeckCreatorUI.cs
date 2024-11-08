@@ -9,11 +9,13 @@ public class DeckCreator : MonoBehaviour
     public List<Card> cardOnDeck = new List<Card>();
 
     private int actualPage = 1;
-    private const int maxPages = 23;
+    private const int maxPages = 26;
 
     [SerializeField] DisplayCard[] cards;
     [SerializeField] private TextMeshProUGUI[] text;
     [SerializeField] DeckPersistance deckPersistance;
+
+    [SerializeField] TMPro.TMP_InputField inputDeckName;
 
     private Card auxCard;
 
@@ -28,11 +30,40 @@ public class DeckCreator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   
+    public void AddCardToDeck(int card)
+    {
+        int cardNumber = 0;
+        for (int i = 0; i < cardOnDeck.Count; i++)
+        {
+            if (cards[card].cardName == cardOnDeck[i].cardName)
+            {
+                cardNumber++;
+            }
+        }
+
+        if (cardNumber <= 2 && deckPersistance.NumberOfCards(cards[card].returnCard()) > cardNumber )
+        {
+            cardOnDeck.Add(cards[card].returnCard());
+        }
+
+    }
+    string deckName;
+    public void SaveDeck()
     {
         
-    }
+        deckName = inputDeckName.text;
+        if (deckName == "" || deckName == null)
+        {
+            Debug.LogError("No has puesto nombre al Deck");
+        }
+        else
+        {
+            deckPersistance.SaveDeck(cardOnDeck, deckName);
+        }
+        
 
+    }
 
     //? Dir 0 <-
     //? Dir 1 ->
@@ -80,22 +111,7 @@ public class DeckCreator : MonoBehaviour
         }
     }
 
-    public void addCardToDeck(Card card)
-    {
-        int cardNumber = 0;
-        for (int i = 0;i < cardOnDeck.Count;i++) 
-        {
-         if (card.cardName == cardOnDeck[i].cardName)
-            {
-                cardNumber++;
-            }
-        }
+  
 
-        if (cardNumber <= 2)
-        {
-            cardOnDeck.Add(card);
-        }
-        
-    }
-
+    
 }
