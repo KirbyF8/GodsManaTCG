@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,6 +91,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     [SerializeField] Selectable selectable;
 
+    private ShopUI shopUI;
+
     private int whereIAm;
     void Start()
     {
@@ -98,6 +101,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
         gameAssets = FindAnyObjectByType<GameAssets>();
         playerDeck = FindAnyObjectByType<PlayerDeck>();
+
+        try
+        {
+            shopUI = FindAnyObjectByType<ShopUI>();
+        }
+        catch (Exception e)
+        {
+            shopUI = null;
+        }
+       
 
         cardImgs = gameAssets.cardImgs;
 
@@ -152,10 +165,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             cardImg.sprite = cardImgs[cardId-1];
 
         }
-        else
-        {
-            Debug.Log(cardImgs.Length);
-        }
+        
 
         if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
         {
@@ -267,7 +277,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private void Next()
     {
-       
+        shopUI.cartaGirada();
         deckPersistance.AddSaveCard(thisCard);
         cardBack.SetActive(false);
     }

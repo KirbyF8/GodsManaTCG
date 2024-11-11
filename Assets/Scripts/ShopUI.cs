@@ -32,7 +32,10 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private GameObject Hider;
 
     private string buyedBoosterPack;
- 
+
+    private int cartasGiradas = 0;
+    [SerializeField] GameObject returnButton;
+
     void Start()
     {
         UpdateCoins();
@@ -172,8 +175,8 @@ public class ShopUI : MonoBehaviour
 
     public void OpenPack()
     {
-       
 
+        cartasGiradas = 0;
         for (int i = 0; i < cardsInBooster.Length; i++) 
         {
             cardsInBooster[i].displayId = Random.Range(first, second);
@@ -193,5 +196,30 @@ public class ShopUI : MonoBehaviour
         panelPack.SetActive(false);
         buyedBooster.SetActive(true);
         Hider.SetActive(false);
+        returnButton.SetActive(false);
     }
+
+    public void returnMainMenu()
+    {
+        
+    }
+
+    public void cartaGirada()
+    {
+
+      
+        if (cartasGiradas <= 3)
+        {
+            
+            cartasGiradas++;
+        } else
+        {
+            
+            returnButton.SetActive(true);
+        }
+        
+    }
+
+    
+
 }

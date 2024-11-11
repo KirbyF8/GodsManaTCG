@@ -139,6 +139,7 @@ public class PlayerDeck : MonoBehaviour
 
         int lastCard = deck.Count;
         displayCard.updateDisplay(deck[cardId].cardId);
+        displayCard.WhereIAm(1);
         hand.Add(deck[cardId]);
         deck.RemoveAt(cardId);
         
@@ -468,6 +469,7 @@ public class PlayerDeck : MonoBehaviour
 
             
             displayCard.updateDisplay(card.cardId);
+            displayCard.WhereIAm(2);
             field.Add(card);
             hand.Remove(card);
           

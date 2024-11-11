@@ -16,6 +16,8 @@ public class DeckCreator : MonoBehaviour
     [SerializeField] DeckPersistance deckPersistance;
 
     [SerializeField] TMPro.TMP_InputField inputDeckName;
+    [SerializeField] GameObject cardInDeck;
+    [SerializeField] GameObject cardInDeckBox;
 
     private Card auxCard;
 
@@ -45,17 +47,37 @@ public class DeckCreator : MonoBehaviour
         if (cardNumber <= 2 && deckPersistance.NumberOfCards(cards[card].returnCard()) > cardNumber )
         {
             cardOnDeck.Add(cards[card].returnCard());
+
+
+            
+            GameObject clone = Instantiate(cardInDeck);
+            clone.GetComponent<CardInDeckCreator>().updateInfoCard(cards[card].cardName, cards[card].cardCost, cards[card].cardType);
+            clone.transform.SetParent(cardInDeckBox.transform, false);
+            
         }
 
     }
+
+    public void RemoveCardFromDeck(string cardName)
+    {
+        for (int i = 0; i < cardOnDeck.Count; i++)
+        {
+            if (cardOnDeck[i].cardName == cardName)
+            {
+                cardOnDeck.Remove(cardOnDeck[i]);
+                return;
+            }
+        }
+    }
+
     string deckName;
     public void SaveDeck()
     {
         
         deckName = inputDeckName.text;
-        if (deckName == "" || deckName == null)
+        if (deckName == "" || deckName == null || cardOnDeck.Count <= 29 || cardOnDeck.Count >= 81)
         {
-            Debug.LogError("No has puesto nombre al Deck");
+            Debug.LogError("No has puesto nombre al Deck// Deck No válido");
         }
         else
         {
