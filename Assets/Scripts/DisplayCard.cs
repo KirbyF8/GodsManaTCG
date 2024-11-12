@@ -91,7 +91,9 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     [SerializeField] Selectable selectable;
 
+    [SerializeField] GameObject selected;
     private ShopUI shopUI;
+    private CardEffects cardEffects;
 
     private int whereIAm;
     void Start()
@@ -105,10 +107,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         try
         {
             shopUI = FindAnyObjectByType<ShopUI>();
+            cardEffects = FindAnyObjectByType<CardEffects>();
         }
         catch (Exception e)
         {
             shopUI = null;
+            cardEffects = null;
         }
        
 
@@ -159,12 +163,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         }
         
         
-        
+        /*
         if (cardImgs.Length >= cardId - 1)
         {
             cardImg.sprite = cardImgs[cardId-1];
 
-        }
+        }*/
         
 
         if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
@@ -258,8 +262,18 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         {
             Next();
             return;
+        } else if (whereIAm == 4)
+        {
+            SelectCard();
         }
         playerDeck.canPlayCard(thisCard);
+        
+        if (thisCard.cardActivationEffect == 1)
+        {
+            cardEffects.CardEffect_DrawCards("", 0, "", 1, "Chronos", 2);
+        }
+        
+        
         Destruction();
 
 
@@ -281,11 +295,25 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         deckPersistance.AddSaveCard(thisCard);
         cardBack.SetActive(false);
     }
+    
+    public void SelectCard()
+    {
+
+        Card auxcard = returnCard();
+        cardEffects.SelectCards(auxcard);
+        
+    }
+
+    private void DeSelectCard()
+    {
+
+    }
 
     //? 0 Deck Creator
     //? 1 Hand
     //? 2 Field
     //? 3 Shoped
+    //? 4 Card SelHéctor
     public void WhereIAm(int aux)
     {
         whereIAm = aux;

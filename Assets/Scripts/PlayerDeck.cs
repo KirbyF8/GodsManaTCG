@@ -210,7 +210,7 @@ public class PlayerDeck : MonoBehaviour
 
                 for (int i = 0; i < deck.Count; i++)
                 {
-                    if (what == "chosen" || what == "Chosen")
+                    if (what == "elegido" || what == "Elegido")
                     {
                         if (deck[i].cardHealth != 0)
                         {
@@ -425,6 +425,11 @@ public class PlayerDeck : MonoBehaviour
 
 
         return returnCards;
+    }
+
+    public void CleanSearch()
+    {
+        returnCards.Clear();
     }
 
     public void canPlayCard(Card card)

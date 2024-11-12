@@ -23,12 +23,28 @@ public class Card
     // Extra info
     public int cardRarity;
 
+    //! 0 Nada
+    //! 1 Al ser invocado
+    //! 2 Al ser destruido
+    //! 3 Al atacar
+    //! 4 Al Ser Invocado + Al ser destruido
+    //! 5 Al Ser Invocado + Al atacar
+    //! 6 Al atacar + Al ser destruido
+    //! 7 Al activar
+    //! 8 Al ser atacado
+    public int cardActivationEffect;
+    
+    //? 0 Nada
+    //? 1 Robar
+    //? 2 Destruir
+    public int cardEffect;
+
     public Card()
     {
 
     }
 
-    public Card(int Id, string CardName, int Cost, int Attack, int Defense, int Health, string Description, string Type, string Class, int Rarity)
+    public Card(int Id, string CardName, int Cost, int Attack, int Defense, int Health, string Description, string Type, string Class, int Rarity, int ActivationEffect = 0 ,int Effect = 0)
     {
         cardId = Id;
         cardName = CardName;
@@ -41,7 +57,7 @@ public class Card
 
         cardClass = Class;
         cardRarity = Rarity;
-
+        cardEffect = Effect;
 
     }
 
