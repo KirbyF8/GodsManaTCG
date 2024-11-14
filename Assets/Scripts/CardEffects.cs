@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
@@ -9,7 +10,7 @@ public class CardEffects : MonoBehaviour
     [SerializeField] PlayerDeck playerDeck;
 
     public List<Card> returnedCards = new List<Card>();
-    private List<Card> selectedCards = new List<Card>();
+    public List<Card> selectedCards = new List<Card>();
 
     [SerializeField] GameObject confirmCardPanel;
 
@@ -19,18 +20,107 @@ public class CardEffects : MonoBehaviour
 
     [SerializeField] private GameObject searchedCardsPlace;
 
+    [SerializeField] private GameObject nothing;
+
+    [SerializeField] private TMP_Text howManyText;
+
+    private int howManyI;
+
   
     public void CardEffect_DrawCards(string what = "", int cost = 0, string who = "", int where = 0, string from = "", int howMany = 1)
     {
+        howManyI = howMany;
         returnedCards = playerDeck.SearchCards(what ,cost ,who ,where, from);
         confirmCardPanel.SetActive(true);
+        howManyText.color = Color.black;
+        howManyText.text = "Selecciona " + howMany + " Cartas";
+
+        GenerateSelectableCards();
+        // playerDeck.CleanSearch();
+    }
+    public void SelectCards(Card card)
+    {
+     
+            selectedCards.Add(card);
+           
         
-        if (returnedCards == null || returnedCards.Count <= 0)
+    }
+
+    public void DeSelectCards(Card card)
+    {
+        
+            selectedCards.Remove(card);
+
+        
+    }
+    public void ConfirmCardsDrawed()
+    {
+       
+        if (selectedCards.Count == howManyI)
         {
-            Debug.Log("A");
+            
+            playerDeck.DrawSelectedCards(selectedCards);
+
+            selectedCards.Clear();
+            nothing.SetActive(false);
+            confirmCardPanel.SetActive(false);
+        }
+        else
+        {
+            //TODO Sonido de fallo
+            howManyText.color = Color.red;
         }
        
-        foreach (Card card in returnedCards )
+    }
+
+    public void CardEffect_DestroyCards(string what = "", int cost = 0,int where = 4, string who = "", string from = "", int howMany = 1)
+    {
+        howManyI = howMany;
+        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        confirmCardPanel.SetActive(true);
+        howManyText.color = Color.black;
+        howManyText.text = "Selecciona " + howMany + " Cartas para destrur";
+
+        GenerateSelectableCards();
+
+    }
+
+    public void ConfirmCardsDestroyed()
+    {
+
+        if (selectedCards.Count == howManyI)
+        {
+
+            foreach(Card card in selectedCards)
+            {
+                playerDeck.field.Remove(card);
+            }
+
+            selectedCards.Clear();
+            nothing.SetActive(false);
+            confirmCardPanel.SetActive(false);
+
+            //TODO Eliminar cartas
+        }
+        else
+        {
+            //TODO Sonido de fallo
+            howManyText.color = Color.red;
+        }
+
+    }
+
+    private void GenerateSelectableCards()
+    {
+        if (returnedCards == null || returnedCards.Count <= 0)
+        {
+            howManyText.text = "Pulse Confirmar";
+            howManyText.color = Color.red;
+            nothing.SetActive(true);
+
+        }
+
+        foreach (Card card in returnedCards)
         {
             GameObject CardInSeach = Instantiate(GOcard, new Vector3(0, 0, 0), Quaternion.identity);
             CardInSeach.transform.SetParent(searchedCardsPlace.transform);
@@ -38,40 +128,24 @@ public class CardEffects : MonoBehaviour
             displayCard = CardInSeach.GetComponent<DisplayCard>();
 
 
-            
+
             displayCard.updateDisplay(card.cardId);
             displayCard.WhereIAm(4);
-          
-        }
-        // playerDeck.CleanSearch();
-    }
-    public void SelectCards(Card card)
-    {
-     if (selectedCards.Count >= howMany) 
-        { 
-        selectedCards.Clear();
-        }
-     else
-        {
-            selectedCards.Add(card);
 
         }
-    }
-    public void ConfirmCardsDrawed()
-    {
 
-
-        selectedCards.Clear();
-        confirmCardPanel.SetActive(false);
+        returnedCards.Clear();
     }
 
-    public void CardEffect_DestroyCards()
+    public void CardEffect_Summon(string what = "", int cost = 0, int where = 1, string who = "", string from = "", int howMany = 1)
     {
+        howManyI = howMany;
+        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        confirmCardPanel.SetActive(true);
+        howManyText.color = Color.black;
+        howManyText.text = "Selecciona " + howMany + " elegidos para invocarlos";
 
-    }
-
-    public void CardEffect_Summon()
-    {
+        GenerateSelectableCards();
 
     }
 
@@ -85,9 +159,15 @@ public class CardEffects : MonoBehaviour
 
     }
 
-    public void CardEffect_BanishCards()
+    public void CardEffect_BanishCards(string what = "", int cost = 0, int where = 1, string who = "", string from = "", int howMany = 1)
     {
+        howManyI = howMany;
+        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        confirmCardPanel.SetActive(true);
+        howManyText.color = Color.black;
+        howManyText.text = "Selecciona " + howMany + " elegidos para desterrarlos";
 
+        GenerateSelectableCards();
     }
 
     public void CardEffect_MoveCards()

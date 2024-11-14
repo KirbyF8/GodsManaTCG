@@ -35,8 +35,17 @@ public class Card
     public int cardActivationEffect;
     
     //? 0 Nada
-    //? 1 Robar
+    //? 1 Buscar
     //? 2 Destruir
+    //? 3 Robar
+    //? 4 Invocar
+    //? 5 Crear Fichas
+    //? 6 Bufo
+    //? 7 Desterrar 
+    //? 8 Devolver
+    //? 9 Curar
+    //? 10 Mana
+    //? 11 Dañar
     public int cardEffect;
 
     public Card()

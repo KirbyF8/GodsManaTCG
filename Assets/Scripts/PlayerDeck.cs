@@ -146,6 +146,24 @@ public class PlayerDeck : MonoBehaviour
         
     }
 
+    public void DrawSelectedCards(List<Card> selectedCards)
+    {
+        foreach (Card card in selectedCards)
+        {
+            GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
+            CardInHand.transform.SetParent(Hand.transform);
+            DisplayCard displayCard;
+            displayCard = CardInHand.GetComponent<DisplayCard>();
+
+            displayCard.updateDisplay(card.cardId);
+            displayCard.WhereIAm(1);
+
+            hand.Add(deck[card.cardId]);
+            deck.RemoveAt(card.cardId);
+
+        }
+    }
+
     public void ReturnCard(Card card)
     {
         deck.Add(card);
@@ -430,6 +448,11 @@ public class PlayerDeck : MonoBehaviour
     public void CleanSearch()
     {
         returnCards.Clear();
+    }
+
+    public void DestroyCard()
+    {
+
     }
 
     public void canPlayCard(Card card)

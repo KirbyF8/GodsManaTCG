@@ -91,7 +91,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     [SerializeField] Selectable selectable;
 
-    [SerializeField] GameObject selected;
+    [SerializeField] GameObject selectedOutline;
+    [SerializeField] GameObject selectedCheck;
     private ShopUI shopUI;
     private CardEffects cardEffects;
 
@@ -265,15 +266,19 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         } else if (whereIAm == 4)
         {
             SelectCard();
+            return;
         }
         playerDeck.canPlayCard(thisCard);
         
         if (thisCard.cardActivationEffect == 1)
         {
             cardEffects.CardEffect_DrawCards("", 0, "", 1, "Chronos", 2);
+        } else if (thisCard.cardActivationEffect == 2)
+        {
+            cardEffects.CardEffect_DestroyCards("", 0, 4, "", "", 2);
         }
-        
-        
+
+
         Destruction();
 
 
@@ -295,18 +300,28 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         deckPersistance.AddSaveCard(thisCard);
         cardBack.SetActive(false);
     }
-    
+
+    private bool selected;
     public void SelectCard()
     {
-
+        
         Card auxcard = returnCard();
+
+        if (selected)
+        {
+            
+            
+            selectedOutline.SetActive(false);
+            selectedCheck.SetActive(false);
+            cardEffects.DeSelectCards(auxcard);
+            selected = false;
+            return;
+        }
+        selected = true;
+        selectedOutline.SetActive(true);
+        selectedCheck.SetActive(true);
         cardEffects.SelectCards(auxcard);
         
-    }
-
-    private void DeSelectCard()
-    {
-
     }
 
     //? 0 Deck Creator
