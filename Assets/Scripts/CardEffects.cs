@@ -170,11 +170,6 @@ public class CardEffects : MonoBehaviour
         GenerateSelectableCards();
     }
 
-    public void CardEffect_MoveCards()
-    {
-
-    }
-
     public void CardEffect_LookCards()
     {
 
