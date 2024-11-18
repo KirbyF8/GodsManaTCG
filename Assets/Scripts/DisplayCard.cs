@@ -269,14 +269,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             return;
         }
         playerDeck.canPlayCard(thisCard);
-        
-        if (thisCard.cardActivationEffect == 1)
-        {
-            cardEffects.CardEffect_DrawCards("", 0, "", 1, "Chronos", 2);
-        } else if (thisCard.cardActivationEffect == 2)
-        {
-            cardEffects.CardEffect_DestroyCards("", 0, 4, "", "", 2);
-        }
+       
 
 
         Destruction();

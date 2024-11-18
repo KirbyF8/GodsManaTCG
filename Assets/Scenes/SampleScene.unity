@@ -2486,8 +2486,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2498,8 +2507,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2510,8 +2528,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2522,8 +2549,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2534,8 +2570,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2546,8 +2591,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2558,8 +2612,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2570,8 +2633,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2582,8 +2654,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2594,8 +2675,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2606,8 +2696,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2618,8 +2717,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2630,8 +2738,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2642,8 +2759,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2654,8 +2780,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2666,8 +2801,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2678,8 +2822,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2690,8 +2843,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2702,8 +2864,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2714,8 +2885,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2726,8 +2906,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2738,8 +2927,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2750,8 +2948,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2762,8 +2969,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2774,8 +2990,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2786,8 +3011,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2798,8 +3032,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2810,8 +3053,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2822,8 +3074,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2834,8 +3095,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2846,8 +3116,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2858,8 +3137,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2870,8 +3158,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2882,8 +3179,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2894,8 +3200,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2906,8 +3221,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2918,8 +3242,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2930,8 +3263,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2942,8 +3284,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2954,8 +3305,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2966,8 +3326,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2978,8 +3347,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -2990,8 +3368,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -3002,8 +3389,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -3014,8 +3410,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   graveyard: []
   banished: []
   hand: []
@@ -4066,8 +4471,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4078,8 +4492,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4090,8 +4513,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4102,8 +4534,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4114,8 +4555,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4126,8 +4576,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4138,8 +4597,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4150,8 +4618,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4162,8 +4639,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4174,8 +4660,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4186,8 +4681,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4198,8 +4702,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4210,8 +4723,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4222,8 +4744,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4234,8 +4765,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4246,8 +4786,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4258,8 +4807,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4270,8 +4828,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4282,8 +4849,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4294,8 +4870,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4306,8 +4891,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4318,8 +4912,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4330,8 +4933,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4342,8 +4954,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4354,8 +4975,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4366,8 +4996,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4378,8 +5017,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4390,8 +5038,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4402,8 +5059,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4414,8 +5080,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4426,8 +5101,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4438,8 +5122,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4450,8 +5143,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4462,8 +5164,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4474,8 +5185,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4486,8 +5206,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4498,8 +5227,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4510,8 +5248,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4522,8 +5269,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4534,8 +5290,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4546,8 +5311,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4558,8 +5332,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4570,8 +5353,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4582,8 +5374,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   - cardId: 0
     cardName: 
     cardCost: 0
@@ -4594,8 +5395,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
-    cardActivationEffect: 0
+    activationTypes: 
     cardEffect: 0
+    effectCantidad: 0
+    effectTargetName: 
+    effectCardClass: 
+    effectCardDeity: 
+    effectCoste: 0
+    effectDonde: 0
+    effectATK: 0
+    effectDEF: 0
+    effectHP: 0
   graveyard: []
   banished: []
   hand: []

@@ -15,7 +15,7 @@ public class EfectosDiccionario : MonoBehaviour
         OnDefense,
         OnStartTurn,
         OnEndTurn,
-        OnDestryCard,
+        OnDestroyCard,
         OnStartBattle,
         OnEndBattle
     }
@@ -34,11 +34,15 @@ public class EfectosDiccionario : MonoBehaviour
             { ActivationType.OncePerTurn, ActivateOncePerTurn },
             { ActivationType.OnAttack, ActivateOnAttack },
             { ActivationType.OnDefense, ActivateOnDefense },
-            { ActivationType.OnStartTurn, ActivateOnStartTurn }
+            { ActivationType.OnStartTurn, ActivateOnStartTurn },
+            { ActivationType.OnEndTurn, ActivateOnEndTurn },
+            { ActivationType.OnDestroyCard, ActivateOnDestroyCard },
+            { ActivationType.OnStartBattle, ActivateOnStartBattle }, 
+            { ActivationType.OnEndBattle, ActivatieOnEndBattle }
         };
         }
 
-        // Método para ejecutar una activación
+       
         public void ActivateEffect(ActivationType activationType, Card card)
         {
             if (activationActions.TryGetValue(activationType, out var activationAction))
@@ -47,64 +51,64 @@ public class EfectosDiccionario : MonoBehaviour
             }
             else
             {
-                Console.WriteLine("No se encontró la lógica para este tipo de activación.");
+                Debug.Log("No se encontró la lógica de este tipo de activación.");
             }
         }
 
-        // Métodos individuales para cada tipo de activación
+        
         private void ActivateOnEnterField(Card card)
         {
-            Console.WriteLine($"Efecto activado al entrar al campo para la carta {card.cardName}.");
-            // Lógica específica para el efecto "OnEnterField"
+            Debug.Log($"Efecto activado al entrar al campo de la carta {card.cardName}.");
+            
         }
 
         private void ActivateOnLeaveField(Card card)
         {
-            Console.WriteLine($"Efecto activado al salir del campo para la carta {card.cardName}.");
-            // Lógica específica para el efecto "OnLeaveField"
+            Debug.Log($"Efecto activado al salir del campo de la carta {card.cardName}.");
+            
         }
 
         private void ActivateOncePerTurn(Card card)
         {
-            Console.WriteLine($"Efecto activado una vez por turno para la carta {card.cardName}.");
-            // Lógica específica para el efecto "OncePerTurn"
+            Debug.Log($"Efecto activado una vez por turno de la carta {card.cardName}.");
+            
         }
 
         private void ActivateOnAttack(Card card)
         {
-            Console.WriteLine($"Efecto activado al atacar con la carta {card.cardName}.");
-            // Lógica específica para el efecto "OnAttack"
+            Debug.Log($"Efecto activado al atacar con la carta {card.cardName}.");
+            
         }
 
         private void ActivateOnDefense(Card card)
         {
-            Console.WriteLine($"Efecto activado al defenderse con la carta {card.cardName}.");
-            // Lógica específica para el efecto "OnDefense"
+            Debug.Log($"Efecto activado al defenderse con la carta {card.cardName}.");
+           
         }
 
         private void ActivateOnStartTurn(Card card)
         {
-
+            Debug.Log($"Efecto activado al inicio del turno de la carta {card.cardName}.");
         }
 
         private void ActivateOnEndTurn(Card card)
         {
-
+            Debug.Log($"Efecto activado al final del turno de la carta {card.cardName}.");
         }
 
-        private void ActivationOnDestroyCard(Card card)
+        private void ActivateOnDestroyCard(Card card)
         {
-
+            Debug.Log($"Efecto activado al destuir la carta {card.cardName}.");
         }
 
-        private void ActivationOnStartBattle(Card card)
+        private void ActivateOnStartBattle(Card card)
         {
-
+            Debug.Log($"Efecto activado al inicio de la fase de batalla de la carta {card.cardName}.");
         }
 
-        private void ActivationOnEndBattle(Card card)
+        private void ActivatieOnEndBattle(Card card)
         {
-
+            Debug.Log($"Efecto activado al final de la fase de batalla turno de la carta {card.cardName}.");
         }
     }
 
@@ -118,68 +122,6 @@ public class EfectosDiccionario : MonoBehaviour
 
 
 
-    public class CardEffects
-    {
-        public void CardEffect_DrawCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Draw");
-            // Lógica para dibujar cartas
-        }
-
-        public void CardEffect_DestroyCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Destroy");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_BanishCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Banish");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_LookCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Look");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_BuffCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Buff");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_HealDamageCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Heal/Damage");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_Taunt(EffectParams parameters)
-        {
-            Console.WriteLine($"Taunt");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_ManaChanges(EffectParams parameters)
-        {
-            Console.WriteLine($"Mana");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_LimitCards(EffectParams parameters)
-        {
-            Console.WriteLine($"Mana");
-            // Lógica para destruir cartas
-        }
-
-        public void CardEffect_Constants(EffectParams parameters)
-        {
-            Console.WriteLine($"Mana");
-            // Lógica para destruir cartas
-        }
-    }
 
     public class EffectParams
     {
@@ -194,12 +136,26 @@ public class EfectosDiccionario : MonoBehaviour
         public int HP { get; set; }
     }
 
-    public class CardGame
+    public enum EffectType
+    {
+        DrawCards,
+        DestroyCards,
+        BanishCards,
+        LookCards,
+        BuffCards,
+        HealDamageCards,
+        Taunt,
+        ManaChanges,
+        LimitCards,
+        Constants
+    }
+
+    public class DictionaryCardEffects
     {
         private Dictionary<int, Action<EffectParams>> effectActions;
         private CardEffects cardEffects;
 
-        public CardGame()
+        public DictionaryCardEffects()
         {
             cardEffects = new CardEffects();
 
@@ -226,7 +182,7 @@ public class EfectosDiccionario : MonoBehaviour
 
         public void ActivateEffect(int cardActivationEffect, EffectParams parameters)
         {
-            // Busca el efecto y lo ejecuta si existe
+            
             if (effectActions.TryGetValue(cardActivationEffect, out var effectAction))
             {
                 effectAction(parameters);
@@ -235,6 +191,70 @@ public class EfectosDiccionario : MonoBehaviour
             {
                 Debug.LogError("No hay efecto");
             }
+        }
+    }
+
+
+    public class CardEffects
+    {
+        public void CardEffect_DrawCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Draw");
+            
+        }
+
+        public void CardEffect_DestroyCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Destroy");
+            
+        }
+
+        public void CardEffect_BanishCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Banish");
+            
+        }
+
+        public void CardEffect_LookCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Look");
+            
+        }
+
+        public void CardEffect_BuffCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Buff");
+           
+        }
+
+        public void CardEffect_HealDamageCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Heal/Damage");
+            
+        }
+
+        public void CardEffect_Taunt(EffectParams parameters)
+        {
+            Console.WriteLine($"Taunt");
+            
+        }
+
+        public void CardEffect_ManaChanges(EffectParams parameters)
+        {
+            Console.WriteLine($"Mana");
+            
+        }
+
+        public void CardEffect_LimitCards(EffectParams parameters)
+        {
+            Console.WriteLine($"Mana");
+            
+        }
+
+        public void CardEffect_Constants(EffectParams parameters)
+        {
+            Console.WriteLine($"Mana");
+            
         }
     }
 }

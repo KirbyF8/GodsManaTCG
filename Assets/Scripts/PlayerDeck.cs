@@ -176,14 +176,12 @@ public class PlayerDeck : MonoBehaviour
     //? 2 Cementerio
     //? 3 Destierros
     //? 4 Campo
-
+    //? 5 ReturnCards 
    
     public List<Card> SearchCards(string what = "", int cost = 0, string who = "", int where = 0, string from = "")
     {
        
-        
-        if (where == 1) // ? Deck
-        {
+       
 
             if (who != "")
             {
@@ -200,250 +198,105 @@ public class PlayerDeck : MonoBehaviour
 
             if (from != "")
             {
-                for (int i = 0; i < deck.Count; i++)
-                {
-                    if (deck[i].cardType == from)
-                    {
-                        returnCards.Add(deck[i]);
-                    }
-                }
-                return returnCards;
+               SearchFrom(deck, from, false);
+            where = 5;
             }
 
             if (cost != 0)
             {
+              SearchCost(deck, cost);
+            where = 5;
 
-                for (int i = 0; i < deck.Count; i++)
-                {
-                    if (deck[i].cardCost == cost)
-                    {
-                        returnCards.Add(deck[i]);
-                    }
-                }
-                return returnCards;
-            }
+        }
 
             if (what != "")
             {
 
-                for (int i = 0; i < deck.Count; i++)
-                {
-                    if (what == "elegido" || what == "Elegido")
-                    {
-                        if (deck[i].cardHealth != 0)
-                        {
-                            returnCards.Add(deck[i]);
-                        }
-                    } 
-                    else if (deck[i].cardClass == what)
-                    {
-                        returnCards.Add(deck[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-
-        } else if (where == 2) //? Cementerio
-        {
-
-            if (who != "")
-            {
-                for (int i = 0; i < graveyard.Count; i++)
-                {
-                    if (graveyard[i].cardName == who)
-                    {
-                        returnCards.Add(graveyard[i]);
-                    }
-
-                }
-                return returnCards;
-            }
-
-            if (from != "")
-            {
-                for (int i = 0; i < graveyard.Count; i++)
-                {
-                    if (graveyard[i].cardType == from)
-                    {
-                        returnCards.Add(graveyard[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (cost != 0)
-            {
-
-                for (int i = 0; i < graveyard.Count; i++)
-                {
-                    if (graveyard[i].cardCost == cost)
-                    {
-                        returnCards.Add(graveyard[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (what != "")
-            {
-
-                for (int i = 0; i < graveyard.Count; i++)
-                {
-                    if (what == "chosen" || what == "Chosen")
-                    {
-                        if (graveyard[i].cardHealth != 0)
-                        {
-                            returnCards.Add(graveyard[i]);
-                        }
-                    }
-                    else if (graveyard[i].cardClass == what)
-                    {
-                        returnCards.Add(graveyard[i]);
-                    }
-                }
-                return returnCards;
-            }
-
+                SearchWhat(deck, what);
+            where = 5;
 
         }
-        else if (where == 3) //? Destierros
-        {
-            if (who != "")
-            {
-                for (int i = 0; i < banished.Count; i++)
-                {
-                    if (banished[i].cardName == who)
-                    {
-                        returnCards.Add(banished[i]);
-                    }
-
-                }
-                return returnCards;
-            }
-
-            if (from != "")
-            {
-                for (int i = 0; i < banished.Count; i++)
-                {
-                    if (banished[i].cardType == from)
-                    {
-                        returnCards.Add(banished[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (cost != 0)
-            {
-
-                for (int i = 0; i < banished.Count; i++)
-                {
-                    if (banished[i].cardCost == cost)
-                    {
-                        returnCards.Add(banished[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (what != "")
-            {
-
-                for (int i = 0; i < banished.Count; i++)
-                {
-                    if (what == "chosen" || what == "Chosen")
-                    {
-                        if (banished[i].cardHealth != 0)
-                        {
-                            returnCards.Add(banished[i]);
-                        }
-                    }
-                    else if (banished[i].cardClass == what)
-                    {
-                        returnCards.Add(banished[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-
-        }
-        else if (where == 4) //? Campo
-        {
-            if (who != "")
-            {
-                for (int i = 0; i < field.Count; i++)
-                {
-                    if (field[i].cardName == who)
-                    {
-                        returnCards.Add(field[i]);
-                    }
-
-                }
-                return returnCards;
-            }
-
-            if (from != "")
-            {
-                for (int i = 0; i < field.Count; i++)
-                {
-                    if (field[i].cardType == from)
-                    {
-                        returnCards.Add(field[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (cost != 0)
-            {
-
-                for (int i = 0; i < field.Count; i++)
-                {
-                    if (field[i].cardCost == cost)
-                    {
-                        returnCards.Add(field[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-            if (what != "")
-            {
-
-                for (int i = 0; i < field.Count; i++)
-                {
-                    if (what == "chosen" || what == "Chosen")
-                    {
-                        if (field[i].cardHealth != 0)
-                        {
-                            returnCards.Add(field[i]);
-                        }
-                    }
-                    else if (field[i].cardClass == what)
-                    {
-                        returnCards.Add(field[i]);
-                    }
-                }
-                return returnCards;
-            }
-
-        }
-
-
-
-
-
-
-        foreach (Card card in deck)
-        {
-            returnCards.Add(card);
-        }
-
 
         return returnCards;
+       
     }
+
+    public List<Card> SearchFrom(List<Card> whereList, string from, bool reEnter)
+    {
+        if (!reEnter)
+        {
+            for (int i = 0; i < whereList.Count; i++)
+            {
+                if (whereList[i].cardType == from)
+                {
+                    returnCards.Add(whereList[i]);
+                }
+            }
+            return returnCards;
+        } 
+        
+        /*
+        else
+        {
+            for (int i = 0; i < returnCards.Count; i++)
+            {
+                if (returnCards[i].cardType == from)
+                {
+                    returnCards.Remove(returnCards[i]);
+                }
+            }
+            return returnCards;
+        }
+        */
+        return returnCards;
+
+
+    }
+    public List<Card> SearchCost(List<Card> whereList, int cost)
+    {
+       
+            for (int i = 0; i < whereList.Count; i++)
+            {
+                if (whereList[i].cardCost == cost)
+                {
+                    returnCards.Add(whereList[i]);
+                }
+            }
+            return returnCards;
+        
+        
+           
+        
+    
+        
+    }
+
+    public List<Card> SearchWhat(List<Card> whereList, string what)
+    {
+
+        
+            for (int i = 0; i < whereList.Count; i++)
+            {
+                if (what == "elegido" || what == "Elegido")
+                {
+                    if (whereList[i].cardHealth != 0)
+                    {
+                        returnCards.Add(whereList[i]);
+                    }
+                }
+                else if (whereList[i].cardClass == what)
+                {
+                    returnCards.Add(whereList[i]);
+                }
+            }
+            return returnCards;
+        
+           
+        
+        
+    }
+
+
 
     public void CleanSearch()
     {
@@ -457,18 +310,27 @@ public class PlayerDeck : MonoBehaviour
 
     public void canPlayCard(Card card)
     {
-        if (field.Count >= 6)
+        if (field.Count >= 6 && card.cardClass != "Mágica" && card.cardClass != "Trampa")
         {
+            // !No hay hueco en el campo
             return;
         }
 
+        // TODO Equipo
+        //TODO: Dominio
         
         if (!turnManager.checkMana(card.cardType, card.cardCost))
         {
+            //! No tienes Mana suficiente
             return;
             
         }
 
+        if (!turnManager.CanSummonFase())
+        {
+            //! No puedes usar cartas en esta fase
+            return;
+        }
        
         for (int i = 0; i < hand.Count; i++)
         {

@@ -44,9 +44,12 @@ public class TurnManager : MonoBehaviour
     [SerializeField] PlayerDeck playerDeck;
     [SerializeField] PlayerDeck rivalDeck;
 
+    private int turnFase;
+    
+
     private void Start()
     {
-        
+        turnFase = 0;
         TurnSelect();
         FirstDraw();
         StartTurn();
@@ -54,7 +57,7 @@ public class TurnManager : MonoBehaviour
     }
 
     
-
+  
     public void DrawCard()
     {
         if (isYourTurn)
@@ -92,6 +95,7 @@ public class TurnManager : MonoBehaviour
                 ManaChanges("N", 0, isYourTurn);
                 ManaChanges("N", 1, isYourTurn);
                 yourTurns++;
+                SetFase(1);
             }
             else
             {
@@ -103,6 +107,7 @@ public class TurnManager : MonoBehaviour
                 yourActualMana = maxManaYou;
                 DrawCard();
                 yourTurns++;
+                SetFase(1);
             }
         }
 
@@ -119,6 +124,7 @@ public class TurnManager : MonoBehaviour
 
                 rivalActualMana = maxManaRival;
                 rivalTurns++;
+                SetFase(1);
             }
             else
             {
@@ -131,6 +137,7 @@ public class TurnManager : MonoBehaviour
                 rivalActualMana = maxManaRival;
                 DrawCard();
                 rivalTurns++;
+                SetFase(1);
             }
         }
 
@@ -160,15 +167,43 @@ public class TurnManager : MonoBehaviour
         if (isYourTurn)
         {
             isYourTurn = false;
+            SetFase(0);
 
         }
         else if (!isYourTurn)
         {
             isYourTurn = true;
+            SetFase(0);
         }
 
         StartTurn();
     }
+    public void NextFase()
+    {
+        turnFase++;
+
+        if (turnFase >= 3)
+        {
+            EndTurn();
+        }
+    }
+    public void SetFase(int fase)
+    {
+        turnFase = fase;
+    }
+
+    public bool CanSummonFase()
+    {
+        if (turnFase == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 
     // !0 Add new mana
