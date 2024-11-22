@@ -14,6 +14,8 @@ public class PlayerDeck : MonoBehaviour
     public List<Card> field = new List<Card>();
     public List<Card> returnCards = new List<Card>();
 
+    public Card zonaDeDominio = null; 
+
     int randomCard = 0;
     [SerializeField] int deckSize;
     private int cardsOnDeck;
@@ -177,6 +179,8 @@ public class PlayerDeck : MonoBehaviour
     //? 3 Destierros
     //? 4 Campo
     //? 5 ReturnCards 
+    //? 6 Mano y Deck
+    //? 7 Fichas
    
     public List<Card> SearchCards(string what = "", int cost = 0, string who = "", int where = 0, string from = "")
     {
@@ -317,7 +321,24 @@ public class PlayerDeck : MonoBehaviour
         }
 
         // TODO Equipo
+        //? Comprobar si hay Elegidos, Comprobar que almeno 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
+
+
         //TODO: Dominio
+        if ( card.cardClass == "Dominio")
+        {
+            if (zonaDeDominio == null)
+            {
+                zonaDeDominio = card;
+                //TODO PlayDomainCard
+            }
+            else
+            {
+                //TODO Destroy Domain
+                zonaDeDominio = card;
+                //TODO PlayDomainCard
+            }
+        }
         
         if (!turnManager.checkMana(card.cardType, card.cardCost))
         {

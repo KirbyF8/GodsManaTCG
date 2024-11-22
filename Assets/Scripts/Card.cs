@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +9,8 @@ using static EfectosDiccionario;
 [System.Serializable]
 public class Card 
 {
+    
+
 
     public int cardId;
     public string cardName;
@@ -48,25 +51,47 @@ public class Card
     //? 9 Curar
     //? 10 Mana
     //? 11 Dañar
-    public int cardEffect;
-
-    public int effectCantidad;   
-    public string effectTargetName; 
-    public string effectCardClass;  
-    public string effectCardDeity;  
-    public int effectCoste;        
-    public int effectDonde;        
-    public int effectATK;          
-    public int effectDEF;
-    public int effectHP;
-
-    
+    public int[] cardEffect;
 
 
 
-    public Card(int Id, string CardName, int Cost, int Attack, int Defense, int Health, string Description, string Type, string Class, int Rarity, 
-        List<ActivationType> ActivationType = null ,int Effect = 0, int E_Cantidad = 1, string E_Name = "", string E_Class = "", string E_Deity = "", int E_Coste = 0, 
-        int E_Donde = 0, int E_ATK = 0, int E_DEF = 0, int E_HP = 0)
+    public int[] effectCantidad;     
+    public string[] effectTargetName; 
+    public string[] effectCardClass;  
+    public string[] effectCardDeity;  
+    public int[] effectCoste;           
+    public int[] effectDonde;           
+    public int[] effectATK;            
+    public int[] effectDEF;            
+    public int[] effectHP;
+
+
+
+
+
+    public Card(
+     int Id,
+     string CardName,
+     int Cost,
+     int Attack,
+     int Defense,
+     int Health,
+     string Description,
+     string Type,
+     string Class,
+     int Rarity,
+     List<ActivationType> ActivationType = null,
+     int[] Effect = null,
+     int[] E_Cantidad = null,
+    string[] E_Name = null,
+    string[] E_Class = null,
+    string[] E_Deity = null,
+    int[] E_Coste = null,
+    int[] E_Donde = null,
+    int[] E_ATK = null,
+    int[] E_DEF = null,
+    int[] E_HP = null
+ )
     {
         cardId = Id;
         cardName = CardName;
@@ -83,18 +108,17 @@ public class Card
 
         activationTypes = ActivationType;
 
-        cardEffect = Effect;
+        cardEffect = Effect ?? new int[2] {0,0};
 
-        effectCantidad = E_Cantidad;
-        effectTargetName = E_Name;
-        effectCardClass = E_Class;
-        effectCardDeity = E_Deity;
-        effectCoste = E_Coste;
-        effectDonde = E_Donde;
-        effectATK = E_ATK;
-        effectDEF = E_DEF;
-        effectHP = E_HP;
-        effectHP = E_HP;
+        effectCantidad = E_Cantidad ?? new int[2] { 1, 1 };
+        effectTargetName = E_Name ?? new string[2] { "", "" };
+        effectCardClass = E_Class ?? new string[2] { "", "" };
+        effectCardDeity = E_Deity ?? new string[2] { "", "" };
+        effectCoste = E_Coste ?? new int[2] { 0, 0 };
+        effectDonde = E_Donde ?? new int[2] { 0, 0 };
+        effectATK = E_ATK ?? new int[2] { 0, 0 };
+        effectDEF = E_DEF ?? new int[2] { 0, 0 };
+        effectHP = E_HP ?? new int[2] { 0, 0 };
     }
 
     

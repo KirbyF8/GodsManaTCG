@@ -172,7 +172,10 @@ public class EfectosDiccionario : MonoBehaviour
             { 7, cardEffects.CardEffect_Taunt },
             { 8, cardEffects.CardEffect_ManaChanges },
             { 9, cardEffects.CardEffect_LimitCards },
-            {10, cardEffects.CardEffect_Constants }
+            {10, cardEffects.CardEffect_Constants },
+            {11, cardEffects.CardEffect_SummonChosen },
+            {12, cardEffects.CardEffect_RetreatChosenDeck },
+            {13, cardEffects.CardEffect_RetreatChosenHand}
 
 
                 
@@ -255,6 +258,20 @@ public class EfectosDiccionario : MonoBehaviour
         {
             Console.WriteLine($"Mana");
             
+        }
+
+        public void CardEffect_SummonChosen(EffectParams parameters)
+        {
+            Console.WriteLine($"Summon");
+        }
+
+        public void CardEffect_RetreatChosenDeck(EffectParams parameters)
+        {
+            Console.WriteLine($"RetratDeck");
+        }
+        public void CardEffect_RetreatChosenHand(EffectParams parameters)
+        {
+            Console.WriteLine($"RetratHand");
         }
     }
 }
