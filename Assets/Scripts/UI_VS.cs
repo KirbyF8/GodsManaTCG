@@ -5,17 +5,13 @@ using UnityEngine;
 public class UI_VS : MonoBehaviour
 {
 
-    [SerializeField] private GameObject VS;
-    [SerializeField] private GameObject 
+    
+    
 
-    void Start()
+  private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

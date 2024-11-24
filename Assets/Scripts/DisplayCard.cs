@@ -322,6 +322,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     //? 2 Field
     //? 3 Shoped
     //? 4 Card SelHéctor
+    //? 5 Rival Hand
     public void WhereIAm(int aux)
     {
         whereIAm = aux;

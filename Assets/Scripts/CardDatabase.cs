@@ -145,7 +145,7 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una mágica  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una trampa  <sprite name=Deck>  del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una carta de equipo  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(89, "Temp", 1, 1, 1, 1, "  <sprite name=AlSerInvocado> mira las 3 cartas de la parte superior  <sprite name=Deck> colocalas de vuelta en el orden que quieras", "Chronos", "Explorador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(89, "Kelith", 1, 1, 1, 1, "  <sprite name=AlSerInvocado> mira las 3 cartas de la parte superior  <sprite name=Deck> colocalas de vuelta en el orden que quieras", "Chronos", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de equipo  <sprite name=Deck> rival, destierrala", "Chronos", "Hechicero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de dominio  <sprite name=Deck> rival, destierrala", "Dana", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
 
