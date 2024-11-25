@@ -61,6 +61,17 @@ MonoBehaviour:
     cardType: 
     cardClass: 
     cardRarity: 0
+    activationTypes: 
+    cardEffect: 
+    effectCantidad: 
+    effectTargetName: []
+    effectCardClass: []
+    effectCardDeity: []
+    effectCoste: 
+    effectDonde: 
+    effectATK: 
+    effectDEF: 
+    effectHP: 
   displayId: 9
   cardId: 1
   cardName: 
@@ -92,24 +103,36 @@ MonoBehaviour:
   Fondo_Yrys: {fileID: 21300000, guid: 70e33589a5db07c45ac558507d2030fc, type: 3}
   Fondo_Chronos: {fileID: 21300000, guid: 387d4dd292807fc41b0991e30b2d2e02, type: 3}
   Fondo_Miknit: {fileID: 21300000, guid: 7b8bd59f8c6fb3f419d2f73da9a7493b, type: 3}
+  Fondo_N: {fileID: 21300000, guid: 1d7b1ecd6ac8a6444befac433a1a4cfa, type: 3}
   Mana_Dana: {fileID: 21300000, guid: 194405c7797da3b4491d5c2e49abee8e, type: 3}
   Mana_Murgu: {fileID: 21300000, guid: f7f18bb13122f36418a72e5b6068106e, type: 3}
   Mana_Etse: {fileID: 21300000, guid: 55a351c7f09a5bb488c6aaa2978e19b8, type: 3}
   Mana_Yrys: {fileID: 21300000, guid: bdb40eeb0c2066445999305bed9bb9ad, type: 3}
   Mana_Chronos: {fileID: 21300000, guid: 7be49c68d0ff2c94085776107af21212, type: 3}
   Mana_Miknit: {fileID: 21300000, guid: 3dc071452fa84cc4cb31aa817079775f, type: 3}
+  Mana_N: {fileID: 21300000, guid: 67d7ea55641ab4446a3e10e6cce95a2b, type: 3}
   Name_Dana: {fileID: 21300000, guid: 64db412e33eba1142812f25dd9201f6d, type: 3}
   Name_Murgu: {fileID: 21300000, guid: a8664fbc0ab473041ba99eb69d50ed09, type: 3}
   Name_Etse: {fileID: 21300000, guid: 7346e91cbbf06544698e132dcf1d2525, type: 3}
   Name_Yrys: {fileID: 21300000, guid: b26d0f1765e9b6147a69cace1e34c8a2, type: 3}
   Name_Chronos: {fileID: 21300000, guid: 8d88ffe8aaac382488aac385efe0721f, type: 3}
   Name_Miknit: {fileID: 21300000, guid: c64a0bb7b33feef44ab7a86c3a11d51a, type: 3}
+  Name_N: {fileID: 21300000, guid: 4c91fd20fa088d2408a85437a749a621, type: 3}
   Txt_Dana: {fileID: 21300000, guid: 424f164c8ef949a459d1d43f8223cd16, type: 3}
   Txt_Murgu: {fileID: 21300000, guid: f32f121eeae420a4a9d4e340e9989960, type: 3}
   Txt_Etse: {fileID: 21300000, guid: 1a19a299a6978024a93149a899690fbc, type: 3}
   Txt_Yrys: {fileID: 21300000, guid: 694f4f4cf644c3b48bd5990530366769, type: 3}
   Txt_Chronos: {fileID: 21300000, guid: 84ef25104765b2048914adc14fd407e1, type: 3}
   Txt_Miknit: {fileID: 21300000, guid: e2cb795e163cb32478d32fca4b276978, type: 3}
+  Txt_N: {fileID: 21300000, guid: 15322f4b376e4c54881bf37040a65787, type: 3}
+  attackAndDefensePlace: {fileID: 0}
+  deckPersistance: {fileID: 0}
+  materialSR: {fileID: 0}
+  materialUR: {fileID: 0}
+  cardImgs: []
+  selectable: {fileID: 0}
+  selectedOutline: {fileID: 0}
+  selectedCheck: {fileID: 0}
 --- !u!1 &1603915476457331348
 GameObject:
   m_ObjectHideFlags: 0

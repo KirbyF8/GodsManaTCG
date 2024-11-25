@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.PointerEventData;
 
 public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 {
@@ -52,6 +53,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private Sprite Fondo_Yrys;
     [SerializeField] private Sprite Fondo_Chronos;
     [SerializeField] private Sprite Fondo_Miknit;
+    [SerializeField] private Sprite Fondo_N;
 
     [SerializeField] private Sprite Mana_Dana;
     [SerializeField] private Sprite Mana_Murgu;
@@ -59,6 +61,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private Sprite Mana_Yrys;
     [SerializeField] private Sprite Mana_Chronos;
     [SerializeField] private Sprite Mana_Miknit;
+    [SerializeField] private Sprite Mana_N;
 
     [SerializeField] private Sprite Name_Dana;
     [SerializeField] private Sprite Name_Murgu;
@@ -66,6 +69,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private Sprite Name_Yrys;
     [SerializeField] private Sprite Name_Chronos;
     [SerializeField] private Sprite Name_Miknit;
+    [SerializeField] private Sprite Name_N;
 
     [SerializeField] private Sprite Txt_Dana;
     [SerializeField] private Sprite Txt_Murgu;
@@ -73,6 +77,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] private Sprite Txt_Yrys;
     [SerializeField] private Sprite Txt_Chronos;
     [SerializeField] private Sprite Txt_Miknit;
+    [SerializeField] private Sprite Txt_N;
 
     // [SerializeField] private GameObject healthPlace;
     [SerializeField] private GameObject attackAndDefensePlace;
@@ -95,6 +100,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     [SerializeField] GameObject selectedCheck;
     private ShopUI shopUI;
     private CardEffects cardEffects;
+    private TurnManager turnManager;
 
     private int whereIAm;
     void Start()
@@ -103,19 +109,46 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         isFlipped = true;
 
         gameAssets = FindAnyObjectByType<GameAssets>();
-        playerDeck = FindAnyObjectByType<PlayerDeck>();
+
+       
+
+       
+
+
 
         try
         {
+            turnManager = FindAnyObjectByType<TurnManager>();
             shopUI = FindAnyObjectByType<ShopUI>();
             cardEffects = FindAnyObjectByType<CardEffects>();
         }
         catch (Exception e)
         {
+
+           
             shopUI = null;
             cardEffects = null;
+            turnManager = null;
+            Debug.LogException(e);
         }
-       
+
+
+        try
+        {
+            if (whereIAm == 5)
+            {
+                playerDeck = turnManager.returnRivalDeck();
+            }
+            else if (whereIAm == 1)
+            {
+                playerDeck = turnManager.returnPlayerDeck();
+            }
+        }
+        catch (Exception ex)
+        {
+            playerDeck = null;
+            Debug.LogException(ex);
+        }
 
         cardImgs = gameAssets.cardImgs;
 
@@ -229,6 +262,11 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         }
         else
         {
+            fondoCarta.sprite = Fondo_N;
+            fondoMana.sprite = Mana_N;
+            fondoName.sprite = Name_N;
+            fondoTxt.sprite = Txt_N;
+
             return;
         };
 
@@ -252,27 +290,52 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
     }
-
+    
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (whereIAm == 0)
+        if (InputButton.Left == eventData.button)
         {
+            if (whereIAm == 0)
+            {
 
-            return;
-        }else if (whereIAm == 3)
+                return;
+            }
+            else if (whereIAm == 3)
+            {
+                Next();
+                return;
+            }
+            else if (whereIAm == 4)
+            {
+                SelectCard();
+                return;
+            }
+            else if (whereIAm == 5 || whereIAm == 6 || whereIAm == 7)
+            {
+               return;
+            }
+
+            playerDeck.canPlayCard(thisCard);
+
+
+
+            Destruction();
+
+        }
+
+        if (InputButton.Right == eventData.button)
         {
-            Next();
-            return;
-        } else if (whereIAm == 4)
+            
+            if (whereIAm == 1 || whereIAm == 2 || whereIAm == 6)
+            {
+                turnManager.ExamineCard(thisCard);
+            }
+        }
+
+        if (InputButton.Middle == eventData.button)
         {
-            SelectCard();
             return;
         }
-        playerDeck.canPlayCard(thisCard);
-       
-
-
-        Destruction();
 
 
 
@@ -323,9 +386,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     //? 3 Shoped
     //? 4 Card SelHéctor
     //? 5 Rival Hand
+    //? 6 Rival Hand Flipped
+    //? 7 Expositor
     public void WhereIAm(int aux)
     {
         whereIAm = aux;
+        
     }
     Card aux;
     public Card returnCard()
@@ -333,4 +399,6 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         aux = CardDatabase.cardList[cardId];
         return aux;
     }
+
+   
 }

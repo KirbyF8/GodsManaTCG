@@ -34,10 +34,17 @@ public class PlayerDeck : MonoBehaviour
 
     [SerializeField] TurnManager turnManager;
 
+    //! Sustituirlo más adelante
+    [SerializeField] bool rivalHand;
+
+
+
     private bool canDestroy = false;
 
     void Start()
     {
+        
+
         for (int i = 0; i <= deck.Count-1;  i++)
         {
             randomCard = Random.Range(1, 120);
@@ -51,6 +58,8 @@ public class PlayerDeck : MonoBehaviour
         
        
     }
+
+   
 
     public void CallDraw(int numberOfDrawCards)
     {
@@ -138,10 +147,16 @@ public class PlayerDeck : MonoBehaviour
         DisplayCard displayCard;
         displayCard = CardInHand.GetComponent<DisplayCard>();
 
+      
 
         int lastCard = deck.Count;
         displayCard.updateDisplay(deck[cardId].cardId);
         displayCard.WhereIAm(1);
+        if (rivalHand)
+        {
+            displayCard.WhereIAm(5);
+            displayCard.faceDown();
+        }
         hand.Add(deck[cardId]);
         deck.RemoveAt(cardId);
         
@@ -314,19 +329,24 @@ public class PlayerDeck : MonoBehaviour
 
     public void canPlayCard(Card card)
     {
+
+        
         if (field.Count >= 6 && card.cardClass != "Mágica" && card.cardClass != "Trampa")
         {
             // !No hay hueco en el campo
+           
             return;
+           
         }
 
         // TODO Equipo
-        //? Comprobar si hay Elegidos, Comprobar que almeno 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
+        //? Comprobar si hay Elegidos, Comprobar que almenos 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
 
 
         //TODO: Dominio
         if ( card.cardClass == "Dominio")
         {
+           
             if (zonaDeDominio == null)
             {
                 zonaDeDominio = card;
@@ -342,6 +362,7 @@ public class PlayerDeck : MonoBehaviour
         
         if (!turnManager.checkMana(card.cardType, card.cardCost))
         {
+           
             //! No tienes Mana suficiente
             return;
             
@@ -349,14 +370,21 @@ public class PlayerDeck : MonoBehaviour
 
         if (!turnManager.CanSummonFase())
         {
+           
             //! No puedes usar cartas en esta fase
             return;
         }
        
+
+
         for (int i = 0; i < hand.Count; i++)
         {
+          
+
             if (hand[i] == card)
             {
+                
+                
                 canDestroy = true;
                 PlayCard(card);
 
@@ -370,9 +398,10 @@ public class PlayerDeck : MonoBehaviour
 
     public void PlayCard(Card card)
     {
+       
 
 
-            GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
             CardInHand.transform.SetParent(Field.transform);
             DisplayCard displayCard;
             displayCard = CardInHand.GetComponent<DisplayCard>();

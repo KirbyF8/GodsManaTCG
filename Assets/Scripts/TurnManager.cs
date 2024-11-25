@@ -45,29 +45,61 @@ public class TurnManager : MonoBehaviour
     [SerializeField] PlayerDeck rivalDeck;
 
     private int turnFase;
-    
+
+
+    [SerializeField] GameObject examineCardPanel;
+    [SerializeField] GameObject examineCard;
+    [SerializeField] Card examinedCardCard;
+
 
     private void Start()
     {
-        turnFase = 0;
+        SetFase(0);
         TurnSelect();
         FirstDraw();
         StartTurn();
         
     }
 
-    
+    public void ExamineCard(Card card)
+    {
+        examineCardPanel.SetActive(true);
+        
+        DisplayCard cardDisplayCardComponent = examineCard.GetComponent<DisplayCard>();
+
+        examinedCardCard = card;
+        cardDisplayCardComponent.updateDisplay(examinedCardCard.cardId);
+        cardDisplayCardComponent.WhereIAm(6);
+
+    }
+
+    public void ExitExamineCard()
+    {
+        examineCardPanel.SetActive(false);
+    }
+
+    public PlayerDeck returnRivalDeck()
+    {
+        return rivalDeck;
+    }
+
+    public PlayerDeck returnPlayerDeck()
+    {
+        return playerDeck;
+    }
   
     public void DrawCard()
     {
         if (isYourTurn)
         {
             playerDeck.CallDraw(1);
+            SetFase(1);
             return;
         }
         else if (!isYourTurn)
         {
             rivalDeck.CallDraw(1);
+            SetFase(1);
             return;
         }
 
@@ -77,6 +109,7 @@ public class TurnManager : MonoBehaviour
     {
         playerDeck.CallDraw(6);
         rivalDeck.CallDraw(6);
+        SetFase(1);
     }
 
     private void StartTurn()
@@ -324,6 +357,7 @@ public class TurnManager : MonoBehaviour
 }
     private void yourSpendManas(string god,int aux2,ref Image[] Manas)
     {
+        aux2--;
         if (god == "N")
         {
             Manas[aux2--].sprite = ManaN_Spent;
@@ -394,6 +428,7 @@ public class TurnManager : MonoBehaviour
             {
                 yourSpendManas(god, yourActualMana, ref Manas);
                 yourActualMana -= cardCost;
+                
                 return true;
             }
 
