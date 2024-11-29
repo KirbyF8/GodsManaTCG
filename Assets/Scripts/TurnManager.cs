@@ -200,12 +200,14 @@ public class TurnManager : MonoBehaviour
         if (isYourTurn)
         {
             isYourTurn = false;
+            ManaChanges("N", 1, isYourTurn);
             SetFase(0);
 
         }
         else if (!isYourTurn)
         {
             isYourTurn = true;
+            ManaChanges("N", 1, isYourTurn);
             SetFase(0);
         }
 
@@ -247,17 +249,20 @@ public class TurnManager : MonoBehaviour
         int aux;
         int aux2;
         
-        if (turn)
+        if (isYourTurn)
         {
+           
             aux = maxManaYou;
             aux2 = yourActualMana;
-            
+           
+
         }
         else
         {
-            aux = maxManaYou;
-            aux2 = yourActualMana;
-            
+            aux = maxManaRival;
+            aux2 = rivalActualMana;
+           
+
         }
 
 
@@ -267,7 +272,6 @@ public class TurnManager : MonoBehaviour
         aux = aux - 1;
         if (operation == 0)
         {
-            
            
             if (god == "N")
             {
@@ -305,7 +309,7 @@ public class TurnManager : MonoBehaviour
         {
             
             
-            for (int i = 0; i <= aux; i++)
+            for (int i = 0; i <= aux+1; i++)
             {
 
                
@@ -343,11 +347,14 @@ public class TurnManager : MonoBehaviour
 
         if (operation == 2)
         {
-           if (turn)
+           if (isYourTurn)
             {
+               
                 yourActualMana -= manaSpent;
+               
                 yourSpendManas(god, aux2,ref Manas);
-            }else if (!turn)
+
+            }else if (!isYourTurn)
             {
                 rivalActualMana -= manaSpent;
                 rivalSpendManas(god, aux2,ref RivalManas);
@@ -358,65 +365,79 @@ public class TurnManager : MonoBehaviour
     private void yourSpendManas(string god,int aux2,ref Image[] Manas)
     {
         aux2--;
-        if (god == "N")
+
+        Debug.Log(aux2);
+        Debug.Log(yourActualMana);
+
+        for (int i = aux2; i > yourActualMana-1; i--)
         {
-            Manas[aux2--].sprite = ManaN_Spent;
+            if (god == "N")
+            {
+                Manas[i].sprite = ManaN_Spent;
+            }
+            else if (god == "Dana")
+            {
+                Manas[i].sprite = ManaDana_Spent;
+            }
+            else if (god == "Etse")
+            {
+                Manas[i].sprite = ManaEtse_Spent;
+            }
+            else if (god == "Miknit")
+            {
+                Manas[i].sprite = ManaMiknit_Spent;
+            }
+            else if (god == "Chronos")
+            {
+                Manas[i].sprite = ManaChronos_Spent;
+            }
+            else if (god == "Murgu")
+            {
+                Manas[i].sprite = ManaMurgu_Spent;
+            }
+            else if (god == "Yrys")
+            {
+                Manas[i].sprite = ManaYrys_Spent;
+            }
         }
-        else if (god == "Dana")
-        {
-            Manas[aux2--].sprite = ManaDana_Spent;
-        }
-        else if (god == "Etse")
-        {
-            Manas[aux2--].sprite = ManaEtse_Spent;
-        }
-        else if (god == "Miknit")
-        {
-            Manas[aux2--].sprite = ManaMiknit_Spent;
-        }
-        else if (god == "Chronos")
-        {
-            Manas[aux2--].sprite = ManaChronos_Spent;
-        }
-        else if (god == "Murgu")
-        {
-            Manas[aux2--].sprite = ManaMurgu_Spent;
-        }
-        else if (god == "Yrys")
-        {
-            Manas[aux2--].sprite = ManaYrys_Spent;
-        }
+       
     }
 
     private void rivalSpendManas(string god, int aux2, ref Image[] RivalManas)
     {
-        if (god == "N")
+        aux2--;
+       
+
+        for (int i = aux2; i > rivalActualMana; i--)
         {
-            RivalManas[aux2--].sprite = ManaN_Spent;
-        }
-        else if (god == "Dana")
-        {
-            RivalManas[aux2--].sprite = ManaDana_Spent;
-        }
-        else if (god == "Etse")
-        {
-            RivalManas[aux2--].sprite = ManaEtse_Spent;
-        }
-        else if (god == "Miknit")
-        {
-            RivalManas[aux2--].sprite = ManaMiknit_Spent;
-        }
-        else if (god == "Chronos")
-        {
-            RivalManas[aux2--].sprite = ManaChronos_Spent;
-        }
-        else if (god == "Murgu")
-        {
-            RivalManas[aux2--].sprite = ManaMurgu_Spent;
-        }
-        else if (god == "Yrys")
-        {
-            RivalManas[aux2--].sprite = ManaYrys_Spent;
+            if (god == "N")
+            {
+                RivalManas[i].sprite = ManaN_Spent;
+            }
+            else if (god == "Dana")
+            {
+                RivalManas[i].sprite = ManaDana_Spent;
+            }
+            else if (god == "Etse")
+            {
+                RivalManas[i].sprite = ManaEtse_Spent;
+            }
+            else if (god == "Miknit")
+            {
+                RivalManas[i].sprite = ManaMiknit_Spent;
+            }
+            else if (god == "Chronos")
+            {
+                RivalManas[i].sprite = ManaChronos_Spent;
+            }
+            else if (god == "Murgu")
+            {
+                RivalManas[i].sprite = ManaMurgu_Spent;
+            }
+            else if (god == "Yrys")
+            {
+                RivalManas[i].sprite = ManaYrys_Spent;
+            }
         }
     }
 
@@ -426,8 +447,11 @@ public class TurnManager : MonoBehaviour
         {
             if (cardCost <= yourActualMana)
             {
-                yourSpendManas(god, yourActualMana, ref Manas);
-                yourActualMana -= cardCost;
+                
+                ManaChanges(god, 2, true, cardCost);
+
+              
+              
                 
                 return true;
             }
