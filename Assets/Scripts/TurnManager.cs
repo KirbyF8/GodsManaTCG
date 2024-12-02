@@ -461,7 +461,8 @@ public class TurnManager : MonoBehaviour
         {
             if (cardCost <= rivalActualMana)
             {
-                rivalActualMana -= cardCost;
+               
+                ManaChanges(god, 2, false, cardCost);
                 return true;
             }
         }

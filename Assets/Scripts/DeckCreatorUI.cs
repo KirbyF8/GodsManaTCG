@@ -21,7 +21,6 @@ public class DeckCreator : MonoBehaviour
 
     private Card auxCard;
 
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -31,7 +30,6 @@ public class DeckCreator : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
    
     public void AddCardToDeck(int card)
     {
