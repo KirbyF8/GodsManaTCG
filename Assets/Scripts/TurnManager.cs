@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Burst.Intrinsics.X86;
 
 public class TurnManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class TurnManager : MonoBehaviour
     public int maxManaRival = 0;
     public int rivalActualMana;
 
-    private string normalMana = "N";
+
 
     [SerializeField] Sprite ManaN;
     [SerializeField] Sprite ManaN_Spent;
@@ -51,9 +52,14 @@ public class TurnManager : MonoBehaviour
     [SerializeField] GameObject examineCard;
     [SerializeField] Card examinedCardCard;
 
+    private int yourLP;
+    private int rivalLP;
+
 
     private void Start()
     {
+        maxManaYou = 0;
+        maxManaRival = 0;
         SetFase(0);
         TurnSelect();
         FirstDraw();
@@ -112,66 +118,63 @@ public class TurnManager : MonoBehaviour
         SetFase(1);
     }
 
+    private bool ItsFirstTurn()
+    {
+        if (yourTurns == 0 && rivalTurns == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void StartTurn()
     {
         if (isYourTurn)
         {
-            if (yourTurns == 0 && rivalTurns == 0)
-            {
-                maxManaYou++;
+           
                 if (maxManaYou >= 10)
                 {
                     maxManaYou = 10;
                 }
-                
+                maxManaYou++;
                 yourActualMana = maxManaYou;
+                if (!ItsFirstTurn())
+                {
+                DrawCard();
+                }
                 ManaChanges("N", 0, isYourTurn);
                 ManaChanges("N", 1, isYourTurn);
                 yourTurns++;
                 SetFase(1);
-            }
-            else
-            {
-                if (maxManaYou >= 10)
-                {
-                    maxManaYou = 10;
-                }
-                maxManaYou++;
-                yourActualMana = maxManaYou;
-                DrawCard();
-                yourTurns++;
-                SetFase(1);
-            }
+           
         }
 
         if (!isYourTurn)
         {
-            if (rivalTurns == 0 && yourTurns == 0)
+            if (maxManaRival >= 10)
             {
-                isYourTurn = false;
-                maxManaRival++;
-                if (maxManaRival >= 10)
-                {
-                    maxManaRival = 10;
-                }
-
-                rivalActualMana = maxManaRival;
-                rivalTurns++;
-                SetFase(1);
+                maxManaRival = 10;
             }
-            else
+            maxManaRival++;
+            rivalActualMana = maxManaRival;
+            if (!ItsFirstTurn())
             {
-                isYourTurn = false;
-                maxManaRival++;
-                if (maxManaRival >= 10)
-                {
-                    maxManaRival = 10;
-                }
-                rivalActualMana = maxManaRival;
                 DrawCard();
-                rivalTurns++;
-                SetFase(1);
             }
+            ManaChanges("N", 0, isYourTurn);
+            ManaChanges("N", 1, isYourTurn);
+
+            isYourTurn = false;
+
+
+
+
+            rivalTurns++;
+            SetFase(1);
+
         }
 
     }
@@ -229,7 +232,7 @@ public class TurnManager : MonoBehaviour
 
     public bool CanSummonFase()
     {
-        if (turnFase == 1)
+        if (turnFase == 1 && isYourTurn)
         {
             return true;
         }
@@ -266,40 +269,19 @@ public class TurnManager : MonoBehaviour
         }
 
 
-
-
-
         aux = aux - 1;
+
         if (operation == 0)
         {
-           
-            if (god == "N")
+
+            if (isYourTurn)
             {
-                Manas[aux].sprite = ManaN;
+                YourAddMana(god, aux, ref Manas);
+
             }
-            else if (god == "Dana")
+            else if (!isYourTurn)
             {
-                Manas[aux].sprite = ManaDana;
-            }
-            else if (god == "Etse")
-            {
-                Manas[aux].sprite = ManaEtse;
-            }
-            else if (god == "Miknit")
-            {
-                Manas[aux].sprite = ManaMiknit;
-            }
-            else if (god == "Chronos")
-            {
-                Manas[aux].sprite = ManaChronos;
-            }
-            else if (god == "Murgu")
-            {
-                Manas[aux].sprite = ManaMurgu;
-            }
-            else if (god == "Yrys")
-            {
-                Manas[aux].sprite = ManaYrys;
+                RivalAddMana(god, aux, ref RivalManas);
             }
 
             return;
@@ -307,41 +289,15 @@ public class TurnManager : MonoBehaviour
 
         if (operation == 1)
         {
-            
-            
-            for (int i = 0; i <= aux+1; i++)
+            if (isYourTurn)
             {
+                YourRestoreManas(aux, ref Manas);
 
-               
-                if (Manas[i].sprite.name == "ManaDeDana_Agotado")
-                {
-                    Manas[i].sprite = ManaDana;
-                }
-                else if (Manas[i].sprite.name == "ManaDeEtse_Agotado")
-                {
-                    Manas[i].sprite = ManaEtse;
-                }
-                else if (Manas[i].sprite.name == "ManaDeMiknit_Agotado")
-                {
-                    Manas[i].sprite = ManaMiknit;
-                }
-                else if (Manas[i].sprite.name == "ManaDeChronos_Agotado")
-                {
-                    Manas[i].sprite = ManaChronos;
-                }
-                else if (Manas[i].sprite.name == "ManaDeMurgu_Agotado")
-                {
-                    Manas[i].sprite = ManaMurgu;
-                }
-                else if (Manas[i].sprite.name == "ManaDeYrys_Agotado")
-                {
-                    Manas[i].sprite = ManaYrys;
-                }
-                else
-                {
-                    Manas[i].sprite = ManaN;
-                }
+            } else if (!isYourTurn)
+            {
+                RivalRestoreManas(aux, ref RivalManas);
             }
+           
             return;
         }
 
@@ -362,12 +318,149 @@ public class TurnManager : MonoBehaviour
             return;
           }
 }
+    private void YourAddMana(string god, int aux, ref Image[] Manas)
+    {
+        if (god == "N")
+        {
+            Manas[aux].sprite = ManaN;
+        }
+        else if (god == "Dana")
+        {
+            Manas[aux].sprite = ManaDana;
+        }
+        else if (god == "Etse")
+        {
+            Manas[aux].sprite = ManaEtse;
+        }
+        else if (god == "Miknit")
+        {
+            Manas[aux].sprite = ManaMiknit;
+        }
+        else if (god == "Chronos")
+        {
+            Manas[aux].sprite = ManaChronos;
+        }
+        else if (god == "Murgu")
+        {
+            Manas[aux].sprite = ManaMurgu;
+        }
+        else if (god == "Yrys")
+        {
+            Manas[aux].sprite = ManaYrys;
+        }
+    }
+
+    private void RivalAddMana(string god, int aux, ref Image[] RivalManas)
+    {
+        if (god == "N")
+        {
+            RivalManas[aux].sprite = ManaN;
+        }
+        else if (god == "Dana")
+        {
+            RivalManas[aux].sprite = ManaDana;
+        }
+        else if (god == "Etse")
+        {
+            RivalManas[aux].sprite = ManaEtse;
+        }
+        else if (god == "Miknit")
+        {
+            RivalManas[aux].sprite = ManaMiknit;
+        }
+        else if (god == "Chronos")
+        {
+            RivalManas[aux].sprite = ManaChronos;
+        }
+        else if (god == "Murgu")
+        {
+            RivalManas[aux].sprite = ManaMurgu;
+        }
+        else if (god == "Yrys")
+        {
+            RivalManas[aux].sprite = ManaYrys;
+        }
+    }
+    private void YourRestoreManas(int aux, ref Image[] Manas)
+    {
+
+        for (int i = 0; i <= aux; i++)
+        {
+
+
+            if (Manas[i].sprite.name == "ManaDeDana_Agotado")
+            {
+                Manas[i].sprite = ManaDana;
+            }
+            else if (Manas[i].sprite.name == "ManaDeEtse_Agotado")
+            {
+                Manas[i].sprite = ManaEtse;
+            }
+            else if (Manas[i].sprite.name == "ManaDeMiknit_Agotado")
+            {
+                Manas[i].sprite = ManaMiknit;
+            }
+            else if (Manas[i].sprite.name == "ManaDeChronos_Agotado")
+            {
+                Manas[i].sprite = ManaChronos;
+            }
+            else if (Manas[i].sprite.name == "ManaDeMurgu_Agotado")
+            {
+                Manas[i].sprite = ManaMurgu;
+            }
+            else if (Manas[i].sprite.name == "ManaDeYrys_Agotado")
+            {
+                Manas[i].sprite = ManaYrys;
+            }
+            else
+            {
+                Manas[i].sprite = ManaN;
+            }
+        }
+    }
+
+    private void RivalRestoreManas(int aux, ref Image[] RivalManas)
+    {
+
+        for (int i = 0; i <= aux; i++)
+        {
+
+
+            if (Manas[i].sprite.name == "ManaDeDana_Agotado")
+            {
+                RivalManas[i].sprite = ManaDana;
+            }
+            else if (Manas[i].sprite.name == "ManaDeEtse_Agotado")
+            {
+                RivalManas[i].sprite = ManaEtse;
+            }
+            else if (Manas[i].sprite.name == "ManaDeMiknit_Agotado")
+            {
+                RivalManas[i].sprite = ManaMiknit;
+            }
+            else if (Manas[i].sprite.name == "ManaDeChronos_Agotado")
+            {
+                RivalManas[i].sprite = ManaChronos;
+            }
+            else if (Manas[i].sprite.name == "ManaDeMurgu_Agotado")
+            {
+                RivalManas[i].sprite = ManaMurgu;
+            }
+            else if (Manas[i].sprite.name == "ManaDeYrys_Agotado")
+            {
+                RivalManas[i].sprite = ManaYrys;
+            }
+            else
+            {
+                RivalManas[i].sprite = ManaN;
+            }
+        }
+    }
+
     private void yourSpendManas(string god,int aux2,ref Image[] Manas)
     {
         aux2--;
 
-        Debug.Log(aux2);
-        Debug.Log(yourActualMana);
 
         for (int i = aux2; i > yourActualMana-1; i--)
         {
