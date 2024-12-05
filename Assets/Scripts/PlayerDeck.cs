@@ -36,7 +36,7 @@ public class PlayerDeck : MonoBehaviour
 
     //! Sustituirlo más adelante
     [SerializeField] bool rivalHand;
-
+    [SerializeField] GameObject domainCard;
 
 
     private bool canDestroy = false;
@@ -329,7 +329,7 @@ public class PlayerDeck : MonoBehaviour
 
     public void canPlayCard(Card card)
     {
-
+        
         
         if (field.Count >= 6 && card.cardClass != "Mágica" && card.cardClass != "Trampa")
         {
@@ -343,22 +343,7 @@ public class PlayerDeck : MonoBehaviour
         //? Comprobar si hay Elegidos, Comprobar que almenos 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
 
 
-        //TODO: Dominio
-        if ( card.cardClass == "Dominio")
-        {
-           
-            if (zonaDeDominio == null)
-            {
-                zonaDeDominio = card;
-                //TODO PlayDomainCard
-            }
-            else
-            {
-                //TODO Destroy Domain
-                zonaDeDominio = card;
-                //TODO PlayDomainCard
-            }
-        }
+       
         
         if (!turnManager.checkMana(card.cardType, card.cardCost))
         {
@@ -370,12 +355,12 @@ public class PlayerDeck : MonoBehaviour
 
         if (!turnManager.CanSummonFase())
         {
-           
+
             //! No puedes usar cartas en esta fase
             return;
         }
-       
 
+      
 
         for (int i = 0; i < hand.Count; i++)
         {
@@ -398,8 +383,33 @@ public class PlayerDeck : MonoBehaviour
 
     public void PlayCard(Card card)
     {
-       
 
+        if (card.cardClass == "Dominio")
+        {
+            domainCard.SetActive(true);
+            if (zonaDeDominio == null)
+            {
+                
+                zonaDeDominio = card;
+                DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
+                displayCardD.updateDisplay(zonaDeDominio.cardId);
+                displayCardD.WhereIAm(9);
+                hand.Remove(card);
+                return;
+            }
+            else
+            {
+                //TODO Destroy Domain
+                graveyard.Add(zonaDeDominio);
+                zonaDeDominio = card;
+                DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
+                displayCardD.updateDisplay(zonaDeDominio.cardId);
+                displayCardD.WhereIAm(9);
+                hand.Remove(card);
+                return;
+
+            }
+        }
 
         GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
             CardInHand.transform.SetParent(Field.transform);

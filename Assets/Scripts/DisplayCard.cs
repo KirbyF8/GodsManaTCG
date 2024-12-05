@@ -103,6 +103,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     private TurnManager turnManager;
 
     private int whereIAm;
+
+    private int cardHpLost;
+
+
     void Start()
     {
 
@@ -178,6 +182,11 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         cardAttack = displayCard[0].cardAttack;
         cardDefense = displayCard[0].cardDefense;
         cardHealth = displayCard[0].cardHealth;
+        if (cardHpLost != 0)
+        {
+            cardHealth = displayCard[0].cardHealth-cardHpLost;
+        }
+        
         cardDescription = displayCard[0].cardDescription;
         cardType = displayCard[0].cardType;
         cardClass = displayCard[0].cardClass;
@@ -326,7 +335,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         if (InputButton.Right == eventData.button)
         {
             
-            if (whereIAm == 1 || whereIAm == 2 || whereIAm == 6)
+            if (whereIAm == 1 || whereIAm == 2 || whereIAm == 6 || whereIAm == 9)
             {
                 turnManager.ExamineCard(thisCard);
             }
@@ -388,6 +397,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     //? 5 Rival Hand
     //? 6 Rival Hand Flipped
     //? 7 Expositor
+    //? 8 Rival Field
+    //? 9 DoaminZone
     public void WhereIAm(int aux)
     {
         whereIAm = aux;
@@ -400,5 +411,13 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         return aux;
     }
 
-   
+    //TODO!!
+   public void cardHpLosted(int hp)
+    {
+        cardHpLost += hp;
+        if (cardHealth <= cardHpLost)
+        {
+
+        }
+    }
 }

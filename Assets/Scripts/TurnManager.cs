@@ -50,11 +50,20 @@ public class TurnManager : MonoBehaviour
 
     [SerializeField] GameObject examineCardPanel;
     [SerializeField] GameObject examineCard;
-    [SerializeField] Card examinedCardCard;
+    private Card examinedCardCard;
 
     private int yourLP;
     private int rivalLP;
 
+    [SerializeField] GameObject battlePanel;
+    
+    [SerializeField] GameObject atackerGO;
+    [SerializeField] GameObject defenderGO;
+
+    [SerializeField] GameObject faseObject;
+    [SerializeField] Image faseSprite;
+    [SerializeField] Sprite summonSprite;
+    [SerializeField] Sprite battleSprite;
 
     private void Start()
     {
@@ -220,14 +229,35 @@ public class TurnManager : MonoBehaviour
     {
         turnFase++;
 
+        
+
         if (turnFase >= 3)
         {
             EndTurn();
+        }
+
+        if (turnFase == 1)
+        {
+            faseSprite.sprite = summonSprite;
+        }
+        else
+        {
+            faseSprite.sprite = battleSprite;
+        }
+
+        if (isYourTurn)
+        {
+            faseObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+        else
+        {
+            faseObject.transform.rotation = new Quaternion(180, 0, 0, 0);
         }
     }
     public void SetFase(int fase)
     {
         turnFase = fase;
+        
     }
 
     public bool CanSummonFase()
@@ -563,6 +593,23 @@ public class TurnManager : MonoBehaviour
 
         
         return false;
+    }
+
+    public void battle(Card atacker, Card defender)
+    {
+        
+
+        battlePanel.SetActive(true);
+        Card attackerCard = atacker;
+        Card defenderCard = defender;
+
+        DisplayCard atackerDisplay = atackerGO.GetComponent<DisplayCard>();
+        DisplayCard defenderDisplay = defenderGO.GetComponent<DisplayCard>();
+
+        atackerDisplay.updateDisplay(attackerCard.cardId);
+        defenderDisplay.updateDisplay(defenderDisplay.cardId);
+
+
     }
 
 
