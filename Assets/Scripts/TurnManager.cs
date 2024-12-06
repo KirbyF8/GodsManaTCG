@@ -154,8 +154,8 @@ public class TurnManager : MonoBehaviour
                 {
                 DrawCard();
                 }
-                ManaChanges("N", 0, isYourTurn);
-                ManaChanges("N", 1, isYourTurn);
+                ManaChanges("N", 0);
+                ManaChanges("N", 1);
                 yourTurns++;
                 SetFase(1);
            
@@ -173,8 +173,8 @@ public class TurnManager : MonoBehaviour
             {
                 DrawCard();
             }
-            ManaChanges("N", 0, isYourTurn);
-            ManaChanges("N", 1, isYourTurn);
+            ManaChanges("N", 0);
+            ManaChanges("N", 1);
 
             isYourTurn = false;
 
@@ -211,15 +211,17 @@ public class TurnManager : MonoBehaviour
     {
         if (isYourTurn)
         {
+            
+            
             isYourTurn = false;
-            ManaChanges("N", 1, isYourTurn);
             SetFase(0);
 
         }
         else if (!isYourTurn)
         {
+           
+            
             isYourTurn = true;
-            ManaChanges("N", 1, isYourTurn);
             SetFase(0);
         }
 
@@ -277,7 +279,7 @@ public class TurnManager : MonoBehaviour
     // !0 Add new mana
     //? 1 Restore Mana
     //! 2 Spend Mana
-    public void ManaChanges(string god, int operation, bool turn, int manaSpent = 0)
+    public void ManaChanges(string god, int operation, int manaSpent = 0)
     {
         int aux;
         int aux2;
@@ -571,7 +573,7 @@ public class TurnManager : MonoBehaviour
             if (cardCost <= yourActualMana)
             {
                 
-                ManaChanges(god, 2, true, cardCost);
+                ManaChanges(god, 2, cardCost);
 
               
               
@@ -585,7 +587,7 @@ public class TurnManager : MonoBehaviour
             if (cardCost <= rivalActualMana)
             {
                
-                ManaChanges(god, 2, false, cardCost);
+                ManaChanges(god, 2, cardCost);
                 return true;
             }
         }

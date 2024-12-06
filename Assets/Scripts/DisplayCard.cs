@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -200,18 +201,32 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         cardText.text = "" + cardClass;
         thisCard = displayCard[0];
 
-        if (cardRarity == 1)
+
+
+        if (whereIAm == 3)
+        {
+            FoilCard();
+        }
+
+        if (cardRarity == 2)
+        {
+            cardImg.material = materialUR;
+        }else if (cardRarity == 1)
         {
             cardImg.material = materialSR;
         }
+        else
+        {
+            cardImg.material = null;
+        }
         
         
-        /*
+        
         if (cardImgs.Length >= cardId - 1)
         {
             cardImg.sprite = cardImgs[cardId-1];
 
-        }*/
+        }
         
 
         if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
@@ -420,4 +435,24 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
         }
     }
+
+
+    public void FoilCard()
+    {
+         int random = UnityEngine.Random.Range(0, 101);
+
+        if (random >= 98)
+        {
+            cardRarity = 2;
+        } else if (random >= 90)
+        {
+            cardRarity= 1;
+        } else
+        {
+            cardRarity = 0;
+        }
+
+    }
+
+
 }

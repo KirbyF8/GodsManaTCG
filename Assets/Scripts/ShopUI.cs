@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
-    private int coins = 10000;
+    private int coins = 1000000000;
     [SerializeField] private Sprite[] boosterPacksSprites;
     [SerializeField] private int[] prices;
     [SerializeField] private string[] boosterPacksNames;
