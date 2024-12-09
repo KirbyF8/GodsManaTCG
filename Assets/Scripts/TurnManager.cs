@@ -308,12 +308,12 @@ public class TurnManager : MonoBehaviour
 
             if (isYourTurn)
             {
-                YourAddMana(god, aux, ref Manas);
+                YourAddMana(god, aux, Manas);
 
             }
             else if (!isYourTurn)
             {
-                RivalAddMana(god, aux, ref RivalManas);
+                RivalAddMana(god, aux, RivalManas);
             }
 
             return;
@@ -323,11 +323,11 @@ public class TurnManager : MonoBehaviour
         {
             if (isYourTurn)
             {
-                YourRestoreManas(aux, ref Manas);
+                YourRestoreManas(aux,  Manas);
 
             } else if (!isYourTurn)
             {
-                RivalRestoreManas(aux, ref RivalManas);
+                RivalRestoreManas(aux, RivalManas);
             }
            
             return;
@@ -340,17 +340,17 @@ public class TurnManager : MonoBehaviour
                
                 yourActualMana -= manaSpent;
                
-                yourSpendManas(god, aux2,ref Manas);
+                yourSpendManas(god, aux2, Manas);
 
             }else if (!isYourTurn)
             {
                 rivalActualMana -= manaSpent;
-                rivalSpendManas(god, aux2,ref RivalManas);
+                rivalSpendManas(god, aux2, RivalManas);
             }
             return;
           }
 }
-    private void YourAddMana(string god, int aux, ref Image[] Manas)
+    private void YourAddMana(string god, int aux,  Image[] Manas)
     {
         if (god == "N")
         {
@@ -382,7 +382,7 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    private void RivalAddMana(string god, int aux, ref Image[] RivalManas)
+    private void RivalAddMana(string god, int aux, Image[] RivalManas)
     {
         if (god == "N")
         {
@@ -413,7 +413,7 @@ public class TurnManager : MonoBehaviour
             RivalManas[aux].sprite = ManaYrys;
         }
     }
-    private void YourRestoreManas(int aux, ref Image[] Manas)
+    private void YourRestoreManas(int aux, Image[] Manas)
     {
 
         for (int i = 0; i <= aux; i++)
@@ -451,9 +451,9 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    private void RivalRestoreManas(int aux, ref Image[] RivalManas)
+    private void RivalRestoreManas(int aux, Image[] RivalManas)
     {
-
+        Debug.Log("Rival");
         for (int i = 0; i <= aux; i++)
         {
 
@@ -489,7 +489,7 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    private void yourSpendManas(string god,int aux2,ref Image[] Manas)
+    private void yourSpendManas(string god,int aux2, Image[] Manas)
     {
         aux2--;
 
@@ -528,7 +528,7 @@ public class TurnManager : MonoBehaviour
        
     }
 
-    private void rivalSpendManas(string god, int aux2, ref Image[] RivalManas)
+    private void rivalSpendManas(string god, int aux2,  Image[] RivalManas)
     {
         aux2--;
        

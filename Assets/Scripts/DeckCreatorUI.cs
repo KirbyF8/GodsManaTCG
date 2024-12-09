@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DeckCreator : MonoBehaviour
 {
@@ -19,15 +20,16 @@ public class DeckCreator : MonoBehaviour
     [SerializeField] GameObject cardInDeck;
     [SerializeField] GameObject cardInDeckBox;
 
-    private Card auxCard;
 
     void Start()
     {
-
+        
         for (int i = 0; i < cards.Length; i++)
         {
             cards[i].WhereIAm(0);
         }
+        changeCards(1);
+        changeCards(0);
     }
 
    
@@ -131,7 +133,10 @@ public class DeckCreator : MonoBehaviour
         }
     }
 
-  
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
-    
+
 }
