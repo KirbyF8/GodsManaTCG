@@ -441,10 +441,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     {
          int random = UnityEngine.Random.Range(0, 101);
 
-        if (random >= 98)
+        if (random >= 99)
         {
             cardRarity = 2;
-        } else if (random >= 90)
+        } else if (random >= 94)
         {
             cardRarity= 1;
         } else

@@ -8,11 +8,9 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
-<<<<<<< Updated upstream
+
     private int coins = 1000000000;
-=======
-    private int coins = 1000;
->>>>>>> Stashed changes
+
     [SerializeField] private Sprite[] boosterPacksSprites;
     [SerializeField] private int[] prices;
     [SerializeField] private string[] boosterPacksNames;
@@ -47,11 +45,7 @@ public class ShopUI : MonoBehaviour
         SetImages(boosterHint);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void UpdateCoins()
     {
@@ -170,7 +164,7 @@ public class ShopUI : MonoBehaviour
         }
         else
         {
-            //? Sonido
+            
             return;
         }
 
@@ -204,10 +198,7 @@ public class ShopUI : MonoBehaviour
         returnButton.SetActive(false);
     }
 
-    public void returnMainMenu()
-    {
-        
-    }
+    
 
     public void cartaGirada()
     {
