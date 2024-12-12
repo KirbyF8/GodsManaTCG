@@ -39,9 +39,15 @@ public class Battle : MonoBehaviour
 
     private void Start()
     {
-        HideSword();
-        HideShield();
+       
         HideDmgs();
+
+
+
+
+        attackerDC.updateDisplay(attackerDC.cardId);
+        defenderDC.updateDisplay(defenderDC.cardId);
+
         StartCoroutine("Anim");
     }
 
@@ -60,7 +66,7 @@ public class Battle : MonoBehaviour
     private IEnumerator Anim()
     {
         ShowSword();
-        swordRT.DOMoveX(swordEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideSword).OnComplete(AtackerDealDamage);
+        swordRT.DOMoveX(swordEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideSword);
 
 
         defenderDC.cardHpLosted(attackerDC.cardAttack);
@@ -70,7 +76,7 @@ public class Battle : MonoBehaviour
         {
             
             ShowShield();
-            shieldRT.DOMoveX(shieldEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideShield).OnComplete(DefenderDealDamage);
+            shieldRT.DOMoveX(shieldEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideShield);
 
             attackerDC.cardHpLosted(defenderDC.cardDefense);
 
@@ -85,6 +91,7 @@ public class Battle : MonoBehaviour
     private void HideSword()
     {
         swordGO.SetActive(false);
+        AtackerDealDamage();
     }
 
     private void ShowSword()
@@ -95,6 +102,7 @@ public class Battle : MonoBehaviour
     private void HideShield()
     {
         shieldGO.SetActive(false);
+        DefenderDealDamage();
     }
     private void ShowShield()
     {

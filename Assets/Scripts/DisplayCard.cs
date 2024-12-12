@@ -232,7 +232,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             }
             catch (Exception e)
             {
-                Debug.LogException(e);
+                //Debug.LogException(e);
                 cardImg.sprite = null;
             }
 
@@ -456,10 +456,10 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     {
         if (cardHealth - cardHpLost <= 0) 
         {
-            return false;
+            return true;
         }
         
-            return true;
+            return false;
         
     }
 
