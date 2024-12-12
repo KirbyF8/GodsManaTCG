@@ -65,6 +65,9 @@ public class TurnManager : MonoBehaviour
     [SerializeField] Sprite summonSprite;
     [SerializeField] Sprite battleSprite;
 
+    [SerializeField] Mana mana;
+    [SerializeField] Mana rivalMana;
+
     private void Start()
     {
         maxManaYou = 0;
@@ -308,12 +311,12 @@ public class TurnManager : MonoBehaviour
 
             if (isYourTurn)
             {
-                YourAddMana(god, aux, Manas);
+                mana.AddManas(god, aux);
 
             }
             else if (!isYourTurn)
             {
-                RivalAddMana(god, aux, RivalManas);
+                rivalMana.AddManas(god, aux);
             }
 
             return;
@@ -323,11 +326,11 @@ public class TurnManager : MonoBehaviour
         {
             if (isYourTurn)
             {
-                YourRestoreManas(aux,  Manas);
+                mana.RestoreManas(aux);
 
             } else if (!isYourTurn)
             {
-                RivalRestoreManas(aux, RivalManas);
+                rivalMana.RestoreManas(aux);
             }
            
             return;
@@ -340,231 +343,17 @@ public class TurnManager : MonoBehaviour
                
                 yourActualMana -= manaSpent;
                
-                yourSpendManas(god, aux2, Manas);
+                mana.SpendManas(god, aux2, yourActualMana);
 
             }else if (!isYourTurn)
             {
                 rivalActualMana -= manaSpent;
-                rivalSpendManas(god, aux2, RivalManas);
+                rivalMana.SpendManas(god, aux2, rivalActualMana);
             }
             return;
           }
 }
-    private void YourAddMana(string god, int aux,  Image[] Manas)
-    {
-        if (god == "N")
-        {
-            Manas[aux].sprite = ManaN;
-        }
-        else if (god == "Dana")
-        {
-            Manas[aux].sprite = ManaDana;
-        }
-        else if (god == "Etse")
-        {
-            Manas[aux].sprite = ManaEtse;
-        }
-        else if (god == "Miknit")
-        {
-            Manas[aux].sprite = ManaMiknit;
-        }
-        else if (god == "Chronos")
-        {
-            Manas[aux].sprite = ManaChronos;
-        }
-        else if (god == "Murgu")
-        {
-            Manas[aux].sprite = ManaMurgu;
-        }
-        else if (god == "Yrys")
-        {
-            Manas[aux].sprite = ManaYrys;
-        }
-    }
-
-    private void RivalAddMana(string god, int aux, Image[] RivalManas)
-    {
-        if (god == "N")
-        {
-            RivalManas[aux].sprite = ManaN;
-        }
-        else if (god == "Dana")
-        {
-            RivalManas[aux].sprite = ManaDana;
-        }
-        else if (god == "Etse")
-        {
-            RivalManas[aux].sprite = ManaEtse;
-        }
-        else if (god == "Miknit")
-        {
-            RivalManas[aux].sprite = ManaMiknit;
-        }
-        else if (god == "Chronos")
-        {
-            RivalManas[aux].sprite = ManaChronos;
-        }
-        else if (god == "Murgu")
-        {
-            RivalManas[aux].sprite = ManaMurgu;
-        }
-        else if (god == "Yrys")
-        {
-            RivalManas[aux].sprite = ManaYrys;
-        }
-    }
-    private void YourRestoreManas(int aux, Image[] Manas)
-    {
-
-        for (int i = 0; i <= aux; i++)
-        {
-
-
-            if (Manas[i].sprite.name == "ManaDeDana_Agotado")
-            {
-                Manas[i].sprite = ManaDana;
-            }
-            else if (Manas[i].sprite.name == "ManaDeEtse_Agotado")
-            {
-                Manas[i].sprite = ManaEtse;
-            }
-            else if (Manas[i].sprite.name == "ManaDeMiknit_Agotado")
-            {
-                Manas[i].sprite = ManaMiknit;
-            }
-            else if (Manas[i].sprite.name == "ManaDeChronos_Agotado")
-            {
-                Manas[i].sprite = ManaChronos;
-            }
-            else if (Manas[i].sprite.name == "ManaDeMurgu_Agotado")
-            {
-                Manas[i].sprite = ManaMurgu;
-            }
-            else if (Manas[i].sprite.name == "ManaDeYrys_Agotado")
-            {
-                Manas[i].sprite = ManaYrys;
-            }
-            else
-            {
-                Manas[i].sprite = ManaN;
-            }
-        }
-    }
-
-    private void RivalRestoreManas(int aux, Image[] RivalManas)
-    {
-        Debug.Log("Rival");
-        for (int i = 0; i <= aux; i++)
-        {
-
-
-            if (Manas[i].sprite.name == "ManaDeDana_Agotado")
-            {
-                RivalManas[i].sprite = ManaDana;
-            }
-            else if (Manas[i].sprite.name == "ManaDeEtse_Agotado")
-            {
-                RivalManas[i].sprite = ManaEtse;
-            }
-            else if (Manas[i].sprite.name == "ManaDeMiknit_Agotado")
-            {
-                RivalManas[i].sprite = ManaMiknit;
-            }
-            else if (Manas[i].sprite.name == "ManaDeChronos_Agotado")
-            {
-                RivalManas[i].sprite = ManaChronos;
-            }
-            else if (Manas[i].sprite.name == "ManaDeMurgu_Agotado")
-            {
-                RivalManas[i].sprite = ManaMurgu;
-            }
-            else if (Manas[i].sprite.name == "ManaDeYrys_Agotado")
-            {
-                RivalManas[i].sprite = ManaYrys;
-            }
-            else
-            {
-                RivalManas[i].sprite = ManaN;
-            }
-        }
-    }
-
-    private void yourSpendManas(string god,int aux2, Image[] Manas)
-    {
-        aux2--;
-
-
-        for (int i = aux2; i > yourActualMana-1; i--)
-        {
-            if (god == "N")
-            {
-                Manas[i].sprite = ManaN_Spent;
-            }
-            else if (god == "Dana")
-            {
-                Manas[i].sprite = ManaDana_Spent;
-            }
-            else if (god == "Etse")
-            {
-                Manas[i].sprite = ManaEtse_Spent;
-            }
-            else if (god == "Miknit")
-            {
-                Manas[i].sprite = ManaMiknit_Spent;
-            }
-            else if (god == "Chronos")
-            {
-                Manas[i].sprite = ManaChronos_Spent;
-            }
-            else if (god == "Murgu")
-            {
-                Manas[i].sprite = ManaMurgu_Spent;
-            }
-            else if (god == "Yrys")
-            {
-                Manas[i].sprite = ManaYrys_Spent;
-            }
-        }
-       
-    }
-
-    private void rivalSpendManas(string god, int aux2,  Image[] RivalManas)
-    {
-        aux2--;
-       
-
-        for (int i = aux2; i > rivalActualMana; i--)
-        {
-            if (god == "N")
-            {
-                RivalManas[i].sprite = ManaN_Spent;
-            }
-            else if (god == "Dana")
-            {
-                RivalManas[i].sprite = ManaDana_Spent;
-            }
-            else if (god == "Etse")
-            {
-                RivalManas[i].sprite = ManaEtse_Spent;
-            }
-            else if (god == "Miknit")
-            {
-                RivalManas[i].sprite = ManaMiknit_Spent;
-            }
-            else if (god == "Chronos")
-            {
-                RivalManas[i].sprite = ManaChronos_Spent;
-            }
-            else if (god == "Murgu")
-            {
-                RivalManas[i].sprite = ManaMurgu_Spent;
-            }
-            else if (god == "Yrys")
-            {
-                RivalManas[i].sprite = ManaYrys_Spent;
-            }
-        }
-    }
+    
 
     public bool checkMana(string god, int cardCost)
     {

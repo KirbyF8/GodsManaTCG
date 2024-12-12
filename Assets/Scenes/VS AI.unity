@@ -379,7 +379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -111.02002, y: 183.63376}
+  m_AnchoredPosition: {x: -111.02344, y: 183.63281}
   m_SizeDelta: {x: -413.15, y: -730.7975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83154058
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 116906313}
   - component: {fileID: 116906312}
   m_Layer: 5
-  m_Name: Mana8
+  m_Name: RivalMana8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 149901696}
   - component: {fileID: 149901695}
   m_Layer: 5
-  m_Name: Mana10
+  m_Name: RivalMana10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1217,7 @@ GameObject:
   - component: {fileID: 303005600}
   - component: {fileID: 303005599}
   m_Layer: 5
-  m_Name: Mana5
+  m_Name: RivalMana5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1542,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 114.92999, y: -167.98999}
+  m_AnchoredPosition: {x: 114.92969, y: -167.99219}
   m_SizeDelta: {x: -417.22, y: -725.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374400864
@@ -2384,7 +2384,7 @@ GameObject:
   - component: {fileID: 566262021}
   - component: {fileID: 566262020}
   m_Layer: 5
-  m_Name: Mana9
+  m_Name: RivalMana9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2596,7 +2596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 671.4, y: -421.60968}
+  m_AnchoredPosition: {x: 671.39844, y: -421.60938}
   m_SizeDelta: {x: -1526.4, y: -926.7887}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634802047
@@ -3673,7 +3673,7 @@ GameObject:
   - component: {fileID: 657917044}
   - component: {fileID: 657917043}
   m_Layer: 5
-  m_Name: Mana7
+  m_Name: RivalMana7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4320,7 +4320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 671.4, y: -519.1054}
+  m_AnchoredPosition: {x: 671.39844, y: -519.10547}
   m_SizeDelta: {x: -1526.4, y: -1038.2108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731844819
@@ -4532,7 +4532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 195.91003, y: 448.97}
+  m_AnchoredPosition: {x: 195.90625, y: 448.96875}
   m_SizeDelta: {x: -575.42, y: -898.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742449904
@@ -4934,11 +4934,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120.21564
+      value: 120.21875
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -177.01999
+      value: -177.01953
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4999,7 +4999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -670.4099, y: 430.19067}
+  m_AnchoredPosition: {x: -670.40625, y: 430.1914}
   m_SizeDelta: {x: -1531.9366, y: -936.0814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929984833
@@ -6166,6 +6166,8 @@ MonoBehaviour:
   faseSprite: {fileID: 1864994109}
   summonSprite: {fileID: 21300000, guid: 0d74231b983c3d047845f645ef382b76, type: 3}
   battleSprite: {fileID: 21300000, guid: d04ea0fb774b7bf4eae228eb991a0319, type: 3}
+  mana: {fileID: 1980486901}
+  rivalMana: {fileID: 1772519687}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,9 +6361,9 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6481,7 +6483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 755.3, y: 183.63}
+  m_AnchoredPosition: {x: 755.2969, y: 183.6289}
   m_SizeDelta: {x: -1694.2, y: -730.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122569517
@@ -6626,11 +6628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 112.900024
+      value: 112.89844
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -174.6
+      value: -174.60156
       objectReference: {fileID: 0}
     - target: {fileID: 4020678852328088632, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6870,7 +6872,7 @@ GameObject:
   - component: {fileID: 1263910175}
   - component: {fileID: 1263910174}
   m_Layer: 5
-  m_Name: Mana4
+  m_Name: RivalMana4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6945,7 +6947,7 @@ GameObject:
   - component: {fileID: 1268218667}
   - component: {fileID: 1268218666}
   m_Layer: 5
-  m_Name: Mana1
+  m_Name: RivalMana1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7259,7 +7261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -194.78003, y: -442.5}
+  m_AnchoredPosition: {x: -194.78125, y: -442.5}
   m_SizeDelta: {x: -581.24, y: -885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374935954
@@ -7861,7 +7863,7 @@ GameObject:
   - component: {fileID: 1586185012}
   - component: {fileID: 1586185011}
   m_Layer: 5
-  m_Name: Mana6
+  m_Name: RivalMana6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7936,7 +7938,7 @@ GameObject:
   - component: {fileID: 1612749775}
   - component: {fileID: 1612749774}
   m_Layer: 5
-  m_Name: 'Mana2 '
+  m_Name: 'RivalMana2 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8461,6 +8463,7 @@ GameObject:
   - component: {fileID: 1772519685}
   - component: {fileID: 1772519684}
   - component: {fileID: 1772519686}
+  - component: {fileID: 1772519687}
   m_Layer: 5
   m_Name: Rival_Mana
   m_TagString: Rival
@@ -8494,7 +8497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -911.89453, y: -48.842773}
+  m_AnchoredPosition: {x: -911.8906, y: -48.84375}
   m_SizeDelta: {x: -942.475, y: -984.0779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772519684
@@ -8561,6 +8564,43 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &1772519687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772519682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567a11b2e7e415949929b2efd6c8f317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaN: {fileID: 21300000, guid: 079603de66222b941af5c2c0dabb8aec, type: 3}
+  ManaN_Spent: {fileID: 21300000, guid: 48925a724d95524419030557c6708de1, type: 3}
+  ManaDana: {fileID: 21300000, guid: 90b64027b11a30f4ca6da19c794092e4, type: 3}
+  ManaDana_Spent: {fileID: 21300000, guid: aef642bed714d1e4090e0074439737b3, type: 3}
+  ManaEtse: {fileID: 21300000, guid: 13146b54cfea9f2408955b531bc7483b, type: 3}
+  ManaEtse_Spent: {fileID: 21300000, guid: bf720a8a268bc0347a6fe056553d3999, type: 3}
+  ManaMiknit: {fileID: 21300000, guid: e8abcf73e4a17ea44b1f890ceb123394, type: 3}
+  ManaMiknit_Spent: {fileID: 21300000, guid: a8c501a4f91554c459526fbbb9b1e591, type: 3}
+  ManaChronos: {fileID: 21300000, guid: 3e646a6f89d77d048bbec398a651a11d, type: 3}
+  ManaChronos_Spent: {fileID: 21300000, guid: 872a3dc3adfcb5246998e1e3ebfcea5a, type: 3}
+  ManaMurgu: {fileID: 21300000, guid: e6cb7fea37fd1a24ab070cbbf9d034f3, type: 3}
+  ManaMurgu_Spent: {fileID: 21300000, guid: a01eacfe4f9d0a8409473ebdde5e2aa9, type: 3}
+  ManaYrys: {fileID: 21300000, guid: 2941f60ccae554f48a5b51bd5b9814d9, type: 3}
+  ManaYrys_Spent: {fileID: 21300000, guid: 1d7404aa923061842bb71a40c956feb0, type: 3}
+  Manas:
+  - {fileID: 1268218666}
+  - {fileID: 1612749774}
+  - {fileID: 1801919938}
+  - {fileID: 1263910174}
+  - {fileID: 303005599}
+  - {fileID: 1586185011}
+  - {fileID: 657917043}
+  - {fileID: 116906312}
+  - {fileID: 566262020}
+  - {fileID: 149901695}
 --- !u!1 &1801919936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,7 +8613,7 @@ GameObject:
   - component: {fileID: 1801919939}
   - component: {fileID: 1801919938}
   m_Layer: 5
-  m_Name: Mana3
+  m_Name: RivalMana3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9106,7 +9146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -743.9444, y: -167.97998}
+  m_AnchoredPosition: {x: -743.9453, y: -167.98047}
   m_SizeDelta: {x: -1679.5687, y: -725.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890688708
@@ -9559,6 +9599,7 @@ GameObject:
   - component: {fileID: 1980486900}
   - component: {fileID: 1980486899}
   - component: {fileID: 1980486898}
+  - component: {fileID: 1980486901}
   m_Layer: 5
   m_Name: 'Mana '
   m_TagString: Untagged
@@ -9592,7 +9633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 914.7471, y: 46.28711}
+  m_AnchoredPosition: {x: 914.75, y: 46.289062}
   m_SizeDelta: {x: -932.4063, y: -986.7057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980486898
@@ -9659,6 +9700,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980486896}
   m_CullTransparentMesh: 1
+--- !u!114 &1980486901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980486896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567a11b2e7e415949929b2efd6c8f317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaN: {fileID: 21300000, guid: 079603de66222b941af5c2c0dabb8aec, type: 3}
+  ManaN_Spent: {fileID: 21300000, guid: 48925a724d95524419030557c6708de1, type: 3}
+  ManaDana: {fileID: 21300000, guid: 90b64027b11a30f4ca6da19c794092e4, type: 3}
+  ManaDana_Spent: {fileID: 21300000, guid: aef642bed714d1e4090e0074439737b3, type: 3}
+  ManaEtse: {fileID: 21300000, guid: 13146b54cfea9f2408955b531bc7483b, type: 3}
+  ManaEtse_Spent: {fileID: 21300000, guid: bf720a8a268bc0347a6fe056553d3999, type: 3}
+  ManaMiknit: {fileID: 21300000, guid: e8abcf73e4a17ea44b1f890ceb123394, type: 3}
+  ManaMiknit_Spent: {fileID: 21300000, guid: a8c501a4f91554c459526fbbb9b1e591, type: 3}
+  ManaChronos: {fileID: 21300000, guid: 3e646a6f89d77d048bbec398a651a11d, type: 3}
+  ManaChronos_Spent: {fileID: 21300000, guid: 872a3dc3adfcb5246998e1e3ebfcea5a, type: 3}
+  ManaMurgu: {fileID: 21300000, guid: e6cb7fea37fd1a24ab070cbbf9d034f3, type: 3}
+  ManaMurgu_Spent: {fileID: 21300000, guid: 872a3dc3adfcb5246998e1e3ebfcea5a, type: 3}
+  ManaYrys: {fileID: 21300000, guid: 2941f60ccae554f48a5b51bd5b9814d9, type: 3}
+  ManaYrys_Spent: {fileID: 21300000, guid: 1d7404aa923061842bb71a40c956feb0, type: 3}
+  Manas:
+  - {fileID: 1623013152}
+  - {fileID: 521077762}
+  - {fileID: 1708175421}
+  - {fileID: 2111664040}
+  - {fileID: 1411742996}
+  - {fileID: 298679582}
+  - {fileID: 1862192501}
+  - {fileID: 2103083387}
+  - {fileID: 1859485450}
+  - {fileID: 1812101571}
 --- !u!1001 &1986203408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10565,7 +10643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -670.13, y: 521.1124}
+  m_AnchoredPosition: {x: -670.1328, y: 521.1133}
   m_SizeDelta: {x: -1531.9, y: -1042.0748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807

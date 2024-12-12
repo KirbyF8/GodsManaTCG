@@ -188,13 +188,13 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(119, "Aki", 2, 3, 1, 2, "  <sprite name=AlSerInvocado> invoca en el campo del rival Enredaderas 0/5/5 en defensa", "Miknit", "Exploradora", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(120, "Sai", 5, 7, 2, 3, "Puedes invocar esta carta en el campo del rival destruyendo uno de sus monstruos", "Miknit", "Pícaro", 0)); //TODO
         cardList.Add(new Card(121, "Cadmy", 10, 3, 6, 5, "No puede ser invocado si tu zona de elegidos no esta vacia, <sprite name=AlSerInvocado> destruye todos los elegidos, después ambos jugadores descartan su mano", "Miknit", "Curandera", 0)); //TODO
-        cardList.Add(new Card(122, "Lorenzo", 4, 3, 3, 6, "Una vez por turno puedes devolver esta carta al deck y robar una carta", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OncePerTurn })); //TODO
+        cardList.Add(new Card(122, "Lorenz", 4, 3, 3, 6, "Una vez por turno puedes devolver esta carta al deck y robar una carta", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OncePerTurn })); //TODO
 
         cardList.Add(new Card(123, "Elif", 1, 1, 1, 1, "<sprite name=AlSerInvocado> busca la carta <Vida U.Recurso>", "Miknit", "Invocadora", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(124, "Vida U.Recurso", 0, 0, 0, 0, "Solo puedes usar esta carta si te quedan 10 cartas o menos en  <sprite name=Deck>,  envia al cementerio todo <sprite name=Deck>  y <sprite name=Mano>, devuelve  <sprite name=Deck>  todos los elegidos, después roba 2 cartas", "Dana", "Mágica", 0)); //TODO
         // Sobre Colaboraciones Radiantes
         cardList.Add(new Card(125, "Matthew Bleck", 0, 0, 0, 2, "", "Chronos", "Explorador", 0)); //TODO
-        cardList.Add(new Card(126, "Yuu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(126, "Yu", 1, 1, 0, 2, "  <sprite name=AlSerInvocado> tira un dado, segun el resultado invoca: 1- Yu 0/0/2, 2 Oveja 1/1/2, 3 Zorro 3/1/2, 4 lobo 6/2/3, 5 caballo 6/6/6 ,6 dragón 10/10/10", "N", "Invocador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
         cardList.Add(new Card(127, "Togha", 4, 3, 2, 3, "Una vez por turno devuelve una carta mágica del cementerio al  <sprite name=Deck>, roba una con un nombre distinto", "N", "Hechicero", 0, new List<ActivationType> { ActivationType.OncePerTurn }));
         cardList.Add(new Card(128, "Marinette", 3, 4, 4, 2, "Cada vez que destruye un elegido roba una carta", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnDestroyCard }));
         cardList.Add(new Card(129, "Cristian Anim", 0, 0, 0, 2, "", "N", "Robot", 0)); //TODO

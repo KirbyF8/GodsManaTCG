@@ -219,14 +219,24 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         {
             cardImg.material = null;
         }
-        
-        
+
+
         
         if (cardImgs.Length >= cardId - 1)
         {
-            cardImg.sprite = cardImgs[cardId-1];
+            try
+            {
+                cardImg.sprite = cardImgs[cardId - 1];
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+                cardImg.sprite = null;
+            }
 
         }
+     
+
         
 
         if (cardClass == "Trampa" || cardClass == "Mágica" || cardClass == "Equipo" || cardClass == "Dominio")
@@ -324,6 +334,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
                 return;
             }
+            else if (whereIAm == 1)
+            {
+                playerDeck.canPlayCard(thisCard);
+                Destruction();
+                return;
+            }
             else if (whereIAm == 3)
             {
                 Next();
@@ -339,11 +355,11 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
                return;
             }
 
-            playerDeck.canPlayCard(thisCard);
+           
 
 
 
-            Destruction();
+            
 
         }
 
@@ -369,7 +385,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     {
         if (playerDeck.ConfirmDestruction())
         {
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.1f);
         }
         
     }
