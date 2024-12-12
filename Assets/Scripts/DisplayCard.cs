@@ -106,6 +106,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     private int whereIAm;
 
     private int cardHpLost;
+    private int cardModifiedAtk;
+    private int cardModifiedDef;
 
 
     void Start()
@@ -446,12 +448,20 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
    public void cardHpLosted(int hp)
     {
         cardHpLost += hp;
-        if (cardHealth <= cardHpLost)
-        {
-
-        }
+        UpdateHealth();
+        
     }
 
+    public bool IAmAlive()
+    {
+        if (cardHealth - cardHpLost <= 0) 
+        {
+            return false;
+        }
+        
+            return true;
+        
+    }
 
     public void FoilCard()
     {
@@ -470,5 +480,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     }
 
-
+    private void UpdateHealth()
+    {
+        cardHealth = displayCard[0].cardHealth - cardHpLost;
+    }
 }
