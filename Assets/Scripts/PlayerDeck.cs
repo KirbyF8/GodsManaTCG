@@ -322,14 +322,19 @@ public class PlayerDeck : MonoBehaviour
         returnCards.Clear();
     }
 
-    public void DestroyCard()
+    public void DestroyCard(Card card)
     {
+        field.Remove(card);
+        graveyard.Add(card);
 
     }
 
     public void canPlayCard(Card card)
     {
-        
+        if (!turnManager.isYourTurn)
+        {
+            return;
+        }
         
         if (field.Count >= 6 && card.cardClass != "Mágica" && card.cardClass != "Trampa")
         {
