@@ -146,12 +146,12 @@ public class TurnManager : MonoBehaviour
     {
         if (isYourTurn)
         {
-           
-                if (maxManaYou >= 10)
+            maxManaYou++;
+            if (maxManaYou >= 10)
                 {
                     maxManaYou = 10;
                 }
-                maxManaYou++;
+                
                 yourActualMana = maxManaYou;
                 if (!ItsFirstTurn())
                 {
@@ -166,11 +166,12 @@ public class TurnManager : MonoBehaviour
 
         if (!isYourTurn)
         {
+            maxManaRival++;
             if (maxManaRival >= 10)
             {
                 maxManaRival = 10;
             }
-            maxManaRival++;
+           
             rivalActualMana = maxManaRival;
             if (!ItsFirstTurn())
             {

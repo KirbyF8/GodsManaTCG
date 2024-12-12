@@ -31,6 +31,7 @@ public class Mana : MonoBehaviour
 
     public void AddManas(string god, int aux)
     {
+        
         if (god == "N")
         {
             Manas[aux].sprite = ManaN;
