@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
@@ -35,31 +36,62 @@ public class Battle : MonoBehaviour
     [SerializeField] GameObject damageDefenderGO;
     [SerializeField] GameObject damageAttackerGO;
 
-    private int damage = 10;
+    [SerializeField] TurnManager turnManager;
+    [SerializeField] TMP_Text defenderPlayerHealth;
+    [SerializeField] GameObject defenderCard;
+    [SerializeField] GameObject noDefenderIcon;
+
+    [SerializeField] Image Icon;
+    [SerializeField] Sprite iconPlayer;
+    [SerializeField] Sprite iconRival;
+    [SerializeField] Sprite[] iconRivalArray;
 
     private void Start()
     {
-       
+        SetRivalIcon();
         HideDmgs();
 
 
 
 
         attackerDC.updateDisplay(attackerDC.cardId);
-        defenderDC.updateDisplay(defenderDC.cardId);
+        //defenderDC.updateDisplay(defenderDC.cardId);
 
-        StartCoroutine("Anim");
+        HideDefenderPlayerCard();
+        ShowNoDefenderIcon();
+        StartCoroutine(Anim2(true));
     }
 
+    private void SetRivalIcon()
+    {
+        iconRival = iconRivalArray[0];
+        //TODO:
+    }
 
-    public void battle(Card attacker, Card defender)
+    public void battle(Card attacker, Card defender, bool atackerPlayer)
     {
         battlePanel.SetActive(true);
 
-        attackerDC.updateDisplay(attackerDC.cardId);
-        defenderDC.updateDisplay(defenderDC.cardId);
 
-        StartCoroutine("Anim");
+        attackerDC.updateDisplay(attacker.cardId);
+
+        if (defender == null || defender.cardId == 0)
+        {
+            HideDefenderPlayerCard();
+            ShowNoDefenderIcon();
+            StartCoroutine(Anim2(atackerPlayer));
+        }
+        else
+        {
+
+            ShowDefenderPlayerCard();
+            HideNoDefenderIcon();
+            defenderDC.updateDisplay(defender.cardId);
+            
+        }
+       
+
+        StartCoroutine(Anim());
 
     }
 
@@ -68,7 +100,7 @@ public class Battle : MonoBehaviour
         ShowSword();
         swordRT.DOMoveX(swordEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideSword);
 
-
+        yield return new WaitForSeconds(0.6f);
         defenderDC.cardHpLosted(attackerDC.cardAttack);
         yield return new WaitForSeconds(2f);
 
@@ -77,15 +109,69 @@ public class Battle : MonoBehaviour
             
             ShowShield();
             shieldRT.DOMoveX(shieldEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideShield);
-
+            yield return new WaitForSeconds(0.6f);
             attackerDC.cardHpLosted(defenderDC.cardDefense);
 
             yield return new WaitForSeconds(1f);
         }
+        else
+        {
+            HideShield();
+        }
 
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(2f);
+        FinishBattle();
+
+    }
+
+    private IEnumerator Anim2(bool atackerPlayer)
+    {
         
+        ShowSword();
+        ShowDefenderPlayerHealth(atackerPlayer);
+        ShowIcon(atackerPlayer);
+        swordRT.DOMoveX(swordEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideSword);
+        turnManager.ChangeLP(attackerDC.cardAttack, atackerPlayer);
+        yield return new WaitForSeconds(0.6f);
+        ShowDefenderPlayerHealth(atackerPlayer);
+ 
+        yield return new WaitForSeconds(2f);
+        FinishBattle();
 
+    }
+
+    private void ShowIcon(bool attackerPlayer)
+    {
+        if (attackerPlayer)
+        {
+            Icon.sprite = iconRival;
+        }
+        else 
+        {
+            Icon.sprite = iconPlayer;
+        }
+    }
+
+    private void ShowDefenderPlayerHealth(bool attackerPlayer)
+    {
+        int aux = turnManager.ReturnPlayerHealth(attackerPlayer);
+        defenderPlayerHealth.text = aux.ToString();
+    }
+    private void ShowNoDefenderIcon()
+    {
+        noDefenderIcon.SetActive(true);
+    }
+    private void HideNoDefenderIcon()
+    {
+        noDefenderIcon.SetActive(false);
+    }
+    private void ShowDefenderPlayerCard()
+    {
+        defenderCard.SetActive(true);
+    }
+    private void HideDefenderPlayerCard()
+    {
+        defenderCard.SetActive(false);
     }
 
     private void HideSword()
@@ -102,22 +188,23 @@ public class Battle : MonoBehaviour
     private void HideShield()
     {
         shieldGO.SetActive(false);
-        DefenderDealDamage();
+        if (defenderDC.IAmAlive())
+        {
+            DefenderDealDamage();
+        }
+        
     }
+
+
     private void ShowShield()
     {
         shieldGO.SetActive(true);
     }
 
-    private void ChangeAnimationTime(int newAnimTime)
-    {
-        animationTime = newAnimTime;
-    }
-
     private void AtackerDealDamage()
     {
         damageDefenderGO.SetActive(true);
-        damageDefender.text = damage.ToString();
+        damageDefender.text = attackerDC.cardAttack.ToString();
         StartCoroutine(DamageAnim(damageDefenderGO));
 
     }
@@ -125,7 +212,7 @@ public class Battle : MonoBehaviour
     private void DefenderDealDamage()
     {
         damageAttackerGO.SetActive(true);
-        damageDefender.text = damage.ToString();
+        damageAttacker.text = defenderDC.cardAttack.ToString();
         StartCoroutine(DamageAnim(damageAttackerGO));
     }
 
@@ -140,5 +227,10 @@ public class Battle : MonoBehaviour
     {
         damageDefenderGO.SetActive(false);
         damageAttackerGO.SetActive(false);
+    }
+
+    private void FinishBattle()
+    {
+
     }
 }

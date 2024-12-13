@@ -447,14 +447,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     //TODO!!
    public void cardHpLosted(int hp)
     {
+
         cardHpLost += hp;
+        
         UpdateHealth();
         
     }
 
     public bool IAmAlive()
     {
-        if (cardHealth - cardHpLost <= 0) 
+        if (cardHealth - cardHpLost >= 1) 
         {
             return true;
         }
@@ -482,6 +484,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private void UpdateHealth()
     {
-        cardHealth = displayCard[0].cardHealth - cardHpLost;
+        
+        healthText.text = (thisCard.cardHealth - cardHpLost).ToString();
+
     }
 }

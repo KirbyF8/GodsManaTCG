@@ -39,6 +39,8 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] GameObject domainCard;
 
 
+    
+
     private bool canDestroy = false;
 
     void Start()
@@ -445,4 +447,6 @@ public class PlayerDeck : MonoBehaviour
         }
         
     }
+
+   
 }

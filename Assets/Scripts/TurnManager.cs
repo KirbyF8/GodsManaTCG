@@ -70,6 +70,9 @@ public class TurnManager : MonoBehaviour
 
     private void Start()
     {
+        yourLP = 50;
+        rivalLP = 50;
+
         maxManaYou = 0;
         maxManaRival = 0;
         SetFase(0);
@@ -404,7 +407,29 @@ public class TurnManager : MonoBehaviour
 
     }
 
+    public int ReturnPlayerHealth(bool player)
+    {
+        if (player)
+        {
+            return rivalLP;
+        }
+        else
+        {
+            return yourLP;
+        }
+    }
 
+    public void ChangeLP(int dmg, bool player)
+    {
+        if (player)
+        {
+            rivalLP -= dmg;
+        }
+        else
+        {
+            yourLP -= dmg;
+        }
+    }
 }
    
 
