@@ -226,6 +226,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         
         if (cardImgs.Length >= cardId - 1)
         {
+            
             try
             {
                 cardImg.sprite = cardImgs[cardId - 1];

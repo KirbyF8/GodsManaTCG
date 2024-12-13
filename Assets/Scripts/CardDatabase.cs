@@ -173,8 +173,8 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(106, "Yuu", 4, 1, 3, 10, "Aumenta en 1 su ataque cada vez que recupera hp", "Miknit", "Mercenario", 0));
         cardList.Add(new Card(107, "Ryo", 4, 1, 4, 10, "Una vez por turno cura 1hp a un elegido", "Miknit", "Curandera", 0, new List<ActivationType> { ActivationType.OncePerTurn}));
         cardList.Add(new Card(108, "Henka", 6, 7, 2, 3, "<sprite name=AlSerInvocado> busca una carta de equipo  <sprite name=Deck> y robala, una vez por turno puedes cambiar una carta de equipo en el campo por otra <sprite name=Deck>", "Miknit", "Pícara", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OncePerTurn }));
-        cardList.Add(new Card(109, "Palady", 10, 4, 8, 6, "No puede ser invocado si no tienes tu zona de elegidos llena, <sprite name=AlSerInvocado> destruye todos los elegidos, después ambos jugadores descartan su mano", "Miknit", "Curandera", 0)); //TODO
-        cardList.Add(new Card(110, "Grey", 3, 5, 3, 4, "Una vez por turno inflije 1 de daño a un elegido", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OncePerTurn }));
+        cardList.Add(new Card(109, "Paladya", 10, 4, 8, 6, "No puede ser invocado si no tienes tu zona de elegidos llena, <sprite name=AlSerInvocado> destruye todos los elegidos, después ambos jugadores descartan su mano", "Miknit", "Curandera", 0)); //TODO
+        cardList.Add(new Card(110, "Grey", 3, 5, 3, 4, "Una vez por turno puedes inflirle 1 de daño a un elegido", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OncePerTurn }));
         cardList.Add(new Card(111, "Mansel", 10, 8, 14, 12, "<sprite name=AlSerInvocado> tu oponente no puede robar cartas de su deck en su siguiente turno excepto el robo inicial", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
 
         cardList.Add(new Card(112, "Dathe", 1, 1, 1, 1, "<sprite name=AlSerInvocado> busca la carta <Muerte U.Recurso>", "Miknit", "Invocador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
