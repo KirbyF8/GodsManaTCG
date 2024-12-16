@@ -68,6 +68,11 @@ public class TurnManager : MonoBehaviour
     [SerializeField] Mana mana;
     [SerializeField] Mana rivalMana;
 
+    private Card selectAttacker;
+    private Card selectDefender;
+
+    [SerializeField] Battle battleSC;
+
     private void Start()
     {
         yourLP = 50;
@@ -390,22 +395,6 @@ public class TurnManager : MonoBehaviour
         return false;
     }
 
-    public void battle(Card atacker, Card defender)
-    {
-        
-
-        battlePanel.SetActive(true);
-        Card attackerCard = atacker;
-        Card defenderCard = defender;
-
-        DisplayCard atackerDisplay = atackerGO.GetComponent<DisplayCard>();
-        DisplayCard defenderDisplay = defenderGO.GetComponent<DisplayCard>();
-
-        atackerDisplay.updateDisplay(attackerCard.cardId);
-        defenderDisplay.updateDisplay(defenderDisplay.cardId);
-
-
-    }
 
     public int ReturnPlayerHealth(bool player)
     {
@@ -429,6 +418,27 @@ public class TurnManager : MonoBehaviour
         {
             yourLP -= dmg;
         }
+    }
+
+    private void selectAttackerFunc(ref Card card)
+    {
+        selectAttacker = card;
+    }
+
+    private void selectDefenderFunc(ref Card card)
+    {
+        selectDefender = card;
+    }
+
+    public void battle()
+    {
+
+
+        battlePanel.SetActive(true);
+
+        battleSC.battle(selectAttacker, selectDefender, isYourTurn);
+
+
     }
 }
    

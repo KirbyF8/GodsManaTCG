@@ -28,8 +28,9 @@ public class DeckCreator : MonoBehaviour
         {
             cards[i].WhereIAm(0);
         }
-        changeCards(1);
-        changeCards(0);
+
+
+        
     }
 
    

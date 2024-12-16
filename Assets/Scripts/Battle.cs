@@ -46,20 +46,13 @@ public class Battle : MonoBehaviour
     [SerializeField] Sprite iconRival;
     [SerializeField] Sprite[] iconRivalArray;
 
+
+
     private void Start()
     {
         SetRivalIcon();
         HideDmgs();
 
-
-
-
-        attackerDC.updateDisplay(attackerDC.cardId);
-        //defenderDC.updateDisplay(defenderDC.cardId);
-
-        HideDefenderPlayerCard();
-        ShowNoDefenderIcon();
-        StartCoroutine(Anim2(true));
     }
 
     private void SetRivalIcon()

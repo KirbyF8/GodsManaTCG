@@ -356,6 +356,12 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             else if (whereIAm == 5 || whereIAm == 6 || whereIAm == 7)
             {
                return;
+            } else if (whereIAm == 2)
+            {
+                
+            } else if (whereIAm == 8)
+            {
+
             }
 
            
