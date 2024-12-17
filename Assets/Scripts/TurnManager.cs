@@ -420,12 +420,12 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    private void selectAttackerFunc(ref Card card)
+    public void selectAttackerFunc(Card card)
     {
         selectAttacker = card;
     }
 
-    private void selectDefenderFunc(ref Card card)
+    public void selectDefenderFunc(Card card)
     {
         selectDefender = card;
     }

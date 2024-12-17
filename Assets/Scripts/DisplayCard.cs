@@ -109,6 +109,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     private int cardModifiedAtk;
     private int cardModifiedDef;
 
+    [SerializeField] GameObject atackButton;
+    [SerializeField] GameObject effectButton;
 
     void Start()
     {
@@ -355,20 +357,23 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             }
             else if (whereIAm == 5 || whereIAm == 6 || whereIAm == 7)
             {
-               return;
-            } else if (whereIAm == 2)
+                return;
+            }else if (whereIAm == 2)
             {
+                effectButton.SetActive(true);
+                atackButton.SetActive(true);
+                StartCoroutine(TimerHide());
+            }
+            else if (whereIAm == 8)
+            {
+                turnManager.selectDefenderFunc(thisCard);
+                turnManager.battle();
                 
-            } else if (whereIAm == 8)
-            {
-
             }
 
-           
 
 
 
-            
 
         }
 
@@ -388,6 +393,30 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
 
 
+    }
+
+    private bool attacking = false;
+
+    public void SelectAttacker()
+    {
+        effectButton.SetActive(false);
+        if (attacking)
+        {
+            attacking = false;
+            atackButton.SetActive(false);
+        } 
+        
+        
+
+       turnManager.selectAttackerFunc(thisCard);
+
+    }
+    private IEnumerator TimerHide()
+    {
+        yield return new WaitForSeconds(3f);
+        effectButton.SetActive(false);
+        if (!attacking) { atackButton.SetActive(false); }
+       
     }
 
     public void Destruction()
@@ -495,4 +524,6 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         healthText.text = (thisCard.cardHealth - cardHpLost).ToString();
 
     }
+
+   
 }
