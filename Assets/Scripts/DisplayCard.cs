@@ -102,6 +102,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     private ShopUI shopUI;
     private CardEffects cardEffects;
     private TurnManager turnManager;
+    private EfectosDiccionario efectosDiccionario;
 
     private int whereIAm;
 
@@ -111,6 +112,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     [SerializeField] GameObject atackButton;
     [SerializeField] GameObject effectButton;
+
+    private bool hasAttacked;
 
     void Start()
     {
@@ -127,6 +130,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
         try
         {
+            efectosDiccionario = FindAnyObjectByType<EfectosDiccionario>();
             turnManager = FindAnyObjectByType<TurnManager>();
             shopUI = FindAnyObjectByType<ShopUI>();
             cardEffects = FindAnyObjectByType<CardEffects>();
@@ -134,8 +138,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         catch (Exception e)
         {
 
-           
-            shopUI = null;
+            efectosDiccionario = null;
+             shopUI = null;
             cardEffects = null;
             turnManager = null;
             Debug.LogException(e);
@@ -360,8 +364,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
                 return;
             }else if (whereIAm == 2)
             {
-                effectButton.SetActive(true);
-                atackButton.SetActive(true);
+                
+                    if (thisCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OncePerTurn))
+                    {
+                    effectButton.SetActive(true);
+                    }
+                    if (!hasAttacked)
+                    {
+                    atackButton.SetActive(true);
+                    }
+                
                 StartCoroutine(TimerHide());
             }
             else if (whereIAm == 8)
@@ -525,5 +537,14 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     }
 
+    public void CardHasAttacked()
+    {
+        hasAttacked = true;
+    }
+
+    public void CardAttackReset()
+    {
+        hasAttacked = false;
+    }
    
 }

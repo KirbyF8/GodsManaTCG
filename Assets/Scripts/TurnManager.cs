@@ -154,21 +154,22 @@ public class TurnManager : MonoBehaviour
     {
         if (isYourTurn)
         {
+            //TODO
             maxManaYou++;
             if (maxManaYou >= 10)
                 {
                     maxManaYou = 10;
                 }
                 
-                yourActualMana = maxManaYou;
-                if (!ItsFirstTurn())
+            yourActualMana = maxManaYou;
+            if (!ItsFirstTurn())
                 {
-                DrawCard();
+                    DrawCard();
                 }
-                ManaChanges("N", 0);
-                ManaChanges("N", 1);
-                yourTurns++;
-                SetFase(1);
+            ManaChanges("N", 0);
+            ManaChanges("N", 1);
+            yourTurns++;
+            SetFase(1);
            
         }
 
@@ -301,14 +302,12 @@ public class TurnManager : MonoBehaviour
            
             aux = maxManaYou;
             aux2 = yourActualMana;
-           
 
         }
         else
         {
             aux = maxManaRival;
             aux2 = rivalActualMana;
-           
 
         }
 
@@ -373,9 +372,6 @@ public class TurnManager : MonoBehaviour
                 
                 ManaChanges(god, 2, cardCost);
 
-              
-              
-                
                 return true;
             }
 
@@ -440,6 +436,9 @@ public class TurnManager : MonoBehaviour
 
 
     }
+
+ 
+    
 }
    
 

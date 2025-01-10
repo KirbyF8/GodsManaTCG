@@ -27,30 +27,11 @@ public class Card
     // Extra info
     public int cardRarity;
 
-    //! 0 Nada
-    //! 1 Al ser invocado
-    //! 2 Al ser destruido
-    //! 3 Al atacar
-    //! 4 Al Ser Invocado + Al ser destruido
-    //! 5 Al Ser Invocado + Al atacar
-    //! 6 Al atacar + Al ser destruido
-    //! 7 Al activar
-    //! 8 Al ser atacado
+   
     public List<ActivationType> activationTypes;
    
 
-    //? 0 Nada
-    //? 1 Buscar
-    //? 2 Destruir
-    //? 3 Robar
-    //? 4 Invocar
-    //? 5 Crear Fichas
-    //? 6 Bufo
-    //? 7 Desterrar 
-    //? 8 Devolver
-    //? 9 Curar
-    //? 10 Mana
-    //? 11 Dañar
+   
     public int[] cardEffect;
 
 

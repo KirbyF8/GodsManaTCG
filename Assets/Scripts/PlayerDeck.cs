@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 using Random = UnityEngine.Random;
 
 public class PlayerDeck : MonoBehaviour
@@ -406,7 +407,7 @@ public class PlayerDeck : MonoBehaviour
             }
             else
             {
-                //TODO Destroy Domain
+                
                 graveyard.Add(zonaDeDominio);
                 zonaDeDominio = card;
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
@@ -445,8 +446,10 @@ public class PlayerDeck : MonoBehaviour
         {
             return false;
         }
-        
     }
 
-   
+   public void resetAttacks()
+    {
+        
+    } 
 }

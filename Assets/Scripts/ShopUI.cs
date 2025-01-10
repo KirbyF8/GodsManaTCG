@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Unity.Burst.Intrinsics.X86;
 
 public class ShopUI : MonoBehaviour
 {
@@ -92,8 +93,7 @@ public class ShopUI : MonoBehaviour
         {
             boosterImage1.sprite = boosterPacksSprites[boosterPacksNames.Length -1];
             boosterImage2.sprite = boosterPacksSprites[aux];
-            price1.text = prices[aux]+ " GOLD!!!";
-            price2.text = prices[aux] + " GOLD!!!";
+            SetSpam(aux);
             boosterImage3.sprite = boosterPacksSprites[aux+1];
             return;
         }
@@ -103,8 +103,7 @@ public class ShopUI : MonoBehaviour
         {
             boosterImage1.sprite = boosterPacksSprites[aux-1];
             boosterImage2.sprite = boosterPacksSprites[aux];
-            price1.text = prices[aux] + " GOLD!!!";
-            price2.text = prices[aux] + " GOLD!!!";
+            SetSpam(aux);
             boosterImage3.sprite = boosterPacksSprites[0];
             return;
         }
@@ -112,8 +111,7 @@ public class ShopUI : MonoBehaviour
         boosterImage1.sprite = boosterPacksSprites[aux-1];
         
         boosterImage2.sprite = boosterPacksSprites[aux];
-        price1.text = prices[aux] + " GOLD!!!";
-        price2.text = prices[aux] + " GOLD!!!";
+        SetSpam(aux);
         boosterImage3.sprite = boosterPacksSprites[aux + 1];
 
         
@@ -221,4 +219,9 @@ public class ShopUI : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    private void SetSpam(int cost)
+    {
+        price1.text = prices[cost] + " GOLD!!!";
+        price2.text = prices[cost] + " GOLD!!!";
+    }
 }

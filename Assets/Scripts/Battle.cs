@@ -224,6 +224,6 @@ public class Battle : MonoBehaviour
 
     private void FinishBattle()
     {
-
+        
     }
 }

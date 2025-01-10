@@ -20,7 +20,7 @@ public class CardDatabase : MonoBehaviour
         // Mundo Antiguo (Antes de los dioses (Desbloqueo))
          
         // Mundo Antiguo 2 (Nº)
-        cardList.Add(new Card(6, "Nº12 ", 1, 3, 1, 3, "  <sprite name=AlSerDestruido> invoca de forma especial desde tu mano o  <sprite name=Deck> a Nº11", "Chronos", "Guerrera", 0, new List<ActivationType> { ActivationType.OnLeaveField }, new int[2]{ 11, 0 }, new int[2] { 11, 0 },new string[2] { "Nº11", "" }, null, null, null, new int[2] {6,0}));
+        cardList.Add(new Card(6, "Nº12 ", 1, 3, 1, 3, "  <sprite name=AlSerDestruido> invoca de forma especial desde tu mano o  <sprite name=Deck>  a Nº11", "Chronos", "Guerrera", 0, new List<ActivationType> { ActivationType.OnLeaveField }, new int[2]{ 11, 0 }, new int[2] { 11, 0 },new string[2] { "Nº11", "" }, null, null, null, new int[2] {6,0}));
 
         cardList.Add(new Card(7, "Nº11", 2, 1, 4, 4, "  <sprite name=AlSerInvocado> de forma especial crea 2 fichas [soldado de arena] 0/4/1, <sprite name=AlSerDestruido> invoca de forma especial <sprite name=Mano> o  <sprite name=Deck>  a Nº10 ", "Chronos", "Invocadora", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OnLeaveField }, new int[2] { 11,11 }, new int[2] {1,2}, new string[2] {"Soldado de arena"," Nº10"}, null, null, null, new int[2] {7,6} ));
 

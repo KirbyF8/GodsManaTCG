@@ -267,11 +267,11 @@ public class EfectosDiccionario : MonoBehaviour
 
         public void CardEffect_RetreatChosenDeck(EffectParams parameters)
         {
-            Console.WriteLine($"RetratDeck");
+            Console.WriteLine($"RetreatDeck");
         }
         public void CardEffect_RetreatChosenHand(EffectParams parameters)
         {
-            Console.WriteLine($"RetratHand");
+            Console.WriteLine($"RetreatHand");
         }
     }
 }
