@@ -23,7 +23,7 @@ public class DeckPersistance : MonoBehaviour
     public List<Card> cardSaveList = new List<Card>();
     public List<int> cardIDs = new List<int>();
 
-    //! Hacer Mas tarde
+    //! Hacer Mas tarde // ---
     private List<Card> DeckSave = new List<Card>();
 
 
@@ -110,7 +110,7 @@ public class DeckPersistance : MonoBehaviour
 
     public void RemoveSaveCard(Card card)
     {
-        cardSaveList.Add(card);
+        cardSaveList.Remove(card);
     }
 
     private int returnNumberOfCards;

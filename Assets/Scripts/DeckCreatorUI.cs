@@ -11,6 +11,7 @@ public class DeckCreator : MonoBehaviour
 
     private int actualPage = 1;
     private const int maxPages = 26;
+    //? ---- Cambiar esto por formula ---
 
     [SerializeField] DisplayCard[] cards;
     [SerializeField] private TextMeshProUGUI[] text;
@@ -29,8 +30,6 @@ public class DeckCreator : MonoBehaviour
             cards[i].WhereIAm(0);
         }
 
-
-        
     }
 
    
@@ -104,7 +103,7 @@ public class DeckCreator : MonoBehaviour
                 for (int i = 0; i < cards.Length; i++)
                 {
                     int aux1 = cards[i].displayId -= 6;
-                    cards[i].updateDisplay(aux1);
+                    cards[i].UpdateDisplay(aux1);
                     
                     text[i].text = "X" + deckPersistance.NumberOfCards(cards[i].returnCard()).ToString();
                 }
@@ -125,7 +124,7 @@ public class DeckCreator : MonoBehaviour
                 {
                     
                     int aux2 = cards[i].displayId += 6;
-                    cards[i].updateDisplay(aux2);
+                    cards[i].UpdateDisplay(aux2);
 
                     text[i].text = "X" + deckPersistance.NumberOfCards(cards[i].returnCard()).ToString();
                 }

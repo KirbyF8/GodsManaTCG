@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class UI_VS : MonoBehaviour
 {
-    [SerializeField] GameObject Ui_panel;
+    [SerializeField] GameObject uiPanel;
     
     public void HideUIpanel()
     {
-        Ui_panel.SetActive(false);
+        uiPanel.SetActive(false);
     }
 
 

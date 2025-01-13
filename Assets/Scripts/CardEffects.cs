@@ -93,7 +93,8 @@ public class CardEffects : MonoBehaviour
 
             foreach(Card card in selectedCards)
             {
-                playerDeck.field.Remove(card);
+                playerDeck.DestroyCard(card);
+                //playerDeck.field.Remove(card);
             }
 
             selectedCards.Clear();
@@ -129,7 +130,7 @@ public class CardEffects : MonoBehaviour
 
 
 
-            displayCard.updateDisplay(card.cardId);
+            displayCard.UpdateDisplay(card.cardId);
             displayCard.WhereIAm(4);
 
         }

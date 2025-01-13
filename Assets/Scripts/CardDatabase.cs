@@ -9,6 +9,9 @@ public class CardDatabase : MonoBehaviour
 
     private void Awake()
     {
+        //? --- Desactivar de alguna forma las trampas ---
+        //! --- CTRL +H, Dioses ---
+
         cardList.Add(new Card(0, "none", 0 , 0, 0, 0, "none", "none", "", 0 ));
 
         // Mundo Antiguo (Antes de los dioses)

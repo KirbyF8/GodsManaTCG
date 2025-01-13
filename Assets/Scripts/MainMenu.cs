@@ -66,7 +66,7 @@ public class MainMenu : MonoBehaviour
     public void GoToLvl1()
     {
 
-        //TODO: Set rival deck
+        //? --- Preparar decks ----
         SceneManager.LoadScene(3);
     }
 }

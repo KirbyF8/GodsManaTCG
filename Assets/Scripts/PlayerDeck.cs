@@ -12,7 +12,10 @@ public class PlayerDeck : MonoBehaviour
     public List<Card> graveyard = new List<Card>();
     public List<Card> banished = new List<Card>();
     public List<Card> hand = new List<Card>();
-    public List<Card> field = new List<Card>();
+
+    public List<GameObject> field = new List<GameObject>();
+    //? --- Quitar este ---
+
     public List<Card> returnCards = new List<Card>();
 
     public Card zonaDeDominio = null; 
@@ -47,7 +50,7 @@ public class PlayerDeck : MonoBehaviour
     void Start()
     {
         
-
+        //? --- Preparar Decks ---
         for (int i = 0; i <= deck.Count-1;  i++)
         {
             randomCard = Random.Range(1, 120);
@@ -62,7 +65,10 @@ public class PlayerDeck : MonoBehaviour
        
     }
 
-   
+   private void LoadDeck()
+    {
+
+    }
 
     public void CallDraw(int numberOfDrawCards)
     {
@@ -93,7 +99,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 51)
         {
             cardInDeck1.SetActive(false);
-        } else if (deckSize > 51)
+        } else
         {
             cardInDeck1.SetActive(true);
             return;
@@ -102,7 +108,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 41)
         {
             cardInDeck2.SetActive(false);
-        }else if (deckSize > 41)
+        }else 
         {
             cardInDeck2.SetActive(true) ;
             return;
@@ -110,7 +116,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 31)
         {
             cardInDeck3.SetActive(false);
-        } else if (deckSize > 31)
+        } else 
         {
             cardInDeck3.SetActive(true) ;
             return;
@@ -119,7 +125,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 21)
         {
             cardInDeck4.SetActive(false);
-        } else if (deckSize > 21)
+        } else 
         {
             cardInDeck4.SetActive(true) ;
             return;
@@ -127,7 +133,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 11)
         {
             cardInDeck5.SetActive(false);
-        } else if (deckSize > 11)
+        } else 
         {
             cardInDeck5.SetActive(true) ;
             return;
@@ -135,7 +141,7 @@ public class PlayerDeck : MonoBehaviour
         if (deck.Count < 1)
         {
             cardInDeck6.SetActive(false);
-        }else if (deck.Count > 1)
+        }else 
         {
             cardInDeck6.SetActive(true) ;
             return;
@@ -153,12 +159,12 @@ public class PlayerDeck : MonoBehaviour
       
 
         int lastCard = deck.Count;
-        displayCard.updateDisplay(deck[cardId].cardId);
+        displayCard.UpdateDisplay(deck[cardId].cardId);
         displayCard.WhereIAm(1);
         if (rivalHand)
         {
             displayCard.WhereIAm(5);
-            displayCard.faceDown();
+            displayCard.FaceDown();
         }
         hand.Add(deck[cardId]);
         deck.RemoveAt(cardId);
@@ -175,7 +181,7 @@ public class PlayerDeck : MonoBehaviour
             DisplayCard displayCard;
             displayCard = CardInHand.GetComponent<DisplayCard>();
 
-            displayCard.updateDisplay(card.cardId);
+            displayCard.UpdateDisplay(card.cardId);
             displayCard.WhereIAm(1);
 
             hand.Add(deck[card.cardId]);
@@ -327,8 +333,22 @@ public class PlayerDeck : MonoBehaviour
 
     public void DestroyCard(Card card)
     {
-        field.Remove(card);
+        //! COMPROBAR Q FUNCIONE
         graveyard.Add(card);
+
+        foreach (GameObject go in field)
+        {
+            DisplayCard displayCardD = go.GetComponent<DisplayCard>();
+            if (displayCardD.GetThisCard() == card)
+            {
+                field.Remove(go);
+                return;
+            }
+        }
+
+        
+        
+        
 
     }
 
@@ -400,7 +420,7 @@ public class PlayerDeck : MonoBehaviour
                 
                 zonaDeDominio = card;
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
-                displayCardD.updateDisplay(zonaDeDominio.cardId);
+                displayCardD.UpdateDisplay(zonaDeDominio.cardId);
                 displayCardD.WhereIAm(9);
                 hand.Remove(card);
                 return;
@@ -411,7 +431,7 @@ public class PlayerDeck : MonoBehaviour
                 graveyard.Add(zonaDeDominio);
                 zonaDeDominio = card;
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
-                displayCardD.updateDisplay(zonaDeDominio.cardId);
+                displayCardD.UpdateDisplay(zonaDeDominio.cardId);
                 displayCardD.WhereIAm(9);
                 hand.Remove(card);
                 return;
@@ -426,9 +446,9 @@ public class PlayerDeck : MonoBehaviour
 
 
             
-            displayCard.updateDisplay(card.cardId);
+            displayCard.UpdateDisplay(card.cardId);
             displayCard.WhereIAm(2);
-            field.Add(card);
+            field.Add(CardInHand);
             hand.Remove(card);
           
         

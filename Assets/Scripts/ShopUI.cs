@@ -177,7 +177,7 @@ public class ShopUI : MonoBehaviour
         for (int i = 0; i < cardsInBooster.Length; i++) 
         {
             cardsInBooster[i].displayId = Random.Range(first, second);
-            cardsInBooster[i].updateDisplay(cardsInBooster[i].displayId);
+            cardsInBooster[i].UpdateDisplay(cardsInBooster[i].displayId);
             cardsInBooster[i].WhereIAm(3);
         }
         buyedBooster.SetActive(false);
@@ -188,7 +188,7 @@ public class ShopUI : MonoBehaviour
     {
         for (int i = 0; i < cardsInBooster.Length; i++)
         {
-            cardsInBooster[i].faceDown();
+            cardsInBooster[i].FaceDown();
         }
         panelPack.SetActive(false);
         buyedBooster.SetActive(true);
@@ -206,6 +206,7 @@ public class ShopUI : MonoBehaviour
         {
             
             cartasGiradas++;
+
         } else
         {
             

@@ -16,29 +16,6 @@ public class TurnManager : MonoBehaviour
     public int maxManaRival = 0;
     public int rivalActualMana;
 
-
-
-    [SerializeField] Sprite ManaN;
-    [SerializeField] Sprite ManaN_Spent;
-
-    [SerializeField] Sprite ManaDana;
-    [SerializeField] Sprite ManaDana_Spent;
-
-    [SerializeField] Sprite ManaEtse;
-    [SerializeField] Sprite ManaEtse_Spent;
-
-    [SerializeField] Sprite ManaMiknit;
-    [SerializeField] Sprite ManaMiknit_Spent;
-
-    [SerializeField] Sprite ManaChronos;
-    [SerializeField] Sprite ManaChronos_Spent;
-
-    [SerializeField] Sprite ManaMurgu;
-    [SerializeField] Sprite ManaMurgu_Spent;
-
-    [SerializeField] Sprite ManaYrys;
-    [SerializeField] Sprite ManaYrys_Spent;
-
     [SerializeField] Image[] Manas;
     [SerializeField] Image[] RivalManas;
 
@@ -78,6 +55,7 @@ public class TurnManager : MonoBehaviour
         yourLP = 50;
         rivalLP = 50;
 
+        //! --- Mover a Mana ---
         maxManaYou = 0;
         maxManaRival = 0;
         SetFase(0);
@@ -94,7 +72,7 @@ public class TurnManager : MonoBehaviour
         DisplayCard cardDisplayCardComponent = examineCard.GetComponent<DisplayCard>();
 
         examinedCardCard = card;
-        cardDisplayCardComponent.updateDisplay(examinedCardCard.cardId);
+        cardDisplayCardComponent.UpdateDisplay(examinedCardCard.cardId);
         cardDisplayCardComponent.WhereIAm(6);
 
     }
@@ -154,7 +132,7 @@ public class TurnManager : MonoBehaviour
     {
         if (isYourTurn)
         {
-            //TODO
+            //! --- Mover a Mana ---
             maxManaYou++;
             if (maxManaYou >= 10)
                 {
@@ -173,6 +151,7 @@ public class TurnManager : MonoBehaviour
            
         }
 
+        //! --- Mover a Mana ---
         if (!isYourTurn)
         {
             maxManaRival++;

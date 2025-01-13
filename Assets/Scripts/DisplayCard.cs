@@ -219,7 +219,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         if (cardRarity == 2)
         {
             cardImg.material = materialUR;
-        }else if (cardRarity == 1)
+        }
+        else if (cardRarity == 1)
         {
             cardImg.material = materialSR;
         }
@@ -239,7 +240,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             }
             catch (Exception e)
             {
-                //Debug.LogException(e);
+                
                 cardImg.sprite = null;
             }
 
@@ -315,19 +316,19 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     }
 
-    public void faceDown()
+    public void FaceDown()
     {
         
        cardBack.SetActive(true);
         
     }
 
-    public void faceUp()
+    public void FaceUp()
     {
         cardBack.SetActive(false);
     }
 
-    public void updateDisplay(int Id)
+    public void UpdateDisplay(int Id)
     {
         displayId = Id;
         displayCard[0] = CardDatabase.cardList[displayId];
@@ -364,12 +365,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
                 return;
             }else if (whereIAm == 2)
             {
-                
+                if (thisCard.activationTypes != null)
+                {
                     if (thisCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OncePerTurn))
                     {
-                    effectButton.SetActive(true);
+                        effectButton.SetActive(true);
                     }
-                    if (!hasAttacked)
+                }
+                   
+
+                if (!hasAttacked)
                     {
                     atackButton.SetActive(true);
                     }
@@ -515,12 +520,14 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     public void FoilCard()
     {
+
+        //? --- Guardar ----
          int random = UnityEngine.Random.Range(0, 101);
 
         if (random >= 99)
         {
             cardRarity = 2;
-        } else if (random >= 94)
+        } else if (random >= 91)
         {
             cardRarity= 1;
         } else
@@ -547,4 +554,9 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         hasAttacked = false;
     }
    
+    public Card GetThisCard()
+    {
+        return thisCard;
+    }
+
 }

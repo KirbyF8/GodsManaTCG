@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
+
+    //! --- Pasar a Array- --
     [SerializeField] Sprite ManaN;
     [SerializeField] Sprite ManaN_Spent;
 

@@ -66,7 +66,7 @@ public class Battle : MonoBehaviour
         battlePanel.SetActive(true);
 
 
-        attackerDC.updateDisplay(attacker.cardId);
+        attackerDC.UpdateDisplay(attacker.cardId);
 
         if (defender == null || defender.cardId == 0)
         {
@@ -79,7 +79,7 @@ public class Battle : MonoBehaviour
 
             ShowDefenderPlayerCard();
             HideNoDefenderIcon();
-            defenderDC.updateDisplay(defender.cardId);
+            defenderDC.UpdateDisplay(defender.cardId);
             
         }
        
