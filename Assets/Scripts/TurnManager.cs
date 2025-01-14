@@ -246,6 +246,7 @@ public class TurnManager : MonoBehaviour
         else
         {
             faseObject.transform.rotation = new Quaternion(180, 0, 0, 0);
+            playerDeck.AiTurn();
         }
     }
     public void SetFase(int fase)
@@ -416,8 +417,13 @@ public class TurnManager : MonoBehaviour
 
     }
 
- 
-    
+    public void ResetBattle()
+    {
+        selectAttacker = null;
+        selectDefender = null;
+    }
+
+
 }
    
 

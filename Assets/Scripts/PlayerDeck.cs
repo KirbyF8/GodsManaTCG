@@ -14,7 +14,7 @@ public class PlayerDeck : MonoBehaviour
     public List<Card> hand = new List<Card>();
 
     public List<GameObject> field = new List<GameObject>();
-    //? --- Quitar este ---
+   
 
     public List<Card> returnCards = new List<Card>();
 
@@ -42,7 +42,7 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] bool rivalHand;
     [SerializeField] GameObject domainCard;
 
-
+    [SerializeField] AI aI;
     
 
     private bool canDestroy = false;
@@ -172,6 +172,8 @@ public class PlayerDeck : MonoBehaviour
         
     }
 
+
+    //? IA Necesita Cambios
     public void DrawSelectedCards(List<Card> selectedCards)
     {
         foreach (Card card in selectedCards)
@@ -342,13 +344,10 @@ public class PlayerDeck : MonoBehaviour
             if (displayCardD.GetThisCard() == card)
             {
                 field.Remove(go);
+                Destroy(go, 0.1f);
                 return;
             }
         }
-
-        
-        
-        
 
     }
 
@@ -368,7 +367,7 @@ public class PlayerDeck : MonoBehaviour
         }
 
         // TODO Equipo
-        //? Comprobar si hay Elegidos, Comprobar que almenos 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
+        //! Comprobar si hay Elegidos, Comprobar que almenos 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
 
 
        
@@ -409,6 +408,40 @@ public class PlayerDeck : MonoBehaviour
         return;
     }
 
+    public bool CanPlayCardAI(Card card)
+    {
+
+        if (field.Count >= 6 && card.cardClass != "Mágica" && card.cardClass != "Trampa")
+        {
+
+            return false;
+
+        }
+
+        // TODO Equipo
+        //! Comprobar si hay Elegidos, Comprobar que almenos 1 no tenga cartas de equipo, Dejar al jugador a quien ponesela,, Jugar carta
+
+        if (!turnManager.checkMana(card.cardType, card.cardCost))
+        {
+
+            //! No tienes Mana suficiente
+            return false;
+
+        }
+
+        for (int i = 0; i < hand.Count; i++)
+        {
+
+
+            if (hand[i] == card)
+            {
+                return true;
+            }
+        }
+
+
+        return false;
+    }
     public void PlayCard(Card card)
     {
 
@@ -472,4 +505,9 @@ public class PlayerDeck : MonoBehaviour
     {
         
     } 
+
+    public void AiTurn()
+    {
+        aI.SummonFase(hand);
+    }
 }

@@ -4538,6 +4538,7 @@ MonoBehaviour:
   turnManager: {fileID: 954678134}
   rivalHand: 0
   domainCard: {fileID: 1111674058}
+  aI: {fileID: 742449907}
 --- !u!1 &657917041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,6 +5462,7 @@ GameObject:
   - component: {fileID: 742449906}
   - component: {fileID: 742449905}
   - component: {fileID: 742449904}
+  - component: {fileID: 742449907}
   m_Layer: 5
   m_Name: RivalHand
   m_TagString: Rival
@@ -5551,6 +5553,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742449902}
   m_CullTransparentMesh: 1
+--- !u!114 &742449907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742449902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4809fb4d31271214b96d598182cbd1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiDeck: {fileID: 929984833}
+  turnManager: {fileID: 954678134}
 --- !u!1001 &800001165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6952,6 +6968,7 @@ MonoBehaviour:
   turnManager: {fileID: 954678134}
   rivalHand: 1
   domainCard: {fileID: 718621758}
+  aI: {fileID: 742449907}
 --- !u!114 &929984834
 MonoBehaviour:
   m_ObjectHideFlags: 0
