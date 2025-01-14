@@ -224,6 +224,7 @@ public class Battle : MonoBehaviour
 
     private void FinishBattle()
     {
-        
+        battlePanel.SetActive(false);
+        turnManager.ResetBattle();
     }
 }

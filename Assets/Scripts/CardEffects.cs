@@ -94,7 +94,7 @@ public class CardEffects : MonoBehaviour
             foreach(Card card in selectedCards)
             {
                 playerDeck.DestroyCard(card);
-                //playerDeck.field.Remove(card);
+             
             }
 
             selectedCards.Clear();
