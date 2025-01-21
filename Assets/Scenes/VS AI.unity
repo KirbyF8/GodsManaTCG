@@ -7123,7 +7123,7 @@ MonoBehaviour:
   battleSprite: {fileID: 21300000, guid: d04ea0fb774b7bf4eae228eb991a0319, type: 3}
   mana: {fileID: 1980486901}
   rivalMana: {fileID: 1772519687}
-  battleSC: {fileID: 0}
+  battleSC: {fileID: 1979130642}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

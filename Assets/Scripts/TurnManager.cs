@@ -274,6 +274,7 @@ public class TurnManager : MonoBehaviour
     //! 2 Spend Mana
     public void ManaChanges(string god, int operation, int manaSpent = 0)
     {
+       
         int aux;
         int aux2;
         
@@ -350,7 +351,7 @@ public class TurnManager : MonoBehaviour
             if (cardCost <= yourActualMana)
             {
                 
-                ManaChanges(god, 2, cardCost);
+                
 
                 return true;
             }
@@ -361,7 +362,7 @@ public class TurnManager : MonoBehaviour
             if (cardCost <= rivalActualMana)
             {
                
-                ManaChanges(god, 2, cardCost);
+                
                 return true;
             }
         }
@@ -398,21 +399,26 @@ public class TurnManager : MonoBehaviour
 
     public void selectAttackerFunc(Card card)
     {
+        
         selectAttacker = card;
     }
 
     public void selectDefenderFunc(Card card)
     {
+        
         selectDefender = card;
     }
 
     public void battle()
     {
 
+        if (selectAttacker == null || selectDefender == null || turnFase != 1)
+        {
+            battlePanel.SetActive(true);
 
-        battlePanel.SetActive(true);
-
-        battleSC.battle(selectAttacker, selectDefender, isYourTurn);
+            battleSC.battle(selectAttacker, selectDefender, isYourTurn);
+        }
+       
 
 
     }

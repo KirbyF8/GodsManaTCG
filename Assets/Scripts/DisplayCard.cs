@@ -397,7 +397,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         if (InputButton.Right == eventData.button)
         {
             
-            if (whereIAm == 1 || whereIAm == 2 || whereIAm == 6 || whereIAm == 9)
+            if (whereIAm == 1 || whereIAm == 2 || whereIAm == 6 || whereIAm == 9 || whereIAm == 8)
             {
                 turnManager.ExamineCard(thisCard);
             }
@@ -541,6 +541,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     {
         
         healthText.text = (thisCard.cardHealth - cardHpLost).ToString();
+        
 
     }
 

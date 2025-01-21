@@ -440,17 +440,18 @@ public class PlayerDeck : MonoBehaviour
         }
 
 
-        return false;
+        return true;
     }
     public void PlayCard(Card card)
     {
 
+        
         if (card.cardClass == "Dominio")
         {
             domainCard.SetActive(true);
             if (zonaDeDominio == null)
             {
-                
+                turnManager.ManaChanges(card.cardType, 2, card.cardCost);
                 zonaDeDominio = card;
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
                 displayCardD.UpdateDisplay(zonaDeDominio.cardId);
@@ -460,7 +461,7 @@ public class PlayerDeck : MonoBehaviour
             }
             else
             {
-                
+                turnManager.ManaChanges(card.cardType, 2, card.cardCost);
                 graveyard.Add(zonaDeDominio);
                 zonaDeDominio = card;
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
@@ -478,9 +479,17 @@ public class PlayerDeck : MonoBehaviour
             displayCard = CardInHand.GetComponent<DisplayCard>();
 
 
-            
-            displayCard.UpdateDisplay(card.cardId);
+        turnManager.ManaChanges(card.cardType, 2, card.cardCost);
+        displayCard.UpdateDisplay(card.cardId);
+        if (turnManager.isYourTurn)
+        {
             displayCard.WhereIAm(2);
+        }
+        else
+        {
+            displayCard.WhereIAm(8);
+        }
+        
             field.Add(CardInHand);
             hand.Remove(card);
           
