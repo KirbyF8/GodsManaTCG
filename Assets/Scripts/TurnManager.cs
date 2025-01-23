@@ -45,8 +45,10 @@ public class TurnManager : MonoBehaviour
     [SerializeField] Mana mana;
     [SerializeField] Mana rivalMana;
 
-    private Card selectAttacker;
-    private Card selectDefender;
+    private DisplayCard selectAttacker;
+    private DisplayCard selectDefender;
+
+    private List<DisplayCard> CardsThatAttacked = new List<DisplayCard>();
 
     [SerializeField] Battle battleSC;
 
@@ -112,7 +114,7 @@ public class TurnManager : MonoBehaviour
     private void FirstDraw()
     {
         playerDeck.CallDraw(6);
-        rivalDeck.CallDraw(6);
+        rivalDeck.CallDraw(1);
         SetFase(1);
     }
 
@@ -217,6 +219,7 @@ public class TurnManager : MonoBehaviour
             SetFase(0);
         }
 
+        ResetTurn();
         StartTurn();
     }
     public void NextFase()
@@ -267,6 +270,14 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    public bool CanBattleFase()
+    {
+        if (turnFase == 2)
+        {
+            return true;
+        }
+        return false;
+    }
 
 
     // !0 Add new mana
@@ -397,13 +408,13 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    public void selectAttackerFunc(Card card)
+    public void selectAttackerFunc(DisplayCard card)
     {
         
         selectAttacker = card;
     }
 
-    public void selectDefenderFunc(Card card)
+    public void selectDefenderFunc(DisplayCard card)
     {
         
         selectDefender = card;
@@ -417,10 +428,12 @@ public class TurnManager : MonoBehaviour
             battlePanel.SetActive(true);
 
             battleSC.battle(selectAttacker, selectDefender, isYourTurn);
+
+            selectAttacker.CardHasAttacked();
+            CardsThatAttacked.Add(selectAttacker);
         }
-       
 
-
+        ResetBattle();
     }
 
     public void ResetBattle()
@@ -429,7 +442,21 @@ public class TurnManager : MonoBehaviour
         selectDefender = null;
     }
 
+    private void ResetTurn()
+    {
+        if (CardsThatAttacked.Count != 0)
+        {
+            foreach (var displayCard in CardsThatAttacked)
+            {
+                displayCard.CardAttackReset();
+            }
+        } 
 
+        CardsThatAttacked.Clear();
+        
+    }
+
+    
 }
    
 

@@ -374,7 +374,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
                 }
                    
 
-                if (!hasAttacked)
+                if (!hasAttacked && turnManager.CanBattleFase())
                     {
                     atackButton.SetActive(true);
                     }
@@ -383,7 +383,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             }
             else if (whereIAm == 8)
             {
-                turnManager.selectDefenderFunc(thisCard);
+                turnManager.selectDefenderFunc(this);
                 turnManager.battle();
                 
             }
@@ -425,7 +425,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         
         
 
-       turnManager.selectAttackerFunc(thisCard);
+       turnManager.selectAttackerFunc(this);
 
     }
     private IEnumerator TimerHide()
@@ -443,6 +443,11 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             Destroy(gameObject, 0.1f);
         }
         
+    }
+
+    public void DestructionAI()
+    {
+        Destroy(gameObject, 0.1f);
     }
 
     private void Next()
@@ -545,6 +550,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     }
 
+    public string ReturnHealth()
+    {
+        return (thisCard.cardHealth - cardHpLost).ToString();
+    }
+
+    public void UpdateHealthForBattle(string hp)
+    {
+        healthText.text = hp;
+    }
+
     public void CardHasAttacked()
     {
         hasAttacked = true;
@@ -560,4 +575,15 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         return thisCard;
     }
 
+    public void DestroySelf()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public GameObject GetThisGameObject()
+    {
+        return this.gameObject;
+    }
+
+    
 }

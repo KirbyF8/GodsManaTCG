@@ -46,7 +46,11 @@ public class Battle : MonoBehaviour
     [SerializeField] Sprite iconRival;
     [SerializeField] Sprite[] iconRivalArray;
 
+    private DisplayCard displayCardAttacker;
+    private DisplayCard displayCardDefender;
 
+    [SerializeField] PlayerDeck playerDeck;
+    [SerializeField] PlayerDeck rivalDeck;
 
     private void Start()
     {
@@ -61,14 +65,26 @@ public class Battle : MonoBehaviour
         //TODO:
     }
 
-    public void battle(Card attacker, Card defender, bool atackerPlayer)
+
+    private Card cardAttacker;
+    private Card cardDefender;
+    public void battle(DisplayCard attacker, DisplayCard defender, bool atackerPlayer)
     {
+        
+
+        displayCardAttacker = attacker;
+        displayCardDefender = defender;
+        
+        cardAttacker = displayCardAttacker.GetThisCard();
+        cardDefender = displayCardDefender.GetThisCard();
+
         battlePanel.SetActive(true);
 
 
-        attackerDC.UpdateDisplay(attacker.cardId);
+        attackerDC.UpdateDisplay(cardAttacker.cardId);
+        attackerDC.UpdateHealthForBattle(displayCardAttacker.ReturnHealth());
 
-        if (defender == null || defender.cardId == 0)
+        if (displayCardDefender == null || cardDefender.cardId == 0)
         {
             HideDefenderPlayerCard();
             ShowNoDefenderIcon();
@@ -79,7 +95,8 @@ public class Battle : MonoBehaviour
 
             ShowDefenderPlayerCard();
             HideNoDefenderIcon();
-            defenderDC.UpdateDisplay(defender.cardId);
+            defenderDC.UpdateDisplay(cardDefender.cardId);
+            defenderDC.UpdateHealthForBattle(displayCardDefender.ReturnHealth());
             
         }
        
@@ -94,22 +111,50 @@ public class Battle : MonoBehaviour
         swordRT.DOMoveX(swordEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideSword);
 
         yield return new WaitForSeconds(0.6f);
-        defenderDC.cardHpLosted(attackerDC.cardAttack);
+        displayCardDefender.cardHpLosted(attackerDC.cardAttack);
+        defenderDC.UpdateHealthForBattle(displayCardDefender.ReturnHealth());
         yield return new WaitForSeconds(2f);
 
-        if (defenderDC.IAmAlive())
+        if (displayCardDefender.IAmAlive())
         {
             
             ShowShield();
             shieldRT.DOMoveX(shieldEndPos, animationTime).SetEase(Ease.Linear).OnComplete(HideShield);
             yield return new WaitForSeconds(0.6f);
-            attackerDC.cardHpLosted(defenderDC.cardDefense);
+            displayCardAttacker.cardHpLosted(defenderDC.cardDefense);
+            attackerDC.UpdateHealthForBattle(displayCardAttacker.ReturnHealth());
 
             yield return new WaitForSeconds(1f);
+            if (!displayCardAttacker.IAmAlive())
+            {
+                if (turnManager.isYourTurn)
+                {
+                    rivalDeck.AddToGraveYard(displayCardAttacker.GetThisCard());
+                    rivalDeck.field.Remove(displayCardAttacker.GetThisGameObject());
+                }
+                else
+                {
+                    playerDeck.AddToGraveYard(displayCardAttacker.GetThisCard());
+                    playerDeck.field.Remove(displayCardAttacker.GetThisGameObject());
+                }
+                displayCardAttacker.DestroySelf();
+            }
         }
         else
         {
             HideShield();
+            if (turnManager.isYourTurn)
+            {
+                rivalDeck.AddToGraveYard(displayCardDefender.GetThisCard());
+                rivalDeck.field.Remove(displayCardDefender.GetThisGameObject());
+            }
+            else
+            {
+                playerDeck.AddToGraveYard(displayCardDefender.GetThisCard());
+                playerDeck.field.Remove(displayCardDefender.GetThisGameObject());
+            }
+            displayCardDefender.DestroySelf();
+
         }
 
         yield return new WaitForSeconds(2f);
@@ -205,7 +250,7 @@ public class Battle : MonoBehaviour
     private void DefenderDealDamage()
     {
         damageAttackerGO.SetActive(true);
-        damageAttacker.text = defenderDC.cardAttack.ToString();
+        damageAttacker.text = defenderDC.cardDefense.ToString();
         StartCoroutine(DamageAnim(damageAttackerGO));
     }
 
@@ -226,5 +271,11 @@ public class Battle : MonoBehaviour
     {
         battlePanel.SetActive(false);
         turnManager.ResetBattle();
+        ResetThisBattle();
+    }
+
+    private void ResetThisBattle()
+    {
+        displayCardAttacker = null; displayCardDefender = null; cardAttacker = null; cardDefender = null; 
     }
 }

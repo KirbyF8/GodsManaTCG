@@ -11186,6 +11186,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a4522123097849f42af00910eb2cab17, type: 3}
   - {fileID: 21300000, guid: ee110b3b25a14f74aa458c0fba9c3534, type: 3}
   - {fileID: 21300000, guid: 8a59f1fe64cda574f94fd5fd5319fa3f, type: 3}
+  playerDeck: {fileID: 634802050}
+  rivalDeck: {fileID: 929984833}
 --- !u!1 &1980486896
 GameObject:
   m_ObjectHideFlags: 0

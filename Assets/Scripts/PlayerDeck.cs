@@ -11,7 +11,7 @@ public class PlayerDeck : MonoBehaviour
     public List<Card> deck = new List<Card>();
     public List<Card> graveyard = new List<Card>();
     public List<Card> banished = new List<Card>();
-    public List<Card> hand = new List<Card>();
+    public List<GameObject> hand = new List<GameObject>();
 
     public List<GameObject> field = new List<GameObject>();
    
@@ -166,7 +166,7 @@ public class PlayerDeck : MonoBehaviour
             displayCard.WhereIAm(5);
             displayCard.FaceDown();
         }
-        hand.Add(deck[cardId]);
+        hand.Add(CardInHand);
         deck.RemoveAt(cardId);
         
         
@@ -186,7 +186,7 @@ public class PlayerDeck : MonoBehaviour
             displayCard.UpdateDisplay(card.cardId);
             displayCard.WhereIAm(1);
 
-            hand.Add(deck[card.cardId]);
+            hand.Add(CardInHand);
             deck.RemoveAt(card.cardId);
 
         }
@@ -389,20 +389,15 @@ public class PlayerDeck : MonoBehaviour
 
       
 
-        for (int i = 0; i < hand.Count; i++)
-        {
-          
-
-            if (hand[i] == card)
-            {
-                
+      
+         
                 
                 canDestroy = true;
                 PlayCard(card);
 
 
-            }
-        }
+            
+        
 
        
         return;
@@ -429,19 +424,10 @@ public class PlayerDeck : MonoBehaviour
 
         }
 
-        for (int i = 0; i < hand.Count; i++)
-        {
-
-
-            if (hand[i] == card)
-            {
-                return true;
-            }
-        }
-
 
         return true;
     }
+    GameObject CardToRemove;
     public void PlayCard(Card card)
     {
 
@@ -456,7 +442,20 @@ public class PlayerDeck : MonoBehaviour
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
                 displayCardD.UpdateDisplay(zonaDeDominio.cardId);
                 displayCardD.WhereIAm(9);
-                hand.Remove(card);
+
+                foreach (var item in hand)
+                {
+                    DisplayCard aux = item.GetComponent<DisplayCard>();
+                    if (card == aux.GetThisCard())
+                    {
+                        CardToRemove = item;
+                    }
+                    
+                }
+                DisplayCard cardToDestroy3 = CardToRemove.GetComponent<DisplayCard>();
+                cardToDestroy3.Destruction();
+                hand.Remove(CardToRemove);
+                CardToRemove = null;
                 return;
             }
             else
@@ -467,7 +466,19 @@ public class PlayerDeck : MonoBehaviour
                 DisplayCard displayCardD = domainCard.GetComponent<DisplayCard>();
                 displayCardD.UpdateDisplay(zonaDeDominio.cardId);
                 displayCardD.WhereIAm(9);
-                hand.Remove(card);
+                foreach (var item in hand)
+                {
+                    DisplayCard aux = item.GetComponent<DisplayCard>();
+                    if (card == aux.GetThisCard())
+                    {
+                        CardToRemove = item;
+                    }
+
+                }
+                DisplayCard cardToDestroy2 = CardToRemove.GetComponent<DisplayCard>();
+                cardToDestroy2.Destruction();
+                hand.Remove(CardToRemove);
+                CardToRemove=null;
                 return;
 
             }
@@ -491,7 +502,30 @@ public class PlayerDeck : MonoBehaviour
         }
         
             field.Add(CardInHand);
-            hand.Remove(card);
+        foreach (GameObject item in hand)
+        {
+            DisplayCard aux = item.GetComponent<DisplayCard>();
+            
+            if (card == aux.GetThisCard())
+            {
+                //Debug.Log("a");
+                CardToRemove = item;
+            }
+
+        }
+        try
+        {
+            DisplayCard cardToDestroy = CardToRemove.GetComponent<DisplayCard>();
+            cardToDestroy.DestructionAI();
+            cardToDestroy.Destruction();
+
+        } catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+
+
+        hand.Remove(CardToRemove);
           
         
     }
@@ -510,13 +544,14 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-   public void resetAttacks()
+    public void AddToGraveYard(Card card)
     {
-        
-    } 
-
+        graveyard.Add(card);
+    }
     public void AiTurn()
     {
         aI.SummonFase(hand);
     }
+
+    
 }
