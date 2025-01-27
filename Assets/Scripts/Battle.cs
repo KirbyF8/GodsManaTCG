@@ -68,15 +68,22 @@ public class Battle : MonoBehaviour
 
     private Card cardAttacker;
     private Card cardDefender;
-    public void battle(DisplayCard attacker, DisplayCard defender, bool atackerPlayer)
+    public void battle(DisplayCard attacker, bool atackerPlayer, DisplayCard defender = null)
     {
         
 
         displayCardAttacker = attacker;
-        displayCardDefender = defender;
+        Debug.Log(defender);
+        displayCardDefender = null;
+        if (defender != null )
+        {
+            displayCardDefender = defender;
+            cardDefender = displayCardDefender.GetThisCard();
+        }
+      
         
         cardAttacker = displayCardAttacker.GetThisCard();
-        cardDefender = displayCardDefender.GetThisCard();
+        
 
         battlePanel.SetActive(true);
 
@@ -84,7 +91,7 @@ public class Battle : MonoBehaviour
         attackerDC.UpdateDisplay(cardAttacker.cardId);
         attackerDC.UpdateHealthForBattle(displayCardAttacker.ReturnHealth());
 
-        if (displayCardDefender == null || cardDefender.cardId == 0)
+        if (displayCardDefender == null)
         {
             HideDefenderPlayerCard();
             ShowNoDefenderIcon();
@@ -97,11 +104,12 @@ public class Battle : MonoBehaviour
             HideNoDefenderIcon();
             defenderDC.UpdateDisplay(cardDefender.cardId);
             defenderDC.UpdateHealthForBattle(displayCardDefender.ReturnHealth());
-            
+            StartCoroutine(Anim());
+
         }
        
 
-        StartCoroutine(Anim());
+        
 
     }
 
@@ -142,7 +150,7 @@ public class Battle : MonoBehaviour
         }
         else
         {
-            HideShield();
+            
             if (turnManager.isYourTurn)
             {
                 rivalDeck.AddToGraveYard(displayCardDefender.GetThisCard());

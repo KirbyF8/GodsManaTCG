@@ -12,6 +12,9 @@ public class AI : MonoBehaviour
  
     private List<Card> playableCards = new List<Card>();
     private List<GameObject> playableCardsGameObject = new List<GameObject>();
+    
+    private List<GameObject> attackableCards = new List<GameObject>();
+    private List<GameObject> attackableCardsGameObject = new List<GameObject>();
 
     public void SummonFase(List<GameObject> card)
     {
@@ -54,10 +57,7 @@ public class AI : MonoBehaviour
             }
 
         }
-        aiDeck.hand.Remove(playedCardGameObject);
-        aiDeck.ConfirmDestruction();
-        DisplayCard aux2 = playedCardGameObject.GetComponent<DisplayCard>();
-        aux2.Destruction();
+        
         ResetPlayableCards();
         aiDeck.AiTurn();
     }
@@ -65,5 +65,34 @@ public class AI : MonoBehaviour
     private void ResetPlayableCards()
     {
         playableCards.Clear();
+    }
+
+
+    public void BattleFase(List<GameObject> card)
+    {
+        attackableCardsGameObject = card;
+        foreach (var item in card)
+        {
+            DisplayCard aux = item.GetComponent<DisplayCard>();
+           if (!item.GetComponent<DisplayCard>().ThisCardHasAttacked()) 
+            {
+                attackableCards.Add(item);
+            }
+
+        }
+
+        if (attackableCards == null || attackableCards.Count <= 0)
+        {
+
+            turnManager.NextFase();
+            return;
+        }
+
+        StartCoroutine(CardAttack());
+    }
+
+    private IEnumerator CardAttack()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }

@@ -502,29 +502,26 @@ public class PlayerDeck : MonoBehaviour
         }
         
             field.Add(CardInHand);
+
+        CardToRemove = null;
         foreach (GameObject item in hand)
         {
             DisplayCard aux = item.GetComponent<DisplayCard>();
-            
+  
+
             if (card == aux.GetThisCard())
             {
-                //Debug.Log("a");
+                
                 CardToRemove = item;
+                DisplayCard cardToDestroy = CardToRemove.GetComponent<DisplayCard>();
+                cardToDestroy.DestructionAI();
+                cardToDestroy.Destruction();
+                break;
             }
 
         }
-        try
-        {
-            DisplayCard cardToDestroy = CardToRemove.GetComponent<DisplayCard>();
-            cardToDestroy.DestructionAI();
-            cardToDestroy.Destruction();
-
-        } catch (Exception e)
-        {
-            Debug.Log(e);
-        }
-
-
+        
+     
         hand.Remove(CardToRemove);
           
         
@@ -553,5 +550,8 @@ public class PlayerDeck : MonoBehaviour
         aI.SummonFase(hand);
     }
 
-    
+    public void AiBattle()
+    {
+        aI.BattleFase(hand);
+    }
 }

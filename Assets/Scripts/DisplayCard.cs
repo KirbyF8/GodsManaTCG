@@ -585,5 +585,16 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
         return this.gameObject;
     }
 
+    public bool ThisCardHasAttacked()
+    {
+        if(hasAttacked)
+            {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
 }

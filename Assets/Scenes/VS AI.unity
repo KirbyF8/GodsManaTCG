@@ -7114,6 +7114,8 @@ MonoBehaviour:
   rivalDeck: {fileID: 929984833}
   examineCardPanel: {fileID: 1445472132}
   examineCard: {fileID: 1357527440}
+  yourLpText: {fileID: 455053447}
+  rivalLpText: {fileID: 1571630913}
   battlePanel: {fileID: 1979130636}
   atackerGO: {fileID: 0}
   defenderGO: {fileID: 0}

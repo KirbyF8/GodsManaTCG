@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Unity.Burst.Intrinsics.X86;
@@ -30,7 +31,9 @@ public class TurnManager : MonoBehaviour
     private Card examinedCardCard;
 
     private int yourLP;
+    [SerializeField] TMP_Text yourLpText;
     private int rivalLP;
+    [SerializeField] TMP_Text rivalLpText;
 
     [SerializeField] GameObject battlePanel;
     
@@ -249,7 +252,15 @@ public class TurnManager : MonoBehaviour
         else
         {
             faseObject.transform.rotation = new Quaternion(180, 0, 0, 0);
-            playerDeck.AiTurn();
+          
+        }
+
+        if (turnFase == 1 && !isYourTurn)
+        {
+            rivalDeck.AiTurn();
+        }else if (turnFase == 2 && ! isYourTurn)
+        {
+            rivalDeck.AiBattle();
         }
     }
     public void SetFase(int fase)
@@ -401,10 +412,12 @@ public class TurnManager : MonoBehaviour
         if (player)
         {
             rivalLP -= dmg;
+            rivalLpText.text = ("LP: " + rivalLP.ToString());
         }
         else
         {
             yourLP -= dmg;
+            yourLpText.text = ("LP: " +  yourLP.ToString());
         }
     }
 
@@ -412,6 +425,11 @@ public class TurnManager : MonoBehaviour
     {
         
         selectAttacker = card;
+        if (rivalDeck.field.Count == 0)
+        {
+            selectDefender = null;
+            battle();
+        }
     }
 
     public void selectDefenderFunc(DisplayCard card)
@@ -423,11 +441,11 @@ public class TurnManager : MonoBehaviour
     public void battle()
     {
 
-        if (selectAttacker == null || selectDefender == null || turnFase != 1)
+        if (selectAttacker != null && turnFase != 1)
         {
             battlePanel.SetActive(true);
 
-            battleSC.battle(selectAttacker, selectDefender, isYourTurn);
+            battleSC.battle(selectAttacker, isYourTurn, selectDefender);
 
             selectAttacker.CardHasAttacked();
             CardsThatAttacked.Add(selectAttacker);
