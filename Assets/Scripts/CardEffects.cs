@@ -29,7 +29,7 @@ public class CardEffects : MonoBehaviour
 
     private void Start()
     {
-        // effectActions.Add(1, CardEffect_DrawCards2);
+        effectActions.Add(1, CardEffect_DrawCards);
         //effectActions.Add (2, CardEffect_DestroyCards);
         //effectActions.Add(3, CardEffect_BanishCards);
         //effectActions.Add(4, CardEffect_LookCards);
@@ -38,22 +38,22 @@ public class CardEffects : MonoBehaviour
     public Dictionary<int, Action<EffectParam>> effectActions = new Dictionary<int, Action<EffectParam>>
 
     {
-        /*
-            { 1, CardEffect_DrawCards},
-            { 2, CardEffect_DestroyCards},
-            { 3, CardEffect_BanishCards },
-            { 4, CardEffect_LookCards },
-            { 5, CardEffect_Buff },
-            { 6, CardEffect_Damage_Heal },
-            { 7, CardEffect_Taunt },
-            { 8, CardEffect_ManaChanges },
-            { 9, CardEffect_LimitCards },
-            { 10, CardEffect_Constants }, 
-            { 11, CardEffect_Summon },
-            { 12, CardEffect_RetreatChosenDeck },
-            { 13, CardEffect_RetreatChosenHand},
-            { 14, CardEffect_Constants}
-        */
+        
+            //{ 1, CardEffect_DrawCards}
+            //{ 2, CardEffect_DestroyCards},
+            //{ 3, CardEffect_BanishCards },
+            //{ 4, CardEffect_LookCards },
+            //{ 5, CardEffect_Buff },
+            //{ 6, CardEffect_Damage_Heal },
+            //{ 7, CardEffect_Taunt },
+            //{ 8, CardEffect_ManaChanges },
+            //{ 9, CardEffect_LimitCards },
+            //{ 10, CardEffect_Constants }, 
+            //{ 11, CardEffect_Summon },
+            //{ 12, CardEffect_RetreatChosenDeck },
+            //{ 13, CardEffect_RetreatChosenHand},
+            //{ 14, CardEffect_Constants}
+        
 
 
 
@@ -115,7 +115,7 @@ public class CardEffects : MonoBehaviour
     public void CardEffect_DestroyCards(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where = 4, ep.from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, 4, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " Cartas para destrur";
@@ -178,10 +178,10 @@ public class CardEffects : MonoBehaviour
     }
 
 
-    public void CardEffect_Summon(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
+    public void CardEffect_Summon(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " elegidos para invocarlos";

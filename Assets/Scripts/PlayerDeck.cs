@@ -495,7 +495,7 @@ public class PlayerDeck : MonoBehaviour
 
         if (actualCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OnEnterField))
         {
-           
+            effects.effectActions[1](new EffectParam { cost = 0});
         }
 
         turnManager.ManaChanges(card.cardType, 2, card.cardCost);

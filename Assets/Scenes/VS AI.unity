@@ -4536,6 +4536,8 @@ MonoBehaviour:
   Field: {fileID: 374400862}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
+  effectDictionary: {fileID: 0}
+  effects: {fileID: 0}
   rivalHand: 0
   domainCard: {fileID: 1111674058}
   aI: {fileID: 742449907}
@@ -5567,6 +5569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiDeck: {fileID: 929984833}
   turnManager: {fileID: 954678134}
+  playerDeck: {fileID: 634802050}
 --- !u!1001 &800001165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6966,6 +6969,8 @@ MonoBehaviour:
   Field: {fileID: 83154056}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
+  effectDictionary: {fileID: 0}
+  effects: {fileID: 0}
   rivalHand: 1
   domainCard: {fileID: 718621758}
   aI: {fileID: 742449907}
