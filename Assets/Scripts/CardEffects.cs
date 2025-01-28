@@ -30,10 +30,10 @@ public class CardEffects : MonoBehaviour
     private void Start()
     {
         effectActions.Add(1, CardEffect_DrawCards);
-        //effectActions.Add (2, CardEffect_DestroyCards);
-        //effectActions.Add(3, CardEffect_BanishCards);
-        //effectActions.Add(4, CardEffect_LookCards);
-        //effectActions.Add(5, CardEffect_Buff);
+        effectActions.Add (2, CardEffect_DestroyCards);
+        effectActions.Add(3, CardEffect_BanishCards);
+        effectActions.Add(4, CardEffect_LookCards);
+        effectActions.Add(5, CardEffect_Buff);
     }
     public Dictionary<int, Action<EffectParam>> effectActions = new Dictionary<int, Action<EffectParam>>
 
@@ -200,10 +200,10 @@ public class CardEffects : MonoBehaviour
 
     }
 
-    public void CardEffect_BanishCards(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
+    public void CardEffect_BanishCards(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " elegidos para desterrarlos";
@@ -211,9 +211,13 @@ public class CardEffects : MonoBehaviour
         GenerateSelectableCards();
     }
 
-    public void CardEffect_LookCards(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
+    public void CardEffect_LookCards(EffectParam ep)
     {
-
+        howManyI = howMany;
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where, ep.from);
+        confirmCardPanel.SetActive(true);
+        howManyText.color = Color.black;
+        howManyText.text = "0-0";
     }
 
     public void CardEffect_LimitCards()
