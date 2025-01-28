@@ -37,6 +37,8 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] GameObject Card;
 
     [SerializeField] TurnManager turnManager;
+    [SerializeField] EfectosDiccionario effectDictionary;
+    [SerializeField] CardEffects effects;
 
     //! Sustituirlo más adelante
     [SerializeField] bool rivalHand;
@@ -488,7 +490,13 @@ public class PlayerDeck : MonoBehaviour
             CardInHand.transform.SetParent(Field.transform);
             DisplayCard displayCard;
             displayCard = CardInHand.GetComponent<DisplayCard>();
+           Card actualCard = displayCard.GetThisCard();
 
+
+        if (actualCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OnEnterField))
+        {
+           
+        }
 
         turnManager.ManaChanges(card.cardType, 2, card.cardCost);
         displayCard.UpdateDisplay(card.cardId);
@@ -552,6 +560,6 @@ public class PlayerDeck : MonoBehaviour
 
     public void AiBattle()
     {
-        aI.BattleFase(hand);
+        aI.BattleFase(field);
     }
 }

@@ -9,6 +9,7 @@ public class AI : MonoBehaviour
 
     [SerializeField] PlayerDeck aiDeck;
     [SerializeField] TurnManager turnManager;
+    [SerializeField] PlayerDeck playerDeck;
  
     private List<Card> playableCards = new List<Card>();
     private List<GameObject> playableCardsGameObject = new List<GameObject>();
@@ -73,7 +74,7 @@ public class AI : MonoBehaviour
         attackableCardsGameObject = card;
         foreach (var item in card)
         {
-            DisplayCard aux = item.GetComponent<DisplayCard>();
+            
            if (!item.GetComponent<DisplayCard>().ThisCardHasAttacked()) 
             {
                 attackableCards.Add(item);
@@ -94,5 +95,37 @@ public class AI : MonoBehaviour
     private IEnumerator CardAttack()
     {
         yield return new WaitForSeconds(1f);
+
+
+        if (playerDeck.field.Count <= 0)
+        {
+            
+            foreach (var item in attackableCards)
+            {
+                turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
+                turnManager.battle();
+                yield return new WaitForSeconds(0.5f);
+            }
+            StopCoroutine(CardAttack());
+
+        }
+
+
+        foreach (var item in attackableCards)
+        {
+            foreach (var item2 in playerDeck.field)
+            {
+                if (item.GetComponent<DisplayCard>().cardAttack >= item2.GetComponent<DisplayCard>().cardAttack)
+                {
+                    turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
+                    turnManager.selectDefenderFunc(item2.GetComponent<DisplayCard>());
+                    turnManager.battle();
+                }
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+
+        aiDeck.AiBattle();
+        
     }
 }

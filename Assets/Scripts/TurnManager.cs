@@ -117,7 +117,7 @@ public class TurnManager : MonoBehaviour
     private void FirstDraw()
     {
         playerDeck.CallDraw(6);
-        rivalDeck.CallDraw(1);
+        rivalDeck.CallDraw(6);
         SetFase(1);
     }
 

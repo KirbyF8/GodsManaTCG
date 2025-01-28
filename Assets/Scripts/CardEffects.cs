@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
+
 
 public class CardEffects : MonoBehaviour
 {
@@ -26,18 +27,56 @@ public class CardEffects : MonoBehaviour
 
     private int howManyI;
 
-  
-    public void CardEffect_DrawCards(string what = "", int cost = 0, string who = "", int where = 0, string from = "", int howMany = 1)
+    private void Start()
+    {
+        // effectActions.Add(1, CardEffect_DrawCards2);
+        //effectActions.Add (2, CardEffect_DestroyCards);
+        //effectActions.Add(3, CardEffect_BanishCards);
+        //effectActions.Add(4, CardEffect_LookCards);
+        //effectActions.Add(5, CardEffect_Buff);
+    }
+    public Dictionary<int, Action<EffectParam>> effectActions = new Dictionary<int, Action<EffectParam>>
+
+    {
+        /*
+            { 1, CardEffect_DrawCards},
+            { 2, CardEffect_DestroyCards},
+            { 3, CardEffect_BanishCards },
+            { 4, CardEffect_LookCards },
+            { 5, CardEffect_Buff },
+            { 6, CardEffect_Damage_Heal },
+            { 7, CardEffect_Taunt },
+            { 8, CardEffect_ManaChanges },
+            { 9, CardEffect_LimitCards },
+            { 10, CardEffect_Constants }, 
+            { 11, CardEffect_Summon },
+            { 12, CardEffect_RetreatChosenDeck },
+            { 13, CardEffect_RetreatChosenHand},
+            { 14, CardEffect_Constants}
+        */
+
+
+
+        };
+
+
+    // Inicializa el diccionario con las funciones que encapsulan los efectos
+
+
+    public void CardEffect_DrawCards(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(what ,cost ,who ,where, from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " Cartas";
 
         GenerateSelectableCards();
-        // playerDeck.CleanSearch();
+        playerDeck.CleanSearch();
     }
+
+ 
+   
     public void SelectCards(Card card)
     {
      
@@ -73,10 +112,10 @@ public class CardEffects : MonoBehaviour
        
     }
 
-    public void CardEffect_DestroyCards(string what = "", int cost = 0,int where = 4, string who = "", string from = "", int howMany = 1)
+    public void CardEffect_DestroyCards(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, ep.where = 4, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " Cartas para destrur";
@@ -138,7 +177,8 @@ public class CardEffects : MonoBehaviour
         returnedCards.Clear();
     }
 
-    public void CardEffect_Summon(string what = "", int cost = 0, int where = 1, string who = "", string from = "", int howMany = 1)
+
+    public void CardEffect_Summon(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
     {
         howManyI = howMany;
         returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
@@ -160,7 +200,7 @@ public class CardEffects : MonoBehaviour
 
     }
 
-    public void CardEffect_BanishCards(string what = "", int cost = 0, int where = 1, string who = "", string from = "", int howMany = 1)
+    public void CardEffect_BanishCards(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
     {
         howManyI = howMany;
         returnedCards = playerDeck.SearchCards(what, cost, who, where, from);
@@ -171,7 +211,7 @@ public class CardEffects : MonoBehaviour
         GenerateSelectableCards();
     }
 
-    public void CardEffect_LookCards()
+    public void CardEffect_LookCards(string what = "", int cost = 0, string who = "", int where = 1, string from = "", int howMany = 1)
     {
 
     }
