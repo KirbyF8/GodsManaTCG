@@ -33,7 +33,7 @@ public class CardEffects : MonoBehaviour
         effectActions.Add (2, CardEffect_DestroyCards);
         effectActions.Add(3, CardEffect_BanishCards);
         effectActions.Add(4, CardEffect_LookCards);
-        effectActions.Add(5, CardEffect_Buff);
+        //effectActions.Add(5, CardEffect_Buff);
     }
     public Dictionary<int, Action<EffectParam>> effectActions = new Dictionary<int, Action<EffectParam>>
 
