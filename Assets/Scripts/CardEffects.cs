@@ -33,7 +33,15 @@ public class CardEffects : MonoBehaviour
         effectActions.Add (2, CardEffect_DestroyCards);
         effectActions.Add(3, CardEffect_BanishCards);
         effectActions.Add(4, CardEffect_LookCards);
-        //effectActions.Add(5, CardEffect_Buff);
+        effectActions.Add(5, CardEffect_Buff);
+        effectActions.Add(6, CardEffect_Damage_Heal);
+        effectActions.Add(7, CardEffect_Taunt);
+        effectActions.Add(8, CardEffect_ManaChanges);
+        effectActions.Add(9, CardEffect_LimitCards);
+        effectActions.Add(10, CardEffect_Constants);
+        effectActions.Add(11, CardEffect_Summon);
+        effectActions.Add(12, CardEffect_RetreatChosen);
+
     }
     public Dictionary<int, Action<EffectParam>> effectActions = new Dictionary<int, Action<EffectParam>>
 
@@ -51,16 +59,12 @@ public class CardEffects : MonoBehaviour
             //{ 10, CardEffect_Constants }, 
             //{ 11, CardEffect_Summon },
             //{ 12, CardEffect_RetreatChosenDeck },
-            //{ 13, CardEffect_RetreatChosenHand},
-            //{ 14, CardEffect_Constants}
-        
-
-
+           
 
         };
 
 
-    // Inicializa el diccionario con las funciones que encapsulan los efectos
+   
 
 
     public void CardEffect_DrawCards(EffectParam ep)
@@ -190,12 +194,12 @@ public class CardEffects : MonoBehaviour
 
     }
 
-    public void CardEffect_Damage_Heal()
+    public void CardEffect_Damage_Heal(EffectParam ep)
     {
 
     }
 
-    public void CardEffect_Buff()
+    public void CardEffect_Buff(EffectParam ep)
     {
 
     }
@@ -220,22 +224,27 @@ public class CardEffects : MonoBehaviour
         howManyText.text = "0-0";
     }
 
-    public void CardEffect_LimitCards()
+    public void CardEffect_LimitCards(EffectParam ep)
     {
 
     }
 
-    public void CardEffect_Taunt()
+    public void CardEffect_Taunt(EffectParam ep)
     {
 
     }
 
-    public void CardEffect_ManaChanges()
+    public void CardEffect_ManaChanges(EffectParam ep)
     {
 
     }
 
-    public void CardEffect_Constants()
+    public void CardEffect_Constants(EffectParam ep)
+    {
+
+    }
+
+    public void CardEffect_RetreatChosen(EffectParam ep)
     {
 
     }

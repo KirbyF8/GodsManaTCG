@@ -3565,12 +3565,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3586,12 +3586,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3607,12 +3607,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3628,12 +3628,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3649,12 +3649,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3670,12 +3670,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3691,12 +3691,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3712,12 +3712,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3733,12 +3733,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3754,12 +3754,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3775,12 +3775,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3796,12 +3796,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3817,12 +3817,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3838,12 +3838,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3859,12 +3859,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3880,12 +3880,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3901,12 +3901,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3922,12 +3922,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3943,12 +3943,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3964,12 +3964,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -3985,12 +3985,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4006,12 +4006,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4027,12 +4027,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4048,12 +4048,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4069,12 +4069,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4090,12 +4090,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4111,12 +4111,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4132,12 +4132,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4153,12 +4153,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4174,12 +4174,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4195,12 +4195,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4216,12 +4216,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4237,12 +4237,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4258,12 +4258,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4279,12 +4279,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4300,12 +4300,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4321,12 +4321,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4342,12 +4342,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4363,12 +4363,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4384,12 +4384,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4405,12 +4405,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4426,12 +4426,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4447,12 +4447,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4468,12 +4468,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4489,12 +4489,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4516,12 +4516,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -4536,9 +4536,10 @@ MonoBehaviour:
   Field: {fileID: 374400862}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
-  effectDictionary: {fileID: 0}
-  effects: {fileID: 0}
+  effectDictionary: {fileID: 1754585361}
+  effects: {fileID: 1754585362}
   rivalHand: 0
+  rivalDeck: {fileID: 929984833}
   domainCard: {fileID: 1111674058}
   aI: {fileID: 742449907}
 --- !u!1 &657917041
@@ -5998,12 +5999,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6019,12 +6020,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6040,12 +6041,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6061,12 +6062,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6082,12 +6083,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6103,12 +6104,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6124,12 +6125,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6145,12 +6146,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6166,12 +6167,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6187,12 +6188,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6208,12 +6209,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6229,12 +6230,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6250,12 +6251,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6271,12 +6272,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6292,12 +6293,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6313,12 +6314,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6334,12 +6335,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6355,12 +6356,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6376,12 +6377,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6397,12 +6398,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6418,12 +6419,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6439,12 +6440,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6460,12 +6461,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6481,12 +6482,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6502,12 +6503,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6523,12 +6524,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6544,12 +6545,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6565,12 +6566,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6586,12 +6587,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6607,12 +6608,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6628,12 +6629,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6649,12 +6650,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6670,12 +6671,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6691,12 +6692,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6712,12 +6713,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6733,12 +6734,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6754,12 +6755,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6775,12 +6776,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6796,12 +6797,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6817,12 +6818,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6838,12 +6839,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6859,12 +6860,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6880,12 +6881,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6901,12 +6902,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6922,12 +6923,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6949,12 +6950,12 @@ MonoBehaviour:
     cardRarity: 0
     activationTypes: 
     cardEffect: 
-    effectCantidad: 
+    effectHowMany: 
     effectTargetName: []
     effectCardClass: []
     effectCardDeity: []
-    effectCoste: 
-    effectDonde: 
+    effectCost: 
+    effectWhere: 
     effectATK: 
     effectDEF: 
     effectHP: 
@@ -6969,9 +6970,10 @@ MonoBehaviour:
   Field: {fileID: 83154056}
   Card: {fileID: 2750442950216274408, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}
   turnManager: {fileID: 954678134}
-  effectDictionary: {fileID: 0}
-  effects: {fileID: 0}
+  effectDictionary: {fileID: 1754585361}
+  effects: {fileID: 1754585362}
   rivalHand: 1
+  rivalDeck: {fileID: 634802050}
   domainCard: {fileID: 718621758}
   aI: {fileID: 742449907}
 --- !u!114 &929984834
@@ -9696,6 +9698,8 @@ GameObject:
   - component: {fileID: 1754585359}
   - component: {fileID: 1754585358}
   - component: {fileID: 1754585360}
+  - component: {fileID: 1754585361}
+  - component: {fileID: 1754585362}
   m_Layer: 0
   m_Name: CardDatabase
   m_TagString: Untagged
@@ -9774,6 +9778,38 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5608dd369d25c3e4098885c08ae4810d, type: 3}
   - {fileID: 21300000, guid: a611f3123c942854a874c97d40088c71, type: 3}
   - {fileID: 21300000, guid: acfc7c8423152b046aa07ce8f60f8a02, type: 3}
+--- !u!114 &1754585361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754585357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5565b85779454474f978d3074283a8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1754585362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754585357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b055b75464d8744967ac4e2ab83b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDeck: {fileID: 0}
+  returnedCards: []
+  selectedCards: []
+  confirmCardPanel: {fileID: 0}
+  GOcard: {fileID: 0}
+  searchedCardsPlace: {fileID: 0}
+  nothing: {fileID: 0}
+  howManyText: {fileID: 0}
 --- !u!1 &1772519682
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,7 @@ public class PlayerDeck : MonoBehaviour
 
     //! Sustituirlo más adelante
     [SerializeField] bool rivalHand;
+    [SerializeField] PlayerDeck rivalDeck;
     [SerializeField] GameObject domainCard;
 
     [SerializeField] AI aI;
@@ -338,7 +339,8 @@ public class PlayerDeck : MonoBehaviour
     public void DestroyCard(Card card)
     {
         //! COMPROBAR Q FUNCIONE
-        graveyard.Add(card);
+        
+        rivalDeck.graveyard.Add(card);
 
         foreach (GameObject go in field)
         {
@@ -346,6 +348,7 @@ public class PlayerDeck : MonoBehaviour
             if (displayCardD.GetThisCard() == card)
             {
                 field.Remove(go);
+                
                 Destroy(go, 0.1f);
                 return;
             }
@@ -489,13 +492,54 @@ public class PlayerDeck : MonoBehaviour
         GameObject CardInHand = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
             CardInHand.transform.SetParent(Field.transform);
             DisplayCard displayCard;
+          
             displayCard = CardInHand.GetComponent<DisplayCard>();
-           Card actualCard = displayCard.GetThisCard();
+        displayCard.UpdateDisplay(card.cardId);
+        displayCard.WhereIAm(2);
+        
+        Card actualCard = displayCard.GetThisCard();
 
-
-        if (actualCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OnEnterField))
+        if (actualCard.activationTypes != null || actualCard.activationTypes.Count >= 1)
         {
-            effects.effectActions[1](new EffectParam { cost = 0});
+
+
+
+            if (actualCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OnEnterField))
+            {
+
+
+                if (actualCard.activationTypes[0] == EfectosDiccionario.ActivationType.OnEnterField)
+                {
+                    effects.effectActions[actualCard.cardEffect[0]](new EffectParam
+                    {
+                        howMany = actualCard.effectHowMany[0],
+                        who = actualCard.effectTargetName[0],
+                        what = actualCard.effectCardClass[0],
+                        HP = actualCard.effectHP[0],
+                        ATK = actualCard.effectATK[0],
+                        cost = actualCard.effectCost[0],
+                        DEF = actualCard.effectDEF[0],
+                        where = actualCard.effectWhere[0],
+                        from = actualCard.effectCardDeity[0]
+                    });
+                }
+                else
+                {
+                    effects.effectActions[actualCard.cardEffect[1]](new EffectParam
+                    {
+                        howMany = actualCard.effectHowMany[1],
+                        who = actualCard.effectTargetName[1],
+                        what = actualCard.effectCardClass[1],
+                        HP = actualCard.effectHP[1],
+                        ATK = actualCard.effectATK[1],
+                        cost = actualCard.effectCost[1],
+                        DEF = actualCard.effectDEF[1],
+                        where = actualCard.effectWhere[1],
+                        from = actualCard.effectCardDeity[1]
+                    });
+                }
+
+            }
         }
 
         turnManager.ManaChanges(card.cardType, 2, card.cardCost);

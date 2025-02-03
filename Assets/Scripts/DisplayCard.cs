@@ -174,7 +174,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
         displayCard[0] = CardDatabase.cardList[displayId];
         SetCard();
-        
+       
         thisCard = displayCard[0];
         
         

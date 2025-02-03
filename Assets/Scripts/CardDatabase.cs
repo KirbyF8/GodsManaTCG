@@ -58,13 +58,13 @@ public class CardDatabase : MonoBehaviour
 
 
         // Mundo Antiguo 3 (Defensores del futuro)
-        cardList.Add(new Card(22, "Lyriel", 2, 4, 2, 3, "Puede atacar directamente al rival", "Chronos", "Pícara", 0, new List<ActivationType> { ActivationType.OnAttack}));
+        cardList.Add(new Card(22, "Lyriel", 2, 4, 2, 3, "Puede atacar directamente al rival", "Chronos", "Pícara", 0, new List<ActivationType> { ActivationType.OnAttack})); // TODO
 
         cardList.Add(new Card(23, "Sol", 3, 2, 1, 12, "Por cada HP que le falte aumenta su ataque en 1", "Chronos", "Luchador", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {10})); //TODO
-        cardList.Add(new Card(24, "Zolbo", 2, 1, 1, 4, "  <sprite name=AlSerInvocado> restaura el HP al completo de cualquier elegido", "Chronos", "Curandero", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {6}));
-        cardList.Add(new Card(25, "Emma", 2, 5, 2, 4, " <sprite name=AlSerInvocado>  en posicion de ataque roba una carta y descarta otra", "Chronos", "Mercenaria", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(26, "Leathen", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> toma el control de un elegido rival, <sprite name=AlSerDestruido> devuelve el control del elegido a su propietario", "Chronos", "Bardo", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OnLeaveField }));
-        cardList.Add(new Card(27, "Arwen", 2, 1, 3, 4, "  <sprite name=AlSerInvocado> cura 2PV al jugador que la invoco", "N", "Curandera", 0, new List<ActivationType> { ActivationType.OnEnterField}));
+        cardList.Add(new Card(24, "Zolbo", 2, 1, 1, 4, "  <sprite name=AlSerInvocado> restaura el HP al completo de cualquier elegido", "Chronos", "Curandero", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {6}, new int[1] {1}, null, null, null, null, new int[1] {2}, null, null, new int[1] {100} ));
+        cardList.Add(new Card(25, "Emma", 5, 5, 2, 4, " <sprite name=AlSerInvocado> roba una carta", "Chronos", "Mercenaria", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {1}, new int[1] {1}));
+        cardList.Add(new Card(26, "Leathen", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> toma el control de un elegido rival, <sprite name=AlSerDestruido> devuelve el control del elegido a su propietario", "Chronos", "Bardo", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OnLeaveField })); //TODO
+        cardList.Add(new Card(27, "Arwen", 2, 1, 3, 4, "  <sprite name=AlSerInvocado> cura 2PV un elegido", "N", "Curandera", 0, new List<ActivationType> { ActivationType.OnEnterField}, new int[1] {6}, new int[1] {1}, null, null, null, null, new int[1] {2}, null, null, new int[1] {2}));
         
         
 
@@ -143,14 +143,14 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(83, "Vix", 5, 7, 3, 5, "  <sprite name=AlSerInvocado> equipala a un monstruo rival este pierde todo su ataque, cuando este es destruido devuelve esta carta a tu zona de elegidos", "Murgu", "Luchadora", 0)); //TODO
 
         // Revolución Steampunk 5 (Nuevos Trabajos)
-        cardList.Add(new Card(84, "Myu", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca un elegido  <sprite name=Deck>  del rival, destierralo", "Chronos", "Tirador", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(85, "Drip", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una mágica  <sprite name=Deck> del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una mágica  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una trampa  <sprite name=Deck>  del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una carta de equipo  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(89, "Kelith", 1, 1, 1, 1, "  <sprite name=AlSerInvocado> mira las 3 cartas de la parte superior  <sprite name=Deck> colocalas de vuelta en el orden que quieras", "Chronos", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de equipo  <sprite name=Deck> rival, destierrala", "Chronos", "Hechicero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de dominio  <sprite name=Deck> rival, destierrala", "Dana", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(84, "Myu", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca un elegido  <sprite name=Deck>  del rival, destierralo", "Chronos", "Tirador", 0, new List<ActivationType> { ActivationType.OnEnterField }));//TODO
+        cardList.Add(new Card(85, "Drip", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una mágica  <sprite name=Deck> del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una mágica  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una trampa  <sprite name=Deck>  del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una carta de equipo  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        cardList.Add(new Card(89, "Kelith", 1, 1, 1, 1, "  <sprite name=AlSerInvocado> mira las 3 cartas de la parte superior  <sprite name=Deck> colocalas de vuelta en el orden que quieras", "Chronos", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));//TODO
+        cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de equipo  <sprite name=Deck> rival, destierrala", "Chronos", "Hechicero", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de dominio  <sprite name=Deck> rival, destierrala", "Dana", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
 
 
         // Miknit's Mana War Legacy 
@@ -258,5 +258,9 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(0, "Lobo", 0, 6, 2, 3, "<sprite name=AlSerDestruido> omites tu proximo robo", "N", "Invocación", 0, new List<ActivationType> { ActivationType.OnLeaveField }));
         cardList.Add(new Card(0, "Caballo", 0, 6, 6, 6, "<sprite name=AlSerDestruido> omites tu proximo robo", "N", "Invocación", 0, new List<ActivationType> { ActivationType.OnLeaveField }));
         cardList.Add(new Card(0, "Dragón", 0, 10, 10, 10, "<sprite name=AlSerDestruido> omites tu proximo robo", "N", "Invocación", 0, new List<ActivationType> { ActivationType.OnLeaveField }));
+
+        // Limite
+
+        
     }
 }

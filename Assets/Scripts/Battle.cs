@@ -73,7 +73,7 @@ public class Battle : MonoBehaviour
         
 
         displayCardAttacker = attacker;
-        Debug.Log(defender);
+        
         displayCardDefender = null;
         if (defender != null )
         {
