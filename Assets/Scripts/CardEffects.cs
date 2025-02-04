@@ -119,7 +119,7 @@ public class CardEffects : MonoBehaviour
     public void CardEffect_DestroyCards(EffectParam ep)
     {
         howManyI = howMany;
-        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, 4, ep.from);
+        returnedCards = playerDeck.SearchCards(ep.what, ep.cost, ep.who, 8, ep.from);
         confirmCardPanel.SetActive(true);
         howManyText.color = Color.black;
         howManyText.text = "Selecciona " + howMany + " Cartas para destrur";

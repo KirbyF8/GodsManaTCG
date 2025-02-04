@@ -106,7 +106,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private int whereIAm;
 
-    private int cardHpLost;
+    public int cardHpLost;
     private int cardModifiedAtk;
     private int cardModifiedDef;
 

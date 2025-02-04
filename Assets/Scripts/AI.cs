@@ -71,6 +71,7 @@ public class AI : MonoBehaviour
 
     public void BattleFase(List<GameObject> card)
     {
+        attackableCards.Clear();
         attackableCardsGameObject = card;
         foreach (var item in card)
         {
@@ -104,6 +105,7 @@ public class AI : MonoBehaviour
             {
                 turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
                 turnManager.battle();
+                Debug.Log("HOLA3");
                 yield return new WaitForSeconds(0.5f);
             }
             StopCoroutine(CardAttack());
@@ -113,15 +115,23 @@ public class AI : MonoBehaviour
 
         foreach (var item in attackableCards)
         {
+            
             foreach (var item2 in playerDeck.field)
             {
-                if (item.GetComponent<DisplayCard>().cardAttack >= item2.GetComponent<DisplayCard>().cardAttack)
+                if (!item.GetComponent<DisplayCard>().ThisCardHasAttacked() && 
+                    item.GetComponent<DisplayCard>().cardAttack >= (item2.GetComponent<DisplayCard>().cardHealth - item2.GetComponent<DisplayCard>().cardHpLost) ||
+                    (item.GetComponent<DisplayCard>().cardHealth - item.GetComponent<DisplayCard>().cardHpLost) > item2.GetComponent<DisplayCard>().cardDefense)
                 {
                     turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
                     turnManager.selectDefenderFunc(item2.GetComponent<DisplayCard>());
                     turnManager.battle();
+                    Debug.Log("HOLA2");
+
                 }
-                yield return new WaitForSeconds(0.5f);
+
+                item.GetComponent<DisplayCard>().CardHasAttacked();
+                Debug.Log("HOLA");
+                yield return new WaitForSeconds(2f);
             }
         }
 

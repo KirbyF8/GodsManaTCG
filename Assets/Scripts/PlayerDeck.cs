@@ -498,11 +498,13 @@ public class PlayerDeck : MonoBehaviour
         displayCard.WhereIAm(2);
         
         Card actualCard = displayCard.GetThisCard();
-
-        if (actualCard.activationTypes != null || actualCard.activationTypes.Count >= 1)
+        /* 
+         * if (turnManager.isYourTurn)
         {
 
-
+      
+        if (actualCard.activationTypes != null && actualCard.activationTypes.Count >= 1)
+        {
 
             if (actualCard.activationTypes.Contains(EfectosDiccionario.ActivationType.OnEnterField))
             {
@@ -541,7 +543,8 @@ public class PlayerDeck : MonoBehaviour
 
             }
         }
-
+        
+        }*/
         turnManager.ManaChanges(card.cardType, 2, card.cardCost);
         displayCard.UpdateDisplay(card.cardId);
         if (turnManager.isYourTurn)

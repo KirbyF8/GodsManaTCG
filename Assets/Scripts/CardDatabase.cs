@@ -58,98 +58,153 @@ public class CardDatabase : MonoBehaviour
 
 
         // Mundo Antiguo 3 (Defensores del futuro)
-        cardList.Add(new Card(22, "Lyriel", 2, 4, 2, 3, "Puede atacar directamente al rival", "Chronos", "Pícara", 0, new List<ActivationType> { ActivationType.OnAttack})); // TODO
+        cardList.Add(new Card(22, "Lyriel", 3, 4, 2, 3, "  <sprite name=AlSerInvocado> inflije 1HP de daño a un elegido", "Chronos", "Pícara", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {6}, new int[1] {1}, null, null, null, null, new int[1] {8}, new int[1])); 
 
         cardList.Add(new Card(23, "Sol", 3, 2, 1, 12, "Por cada HP que le falte aumenta su ataque en 1", "Chronos", "Luchador", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {10})); //TODO
+
         cardList.Add(new Card(24, "Zolbo", 2, 1, 1, 4, "  <sprite name=AlSerInvocado> restaura el HP al completo de cualquier elegido", "Chronos", "Curandero", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {6}, new int[1] {1}, null, null, null, null, new int[1] {2}, null, null, new int[1] {100} ));
+        
         cardList.Add(new Card(25, "Emma", 5, 5, 2, 4, " <sprite name=AlSerInvocado> roba una carta", "Chronos", "Mercenaria", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] {1}, new int[1] {1}));
+        
         cardList.Add(new Card(26, "Leathen", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> toma el control de un elegido rival, <sprite name=AlSerDestruido> devuelve el control del elegido a su propietario", "Chronos", "Bardo", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OnLeaveField })); //TODO
+        
         cardList.Add(new Card(27, "Arwen", 2, 1, 3, 4, "  <sprite name=AlSerInvocado> cura 2PV un elegido", "N", "Curandera", 0, new List<ActivationType> { ActivationType.OnEnterField}, new int[1] {6}, new int[1] {1}, null, null, null, null, new int[1] {2}, null, null, new int[1] {2}));
-        
-        
+
+
 
         // Mundo Antiguo 4 (Siervos Nº)
-        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, " <sprite name=AlSerInvocado> busca una Nº1  <sprite name=Deck>", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, " <sprite name=AlSerInvocado> invoca una ficha Chakal 5/1/2", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(30, "Elcrieri", 8, 8, 2, 6, "Cada vez que ataque roba una carta", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnAttack }));
-        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, " <sprite name=AlSerInvocado> coloca en posición de ataque un elegido en defensa", "Chronos", "Pícaro", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(28, "Klea", 1, 2, 2, 2, "<sprite name=AlSerInvocado> busca una Nº1 <sprite name=Deck>", "Chronos", "Guerrera", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "Nº1" }, null, null, null, new int[1] { 1 }));
+        
+        cardList.Add(new Card(29, "Kachal", 6, 2, 1, 5, "<sprite name=AlSerInvocado> invoca una ficha Chakal 5/1/2", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 11 }, new int[1] { 1 }, new string[1] { "Chakal" }, null, null, null, new int[1] { 1 }));
+        
+        cardList.Add(new Card(30, "Elcrieri", 8, 8, 2, 6, "Cada vez que ataque roba una carta", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnAttack }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "" }, null, null, null, new int[1] { 1 }));
+
+        cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, "<sprite name=AlSerInvocado> reduce la defensa a 0 de un elegido rival", "Chronos", "Pícaro", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 5 }, new int[1] { 1 }, new string[1] { "" }, null, null, null, new int[1] { 0 }));
+        
         cardList.Add(new Card(32, "Dahila", 3, 4, 1, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "Chronos", "", 0)); //TODO
-        cardList.Add(new Card(33, "Celine", 6, 4, 4, 6, "Mientras esta en el campo en posicion de ataque al final del turno todos los elegidos reciben 1 de daño excetpo si esto los mata ", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEndTurn }));
+
+        cardList.Add(new Card(33, "Celine", 6, 4, 4, 6, "Al final del turno todos los elegidos reciben 1 de daño", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEndTurn }, new int[1] { 6 }, new int[1] { 100 }, new string[1] { "" }, null, null, null, new int[1] { 1 }));
+
         cardList.Add(new Card(34, "Gumi", 4, 1, 4, 10, "Si el jugador rival recibe daño aumenta el ataque de esta carta en esa cantidad hasta el final de ese turno", "Chronos", "", 0)); //TODO
-        cardList.Add(new Card(35, "Amaro", 1, 5, 1, 1, "<sprite name=AlSerInvocado> destruye un elegido con 1 de defensa, si no puede esta carta es destruida", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(36, "Íñigo", 2, 3, 2, 3, "Si un elejido pasa de defensa a ataque reduce el ataque de este a la mitad", "Chronos", "", 0)); //TODO
+
+        cardList.Add(new Card(35, "Amaro", 1, 5, 1, 1, "<sprite name=AlSerInvocado> destruye un elegido con 1 de defensa, si no puede esta carta es destruida", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[2] { 2, 2 }, new int[2] { 1, 1 }, new string[2] { "", "Amaro" }, null, null, null, new int[2] { 1, 0 }));
+        
+        cardList.Add(new Card(36, "Íñigo", 2, 3, 2, 3, "<sprite name=AlSerInvocado> reduce el ataque de un elegido a la mitad", "Chronos", "", 0)); //TODO
+
         cardList.Add(new Card(37, "Aul", 10, 10, 4, 10, "Si dos o mas elegidos son destruidos por el efecto de una carta puedes invocarla gratuitamente", "Chronos", "", 0)); //TODO
-        cardList.Add(new Card(38, "Olivia", 8, 1, 10, 10, "Puedes destruir una carta mágica o trampa, si lo haces tus elegidos que ya han atacado lo pueden volver a hacer", "Chronos", "", 0)); //TODO
+
+        cardList.Add(new Card(38, "Olivia", 7, 1, 10, 10, "<sprite name=AlSerInvocado> destruye una carta trampa", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 2 }, new int[1] { 1 }, new string[1] { "" }, new string[1] { "Trampa" }, null, null, new int[1] { 0 }));
+        
         cardList.Add(new Card(39, "Céfiro", 6, 6, 6, 6, "No puede ser destruido por efectos de elegidos", "Chronos", "", 0)); //TODO
 
         // Mundo Antiguo 5
         cardList.Add(new Card(40, "Rana Mercante", 1, 1, 1, 1, "Una vez por ronda puedes descartar 2 cartas para robar 1", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OncePerTurn }));
         
-        cardList.Add(new Card(41, "Reglas antiguas", 2, 0, 0, 0, "Elimina todos los manas de los dioses", "N", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(41, "Reglas antiguas", 2, 0, 0, 0, "Elimina todos los manas de los dioses", "N", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+
         cardList.Add(new Card(42, "Último recurso", 5, 0, 0, 0, "Si tu vida es 1, obten 20 de mana", "Miknit", "Mágica", 0)); //TODO
-        cardList.Add(new Card(43, "Vuelta a lo básico", 1, 0, 0, 0, "Transforma todo el mana de los dioses a mana", "N", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+
+        cardList.Add(new Card(43, "Vuelta a lo básico", 1, 0, 0, 0, "Transforma todo el mana de los dioses a mana", "N", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+
         cardList.Add(new Card(44, "Último esfuerzo", 1, 0, 0, 0, "Cuando un elegido vaya a ser destruido mantenlo a 1 de vida", "Dana", "Trampa", 0)); //TODO
-        cardList.Add(new Card(45, "Castigo divino", 4, 0, 0, 0, "Destruye todos los monstruos en el campo", "Etse", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+
+        cardList.Add(new Card(45, "Castigo divino", 5, 0, 0, 0, "Destruye todos los elegidos en el campo", "Etse", "Mágica", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 2 }, new int[1] { 100 }, new string[1] { "" }, null, null, null, new int[1] { 0 }));
 
 
         // Revolución Steampunk (La creacion de K.R.I.S)
-        cardList.Add(new Card(46, "Orion Bolt", 1, 1, 1, 2, "<sprite name=AlSerInvocado> añade K.R.I.S <sprite name=Mano>", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(47, "Martyn Bolt", 2, 1, 1, 1, "  <sprite name=AlSerDestruido> en combate roba dos cartas", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnLeaveField }));
+        cardList.Add(new Card(46, "Orion Bolt", 1, 1, 1, 2, "<sprite name=AlSerInvocado> añade K.R.I.S a <sprite name=Mano>", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "K.R.I.S" }, null, null, null, new int[1] { 1 }));
+
+        cardList.Add(new Card(47, "Martyn Bolt", 2, 1, 1, 1, "<sprite name=AlSerDestruido> roba dos cartas", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnLeaveField }, new int[1] { 1 }, new int[1] { 2 }, null, null, null, null, new int[1] { 2 }));
+        
         cardList.Add(new Card(48, "Ren Bolt", 5, 3, 2, 2, "Si K.R.I.S esta en el campo puedes invocar este elegido de forma especial desde el cementerio, al hacerlo aumenta el ataque de K.R.I.S en 1", "Miknit", "Artificiero", 0)); //TODO
+        
         cardList.Add(new Card(49, "Elen Bolt", 3, 6, 3, 3, "Si K.R.I.S es seleccionado como efecto puedes descartar esta carta y negar ese efecto", "Miknit", "Artificiera", 0)); //TODO
+        
         cardList.Add(new Card(50, "Leo Bolt", 4, 1, 4, 3, "  <sprite name=AlSerInvocado>, si tienes a K.R.I.S en la mano, reduce su coste a la mitad", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        
         cardList.Add(new Card(51, "Nora Bolt", 6, 5, 2, 6, "  <sprite name=AlSerInvocado> si Kris Bolt o K.R.I.S estan en el campo puedes buscar una carta que mencione a uno de los dos  <sprite name=Deck> y añadirla a tu mano ", "Miknit", "Artificiera", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        
         cardList.Add(new Card(52, "K.R.I.S", 10, 10, 10, 10, "Si esta en posición de defensa los elegidos enemigos solo pueden atacarle a el", "N", "Robot", 0)); //TODO
 
         cardList.Add(new Card(53, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Miknit", "Dominio", 0)); //TODO
+        
         cardList.Add(new Card(54, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "Mágica", "", 0)); //TODO
+        
         cardList.Add(new Card(55, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de HP por cada uno", "Miknit", "Mágica", 0)); //TODO
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
-        cardList.Add(new Card(56, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ataque, cuando es el turno del rival reducelo a la mitad", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnStartTurn, ActivationType.OnEndTurn }));
-        cardList.Add(new Card(57, "Valette Bleck", 4, 5, 2, 2, "  <sprite name=AlSerInvocado> roba una carta de equipo, puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0)); //TODO
+        cardList.Add(new Card(56, "Kris Bolt", 5, 8, 1, 3, "Cuando es tu turno duplica su ATK, cuando es el turno del rival reduce su DEF a la mitad", "Miknit", "Artificiero", 0, new List<ActivationType> { ActivationType.OnStartTurn, ActivationType.OnEndTurn }));
+
+        cardList.Add(new Card(57, "Valette Bleck", 4, 5, 2, 2, "<sprite name=AlSerInvocado> roba una carta de equipo, una vez por turno puedes destruir esta para destruir un elegido del rival", "Chronos", "Tiradora", 0, new List<ActivationType> { ActivationType.OnEnterField, ActivationType.OncePerTurn }, new int[2] { 1, 2 }, new int[2] { 1, 1 }, new string[2] { "Equipo", "" }, null, null, null, new int[2] { 1, 1 }));
+
         cardList.Add(new Card(58, "Nara", 3, 1, 2, 8, "Puede tener hasta 8 cartas equipadas", "Dana", "Mercenaria", 0)); //TODO
+       
         cardList.Add(new Card(59, "B.S.B-G.A.P-103", 9, 8, 16, 12, "Cada vez que destruye un elegido rival aumenta en 1 todas sus estadísticas", "Murgu", "Robot", 0, new List<ActivationType> { ActivationType.OnDestroyCard }));
 
         cardList.Add(new Card(60, "Bateria de Atem", 4, 0, 0, 0, "El elegido equipado con esto puede atacar dos veces por turno", "Dana", "Equipo", 0)); //TODO
+     
         cardList.Add(new Card(61, "Lia", 4, 0, 0, 0, "Disminuye en 1 el ataque, <sprite name=AlSerDestruido> invoca en el campo del poseedor de la carta una ficha Lia 9/0/1", "Dana", "Equipo", 0)); //TODO
+        
         cardList.Add(new Card(62, "Pistola Kelsier", 2, 0, 0, 0, "Cuando el elegido que la lleve equipada ataque inflige 1 de daño a tu oponente", "Chronos", "Equipo", 0)); //TODO
+        
         cardList.Add(new Card(63, "Rifle Bleck", 3, 0, 0, 0, "Aumenta en 1 el ataque, <sprite name=AlSerDestruido> destruye un elegido", "Chronos", "Equipo", 0)); //TODO
+        
         cardList.Add(new Card(64, "EléctroBola", 3, 0, 0, 0, "Solo puede ser equipada en elegidos bolt, duplica el ataque de estos cuando atacan a un elegido que no sea de Miknit", "Miknit", "Equipo", 0)); //TODO
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)
         // 
 
         // Revolución Steampunk 3 (Revolucionarios)
         cardList.Add(new Card(65, "Sonya Delay", 10, 1, 10, 10, "Mientras esta carta este en el campo tu rival no puede atacar con sus elegidos", "Chronos", "", 0)); //TODO
+        
         cardList.Add(new Card(66, "Edelgard", 10, 20, 10, 10, "Esta elegida puede atacar tantas veces a elegidos enemigos como quiera pero no puede atacar directamente", "Murgu", "", 0)); //TODO
+        
         cardList.Add(new Card(67, "Ace Electro", 10, 4, 4, 10, "Mientras esta carta este en el campo tu rival no puede colocar trampas ni equipar cartas de equipo", "Miknit", "", 0)); //TODO
-        cardList.Add(new Card(68, "Genex", 10, 10, 10, 20, "Cada vez que finalice tu turno recupera toda su vida", "Dana", "", 0, new List<ActivationType> { ActivationType.OnEndTurn }));
+
+        cardList.Add(new Card(68, "Genex", 10, 10, 10, 20, "Cada vez que finalice tu turno recupera toda su vida", "Dana", "", 0, new List<ActivationType> { ActivationType.OnEndTurn }, new int[1] { 6 }, new int[1] { 1 }, new string[1] { "Genex" }, null, null, null, new int[1] { 20 }));
+        
         cardList.Add(new Card(69, "Fazos", 10, 5, 5, 5, "Mientras esta carta este en el campo tu adversario no puede invocar de forma especial", "Yrys", "", 0)); //TODO
-        cardList.Add(new Card(70, "Mona", 10, 10, 10, 10, "  <sprite name=AlSerInvocado> destruye todos los elegidos que su mana no sea de Etse", "Etse", "", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+
+        cardList.Add(new Card(70, "Mona", 10, 10, 10, 10, "<sprite name=AlSerInvocado> destruye todos los elegidos que su dios no sean de Etse", "Etse", "", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 2 }, new int[1] { 100 }, null, null, new string[1] { "Etse" }, null, null));
 
         cardList.Add(new Card(71, "Deicidio", 10, 0, 0, 0, "Si todo tu mana es mana de los dioses transformalo en mana, aumenta permanentemente en 2 tu mana maximo, no puedes obtener mana de los dioses después de activar este efecto", "N", "Mágica", 0)); //TODO
 
         cardList.Add(new Card(72, "Emperor Red", 6, 0, 0, 0, "Siempre que un elegido de chronos ataque el elegido del rival no puede contraatacar", "Chronos", "Dominio", 0)); //TODO
+
         cardList.Add(new Card(73, "Baño de sangre", 6, 0, 0, 0, "Cuando un elegido es destruido recupera toda la vida de tus elegidos de murgu", "Murgu", "Dominio", 0)); //TODO
+
         cardList.Add(new Card(74, "Electromagnetismo", 6, 0, 0, 0, "Al invocar un elegido de Miknit puede atacar sin esperar", "Miknit", "Dominio", 0)); //TODO
+
         cardList.Add(new Card(75, "Neblina púrpura", 6, 0, 0, 0, "Los elegidos invocados que no sean de Dana pierden la mitad de su ataque y defensa", "Dana", "Dominio", 0)); //TODO
+
         cardList.Add(new Card(76, "Zona extraña", 1, 0, 0, 0, "Cambia el ataque por la defensa de todos los elegidos invocados, si el elegido es de Yrys el invocador puede decir si cambiar o no el ataque", "Yrys", "Dominio", 0)); //TODO
+
         cardList.Add(new Card(77, "Cementerio de almas", 6, 0, 0, 0, "Cuando un elegido es destruido traelo de vuelta desde el cementerio, la próxima vez que fueran a ser destruidos destierralos", "Etse", "Dominio", 0)); //TODO
-        // Revolución Steampunk 4 (Linea de defensa)
-        cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "  <sprite name=AlSerInvocado> roba una carta mágica  <sprite name=Deck>", "Miknit", "Hechicera", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(79, "Eins", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> o mano a Zwei y Drei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(80, "Zwei", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> o mano a Eins y Drei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(81, "Drei", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> o mano a Eins y Zwei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
-        cardList.Add(new Card(82, "Atom", 5, 6, 5, 7, "  <sprite name=AlSerInvocado> destruye una carta de tu adversario", "Dana", "Hechicera", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+                                                                                                                                                                                                                             // Revolución Steampunk 4 (Linea de defensa)
+        cardList.Add(new Card(78, "Ruby VIII", 5, 2, 2, 5, "<sprite name=AlSerInvocado> roba una carta mágica <sprite name=Deck>", "Miknit", "Hechicera", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "Mágica" }, null, null, null, new int[1] { 1 }));
+        
+        cardList.Add(new Card(79, "Eins", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> a Zwei y Drei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(80, "Zwei", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> a Eins y Drei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+        cardList.Add(new Card(81, "Drei", 5, 10, 1, 1, "  <sprite name=AlSerInvocado> de forma normal invoca  <sprite name=Deck> a Eins y Zwei", "Chronos", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField }));
+
+        cardList.Add(new Card(82, "Atom", 5, 6, 5, 7, "<sprite name=AlSerInvocado> destruye una carta de tu adversario", "Dana", "Hechicera", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 2 }, new int[1] { 1 }));
+
+
         cardList.Add(new Card(83, "Vix", 5, 7, 3, 5, "  <sprite name=AlSerInvocado> equipala a un monstruo rival este pierde todo su ataque, cuando este es destruido devuelve esta carta a tu zona de elegidos", "Murgu", "Luchadora", 0)); //TODO
 
         // Revolución Steampunk 5 (Nuevos Trabajos)
         cardList.Add(new Card(84, "Myu", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca un elegido  <sprite name=Deck>  del rival, destierralo", "Chronos", "Tirador", 0, new List<ActivationType> { ActivationType.OnEnterField }));//TODO
+        
         cardList.Add(new Card(85, "Drip", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una mágica  <sprite name=Deck> del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
-        cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una mágica  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
-        cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una trampa  <sprite name=Deck>  del rival, destierrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
-        cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> roba una carta de equipo  <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+
+        cardList.Add(new Card(86, "BeeBot", 2, 1, 1, 1, "<sprite name=AlSerInvocado> roba una mágica <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "Mágica" }, null, null, null, new int[1] { 1 }));
+
+        cardList.Add(new Card(87, "Emil", 2, 1, 1, 1, "<sprite name=AlSerInvocado> busca una trampa <sprite name=Deck> del rival, destiérrala", "Dana", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 3 }, new int[1] { 1 }, new string[1] { "Trampa" }, null, null, null, new int[1] { 1 }));
+
+        cardList.Add(new Card(88, "M.4.1.D", 2, 1, 1, 1, "<sprite name=AlSerInvocado> roba una carta de equipo <sprite name=Deck>", "N", "Robot", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 1 }, new int[1] { 1 }, new string[1] { "Equipo" }, null, null, null, new int[1] { 1 }));
+        
         cardList.Add(new Card(89, "Kelith", 1, 1, 1, 1, "  <sprite name=AlSerInvocado> mira las 3 cartas de la parte superior  <sprite name=Deck> colocalas de vuelta en el orden que quieras", "Chronos", "Mercader", 0, new List<ActivationType> { ActivationType.OnEnterField }));//TODO
+        
         cardList.Add(new Card(90, "Decay", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de equipo  <sprite name=Deck> rival, destierrala", "Chronos", "Hechicero", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
+        
         cardList.Add(new Card(91, "Efraim", 2, 1, 1, 1, "  <sprite name=AlSerInvocado> busca una carta de dominio  <sprite name=Deck> rival, destierrala", "Dana", "Artificiero", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
 
 
