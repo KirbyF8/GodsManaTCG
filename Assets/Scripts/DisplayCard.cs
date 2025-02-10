@@ -514,6 +514,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     public bool IAmAlive()
     {
+        Debug.Log(cardName + " mi vida es " + (cardHealth - cardHpLost));
         if (cardHealth - cardHpLost >= 1) 
         {
             return true;
@@ -583,6 +584,13 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
     public GameObject GetThisGameObject()
     {
         return this.gameObject;
+    }
+
+    public bool IAmDead = false;
+    public void Kill()
+    {
+        IAmDead = true;
+        Debug.Log(cardName + " Ha muerto ");
     }
 
     public bool ThisCardHasAttacked()

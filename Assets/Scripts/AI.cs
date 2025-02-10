@@ -15,7 +15,7 @@ public class AI : MonoBehaviour
     private List<GameObject> playableCardsGameObject = new List<GameObject>();
     
     private List<GameObject> attackableCards = new List<GameObject>();
-    private List<GameObject> attackableCardsGameObject = new List<GameObject>();
+    //private List<GameObject> attackableCardsGameObject = new List<GameObject>();
 
     public void SummonFase(List<GameObject> card)
     {
@@ -68,11 +68,21 @@ public class AI : MonoBehaviour
         playableCards.Clear();
     }
 
-
+    private bool firstBattle = true;
     public void BattleFase(List<GameObject> card)
     {
         attackableCards.Clear();
-        attackableCardsGameObject = card;
+        if (firstBattle)
+        {
+            foreach (var item in card)
+            {
+
+                item.GetComponent<DisplayCard>().CardAttackReset();
+
+            }
+            firstBattle = false;
+        }
+        Debug.Log("BattleFase");
         foreach (var item in card)
         {
             
@@ -83,16 +93,17 @@ public class AI : MonoBehaviour
 
         }
 
-        if (attackableCards == null || attackableCards.Count <= 0)
+        if (attackableCards.Count <= 0)
         {
-
+            Debug.Log("cambio de turno");
             turnManager.NextFase();
+            firstBattle = true;
             return;
         }
 
         StartCoroutine(CardAttack());
     }
-
+    
     private IEnumerator CardAttack()
     {
         yield return new WaitForSeconds(1f);
@@ -105,36 +116,52 @@ public class AI : MonoBehaviour
             {
                 turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
                 turnManager.battle();
-                Debug.Log("HOLA3");
-                yield return new WaitForSeconds(0.5f);
-            }
-            StopCoroutine(CardAttack());
-
-        }
-
-
-        foreach (var item in attackableCards)
-        {
-            
-            foreach (var item2 in playerDeck.field)
-            {
-                if (!item.GetComponent<DisplayCard>().ThisCardHasAttacked() && 
-                    item.GetComponent<DisplayCard>().cardAttack >= (item2.GetComponent<DisplayCard>().cardHealth - item2.GetComponent<DisplayCard>().cardHpLost) ||
-                    (item.GetComponent<DisplayCard>().cardHealth - item.GetComponent<DisplayCard>().cardHpLost) > item2.GetComponent<DisplayCard>().cardDefense)
-                {
-                    turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
-                    turnManager.selectDefenderFunc(item2.GetComponent<DisplayCard>());
-                    turnManager.battle();
-                    Debug.Log("HOLA2");
-
-                }
-
                 item.GetComponent<DisplayCard>().CardHasAttacked();
-                Debug.Log("HOLA");
+                Debug.Log("Ataque Directo");
                 yield return new WaitForSeconds(2f);
             }
-        }
+           
 
+        }else { 
+
+        
+            foreach (var item in attackableCards)
+            {
+                DisplayCard displayCard = item.GetComponent<DisplayCard>();
+                foreach (var playerCard in playerDeck.field)
+                {
+                    Debug.Log(displayCard.cardName + " Ha Atacado? " + displayCard.ThisCardHasAttacked());
+                   
+                    DisplayCard playerDisplay = playerCard.GetComponent<DisplayCard>();
+                    Debug.Log(playerDisplay.cardName + " Muerta " + !playerDisplay.IAmAlive());
+                    Debug.Log(" or parte 1 " + (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost)) );
+                    Debug.Log(" or parte 2 " + ((displayCard.cardHealth - displayCard.cardHpLost) > playerDisplay.cardDefense));
+                    if (!displayCard.ThisCardHasAttacked() &&
+                        playerDisplay.IAmAlive() &&
+                        (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost) ||
+                        (displayCard.cardHealth - displayCard.cardHpLost) > playerDisplay.cardDefense))
+                    {
+                        turnManager.selectAttackerFunc(displayCard);
+                        turnManager.selectDefenderFunc(playerDisplay);
+                        turnManager.battle();
+                        Debug.Log(displayCard.cardName + " Ataca a " + playerDisplay.cardName);
+
+                    }
+                    else
+                    {
+                        Debug.Log(displayCard.cardName + " no atacó");
+                    }
+
+                    
+                    
+                        displayCard.CardHasAttacked();
+                    
+                  //! EVENTO ON BATTLE  FINISH
+                    yield return new WaitForSeconds(2f);
+                }
+            }
+        }
+        turnManager.DestroyBattleCards();
         aiDeck.AiBattle();
         
     }

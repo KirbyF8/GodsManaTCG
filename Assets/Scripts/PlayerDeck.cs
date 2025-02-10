@@ -557,6 +557,7 @@ public class PlayerDeck : MonoBehaviour
         }
         
             field.Add(CardInHand);
+        
 
         CardToRemove = null;
         foreach (GameObject item in hand)

@@ -206,21 +206,13 @@ public class TurnManager : MonoBehaviour
 
     public void EndTurn()
     {
-        if (isYourTurn)
-        {
+        
             
             
-            isYourTurn = false;
+            isYourTurn = !isYourTurn;
             SetFase(0);
 
-        }
-        else if (!isYourTurn)
-        {
-           
-            
-            isYourTurn = true;
-            SetFase(0);
-        }
+        
 
         ResetTurn();
         StartTurn();
@@ -452,6 +444,11 @@ public class TurnManager : MonoBehaviour
         }
 
         ResetBattle();
+    }
+
+    public void DestroyBattleCards()
+    {
+        battleSC.DestroyAllDefeatedCards();
     }
 
     public void ResetBattle()

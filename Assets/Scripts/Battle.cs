@@ -52,6 +52,8 @@ public class Battle : MonoBehaviour
     [SerializeField] PlayerDeck playerDeck;
     [SerializeField] PlayerDeck rivalDeck;
 
+    private List<GameObject> cardsToDelete = new List<GameObject>();
+
     private void Start()
     {
         SetRivalIcon();
@@ -122,7 +124,7 @@ public class Battle : MonoBehaviour
         displayCardDefender.cardHpLosted(attackerDC.cardAttack);
         defenderDC.UpdateHealthForBattle(displayCardDefender.ReturnHealth());
         yield return new WaitForSeconds(2f);
-
+        
         if (displayCardDefender.IAmAlive())
         {
             
@@ -145,6 +147,7 @@ public class Battle : MonoBehaviour
                     playerDeck.AddToGraveYard(displayCardAttacker.GetThisCard());
                     playerDeck.field.Remove(displayCardAttacker.GetThisGameObject());
                 }
+                Debug.Log("Destruyendo Atacante");
                 displayCardAttacker.DestroySelf();
             }
         }
@@ -153,21 +156,43 @@ public class Battle : MonoBehaviour
             
             if (turnManager.isYourTurn)
             {
+                Debug.Log(turnManager.isYourTurn);
                 rivalDeck.AddToGraveYard(displayCardDefender.GetThisCard());
+                
                 rivalDeck.field.Remove(displayCardDefender.GetThisGameObject());
+                displayCardDefender.DestroySelf();
+
             }
             else
             {
                 playerDeck.AddToGraveYard(displayCardDefender.GetThisCard());
-                playerDeck.field.Remove(displayCardDefender.GetThisGameObject());
+                displayCardDefender.Kill();
+                cardsToDelete.Add(displayCardDefender.GetThisGameObject());
+                //playerDeck.field.Remove(displayCardDefender.GetThisGameObject());
             }
-            displayCardDefender.DestroySelf();
+            //
 
         }
 
         yield return new WaitForSeconds(2f);
         FinishBattle();
 
+    }
+
+    public void DestroyAllDefeatedCards()
+    {
+        if (cardsToDelete.Count > 0)
+        {
+            Debug.Log("Hola");
+            foreach (var card in cardsToDelete)
+            {
+                rivalDeck.field.Remove(card);
+                Debug.Log(rivalDeck.field.Count);
+                DisplayCard cardDisplay = card.GetComponent<DisplayCard>();
+                cardDisplay.DestroySelf();
+            }
+        }
+        cardsToDelete.Clear();
     }
 
     private IEnumerator Anim2(bool atackerPlayer)
