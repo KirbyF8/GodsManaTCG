@@ -15,7 +15,7 @@ public class AI : MonoBehaviour
     private List<GameObject> playableCardsGameObject = new List<GameObject>();
     
     private List<GameObject> attackableCards = new List<GameObject>();
-    //private List<GameObject> attackableCardsGameObject = new List<GameObject>();
+    
 
     public void SummonFase(List<GameObject> card)
     {

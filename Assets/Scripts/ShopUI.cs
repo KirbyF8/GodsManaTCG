@@ -40,6 +40,11 @@ public class ShopUI : MonoBehaviour
     private int cartasGiradas = 0;
     [SerializeField] GameObject returnButton;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip openPack;
+    [SerializeField] AudioClip revealCard;
+    [SerializeField] AudioClip nextPack;
+
     void Start()
     {
         UpdateCoins();
@@ -56,7 +61,10 @@ public class ShopUI : MonoBehaviour
     //? 1 ->
     public void ChangeBoosterPack(int direct)
     {
-    
+
+        audioSource.clip = nextPack;
+        audioSource.Play();
+
         if (direct == 1)
         {
             boosterHint += 1;
@@ -172,7 +180,8 @@ public class ShopUI : MonoBehaviour
 
     public void OpenPack()
     {
-
+        audioSource.clip = openPack;
+        audioSource.Play();
         cartasGiradas = 0;
         for (int i = 0; i < cardsInBooster.Length; i++) 
         {
@@ -181,6 +190,7 @@ public class ShopUI : MonoBehaviour
             cardsInBooster[i].WhereIAm(3);
         }
         buyedBooster.SetActive(false);
+       
         Hider.SetActive(true);
     }
 
@@ -197,11 +207,15 @@ public class ShopUI : MonoBehaviour
     }
 
     
-
+    public void flipCardSound()
+    {
+        audioSource.clip = revealCard;
+        audioSource.Play();
+    }
     public void cartaGirada()
     {
+       
 
-      
         if (cartasGiradas <= 3)
         {
             

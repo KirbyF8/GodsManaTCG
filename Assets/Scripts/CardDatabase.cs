@@ -81,7 +81,7 @@ public class CardDatabase : MonoBehaviour
 
         cardList.Add(new Card(31, "ShadowStep", 2, 4, 1, 1, "<sprite name=AlSerInvocado> reduce la defensa a 0 de un elegido rival", "Chronos", "Pícaro", 0, new List<ActivationType> { ActivationType.OnEnterField }, new int[1] { 5 }, new int[1] { 1 }, new string[1] { "" }, null, null, null, new int[1] { 0 }));
         
-        cardList.Add(new Card(32, "Dahila", 3, 4, 1, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "Chronos", "", 0)); //TODO
+        cardList.Add(new Card(32, "Dahila", 3, 1, 4, 4, "Si un elegido fuera a ser destruido puedes destruir esta en su lugar", "Chronos", "", 0)); //TODO
 
         cardList.Add(new Card(33, "Celine", 6, 4, 4, 6, "Al final del turno todos los elegidos reciben 1 de daño", "Chronos", "", 0, new List<ActivationType> { ActivationType.OnEndTurn }, new int[1] { 6 }, new int[1] { 100 }, new string[1] { "" }, null, null, null, new int[1] { 1 }));
 
@@ -128,7 +128,7 @@ public class CardDatabase : MonoBehaviour
 
         cardList.Add(new Card(53, "Electric field", 1, 0, 0, 0, "Aumenta el ataque de todos los elegidos Bolt y K.R.I.S en 1, si no hay al menos 1 Bolt en campo al finalizar el turno es destruida", "Miknit", "Dominio", 0)); //TODO
         
-        cardList.Add(new Card(54, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "Mágica", "", 0)); //TODO
+        cardList.Add(new Card(54, "Plan Bolt", 3, 0, 0, 0, "Si tienes 1 Bolt en el campo, 1 en el cementerio y 1 en la mano puedes invocar a K.R.I.S", "N", "Mágica", 0)); //TODO
         
         cardList.Add(new Card(55, "Eureka!", 5, 0, 0, 0, "Puedes equipar hasta 6 elegidos Bolt con nombres diferentes a K.R.I.S, este gana 1 de defensa y 2 de HP por cada uno", "Miknit", "Mágica", 0)); //TODO
         // Revolución Steampunk 2 (Mecánica Fantástica y Artefactos Extaordianrios)

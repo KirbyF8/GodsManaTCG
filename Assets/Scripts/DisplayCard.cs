@@ -452,6 +452,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private void Next()
     {
+        shopUI.flipCardSound();
         shopUI.cartaGirada();
         deckPersistance.AddSaveCard(thisCard);
         cardBack.SetActive(false);

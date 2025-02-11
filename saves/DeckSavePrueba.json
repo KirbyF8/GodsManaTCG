@@ -1,0 +1,165 @@
+{
+    "cards": [],
+    "cardsID": [],
+    "deckCards": [
+        {
+            "cardId": 2,
+            "cardName": "Lia",
+            "cardCost": 1,
+            "cardAttack": 1,
+            "cardDefense": 2,
+            "cardHealth": 4,
+            "cardDescription": "Una aventurera elfa olvidadada por el mundo",
+            "cardType": "N",
+            "cardClass": "Guerrera",
+            "cardRarity": 0,
+            "activationTypes": [],
+            "cardEffect": [
+                0,
+                0
+            ],
+            "effectHowMany": [
+                1,
+                1
+            ],
+            "effectTargetName": [
+                "",
+                ""
+            ],
+            "effectCardClass": [
+                "",
+                ""
+            ],
+            "effectCardDeity": [
+                "",
+                ""
+            ],
+            "effectCost": [
+                0,
+                0
+            ],
+            "effectWhere": [
+                0,
+                0
+            ],
+            "effectATK": [
+                0,
+                0
+            ],
+            "effectDEF": [
+                0,
+                0
+            ],
+            "effectHP": [
+                0,
+                0
+            ]
+        },
+        {
+            "cardId": 2,
+            "cardName": "Lia",
+            "cardCost": 1,
+            "cardAttack": 1,
+            "cardDefense": 2,
+            "cardHealth": 4,
+            "cardDescription": "Una aventurera elfa olvidadada por el mundo",
+            "cardType": "N",
+            "cardClass": "Guerrera",
+            "cardRarity": 0,
+            "activationTypes": [],
+            "cardEffect": [
+                0,
+                0
+            ],
+            "effectHowMany": [
+                1,
+                1
+            ],
+            "effectTargetName": [
+                "",
+                ""
+            ],
+            "effectCardClass": [
+                "",
+                ""
+            ],
+            "effectCardDeity": [
+                "",
+                ""
+            ],
+            "effectCost": [
+                0,
+                0
+            ],
+            "effectWhere": [
+                0,
+                0
+            ],
+            "effectATK": [
+                0,
+                0
+            ],
+            "effectDEF": [
+                0,
+                0
+            ],
+            "effectHP": [
+                0,
+                0
+            ]
+        },
+        {
+            "cardId": 2,
+            "cardName": "Lia",
+            "cardCost": 1,
+            "cardAttack": 1,
+            "cardDefense": 2,
+            "cardHealth": 4,
+            "cardDescription": "Una aventurera elfa olvidadada por el mundo",
+            "cardType": "N",
+            "cardClass": "Guerrera",
+            "cardRarity": 0,
+            "activationTypes": [],
+            "cardEffect": [
+                0,
+                0
+            ],
+            "effectHowMany": [
+                1,
+                1
+            ],
+            "effectTargetName": [
+                "",
+                ""
+            ],
+            "effectCardClass": [
+                "",
+                ""
+            ],
+            "effectCardDeity": [
+                "",
+                ""
+            ],
+            "effectCost": [
+                0,
+                0
+            ],
+            "effectWhere": [
+                0,
+                0
+            ],
+            "effectATK": [
+                0,
+                0
+            ],
+            "effectDEF": [
+                0,
+                0
+            ],
+            "effectHP": [
+                0,
+                0
+            ]
+        }
+    ]
+}
