@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class DeckCreator : MonoBehaviour
 {
@@ -21,8 +22,12 @@ public class DeckCreator : MonoBehaviour
     [SerializeField] GameObject cardInDeck;
     [SerializeField] GameObject cardInDeckBox;
 
-    [SerializeField] GameObject deckInSaves;
 
+    private string deckPath = Application.dataPath + "/../saves/DeckSave/";
+
+    [SerializeField] GameObject deckInSaves;
+    [SerializeField] GameObject cardInSavesBox;
+    [SerializeField] GameObject decksPanel;
 
     void Start()
     {
@@ -140,5 +145,17 @@ public class DeckCreator : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LoadDecks()
+    {
+        decksPanel.SetActive(true);
+        
+     
 
+
+
+            GameObject clone = Instantiate(deckInSaves);
+            clone.GetComponent<DecksPrefabs>().updateInfo("a" + Random.Range(0, 100));
+            clone.transform.SetParent(cardInSavesBox.transform, false);
+        
+    }
 }

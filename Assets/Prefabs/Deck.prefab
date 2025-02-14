@@ -223,4 +223,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d9c18512917d34eb73b0822f3b64fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckName: {fileID: 8731882537278736186}
+  deckNameText: {fileID: 8731882537278736186}

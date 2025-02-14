@@ -9,13 +9,16 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject panelMultiPlayer;
     [SerializeField] GameObject panelOptions;
     [SerializeField] GameObject panelHistoryMode;
-
+    [SerializeField] GameObject panelRules;
+    [SerializeField] GameObject panelPrologue;
     public void ReturnToMainMenu()
     {
         panelSinglePlayer.SetActive(false);
         panelMultiPlayer.SetActive(false);
         panelOptions.SetActive(false);
         panelHistoryMode.SetActive(false);
+        panelRules.SetActive(false);
+        panelPrologue.SetActive(false);
     }
 
     public void GoToVSAI()
@@ -55,7 +58,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToRules()
     {
-
+        panelRules.SetActive(true);
     }
 
     public void GoToOptions()
@@ -68,5 +71,10 @@ public class MainMenu : MonoBehaviour
 
         //? --- Preparar decks ----
         SceneManager.LoadScene(3);
+    }
+
+    public void GoToPrologue()
+    {
+        panelPrologue.SetActive(true );
     }
 }

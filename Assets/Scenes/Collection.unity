@@ -265,6 +265,8 @@ MonoBehaviour:
   cardInDeck: {fileID: 3432827734413757655, guid: d1261b24cb1720f4c8d6b549b04858ee, type: 3}
   cardInDeckBox: {fileID: 853207797}
   deckInSaves: {fileID: 7178276530942620811, guid: f44a726b5cf485947adb84a5c3f67587, type: 3}
+  cardInSavesBox: {fileID: 1166150007}
+  decksPanel: {fileID: 156693144}
 --- !u!114 &5826447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3792,7 +3794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1181188338}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5826446}
+        m_TargetAssemblyTypeName: DeckCreator, Assembly-CSharp
+        m_MethodName: LoadDecks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1181188338
 MonoBehaviour:
   m_ObjectHideFlags: 0

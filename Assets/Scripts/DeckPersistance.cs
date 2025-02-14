@@ -17,7 +17,7 @@ public class DeckPersistance : MonoBehaviour
 {
 
     private string path = Application.dataPath + "/../saves/" + "save.json";
-    private string deckPath = Application.dataPath + "/../saves/" + "DeckSave";
+    private string deckPath = Application.dataPath + "/../saves/DeckSave/";
     private string nameOfDeckPath;
 
     public List<Card> cardSaveList = new List<Card>();
