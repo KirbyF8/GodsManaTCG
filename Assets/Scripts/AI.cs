@@ -95,15 +95,22 @@ public class AI : MonoBehaviour
 
         if (attackableCards.Count <= 0)
         {
-            Debug.Log("cambio de turno");
-            turnManager.NextFase();
-            firstBattle = true;
+            StartCoroutine(ChangeTurn());
+            
+            
             return;
         }
 
         StartCoroutine(CardAttack());
     }
-    
+    private IEnumerator ChangeTurn()
+    {
+        Debug.Log("algo delante" + turnManager.BattleHasFinished());
+        yield return new WaitUntil(()=> turnManager.BattleHasFinished());
+        firstBattle = true;
+        Debug.Log(turnManager.isYourTurn);
+        turnManager.NextFase();
+    }
     private IEnumerator CardAttack()
     {
         yield return new WaitForSeconds(1f);
@@ -117,7 +124,7 @@ public class AI : MonoBehaviour
                 turnManager.selectAttackerFunc(item.GetComponent<DisplayCard>());
                 turnManager.battle();
                 item.GetComponent<DisplayCard>().CardHasAttacked();
-                Debug.Log("Ataque Directo");
+                //Debug.Log("Ataque Directo");
                 yield return new WaitForSeconds(2f);
             }
            
@@ -128,14 +135,15 @@ public class AI : MonoBehaviour
             foreach (var item in attackableCards)
             {
                 DisplayCard displayCard = item.GetComponent<DisplayCard>();
+                //Debug.Log("en el campo hay " + playerDeck.field.Count);
                 foreach (var playerCard in playerDeck.field)
                 {
-                    Debug.Log(displayCard.cardName + " Ha Atacado? " + displayCard.ThisCardHasAttacked());
+                    //Debug.Log(displayCard.cardName + " Ha Atacado? " + displayCard.ThisCardHasAttacked());
                    
                     DisplayCard playerDisplay = playerCard.GetComponent<DisplayCard>();
-                    Debug.Log(playerDisplay.cardName + " Muerta " + !playerDisplay.IAmAlive());
-                    Debug.Log(" or parte 1 " + (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost)) );
-                    Debug.Log(" or parte 2 " + ((displayCard.cardHealth - displayCard.cardHpLost) > playerDisplay.cardDefense));
+                    //Debug.Log(playerDisplay.cardName + " Muerta " + !playerDisplay.IAmAlive());
+                    //Debug.Log(" or parte 1 " + (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost)) );
+                    //Debug.Log(" or parte 2 " + ((displayCard.cardHealth - displayCard.cardHpLost) > playerDisplay.cardDefense));
                     if (!displayCard.ThisCardHasAttacked() &&
                         playerDisplay.IAmAlive() &&
                         (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost) ||
@@ -144,12 +152,12 @@ public class AI : MonoBehaviour
                         turnManager.selectAttackerFunc(displayCard);
                         turnManager.selectDefenderFunc(playerDisplay);
                         turnManager.battle();
-                        Debug.Log(displayCard.cardName + " Ataca a " + playerDisplay.cardName);
+                        //Debug.Log(displayCard.cardName + " Ataca a " + playerDisplay.cardName);
 
                     }
                     else
                     {
-                        Debug.Log(displayCard.cardName + " no atacó");
+                        //Debug.Log(displayCard.cardName + " no atacó");
                     }
 
                     
@@ -157,11 +165,11 @@ public class AI : MonoBehaviour
                         displayCard.CardHasAttacked();
                     
                   //! EVENTO ON BATTLE  FINISH
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(1f);
                 }
             }
         }
-        turnManager.DestroyBattleCards();
+        //turnManager.DestroyBattleCards();
         aiDeck.AiBattle();
         
     }

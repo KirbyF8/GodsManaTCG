@@ -155,18 +155,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5d90f8e22862942ac9dde0b8d8fb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 812783211}
   textBox: {fileID: 1794088777}
   imageLeft: {fileID: 435010511}
   imageRight: {fileID: 942577670}
   background: {fileID: 258871834}
   godsSprites:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 32af9c583f725304aa4369bd3dc37dec, type: 3}
   - {fileID: 21300000, guid: 7261b295cc5276745bc7fde03de38b0b, type: 3}
   - {fileID: 21300000, guid: b851f55c49ae4cf4eb4d45e416c9ce84, type: 3}
   - {fileID: 21300000, guid: 810edb5d02c4cab4a9c66ff56cf5d0b5, type: 3}
   - {fileID: 21300000, guid: 156ea1f6104cdf746b7494cbaf61ddf8, type: 3}
   - {fileID: 21300000, guid: f1d00b070a57ae143b504ab6698a07b5, type: 3}
-  mainCharacter: {fileID: 0}
+  mainCharacter: {fileID: 21300000, guid: cab735e3a3c3a0e49a785833fe4b84b8, type: 3}
   truck: {fileID: 21300000, guid: 1115b264833be3946a13ccddada70867, type: 3}
   backgrounds:
   - {fileID: 21300000, guid: 7fb98730dd399c946b256f92a601156c, type: 3}
@@ -179,7 +180,7 @@ MonoBehaviour:
     vez hay menos conflictos
   - Y los que hay cada vez son mas aburridos, ya parece que se estan olvidando de
     la magia
-  - "Ademas cada vez la gente es m\xE1s d\xE9bil"
+  - "Adem\xE1s cada vez la gente es m\xE1s d\xE9bil"
   - "\xBFY si creo otro planeta a ver que pasa?"
   - "No quiero trabajar m\xE1s, yo solo quiero jugar"
   - Mmmm, oye, y si hacemos eso
@@ -196,18 +197,51 @@ MonoBehaviour:
   - "\xBF\xA1Y cuando jugamos!?"
   - Estaba esperando a reunirnos para acabar con las reglas
   - Que ganas de derrotaros a todos
-  - "\xBFComo hace 1000 a\xF1os?"
+  - "\xBFComo hace mil a\xF1os?"
   - "\xBFEnserio no te vas a olvidar de eso?"
   - "< 1 a\xF1o m\xE1s tarde >"
   - Y, te volvi a ganar, Murgu esto no es lo tuyo
-  - Porque no he ganado a nadie, ni una sola vez
+  - "No he ganado a nadie..., ni una sola vez, \xA1\xBFPOR QU\xC9?!"
   - Skill Issue
   - "Ya no puedo m\xE1s, \xBFy si traemos seres vivos para jugar contra ellos?"
   - "En realidad, tambi\xE9n me estoy cansando de jugar solo contra vosotros"
-  - "Podemos ense\xF1ar a las propias almas a jugar"
-  - "\xBFY si traemos al siguiente ser vivo que muera para que juegue contra ellos?"
+  - "Tambi\xE9n podemos ense\xF1ar a las propias almas a jugar"
+  - "\xBFY si traemos al siguiente ser vivo que perezca para que juegue contra ellos?"
   - Buena idea, ahora esperemos al primer alma que se desprenda de su cuerpo
-  - "\xBFSabes que existe la palabra morir?"
+  - "\xBFSabeis que existe la palabra morir?"
+  - En ese preciso momento, en nantial.
+  - "Nueve horas de trabajo, por el sueldo m\xEDnimo, para volver a una casa en la
+    que no me espera nadie..."
+  - "Bueno, hoy sale el \xFAltimo episodio mi serie favorita, tengo ganas de ver
+    que es el One piece"
+  - "\xA1APARTA!"
+  - "\xBFEh?"
+  - 
+  - "\xA1Ah! "
+  - "\xBFEh? \xBFsigo viv@?, \xBFdonde estoy?"
+  - Bienvenido mortal
+  - "\xBF\xA1Y tu quien eres!?"
+  - Calma y recibiras respuestas
+  - "\xBF\xA1Calma!? Me acaban de atropellar, bueno al menos eso creo"
+  - "Y ahora estoy en un templo con seis personas vestidas de una manera extra\xF1a"
+  - Tranquilo@ solo has muerto
+  - "\xA1\xBFQU\xC9?! "
+  - Tampoco es que ha nadie le haya importado
+  - "\xBFEntonces quieres jugar a las cartas?"
+  - "Un momento, \xBFquienes sois y que hago aqu\xED?"
+  - Chronos dios del tiempo y moriste hace 29 segundos
+  - "Yrys diosa del espacio y estas aqu\xED para jugar a las cartas"
+  - Dana diosa de la vida, y si nos ganas a todos puedo revivirte
+  - Etse dios de la muerte o podria matar a alguien que odies
+  - Miknit diosa del mana
+  - "Y por \xFAltimo murgu dios de la guerra y el progreso"
+  - "A ver si lo entiendo, me he muerto y los dioses que estudie en primaria me han
+    traido aqu\xED para jugar a las cartas"
+  - Basicamente
+  - "Bueno, me he muerto, tampoco tengo nada mejor que hacer, a ver, \xBFcomo se
+    juega?"
+  - 
+  textBoxBackground: {fileID: 707071801}
 --- !u!114 &126002039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +564,7 @@ GameObject:
   - component: {fileID: 810025045}
   - component: {fileID: 810025044}
   - component: {fileID: 810025043}
+  - component: {fileID: 810025046}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -611,6 +646,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &810025046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810025042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &810694172
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +777,8 @@ GameObject:
   m_Component:
   - component: {fileID: 812783209}
   - component: {fileID: 812783208}
+  - component: {fileID: 812783210}
+  - component: {fileID: 812783211}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -782,6 +863,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &812783210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812783207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!114 &812783211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812783207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a286920b5598b4ebffee9d53ef6739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelSinglePlayer: {fileID: 0}
+  panelMultiPlayer: {fileID: 0}
+  panelOptions: {fileID: 0}
+  panelHistoryMode: {fileID: 0}
+  panelRules: {fileID: 0}
+  panelPrologue: {fileID: 0}
 --- !u!1 &942577667
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7261b295cc5276745bc7fde03de38b0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cab735e3a3c3a0e49a785833fe4b84b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

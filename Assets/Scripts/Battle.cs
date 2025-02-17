@@ -54,11 +54,19 @@ public class Battle : MonoBehaviour
 
     private List<GameObject> cardsToDelete = new List<GameObject>();
 
+    private bool theBattlehasFinished = true;
+
     private void Start()
     {
         SetRivalIcon();
         HideDmgs();
+      
 
+    }
+
+    public bool GetBattleHasFinished()
+    {
+        return theBattlehasFinished;
     }
 
     private void SetRivalIcon()
@@ -72,7 +80,8 @@ public class Battle : MonoBehaviour
     private Card cardDefender;
     public void battle(DisplayCard attacker, bool atackerPlayer, DisplayCard defender = null)
     {
-        
+        Debug.Log("Entro en batalla");
+        theBattlehasFinished = false;
 
         displayCardAttacker = attacker;
         
@@ -167,6 +176,7 @@ public class Battle : MonoBehaviour
             {
                 playerDeck.AddToGraveYard(displayCardDefender.GetThisCard());
                 displayCardDefender.Kill();
+                Debug.Log("carta eliminada");
                 cardsToDelete.Add(displayCardDefender.GetThisGameObject());
                 //playerDeck.field.Remove(displayCardDefender.GetThisGameObject());
             }
@@ -174,20 +184,22 @@ public class Battle : MonoBehaviour
 
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         FinishBattle();
 
     }
 
     public void DestroyAllDefeatedCards()
     {
+        Debug.Log("Hola");
         if (cardsToDelete.Count > 0)
         {
-            Debug.Log("Hola");
+            Debug.Log("Aloh");
             foreach (var card in cardsToDelete)
             {
-                rivalDeck.field.Remove(card);
-                Debug.Log(rivalDeck.field.Count);
+                Debug.Log("antes quedaban estas cartas: " + playerDeck.field.Count);
+                playerDeck.field.Remove(card);
+                Debug.Log("quedan estas cartas: " + playerDeck.field.Count);
                 DisplayCard cardDisplay = card.GetComponent<DisplayCard>();
                 cardDisplay.DestroySelf();
             }
@@ -305,6 +317,8 @@ public class Battle : MonoBehaviour
         battlePanel.SetActive(false);
         turnManager.ResetBattle();
         ResetThisBattle();
+        theBattlehasFinished = true;
+        DestroyAllDefeatedCards();
     }
 
     private void ResetThisBattle()

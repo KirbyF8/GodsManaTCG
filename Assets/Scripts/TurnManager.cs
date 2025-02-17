@@ -471,7 +471,10 @@ public class TurnManager : MonoBehaviour
         
     }
 
-    
+    public bool BattleHasFinished()
+    {
+        return battleSC.GetBattleHasFinished();
+    }
 }
    
 
