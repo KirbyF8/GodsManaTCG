@@ -175,9 +175,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4c894c688423f6847a2a270b2ed3a881, type: 3}
   - {fileID: 21300000, guid: 6ce7a78307c55234cae3b48039d12e42, type: 3}
   dialogues:
-  - Me abuuuuuuuurro
-  - Ya te digo, desde que los seres vivos descubrieron eso de la electricidad cada
-    vez hay menos conflictos
+  - Me abuuuuuuuurrooooo
+  - Ya ves, desde que los seres vivos descubrieron eso de la electricidad cada vez
+    hay menos conflictos
   - Y los que hay cada vez son mas aburridos, ya parece que se estan olvidando de
     la magia
   - "Adem\xE1s cada vez la gente es m\xE1s d\xE9bil"
@@ -209,7 +209,7 @@ MonoBehaviour:
   - "\xBFY si traemos al siguiente ser vivo que perezca para que juegue contra ellos?"
   - Buena idea, ahora esperemos al primer alma que se desprenda de su cuerpo
   - "\xBFSabeis que existe la palabra morir?"
-  - En ese preciso momento, en nantial.
+  - En ese preciso momento, en Nantial.
   - "Nueve horas de trabajo, por el sueldo m\xEDnimo, para volver a una casa en la
     que no me espera nadie..."
   - "Bueno, hoy sale el \xFAltimo episodio mi serie favorita, tengo ganas de ver
@@ -219,7 +219,7 @@ MonoBehaviour:
   - 
   - "\xA1Ah! "
   - "\xBFEh? \xBFsigo viv@?, \xBFdonde estoy?"
-  - Bienvenido mortal
+  - Bienvenid@ mortal
   - "\xBF\xA1Y tu quien eres!?"
   - Calma y recibiras respuestas
   - "\xBF\xA1Calma!? Me acaban de atropellar, bueno al menos eso creo"
