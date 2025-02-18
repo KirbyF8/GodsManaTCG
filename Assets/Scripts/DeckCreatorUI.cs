@@ -65,6 +65,14 @@ public class DeckCreator : MonoBehaviour
 
     }
 
+    public void LoadCardToDeck(int cardID)
+    {
+        //? AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        GameObject clone = Instantiate(cardInDeck);
+        clone.GetComponent<CardInDeckCreator>().updateInfoCard(CardDatabase.cardList[cardID].cardName, CardDatabase.cardList[cardID].cardCost, CardDatabase.cardList[cardID].cardType);
+        clone.transform.SetParent(cardInDeckBox.transform, false);
+    }
+
     public void RemoveCardFromDeck(string cardName)
     {
         for (int i = 0; i < cardOnDeck.Count; i++)
@@ -148,14 +156,36 @@ public class DeckCreator : MonoBehaviour
     public void LoadDecks()
     {
         decksPanel.SetActive(true);
+        foreach (DecksPrefabs decksPrefabs in cardInSavesBox.gameObject.GetComponentsInChildren<DecksPrefabs>())
+        {
+            Destroy(decksPrefabs.gameObject);
+        }
         
-     
 
-
-
+        foreach (var item in deckPersistance.GetAllDecksNames())
+        {
             GameObject clone = Instantiate(deckInSaves);
-            clone.GetComponent<DecksPrefabs>().updateInfo("a" + Random.Range(0, 100));
+            clone.GetComponent<DecksPrefabs>().updateInfo(item);
             clone.transform.SetParent(cardInSavesBox.transform, false);
+
+        }
+
+
+    }
+
+    public void HideDecks()
+    {
+        decksPanel.SetActive(false);
+    }
+
+    public void DeckLoad(string deckName)
+    {
+        HideDecks();
+        
+        foreach (var id in deckPersistance.ReturnDeck(deckName))
+        {
+            LoadCardToDeck(id);
+        }
         
     }
 }

@@ -10,15 +10,21 @@ public class DecksPrefabs : MonoBehaviour
 
     [SerializeField] TMP_Text deckNameText;
 
-    private DeckCreator creator;
+    private string localDeckName;
 
-   public void updateInfo(string deckName)
+    private DeckCreator creator;
+    private void Start()
+    {
+        creator = FindAnyObjectByType<DeckCreator>();
+    }
+    public void updateInfo(string deckName)
     {
         deckNameText.text = deckName;
+        localDeckName = deckName+".json";
     }
 
     public void loadDeck()
     {
-
+        creator.DeckLoad(localDeckName);
     }
 }

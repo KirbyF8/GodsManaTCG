@@ -260,8 +260,8 @@ public class CardDatabase : MonoBehaviour
         cardList.Add(new Card(131, "Iker Anim", 0, 0, 0, 2, "", "N", "Explorador", 0)); //TODO
         cardList.Add(new Card(132, "Alberto Video", 0, 0, 0, 2, "", "N", "Explorador", 0)); //TODO
         cardList.Add(new Card(133, "Alberto Anim", 0, 0, 0, 2, "", "N", "Explorador", 0)); //TODO
-        cardList.Add(new Card(134, "Javi Anim", 0, 0, 0, 2, "", "N", "Explorador", 0)); //TODO
-        cardList.Add(new Card(135, "Javi Video", 0, 0, 0, 2, "", "N", "Robot", 0)); //TODO
+        cardList.Add(new Card(134, "Robinson", 0, 0, 0, 2, "", "N", "Explorador", 0)); //TODO
+        cardList.Add(new Card(135, "Starship Odyssey", 5, 4, 12, 1, "Una vez por turno duplica su ataque", "N", "Robot", 0)); //TODO
 
         cardList.Add(new Card(136, "Dana", 12, 20, 20, 50, "No puede ser seleccionada por efectos de cartas, <sprite name=AlSerInvocado> invoca del cementerio tantos elegidos como quieras", "Dana", "Diosa", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO
         cardList.Add(new Card(137, "Etse", 12, 50, 20, 20, "No puede ser seleccionada por efectos de cartas, <sprite name=AlSerInvocado> destruye tantos elegidos en el campo como quieras", "Etse", "Dios", 0, new List<ActivationType> { ActivationType.OnEnterField })); //TODO

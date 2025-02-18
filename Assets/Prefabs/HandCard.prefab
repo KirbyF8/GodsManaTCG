@@ -512,6 +512,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 19b5bf795a69ef34098175296002bea2, type: 2}
     - target: {fileID: 8597039006825536336, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
+      propertyPath: particles1
+      value: 
+      objectReference: {fileID: 156794, guid: b8d96c3a8a44b714bb16ae46db4557d3, type: 3}
+    - target: {fileID: 8597039006825536336, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
+      propertyPath: particles2
+      value: 
+      objectReference: {fileID: 133914, guid: bff07cdf8ac658445acc33282a22db14, type: 3}
+    - target: {fileID: 8597039006825536336, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}
       propertyPath: selectable
       value: 
       objectReference: {fileID: 5464227252749864114}

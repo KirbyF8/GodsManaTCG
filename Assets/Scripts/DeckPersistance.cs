@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using Unity.VisualScripting;
+using System;
 
 [System.Serializable]
 public class CardSaveListWrapper
@@ -140,6 +141,52 @@ public class DeckPersistance : MonoBehaviour
                 return;
                 
             }
+        }
+    }
+
+
+    private List<string> returnDecks = new List<string>();
+    public List<string> GetAllDecksNames()
+    {
+        returnDecks.Clear();
+
+        var info = new DirectoryInfo(deckPath);
+        var fileInfo = info.GetFiles();
+        foreach (var file in fileInfo )
+        {
+             string fileName = file.Name.Split('.')[0];
+            returnDecks.Add(fileName);
+         
+        }
+
+
+        return returnDecks;
+    }
+
+    public List<int> ReturnDeck(string deckName)
+    {
+        string deckPathName = deckPath + deckName;
+
+        if (File.Exists(deckPathName))
+        {
+            string json = File.ReadAllText(deckPathName); 
+            CardSaveListWrapper wrapper = JsonUtility.FromJson<CardSaveListWrapper>(json);
+
+            if (wrapper != null && wrapper.cardsID != null)
+            {
+                return wrapper.cardsID; 
+            }
+            else
+            {
+                Debug.LogError("Deck Vacio");
+                return new List<int>();
+            }
+
+        }
+        else
+        {
+            Debug.LogError("Donde esta mi archivo!!??");
+            return null;
         }
     }
 }

@@ -115,6 +115,8 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
 
     private bool hasAttacked;
 
+ 
+
     void Start()
     {
 
