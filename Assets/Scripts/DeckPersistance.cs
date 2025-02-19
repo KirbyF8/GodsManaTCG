@@ -24,7 +24,7 @@ public class DeckPersistance : MonoBehaviour
     public List<Card> cardSaveList = new List<Card>();
     public List<int> cardIDs = new List<int>();
 
-    //! Hacer Mas tarde // ---
+    
     private List<int> DeckSave = new List<int>();
 
 
@@ -62,7 +62,7 @@ public class DeckPersistance : MonoBehaviour
     {
 
 
-        // Cargar IDs existentes desde el archivo (si existe)
+        // ! Carga los IDs existentes desde el archivo (si existe)
         List<int> existingCardIDs = new List<int>();
 
         if (File.Exists(path))
@@ -72,7 +72,7 @@ public class DeckPersistance : MonoBehaviour
             existingCardIDs = existingWrapper.cardsID;
         }
 
-        // Agregar los nuevos card IDs al listado existente
+        //! Agrega los nuevos card IDs al listado existente
         for (int i = 0; i < cardSaveList.Count; i++)
         {
             
@@ -80,7 +80,7 @@ public class DeckPersistance : MonoBehaviour
             
         }
 
-        // Crear un nuevo wrapper con todos los IDs y guardarlo
+        //! Crea un nuevo wrapper con todos los IDs y guardarlo
         CardSaveListWrapper wrapper = new CardSaveListWrapper { cardsID = existingCardIDs };
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(path, json);
@@ -115,6 +115,8 @@ public class DeckPersistance : MonoBehaviour
     }
 
     private int returnNumberOfCards;
+
+    //! Check how many cards 
     public int NumberOfCards(Card card)
     {
         returnNumberOfCards = 0;  

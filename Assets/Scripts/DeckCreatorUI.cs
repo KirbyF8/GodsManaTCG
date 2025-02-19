@@ -106,7 +106,7 @@ public class DeckCreator : MonoBehaviour
     {
         
         deckName = inputDeckName.text;
-        if (deckName == "" || deckName == null || cardOnDeck.Count <= 15 || cardOnDeck.Count >= 81)
+        if (deckName == "" || deckName == null || cardOnDeck.Count <= 20 || cardOnDeck.Count >= 81)
         {
             Debug.LogError("No has puesto nombre al Deck// Deck No válido");
         }
