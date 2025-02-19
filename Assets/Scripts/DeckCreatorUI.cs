@@ -66,18 +66,25 @@ public class DeckCreator : MonoBehaviour
         }
 
     }
-
+    public void ClearActualDeck()
+    {
+        cardOnDeck.Clear();
+        foreach (CardInDeckCreator cardInDeckCreator in cardInDeckBox.gameObject.GetComponentsInChildren<CardInDeckCreator>())
+        {
+            Destroy(cardInDeckCreator.gameObject);
+        }
+    }
     public void LoadCardToDeck(int cardID)
     {
-        Debug.Log("hola");
+       
         auxCard.UpdateDisplay(cardID);
         cardOnDeck.Add(auxCard.GetThisCard());
-        Debug.Log("hola");
+        
 
         GameObject clone = Instantiate(cardInDeck);
         clone.GetComponent<CardInDeckCreator>().updateInfoCard(auxCard.cardName, auxCard.cardCost, auxCard.cardType);
         clone.transform.SetParent(cardInDeckBox.transform, false);
-        Debug.Log(clone);
+        
     }
 
     public void RemoveCardFromDeck(string cardName)
@@ -194,14 +201,14 @@ public class DeckCreator : MonoBehaviour
     new List<int> ids;
     public void DeckLoad(string deckName)
     {
+        ClearActualDeck();
         HideDecks();
         ids = deckPersistance.ReturnDeck(deckName);
-        Debug.Log(ids.Count);
-        Debug.Log("Im int?");
+        
         foreach (int id in ids)
         {
-            Debug.Log("Im in?");
-            Debug.Log(id);
+           
+            
             LoadCardToDeck(id);
         }
         
