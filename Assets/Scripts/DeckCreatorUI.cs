@@ -29,6 +29,8 @@ public class DeckCreator : MonoBehaviour
     [SerializeField] GameObject cardInSavesBox;
     [SerializeField] GameObject decksPanel;
 
+    [SerializeField] DisplayCard auxCard;
+
     void Start()
     {
         
@@ -67,10 +69,15 @@ public class DeckCreator : MonoBehaviour
 
     public void LoadCardToDeck(int cardID)
     {
-        //? AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        Debug.Log("hola");
+        auxCard.UpdateDisplay(cardID);
+        cardOnDeck.Add(auxCard.GetThisCard());
+        Debug.Log("hola");
+
         GameObject clone = Instantiate(cardInDeck);
-        clone.GetComponent<CardInDeckCreator>().updateInfoCard(CardDatabase.cardList[cardID].cardName, CardDatabase.cardList[cardID].cardCost, CardDatabase.cardList[cardID].cardType);
+        clone.GetComponent<CardInDeckCreator>().updateInfoCard(auxCard.cardName, auxCard.cardCost, auxCard.cardType);
         clone.transform.SetParent(cardInDeckBox.transform, false);
+        Debug.Log(clone);
     }
 
     public void RemoveCardFromDeck(string cardName)
@@ -86,17 +93,24 @@ public class DeckCreator : MonoBehaviour
     }
 
     string deckName;
+
+    private List<int> cardIdOnDeck = new List<int>();
     public void SaveDeck()
     {
         
         deckName = inputDeckName.text;
-        if (deckName == "" || deckName == null || cardOnDeck.Count <= 20 || cardOnDeck.Count >= 81)
+        if (deckName == "" || deckName == null || cardOnDeck.Count <= 15 || cardOnDeck.Count >= 81)
         {
             Debug.LogError("No has puesto nombre al Deck// Deck No válido");
         }
         else
         {
-            deckPersistance.SaveDeck(cardOnDeck, deckName);
+            foreach (var item in cardOnDeck)
+            {
+                cardIdOnDeck.Add(item.cardId);
+            }
+
+            deckPersistance.SaveDeck(cardIdOnDeck, deckName);
         }
         
 
@@ -177,13 +191,17 @@ public class DeckCreator : MonoBehaviour
     {
         decksPanel.SetActive(false);
     }
-
+    new List<int> ids;
     public void DeckLoad(string deckName)
     {
         HideDecks();
-        
-        foreach (var id in deckPersistance.ReturnDeck(deckName))
+        ids = deckPersistance.ReturnDeck(deckName);
+        Debug.Log(ids.Count);
+        Debug.Log("Im int?");
+        foreach (int id in ids)
         {
+            Debug.Log("Im in?");
+            Debug.Log(id);
             LoadCardToDeck(id);
         }
         

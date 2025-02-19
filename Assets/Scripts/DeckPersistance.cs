@@ -11,7 +11,7 @@ public class CardSaveListWrapper
 {
     public List<Card> cards;
     public List<int> cardsID;
-    public List<Card> deckCards;
+    public List<int> deckCards;
 }
 
 public class DeckPersistance : MonoBehaviour
@@ -25,7 +25,7 @@ public class DeckPersistance : MonoBehaviour
     public List<int> cardIDs = new List<int>();
 
     //! Hacer Mas tarde // ---
-    private List<Card> DeckSave = new List<Card>();
+    private List<int> DeckSave = new List<int>();
 
 
     private void Start()
@@ -33,7 +33,7 @@ public class DeckPersistance : MonoBehaviour
         LoadSavedCards();
     }
 
-    public void SaveDeck(List<Card> deck, string filename)
+    public void SaveDeck(List<int> deck, string filename)
     {
         DeckSave = deck;
         nameOfDeckPath = deckPath + filename;
@@ -172,9 +172,11 @@ public class DeckPersistance : MonoBehaviour
             string json = File.ReadAllText(deckPathName); 
             CardSaveListWrapper wrapper = JsonUtility.FromJson<CardSaveListWrapper>(json);
 
-            if (wrapper != null && wrapper.cardsID != null)
+            if (wrapper != null && wrapper.deckCards != null)
             {
-                return wrapper.cardsID; 
+               
+                return wrapper.deckCards; 
+                
             }
             else
             {
