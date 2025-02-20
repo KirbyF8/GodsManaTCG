@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject panelHistoryMode;
     [SerializeField] GameObject panelRules;
     [SerializeField] GameObject panelPrologue;
+    [SerializeField] GameObject panelLevelLocked;
     public void ReturnToMainMenu()
     {
         panelSinglePlayer.SetActive(false);
@@ -76,5 +78,25 @@ public class MainMenu : MonoBehaviour
     public void GoToPrologue()
     {
         panelPrologue.SetActive(true );
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    [SerializeField] private Toggle toggle;
+    public void FullScreen()
+    {
+        Screen.fullScreen = toggle.isOn;
+    }
+
+    public void LockedLevel()
+    {
+        panelLevelLocked.SetActive(true);
+    }
+
+    public void HideLockedLevel()
+    {
+        panelLevelLocked.SetActive(false);
     }
 }

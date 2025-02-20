@@ -57,6 +57,8 @@ public class TurnManager : MonoBehaviour
 
     private void Start()
     {
+        finishPanel.SetActive(false);
+
         yourLP = 50;
         rivalLP = 50;
 
@@ -116,8 +118,8 @@ public class TurnManager : MonoBehaviour
 
     private void FirstDraw()
     {
-        playerDeck.CallDraw(6);
-        rivalDeck.CallDraw(6);
+        playerDeck.CallDraw(5);
+        rivalDeck.CallDraw(5);
         SetFase(1);
     }
 
@@ -405,12 +407,33 @@ public class TurnManager : MonoBehaviour
         {
             rivalLP -= dmg;
             rivalLpText.text = ("LP: " + rivalLP.ToString());
+            if (rivalLP <= 0)
+            {
+                WinAnim();
+            }
         }
         else
         {
             yourLP -= dmg;
             yourLpText.text = ("LP: " +  yourLP.ToString());
+            if (rivalLP >= 0)
+            {
+                LoseAnim();
+            }
         }
+    }
+
+    [SerializeField] GameObject finishPanel;
+    private void WinAnim()
+    {
+        finishPanel.SetActive(true);
+        //? Cambiar de escena
+    }
+
+    private void LoseAnim()
+    {
+        finishPanel.SetActive(true );
+        //? Cambiar de escena
     }
 
     public void selectAttackerFunc(DisplayCard card)

@@ -56,8 +56,15 @@ public class PlayerDeck : MonoBehaviour
         //? --- Preparar Decks ---
         for (int i = 0; i <= deck.Count-1;  i++)
         {
+            
+            if (rivalHand)
+            {
+
+            }
+            
             randomCard = Random.Range(1, 120);
             
+
             deck[i] = CardDatabase.cardList[randomCard];
         }
 

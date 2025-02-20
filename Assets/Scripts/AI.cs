@@ -82,7 +82,7 @@ public class AI : MonoBehaviour
             }
             firstBattle = false;
         }
-        Debug.Log("BattleFase");
+       
         foreach (var item in card)
         {
             
@@ -105,10 +105,10 @@ public class AI : MonoBehaviour
     }
     private IEnumerator ChangeTurn()
     {
-        Debug.Log("algo delante" + turnManager.BattleHasFinished());
+        
         yield return new WaitUntil(()=> turnManager.BattleHasFinished());
         firstBattle = true;
-        Debug.Log(turnManager.isYourTurn);
+        
         turnManager.NextFase();
     }
     private IEnumerator CardAttack()

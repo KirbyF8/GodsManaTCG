@@ -76,7 +76,7 @@ public class DeckCreator : MonoBehaviour
     }
     public void LoadCardToDeck(int cardID)
     {
-       
+      
         auxCard.UpdateDisplay(cardID);
         cardOnDeck.Add(auxCard.GetThisCard());
         
@@ -198,7 +198,7 @@ public class DeckCreator : MonoBehaviour
     {
         decksPanel.SetActive(false);
     }
-    new List<int> ids;
+    List<int> ids;
     public void DeckLoad(string deckName)
     {
         ClearActualDeck();

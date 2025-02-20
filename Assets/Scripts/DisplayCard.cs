@@ -242,7 +242,7 @@ public class DisplayCard : MonoBehaviour, IPointerDownHandler//
             }
             catch (Exception e)
             {
-                
+                string error = e.Message;
                 cardImg.sprite = null;
             }
 

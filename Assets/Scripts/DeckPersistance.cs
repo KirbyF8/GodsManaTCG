@@ -99,7 +99,7 @@ public class DeckPersistance : MonoBehaviour
         }
         else
         {
-            Debug.Log("Donde esta mi archivo??");
+            Debug.Log("Yo habia ponido mi arhivo aqui");
         }
     }
 
