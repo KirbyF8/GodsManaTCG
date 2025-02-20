@@ -69,11 +69,12 @@ public class Prologue : MonoBehaviour
        
         foreach (char c in text)
         {
+         
             textBox.text += c;
             yield return new WaitForSeconds(0.05f);
             
         }
-        
+        runningText = false;
        
       
        
