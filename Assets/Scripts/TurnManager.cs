@@ -426,14 +426,17 @@ public class TurnManager : MonoBehaviour
     [SerializeField] GameObject finishPanel;
     private void WinAnim()
     {
-        finishPanel.SetActive(true);
-        //? Cambiar de escena
+        //? Si da tiempo cambiar
+        //finishPanel.SetActive(true);
+        UI_VS ui_VS = FindObjectOfType<UI_VS>();
+        ui_VS.Surrender();
     }
 
     private void LoseAnim()
     {
-        finishPanel.SetActive(true );
-        //? Cambiar de escena
+        //finishPanel.SetActive(true );
+        UI_VS ui_VS = FindObjectOfType<UI_VS>();
+        ui_VS.Surrender();
     }
 
     public void selectAttackerFunc(DisplayCard card)
