@@ -15,8 +15,9 @@ public class AI : MonoBehaviour
     private List<GameObject> playableCardsGameObject = new List<GameObject>();
     
     private List<GameObject> attackableCards = new List<GameObject>();
-    
 
+    [SerializeField] private Battle battle;
+   
     public void SummonFase(List<GameObject> card)
     {
         playableCardsGameObject = card;
@@ -136,6 +137,7 @@ public class AI : MonoBehaviour
             {
                 DisplayCard displayCard = item.GetComponent<DisplayCard>();
                 //Debug.Log("en el campo hay " + playerDeck.field.Count);
+                Debug.Log("Voy a usar la coleccion");
                 foreach (var playerCard in playerDeck.field)
                 {
                     //Debug.Log(displayCard.cardName + " Ha Atacado? " + displayCard.ThisCardHasAttacked());
@@ -152,6 +154,7 @@ public class AI : MonoBehaviour
                         turnManager.selectAttackerFunc(displayCard);
                         turnManager.selectDefenderFunc(playerDisplay);
                         turnManager.battle();
+                        yield return new WaitForSeconds(2.5f);
                         //Debug.Log(displayCard.cardName + " Ataca a " + playerDisplay.cardName);
 
                     }
@@ -162,14 +165,18 @@ public class AI : MonoBehaviour
 
                     
                     
-                        displayCard.CardHasAttacked();
+                        
                     
                   //! EVENTO ON BATTLE  FINISH
                     yield return new WaitForSeconds(1f);
+                
                 }
+                displayCard.CardHasAttacked();
+                Debug.Log("Acabé con la coleccion");
             }
         }
         //turnManager.DestroyBattleCards();
+        battle.DestroyAllDefeatedCards();
         aiDeck.AiBattle();
         
     }

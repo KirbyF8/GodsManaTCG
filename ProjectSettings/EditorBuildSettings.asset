@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VS AI.unity
     guid: 0683f026140a1084695043a61c4c72c2
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 50cb1802d89f60143b80056377856d52
   m_configObjects: {}

@@ -77,7 +77,12 @@ public class MainMenu : MonoBehaviour
 
     public void GoToPrologue()
     {
-        panelPrologue.SetActive(true );
+        SceneManager.LoadScene(4);
+    }
+
+    public void WantPrologue()
+    {
+        panelPrologue.SetActive(true);
     }
 
     public void Exit()

@@ -191,10 +191,11 @@ public class Battle : MonoBehaviour
 
     public void DestroyAllDefeatedCards()
     {
-        Debug.Log("Hola");
+       
         if (cardsToDelete.Count > 0)
         {
-            Debug.Log("Aloh");
+           
+           
             foreach (var card in cardsToDelete)
             {
                 Debug.Log("antes quedaban estas cartas: " + playerDeck.field.Count);
@@ -318,7 +319,7 @@ public class Battle : MonoBehaviour
         turnManager.ResetBattle();
         ResetThisBattle();
         theBattlehasFinished = true;
-        DestroyAllDefeatedCards();
+        
     }
 
     private void ResetThisBattle()

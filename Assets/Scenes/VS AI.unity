@@ -5669,6 +5669,7 @@ MonoBehaviour:
   aiDeck: {fileID: 929984833}
   turnManager: {fileID: 954678134}
   playerDeck: {fileID: 634802050}
+  battle: {fileID: 1979130642}
 --- !u!1001 &800001165
 PrefabInstance:
   m_ObjectHideFlags: 0

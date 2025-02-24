@@ -416,7 +416,7 @@ public class TurnManager : MonoBehaviour
         {
             yourLP -= dmg;
             yourLpText.text = ("LP: " +  yourLP.ToString());
-            if (rivalLP >= 0)
+            if (rivalLP <= 0)
             {
                 LoseAnim();
             }
@@ -475,6 +475,7 @@ public class TurnManager : MonoBehaviour
     public void DestroyBattleCards()
     {
         battleSC.DestroyAllDefeatedCards();
+       
     }
 
     public void ResetBattle()
