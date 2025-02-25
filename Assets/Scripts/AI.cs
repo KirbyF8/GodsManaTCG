@@ -136,16 +136,14 @@ public class AI : MonoBehaviour
             foreach (var item in attackableCards)
             {
                 DisplayCard displayCard = item.GetComponent<DisplayCard>();
-                //Debug.Log("en el campo hay " + playerDeck.field.Count);
-                Debug.Log("Voy a usar la coleccion");
+                
+               
                 foreach (var playerCard in playerDeck.field)
                 {
-                    //Debug.Log(displayCard.cardName + " Ha Atacado? " + displayCard.ThisCardHasAttacked());
+                    
                    
                     DisplayCard playerDisplay = playerCard.GetComponent<DisplayCard>();
-                    //Debug.Log(playerDisplay.cardName + " Muerta " + !playerDisplay.IAmAlive());
-                    //Debug.Log(" or parte 1 " + (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost)) );
-                    //Debug.Log(" or parte 2 " + ((displayCard.cardHealth - displayCard.cardHpLost) > playerDisplay.cardDefense));
+                   
                     if (!displayCard.ThisCardHasAttacked() &&
                         playerDisplay.IAmAlive() &&
                         (displayCard.cardAttack >= (playerDisplay.cardHealth - playerDisplay.cardHpLost) ||
@@ -155,13 +153,10 @@ public class AI : MonoBehaviour
                         turnManager.selectDefenderFunc(playerDisplay);
                         turnManager.battle();
                         yield return new WaitForSeconds(2.5f);
-                        //Debug.Log(displayCard.cardName + " Ataca a " + playerDisplay.cardName);
+                       
 
                     }
-                    else
-                    {
-                        //Debug.Log(displayCard.cardName + " no atacó");
-                    }
+                   
 
                     
                     
