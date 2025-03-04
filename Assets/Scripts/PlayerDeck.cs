@@ -20,7 +20,6 @@ public class PlayerDeck : MonoBehaviour
 
     public Card zonaDeDominio = null; 
 
-    int randomCard = 0;
     [SerializeField] int deckSize;
     private int cardsOnDeck;
 
@@ -46,7 +45,11 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] GameObject domainCard;
 
     [SerializeField] AI aI;
-    
+
+    [SerializeField] DeckPersistance deckPersistance;
+    private List<int> cardsID;
+
+
 
     private bool canDestroy = false;
 
@@ -54,19 +57,22 @@ public class PlayerDeck : MonoBehaviour
     {
         
         //? --- Preparar Decks ---
-        for (int i = 0; i <= deck.Count-1;  i++)
-        {
-            
-            if (rivalHand)
+       
+       if (rivalHand)
             {
-
+               cardsID = deckPersistance.ReturnAIDeck(PlayerPrefs.GetString("lvl"));
+                LoadDeck();
             }
+       else
+        {
+
+        }
             
-            randomCard = Random.Range(1, 120);
+           
             
 
-            deck[i] = CardDatabase.cardList[randomCard];
-        }
+          
+        
 
         DeckChanges();
 
@@ -75,9 +81,16 @@ public class PlayerDeck : MonoBehaviour
        
     }
 
+    private int cardCounter;
    private void LoadDeck()
     {
-
+        cardCounter = 0;
+        foreach (int id in cardsID)
+        {
+            deck[cardCounter] = CardDatabase.cardList[id];
+            cardCounter++;
+        }
+        
     }
 
     public void CallDraw(int numberOfDrawCards)

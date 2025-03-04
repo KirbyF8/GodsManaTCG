@@ -4620,6 +4620,7 @@ MonoBehaviour:
   rivalDeck: {fileID: 929984833}
   domainCard: {fileID: 1111674058}
   aI: {fileID: 742449907}
+  deckPersistance: {fileID: 1061531678}
 --- !u!114 &634802051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7076,6 +7077,7 @@ MonoBehaviour:
   rivalDeck: {fileID: 634802050}
   domainCard: {fileID: 718621758}
   aI: {fileID: 742449907}
+  deckPersistance: {fileID: 1061531678}
 --- !u!114 &929984834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7506,6 +7508,7 @@ GameObject:
   - component: {fileID: 1061531674}
   - component: {fileID: 1061531673}
   - component: {fileID: 1061531677}
+  - component: {fileID: 1061531678}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7633,6 +7636,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiPanel: {fileID: 2046609678}
   pausePanel: {fileID: 1825406338}
+--- !u!114 &1061531678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061531672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80aa1cc92e37a944ea19608d562369c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSaveList: []
+  cardIDs: 
 --- !u!1 &1085200627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 225511385598018576, guid: 3118742b3281e1d45998f8a75bed9190, type: 3}

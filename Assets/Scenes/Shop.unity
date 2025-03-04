@@ -3930,6 +3930,7 @@ GameObject:
   - component: {fileID: 1941754838}
   - component: {fileID: 1941754837}
   - component: {fileID: 1941754839}
+  - component: {fileID: 1941754840}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4071,6 +4072,7 @@ MonoBehaviour:
   openPack: {fileID: 8300000, guid: 9b2c9e22887ad4844a9e121095db1b59, type: 3}
   revealCard: {fileID: 8300000, guid: 6be9cdac54d67af498e7f895b7cf5a67, type: 3}
   nextPack: {fileID: 8300000, guid: 1b69e1586abb6804caa5c6852fd8e02b, type: 3}
+  deckPersistance: {fileID: 1941754840}
 --- !u!114 &1941754837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4192,6 +4194,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1941754840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941754831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80aa1cc92e37a944ea19608d562369c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSaveList: []
+  cardIDs: 
 --- !u!1 &1966465161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3695454749274115948, guid: f6f28e31d0f3b0249adbc49dc94c58b5, type: 3}

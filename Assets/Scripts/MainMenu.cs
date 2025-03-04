@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject panelRules;
     [SerializeField] GameObject panelPrologue;
     [SerializeField] GameObject panelLevelLocked;
+
+    [SerializeField] GameObject Lock1;
+    [SerializeField] GameObject Lock2;
     public void ReturnToMainMenu()
     {
         panelSinglePlayer.SetActive(false);
@@ -71,10 +74,24 @@ public class MainMenu : MonoBehaviour
     public void GoToLvl1()
     {
 
-        //? --- Preparar decks ----
+        
+        PlayerPrefs.SetString("lvl", "DeckIaYumi");
         SceneManager.LoadScene(3);
     }
+    public void GoToLvl2()
+    {
 
+
+        PlayerPrefs.SetString("lvl", "DeckIaNumberOne");
+        SceneManager.LoadScene(3);
+    }
+    public void GoToLvl3()
+    {
+
+
+        PlayerPrefs.SetString("lvl", "DeckIaValette");
+        SceneManager.LoadScene(3);
+    }
     public void GoToPrologue()
     {
         SceneManager.LoadScene(4);
@@ -103,5 +120,12 @@ public class MainMenu : MonoBehaviour
     public void HideLockedLevel()
     {
         panelLevelLocked.SetActive(false);
+    }
+
+    public void HideLocks()
+    {
+        //! Only for betatesting
+        Lock1.SetActive(false);
+        Lock2.SetActive(false);
     }
 }

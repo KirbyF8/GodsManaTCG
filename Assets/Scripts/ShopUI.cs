@@ -45,6 +45,8 @@ public class ShopUI : MonoBehaviour
     [SerializeField] AudioClip revealCard;
     [SerializeField] AudioClip nextPack;
 
+    [SerializeField] DeckPersistance deckPersistance;
+
     void Start()
     {
         UpdateCoins();
@@ -188,7 +190,9 @@ public class ShopUI : MonoBehaviour
             cardsInBooster[i].displayId = Random.Range(first, second);
             cardsInBooster[i].UpdateDisplay(cardsInBooster[i].displayId);
             cardsInBooster[i].WhereIAm(3);
+            
         }
+        deckPersistance.SaveCards();
         buyedBooster.SetActive(false);
        
         Hider.SetActive(true);
@@ -231,6 +235,7 @@ public class ShopUI : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        
         SceneManager.LoadScene(0);
     }
 

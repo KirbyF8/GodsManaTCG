@@ -19,6 +19,7 @@ public class DeckPersistance : MonoBehaviour
 
     private string path = Application.dataPath + "/../saves/" + "save.json";
     private string deckPath = Application.dataPath + "/../saves/DeckSave/";
+    private string deckAIPath = Application.dataPath + "/../saves/DecksIA/";
     private string nameOfDeckPath;
 
     public List<Card> cardSaveList = new List<Card>();
@@ -80,11 +81,14 @@ public class DeckPersistance : MonoBehaviour
             
         }
 
-        //! Crea un nuevo wrapper con todos los IDs y guardarlo
+        //! Crea un nuevo wrapper con todos los IDs y lo guarda
         CardSaveListWrapper wrapper = new CardSaveListWrapper { cardsID = existingCardIDs };
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(path, json);
         cardIDs.Clear();
+        Debug.Log(cardSaveList.Count);
+        cardSaveList.Clear();
+        
     }
 
     
@@ -105,8 +109,9 @@ public class DeckPersistance : MonoBehaviour
 
     public void AddSaveCard(Card card)
     {
-        cardSaveList.Clear();
+        
         cardSaveList.Add(card);
+        Debug.Log(cardSaveList.Count);
     }
 
     public void RemoveSaveCard(Card card)
@@ -179,6 +184,35 @@ public class DeckPersistance : MonoBehaviour
                
                 return wrapper.deckCards; 
                 
+            }
+            else
+            {
+                Debug.LogError("Deck Vacio");
+                return new List<int>();
+            }
+
+        }
+        else
+        {
+            Debug.LogError("Donde esta mi archivo!!??");
+            return null;
+        }
+    }
+
+    public List<int> ReturnAIDeck(string deckName)
+    {
+        string deckPathName = deckAIPath + deckName;
+
+        if (File.Exists(deckPathName))
+        {
+            string json = File.ReadAllText(deckPathName);
+            CardSaveListWrapper wrapper = JsonUtility.FromJson<CardSaveListWrapper>(json);
+
+            if (wrapper != null && wrapper.deckCards != null)
+            {
+
+                return wrapper.deckCards;
+
             }
             else
             {
