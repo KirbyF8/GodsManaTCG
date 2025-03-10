@@ -60,8 +60,10 @@ public class PlayerDeck : MonoBehaviour
        
        if (rivalHand)
             {
+            /*
                cardsID = deckPersistance.ReturnAIDeck(PlayerPrefs.GetString("lvl"));
-                LoadDeck();
+                LoadDeck();*/
+            LoadRandomDeck();
             }
        else
         {
