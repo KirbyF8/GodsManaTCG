@@ -65,7 +65,7 @@ public class PlayerDeck : MonoBehaviour
             }
        else
         {
-
+            LoadRandomDeck();
         }
             
            
@@ -82,6 +82,15 @@ public class PlayerDeck : MonoBehaviour
     }
 
     private int cardCounter;
+
+    private void LoadRandomDeck()
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            int r = Random.Range(0, 158);
+            deck[i] = CardDatabase.cardList[r];
+        }
+    }
    private void LoadDeck()
     {
         cardCounter = 0;

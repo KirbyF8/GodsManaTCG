@@ -20,11 +20,13 @@ public class DecksPrefabs : MonoBehaviour
     public void updateInfo(string deckName)
     {
         deckNameText.text = deckName;
+        
         localDeckName = deckName+".json";
     }
 
     public void loadDeck()
     {
+       
         creator.DeckLoad(localDeckName);
     }
 }
